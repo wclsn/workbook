@@ -3,236 +3,866 @@ open BigOperators
 open Nat
 open Real
 open Rat
-theorem lean_workbook_plus_71362 : ∀ x : ℝ, x ≤ (Real.sqrt 5 - 1) / 2 ∧ x ≤ 0 → x^3 * (1 + Real.sqrt (3 - x^2)) + x^2 ≤ 1   :=  by sorry
-theorem lean_workbook_plus_77409  (n : ℕ)
-  (h₀ : 21 ∣ (4^(n + 1) + 5^(2 * n - 1))) :
-  21 ∣ (4^(n + 2) + 5^(2 * n + 1))   :=  by sorry
-theorem lean_workbook_plus_59379 (a b c : ℝ) (h : 0 < a ∧ 0 < b ∧ 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 + a * b * c = 4) : a + b + c <= 3   :=  by sorry
-theorem lean_workbook_plus_66381 (x y : ℝ) (h₁ : x + y = 3) (h₂ : x^2 + y^2 - x*y = 4) : x^4 + y^4 + x^3*y + x*y^3 = 36   :=  by sorry
-theorem lean_workbook_plus_52954 (x y : ℤ) : (gcd x y)^2 ∣ x^2 + y^2   :=  by sorry
-theorem lean_workbook_plus_6811 (x y z : ℝ) :
-  x^2 * y^2 - x^2 * y * z + x^2 * z^2 - x * y^2 * z - x * y * z^2 + y^2 * z^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_36773 (n : ℕ) : 2 ^ (10 * n) ≡ 1 [ZMOD 11]   :=  by sorry
-theorem lean_workbook_plus_65157 (a b : ℝ) (ha : a + b > 0) (hb : b + c > 0) (hc : a + c > 0) : a^2 ≥ b^2 ↔ a ≥ b   :=  by sorry
-theorem lean_workbook_plus_45 :
-  (5^(2*1) ≡ 25 [MOD 100])   :=  by sorry
-theorem lean_workbook_plus_25042 :
-  Real.logb 2 (Real.logb 4 16) = 1   :=  by sorry
-theorem lean_workbook_plus_51104 (x : ℕ → ℝ) (i : ℕ) :
-  x i * x (i + 2) ≤ (x i ^ 2 + x (i + 2) ^ 2) / 2   :=  by sorry
-theorem lean_workbook_plus_23463 (q : ℝ) : 1 ≤ |q| + |q + 1|   :=  by sorry
-theorem lean_workbook_plus_5103 : ∀ x : ℝ, 0 ≤ x ∧ x ≤ 1 → 1 / (x ^ 2 - 4 * x + 9) ≤ (x + 2) / 18   :=  by sorry
-theorem lean_workbook_plus_31968 : ∀ x y z : ℝ, (x ^ 3 + y ^ 3 + z ^ 3 + 2 * (x ^ 2 * y + y ^ 2 * z + z ^ 2 * x) - 3 * (x ^ 2 * z + y ^ 2 * x + z ^ 2 * y) ≥ 0 ↔ 2 * (x ^ 3 + y ^ 3 + z ^ 3) + 4 * (x ^ 2 * y + y ^ 2 * z + z ^ 2 * x) - 6 * (x ^ 2 * z + y ^ 2 * x + z ^ 2 * y) ≥ 0)   :=  by sorry
-theorem lean_workbook_plus_42361 (a1 a2 b1 b2 : ℝ) (ha1 : 0 < a1) (ha2 : 0 < a2) (hb1 : 0 < b1) (hb2 : 0 < b2) : (a1 ^ 2 / b1 + a2 ^ 2 / b2) ≥ (a1 + a2) ^ 2 / (b1 + b2)   :=  by sorry
-theorem lean_workbook_plus_71317 (n : ℤ) : n^2 + 3*n - 2 = 2*n ↔ n = 1 ∨ n = -2   :=  by sorry
-theorem lean_workbook_plus_3184 {x y z : ℝ} : 2*y*(1 + x^2 + y^2 + z^2)*(x^3 + z^3 + x*y*z + x*z) ≤ (y*(1 + x^2 + y^2 + z^2) + 2*(x^3 + z^3 + x*y*z + x*z))^2 / 4   :=  by sorry
-theorem lean_workbook_plus_4774 : ∀ b c : ℝ, ∀ α : ℝ, (α ≠ 0 ∧ α ≠ π) → 16 * (1 / 2 * b * c * Real.sin α) ^ 2 = 4 * b ^ 2 * c ^ 2 * (Real.sin α) ^ 2   :=  by sorry
-theorem lean_workbook_plus_7344 {m : ℤ} (f : ℤ → ℤ) (hf: f = fun n => if n % 2 = 0 then n-1 else n+1) : ∀ n ≤ 2*m, f n = if n % 2 = 0 then n-1 else n+1   :=  by sorry
-theorem lean_workbook_plus_46312 (n : ℕ) (hn : n = 1009) : n + 1 = 1010   :=  by sorry
-theorem lean_workbook_plus_58582 (x y z: ℝ) :  x * x + y * y + z * z ≥ x * y + y * z + z * x   :=  by sorry
-theorem lean_workbook_plus_62474  (x : ℕ → ℕ)
-  (h₀ : x 0 = 1)
-  (h₁ : x 1 = 2)
-  (h₂ : x 2 = 3)
-  (h₃ : x 3 = 2)
-  (h₄ : x 4 = 1)
-  (h₅ : ∀ n, x (n + 5) = x n) :
-  x 2014 = 1   :=  by sorry
-theorem lean_workbook_plus_82692 (a : ℝ) (ha : 0 < a) : (a^4 + 9) / (10*a) > 4/5   :=  by sorry
-theorem lean_workbook_plus_35481 (a b c : ℕ) : a + b = c ∧ a = 3 ∧ b = 6 → c = 9   :=  by sorry
-theorem lean_workbook_plus_69171 (a b c : ℕ) (hab : a ≠ 1 ∧ b ≠ 1 ∧ c ≠ 1) (hgcd : Nat.gcd a b = 1 ∧ Nat.gcd b c = 1 ∧ Nat.gcd c a = 1) (hdiv : a ∣ 2 ^ b + 1 ∧ b ∣ 2 ^ c + 1 ∧ c ∣ 2 ^ a + 1) : a ∣ 2 ^ b + 1 ∧ b ∣ 2 ^ c + 1 ∧ c ∣ 2 ^ a + 1   :=  by sorry
-theorem lean_workbook_plus_73296 (a b c : ℝ) : 7 * (a ^ 6 + b ^ 6 + c ^ 6) + 21 * a ^ 2 * b ^ 2 * c ^ 2 ≥ 14 * (a ^ 4 * b * c + b ^ 4 * c * a + c ^ 4 * a * b)   :=  by sorry
-theorem lean_workbook_plus_21372 : ∀ x y : ℝ, cos x + cos y = 2 * cos ((x + y) / 2) * cos ((x - y) / 2)   :=  by sorry
-theorem lean_workbook_plus_80344 (a b : ℝ) : 2 * sin a * sin b = cos (a - b) - cos (a + b)   :=  by sorry
-theorem lean_workbook_plus_72192 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 ≥ 4 * Real.sqrt (a * b * c)) : a + b + c ≥ 2 * Real.sqrt (a * b * c)   :=  by sorry
-theorem lean_workbook_plus_3071 (a b : ℝ) : a = 2 ∧ b = 2 → (a^3*b^3+1)/(a^3+b^3) = 65/16   :=  by sorry
-theorem lean_workbook_plus_27569 (G : Type*) [Group G] (n : ℕ) (M : ℕ → Set G) (hM : ∀ d : ℕ, M d = {x : G | orderOf x = d}) : ∀ d1 d2 : ℕ, d1 ≠ d2 → M d1 ∩ M d2 = ∅   :=  by sorry
-theorem lean_workbook_plus_20381 (x : ℝ) : tan (π / 2 + π / 4) = -1   :=  by sorry
-theorem lean_workbook_plus_48236 : ∀ n : ℕ, ∀ z : Fin n → ℂ, ∑ i, ‖z i‖ ≥ ‖∑ i, z i‖   :=  by sorry
-theorem lean_workbook_plus_15478 : ∀ x : ℝ, 1 > x ∧ x > 0 → ↑⌊x⌋ = 0 ∧ 0 ≤ √x ∧ √x < 1   :=  by sorry
-theorem lean_workbook_plus_18936 : 1 = 1 ∧ 1 = 1 ∧ Nat.gcd 1 1 = 1   :=  by sorry
-theorem lean_workbook_plus_75523 (p q α β θ : ℝ) (hp : p = Real.cos (θ - α)) (hq : q = Real.sin (θ + β)) : p^2 + q^2 - 2 * p * q * Real.sin (α + β) = Real.cos (α + β)^2   :=  by sorry
-theorem lean_workbook_plus_6524 (a b : ℝ) (h1 : 3 ≤ a ^ 2 + b ^ 2 + a * b) (h2 : a ^ 2 + b ^ 2 + a * b ≤ 6) : 2 ≤ a ^ 4 + b ^ 4 ∧ a ^ 4 + b ^ 4 ≤ 72   :=  by sorry
-theorem lean_workbook_plus_48003 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (h : x*y*z = 1) : (2 / (1 + x))^(1 / 3) + (2 / (1 + y))^(1 / 3) + (2 / (1 + z))^(1 / 3) ≤ 3   :=  by sorry
-theorem lean_workbook_plus_78452 (n : ℕ) (hn : 0 < n) (A : Finset ℕ) (hA : A.card = n + 1) (hA2 : ∀ a ∈ A, 0 < a ∧ a ≤ 2 * n) : ∃ a b, a ∈ A ∧ b ∈ A ∧ a ∣ b   :=  by sorry
-theorem lean_workbook_plus_40 :
-  ∀ θ : ℝ, 0 < θ ∧ θ < Real.pi / 4 → Real.cos θ > Real.sin θ   :=  by sorry
-theorem lean_workbook_plus_30928 (f : ℝ → ℝ) (hf: f'' = λ x => 6 * x) : f'' = λ x => 6 * x   :=  by sorry
-theorem lean_workbook_plus_1663 (x y z : ℝ) : (x + y + z) ^ 2 ≥ 3 * (x*y + y*z + z*x)   :=  by sorry
-theorem lean_workbook_plus_67146 (n : ℤ) : ¬ 3 ∣ n → ¬ 3 ∣ n^2   :=  by sorry
-theorem lean_workbook_plus_57996 (x y z : ℝ) : 9 * x ^ 2 + 25 * y ^ 2 + 225 * z ^ 2 ≥ 15 * (x * y + 3 * x * z + 5 * y * z)   :=  by sorry
-theorem lean_workbook_plus_16331 (f : ℝ → ℝ) (g : ℝ → ℝ) (h₁ : ∀ x, f x = exp (g x)) (h₂ : ∀ x y, g (x + y) = g x + g y) : ∀ x y, f (x + y) = f x * f y   :=  by sorry
-theorem lean_workbook_plus_51755 :
-  ((1 / 2) / 2) = (1 / 4)   :=  by sorry
-theorem lean_workbook_plus_72668 (a b : ℝ) (h : (2 * a + b) * (2 * b + a) = 9) : a * b ≤ 1   :=  by sorry
-theorem lean_workbook_plus_8288 (a : ℝ) (ha : 0 < a) : (a^2 / (a + 1)) ≥ (3/4 * a - 1/4)   :=  by sorry
-theorem lean_workbook_plus_38969 (x y z t : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (ht : 0 < t) : (x + y + z + t) ^ 3 ≥ 16 * (x*y*z + y*z*t + z*t*x + t*x*y)   :=  by sorry
-theorem lean_workbook_plus_76993 (n : ℕ) : ∃ m, (Nat.digits 10 m).all (Odd ·) ∧ 5^n ∣ m   :=  by sorry
-theorem lean_workbook_plus_77591 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 6) : a / (b^3 + 1)^(1/2) + b / (c^3 + 1)^(1/2) + c / (a^3 + 1)^(1/2) ≥ 2   :=  by sorry
-theorem lean_workbook_plus_11897 : (2^3)^2 = 64   :=  by sorry
-theorem lean_workbook_plus_42966 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : (a + b + c + Real.sqrt (a * b * c)) = 1 → (a + b + c) ^ 2 + 2 * Real.sqrt (a * b * c) * (a + b + c) ≥ 4 * (a * b + b * c + a * c)   :=  by sorry
-theorem lean_workbook_plus_47499 (a b : ℤ) : a^7 + b^7 = (a + b)*(a^6 - a^5*b + a^4*b^2 - a^3*b^3 + a^2*b^4 - a*b^5 + b^6)   :=  by sorry
-theorem lean_workbook_plus_63456 (a b c : ℝ) (h₁ : a + b + c = 0) (h₂ : a ^ 3 + b ^ 3 + c ^ 3 = 3 * a * b * c) : (a ^ 5 + b ^ 5 + c ^ 5) / 5 = (a ^ 3 + b ^ 3 + c ^ 3) / 3 * (a ^ 2 + b ^ 2 + c ^ 2) / 2   :=  by sorry
-theorem lean_workbook_plus_79770  (a b c : ℝ)
+theorem lean_workbook_plus_40320 (a b : ℝ) (hab : 1 ≤ a ∧ 1 ≤ b) (h : a + 1 / a ^ 2 ≥ b - 2 / b ^ 2) : a ≥ b / 2 - 1 / b ^ 2   :=  by sorry
+theorem lean_workbook_plus_40344 (a b c : ℝ) (hab : a + b + c = 0) (hbc : abs a + abs b + abs c = 1) :
+  a + b / 2 + c / 3 ≤ 1 / 3   :=  by sorry
+theorem lean_workbook_plus_40366 (a b c d : ℝ) : (a^2 + b^2) * (c^2 + d^2) ≥ (a * c + b * d)^2   :=  by sorry
+theorem lean_workbook_plus_40370 (x y : ℝ) (hx : 0 ≤ x) (hy : 0 ≤ y) (h : x + y ≤ 1) :
+  12 * x * y ≤ 4 * x * (1 - y) + 9 * y * (1 - x)   :=  by sorry
+theorem lean_workbook_plus_40377 {a b : ℤ} {p : ℕ} (hp : p.Prime) (h : (p : ℤ) ∣ (a * b)) : (p : ℤ) ∣ a ∨ (p : ℤ) ∣ b   :=  by sorry
+theorem lean_workbook_plus_40378 (t : ℂ) : (1 - t)^5 = t ↔ -t^5 + 5 * t^4 - 10 * t^3 + 10 * t^2 - 6 * t + 1 = 0   :=  by sorry
+theorem lean_workbook_plus_40380 (x : ℝ) : 360 * (x + 4) = 400 * x + 640 ↔ x = 20   :=  by sorry
+theorem lean_workbook_plus_40381  (p i j : ℝ)
+  (h₀ : 0 < p)
+  (h₁ : 0 < i)
+  (h₂ : 0 < j) :
+  ((p * (1 + i / 100) * (1 + j / 100) - p) / p) * 100 = i + j + (i * j / 100)   :=  by sorry
+theorem lean_workbook_plus_40391 (x : ℝ) (hx: 0 < x ∧ x < 4) : (4 - x) / x + x / (4 - x) ≥ 62 / 9 - 32 * x / 9   :=  by sorry
+theorem lean_workbook_plus_40393 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c * (a + b + c) = 3) : a * b * c + (2 / 3) * (a + b + c) ≥ (18 * (1 / (a + 1) + 1 / (b + 1) + 1 / (c + 1)))^(1 / 3)   :=  by sorry
+theorem lean_workbook_plus_40394 {a b c : ℝ} (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) (hab : a + b ≥ c) (hbc : b + c ≥ a) (hca : a + c ≥ b) : a * (b - c) ^ 2 + b * (c - a) ^ 2 + c * (a - b) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_40405 (n : ℕ) (hn : 6 ≤ n) : (n + 3)^3 ≤ 3^n   :=  by sorry
+theorem lean_workbook_plus_40413 (x : ℝ) : x^6 + x^5 + 6 * x^4 + 6 * x^3 + 7 * x^2 + 4 * x + 7 > 0   :=  by sorry
+theorem lean_workbook_plus_40424 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : (a^2 / (a^2 + b * c) + b^2 / (b^2 + c * d) + c^2 / (c^2 + d * a) + d^2 / (d^2 + a * b) ≤ 3)   :=  by sorry
+theorem lean_workbook_plus_40426 (x y z : ℝ) (hx : 0 < x ∧ 0 < y ∧ 0 < z) (h : x * y + y * z + z * x = 1) :
+  x * (y^2 + z^2) * (x^2 - y * z) + y * (z^2 + x^2) * (y^2 - z * x) + z * (x^2 + y^2) * (z^2 - x * y) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_40434  (a b y : ℕ)
+  (h₀ : 0 < a ∧ 0 < b ∧ 0 < y)
+  (h₁ : b ≠ 1)
+  (h₂ : ∀ n : ℕ, 1 ≤ n → (a + y^n) % (b^n) = 0) :
+  ∃ p q : ℕ, p < q ∧ (q - p) % (Nat.totient (b^p)) = 0   :=  by sorry
+theorem lean_workbook_plus_40440 (x y : ℤ) (hx : x^2 = 1) (hy : y^2 = 1) : (x * y)^2 = 1   :=  by sorry
+theorem lean_workbook_plus_40480 (a b : ℝ) (h : a > b) : ∃ n : ℕ, a > b + 1 / n   :=  by sorry
+theorem lean_workbook_plus_40486 (a b c : ℝ) (h : a * b + b * c + c * a = 3) : 1 / (a ^ 2 + 2) + 1 / (b ^ 2 + 2) + 1 / (c ^ 2 + 2) ≤ 1   :=  by sorry
+theorem lean_workbook_plus_40488 (n : ℕ) (a : ℕ → ℤ) (ha : ∀ m > n + 1, a m ≡ -1 [ZMOD 8]) : ∀ m > n + 1, a m ≡ -1 [ZMOD 8] ∨ a m ≡ -2 [ZMOD 8]   :=  by sorry
+theorem lean_workbook_plus_40494 (a : ℕ → ℝ) (k : ℕ) (h₁ : 0 < k) (h₂ : ∀ n, 3 * k + 11 ≤ n → |a n - 2| < 1 / 3 * (2 / 3)^k) : ∀ n, 3 * k + 11 ≤ n → |a n - 2| < 1 / 3 * (2 / 3)^k   :=  by sorry
+theorem lean_workbook_plus_40511 (a b : ℝ) (n : ℕ) (ha : 0 < a) (hb : 0 < b) : (1 / (n * a + b) + 1 / (a + n * b)) ≤ (1 / (n + 1) * (1 / a + 1 / b))   :=  by sorry
+theorem lean_workbook_plus_40519 (x y z : ℝ) : x^2 * y^2 + y^2 * z^2 + z^2 * x^2 ≥ x^2 * y * z + x * y^2 * z + x * y * z^2   :=  by sorry
+theorem lean_workbook_plus_40528 : ∀ {a x y : ℤ} (h₁ : a ∣ x) (h₂ : a ∣ y), a ∣ x + y ∧ a ∣ x - y ∧ ∀ p q : ℤ, a ∣ p * x + q * y   :=  by sorry
+theorem lean_workbook_plus_40536 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) : (a^2 + b + 3 / 4) * (b^2 + a + 3 / 4) ≥ (2 * a + 1 / 2) * (2 * b + 1 / 2)   :=  by sorry
+theorem lean_workbook_plus_40537 : ∀ n : ℕ, n > 2 → 8 ∣ ((n:ℝ)^(1/3) + (n + 2:ℝ)^(1/3))^3 + 1   :=  by sorry
+theorem lean_workbook_plus_40565 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : 1 / (a + b) + 1 / (b + c) + 1 / (c + a) = 1 / 2) : a + b + c + 2 ≥ 11 / 27 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_40573 (p : ℕ) (hp : 10 < p) (hp' : Nat.Prime p) : ∃ m n : ℕ, m + n < p ∧ (p ∣ (5^m * 7^n - 1))   :=  by sorry
+theorem lean_workbook_plus_40592 (x : ℝ) (n : ℕ) (f : ℝ → ℝ) (hf: 0 < x ∧ x < 1) (h: ∀ n : ℕ, f x >= 1 - x ^ n): f x >= 1   :=  by sorry
+theorem lean_workbook_plus_40593 (x y a b : ℝ) (hx : 0 < x) (hy : 0 < y) (ha : 0 < a) (hb : 0 < b) : (x ^ 2 / a + y ^ 2 / b) ≥ (x + y) ^ 2 / (a + b)   :=  by sorry
+theorem lean_workbook_plus_40596 : ∀ x : ℝ, (x = 2*n*π + π/3 ∨ x = 2*m*π + 2*π/3) ↔ x = 2*n*π + π/3 ∨ x = 2*m*π + 2*π/3   :=  by sorry
+theorem lean_workbook_plus_40598 {R r s : ℝ} (hR : R ≥ 0) (hr : r ≥ 0) (hs : s ≥ 0) (hab : R + r = s) : 4 * R ^ 2 + 4 * R * r + 3 * r ^ 2 ≥ s ^ 2   :=  by sorry
+theorem lean_workbook_plus_40606 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : 16 / (1 + a * b * c * d) ≤ 8 / Real.sqrt (a * b * c * d)   :=  by sorry
+theorem lean_workbook_plus_40615 : ∀ n, (∏ k in (Finset.range (n + 1)).filter (· ≠ 1), (k - 1) * (k ^ 2 + k) / k ^ 3) = (∏ k in (Finset.range (n + 1)).filter (· ≠ 1), (k ^ 2 - 1) / k ^ 2)   :=  by sorry
+theorem lean_workbook_plus_40624 (R : Type*) [CommRing R]
+  (A B : Matrix (Fin 2) (Fin 2) R) :
+  A * B ^ 2 - A * B * A = 0 ↔ A * B ^ 2 = A * B * A   :=  by sorry
+theorem lean_workbook_plus_40625 (a b : ℝ) (α : ℝ) (h₁ : a = Real.cos α) (h₂ : b = Real.sin α / Real.sqrt 3) : a^2 + 3 * b^2 = 1   :=  by sorry
+theorem lean_workbook_plus_40628 (X : Type*) [Countable X] (A : Set X) : Countable A   :=  by sorry
+theorem lean_workbook_plus_40631 (x : ℝ) : 5 * x ^ 4 - 5 * x ^ 2 + 120 * x = 0 ↔ x = 0 ∨ x = -3   :=  by sorry
+theorem lean_workbook_plus_40632 (x : ℝ) (h : 4*x + 2*(x-2) = 360) : x = 182/3   :=  by sorry
+theorem lean_workbook_plus_40634 : 5888 + 368 + 3 + 253 = 6512   :=  by sorry
+theorem lean_workbook_plus_40638 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / c + c / b) ≥ 4 * a / (a + b)   :=  by sorry
+theorem lean_workbook_plus_40653 (ha : a > 0) : (a - 1) ^ 2 * (9 * a ^ 6 - 12 * a ^ 5 - 5 * a ^ 4 + 2 * a ^ 3 + 9 * a ^ 2 + 6 * a + 3) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_40675 :
+  9 / 2 = 9 / 2   :=  by sorry
+theorem lean_workbook_plus_40685 (a p : ℝ) (h₁ : a = 2 - p) (h₂ : 9 = 2 + p) : a = -5   :=  by sorry
+theorem lean_workbook_plus_40691 (h : 7 < 14) : (Nat.choose 7 2 : ℚ) / (Nat.choose 14 2 : ℚ) = 3 / 13   :=  by sorry
+theorem lean_workbook_plus_40695 (x : ℝ) (h : x > 0) : (x + 1) * (x + 2) * (x + 5) ≥ 36 * x   :=  by sorry
+theorem lean_workbook_plus_40699 (a b c : ℝ) (h₁ : a ≥ b ∧ b ≥ c ∧ c > 0) : (a - b + c) * (1 / a - 1 / b + 1 / c) ≥ 1   :=  by sorry
+theorem lean_workbook_plus_40700 (a b c : ℝ) : a ^ 2 * b * c + b ^ 2 * c * a + c ^ 2 * a * b ≤ a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2   :=  by sorry
+theorem lean_workbook_plus_40703 (x y z : ℚ) (hx : x = 5 / 6) (hy : y = 4 / 5) (hz : z = 3 / 4) : x * y * z = 1 / 2   :=  by sorry
+theorem lean_workbook_plus_40716  (a b : ℝ) :
+  2 * a^2 + 2 * b^2 ≥ 4 * a * b   :=  by sorry
+theorem lean_workbook_plus_40737 (x y : ℤ) : x^4 + 4*y^4 = (x^2 - 2*x*y + 2*y^2) * (x^2 + 2*x*y + 2*y^2)   :=  by sorry
+theorem lean_workbook_plus_40739 (a b c d : ℝ) (h : a + b + c + d = 1) : a * b + a * c + a * d + b * c + b * d + c * d ≤ 3 / 8   :=  by sorry
+theorem lean_workbook_plus_40759 (a b c : ℝ) : (a + b) ^ 2 * (a + c) ^ 2 ≥ 4 * a * (b + c) * (a ^ 2 + b * c)   :=  by sorry
+theorem lean_workbook_plus_40762  (a b c d e : ℝ)
+  (f r : ℝ → ℝ)
+  (h₀ : ∀ x, r x = f x)
+  (h₁ : r a = a^5)
+  (h₂ : r b = b^5)
+  (h₃ : r c = c^5)
+  (h₄ : r d = d^5)
+  (h₅ : r e = e^5)
+  (h₆ : a ≠ b)
+  (h₇ : a ≠ c)
+  (h₈ : a ≠ d)
+  (h₉ : a ≠ e)
+  (h₁₀ : b ≠ c)
+  (h₁₁ : b ≠ d)
+  (h₁₂ : b ≠ e)
+  (h₁₃ : c ≠ d)
+  (h₁₄ : c ≠ e)
+  (h₁₅ : d ≠ e) :
+  r a + r b + r c + r d + r e = a^5 + b^5 + c^5 + d^5 + e^5   :=  by sorry
+theorem lean_workbook_plus_40764 (b c : ℝ) :
+  32 * b^4 + 35 * b^2 * c^2 - 44 * b^3 * c - 18 * b * c^3 + 27 * c^4 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_40768  (x : ℝ)
+  (f : ℝ → ℝ)
+  (h₀ : x^2 - x - 1 ≠ 0)
+  (h₁ : x^2 - x + 1 ≠ 0)
+  (h₂ : f x = (1 - x) * (1 + x))
+  (h₃ : 0 < x) :
+  f x = 1 - x^2   :=  by sorry
+theorem lean_workbook_plus_40785 (a b : ℝ) : Real.sqrt (a ^ 2 + a * b + b ^ 2) ≥ Real.sqrt 3 / 2 * (a + b)   :=  by sorry
+theorem lean_workbook_plus_40790 (a b c: ℝ) : (a ^ 2 + b ^ 2 + c ^ 2) ^ 2 >= 3 * (a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2)   :=  by sorry
+theorem lean_workbook_plus_40803 (a b c : ℝ) :
+  2 * (a^2 + b^2) * (b^2 + c^2) * (c^2 + a^2) ≥ ((a + b) * (b + c) * (c + a) - 4 * a * b * c)^2   :=  by sorry
+theorem lean_workbook_plus_40812 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a / b + b / c + c / a = a^2 / (a * b) + b^2 / (b * c) + c^2 / (c * a) ∧ a / b + b / c + c / a ≥ (a + b + c)^2 / (a * b + b * c + c * a)   :=  by sorry
+theorem lean_workbook_plus_40829 (n j : ℕ) (h₁ : 2 * j + 1 > n) : choose n (2 * j + 1) = 0   :=  by sorry
+theorem lean_workbook_plus_40830 (n : ℕ) : ∑ k in Finset.range (n+1), (n.choose k) * (10:ℕ)^(n-k) = 11^n   :=  by sorry
+theorem lean_workbook_plus_40840 (x : ℝ) (h : x ≥ 1) : x^3 - 5 * x^2 + 8 * x - 4 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_40842 (a b : ℤ) (h₁ : a = 15) (h₂ : b = -9) : a^2 + 2 * a * b + b^2 = 36   :=  by sorry
+theorem lean_workbook_plus_40860 (x y z : ℝ) (k : ℕ) (h₁ : 0 < k ∧ k ≤ 25) (h₂ : x = Real.tan (k * π / 26)) (h₃ : y = Real.tan (3 * k * π / 26)) (h₄ : z = Real.tan (9 * k * π / 26)) : (x, y, z) = (Real.tan (k * π / 26), Real.tan (3 * k * π / 26), Real.tan (9 * k * π / 26))   :=  by sorry
+theorem lean_workbook_plus_40868 (x y z : ℝ) : 5.3 + y^2 * x^2 + y^2 * z^2 + z^2 * x^2 ≥ 2 * (x * y + z * x + y * z)   :=  by sorry
+theorem lean_workbook_plus_40877 :
+  ∑ k in (Finset.Icc 2 20), (1 / k - 1 / (k + 1)) = 1 / 2 - 1 / 21   :=  by sorry
+theorem lean_workbook_plus_40882 (x y : ℝ) : (2*x + y ≤ 10 ∧ 5*x + 2*y ≥ 20 ∧ -x + 2*y ≥ 0 ∧ x >= 0 ∧ y >= 0) → x + 3*y >= 7   :=  by sorry
+theorem lean_workbook_plus_40887 (A B C : Finset ℕ) : A = {1, 2, 3} ∧ B = {2, 4, 6} ∧ C = {1, 3, 5} → (A ∪ B) ∩ C = {1, 3}   :=  by sorry
+theorem lean_workbook_plus_40888 (f : ℕ → ℕ) (n : ℕ) (h₁ : f 1 = 1) (h₂ : ∀ n, f (n + 1) = f n + 1) : f n = f 1 + n - 1   :=  by sorry
+theorem lean_workbook_plus_40889 (x : ℝ) : x - 1 ≤ ⌊x⌋ ∧ ⌊x⌋ ≤ x   :=  by sorry
+theorem lean_workbook_plus_40913 (a b c : ℝ) (h : ∀ x ∈ Set.Icc (-1) 1, abs (a * x ^ 2 + b * x + c) ≤ 1) : abs a + abs b + abs c ≤ 3   :=  by sorry
+theorem lean_workbook_plus_40936 (a b c : ℝ) : (a * b * c * (b * c / a + 2) * (c * a / b + 2) * (a * b / c + 2))^(1 / 3) ≤ 1 + (2 * (a ^ 2 + b ^ 2 + c ^ 2)) / 3   :=  by sorry
+theorem lean_workbook_plus_40944 (x y : ℝ) : Continuous (fun p : ℝ × ℝ => sin (p.1^2 + p.2^2))   :=  by sorry
+theorem lean_workbook_plus_40945 (a b : ℝ) (h : abs (a - b) < abs b / 2) : abs a > abs b / 2   :=  by sorry
+theorem lean_workbook_plus_40946 (a b c : ℝ) (h : a > 0 ∧ b > 0 ∧ c > 0 ∧ a * b * c = 1): a^4 + b^4 + c^4 ≥ a + b + c   :=  by sorry
+theorem lean_workbook_plus_40957 (a b c : ℝ) : a^8 + b^8 + c^8 ≥ a^4 * b^4 + b^4 * c^4 + c^4 * a^4   :=  by sorry
+theorem lean_workbook_plus_40961 (a : ℕ → ℤ) (a0 : a 0 = 5) (a1 : a 1 = 35) (a_rec : ∀ n, a (n + 2) = 8 * a (n + 1) - a n) : ∃ f : ℕ → ℤ, ∀ n, a n = f n   :=  by sorry
+theorem lean_workbook_plus_40973 (x : ℝ) : x^2 - x * (sin x + cos x) + sin x * cos x = (x - sin x) * (x - cos x)   :=  by sorry
+theorem lean_workbook_plus_40974 : ∑ i in Finset.Icc (1 : ℕ) 64, (1 : ℝ) / i < 6.4   :=  by sorry
+theorem lean_workbook_plus_40975 (a b c : ℝ) (h1 : a + b ≥ 0) (h2 : b + c ≥ 0) (h3 : c + a ≥ 0) : a + b + c ≥ (|a| + |b| + |c|) / 3   :=  by sorry
+theorem lean_workbook_plus_40978 : ∀ a b : ℤ, b^4+4*a^4 = (2*a^2-2*a*b+b^2) * (2*a^2+2*a*b+b^2)   :=  by sorry
+theorem lean_workbook_plus_40979 :
+  (3 * 5 * 4 + 3 * 5 * ( choose 4 2)) / (3^5) = 50 / 81   :=  by sorry
+theorem lean_workbook_plus_40989 (a : ℝ) (b : ℝ) (N : ℕ) : ∑ k in Finset.Icc 1 N, (k^a * b^k) = (∑ k in Finset.Icc 1 N, (k^a * b^k))   :=  by sorry
+theorem lean_workbook_plus_40995 (x y z : ℝ) : (4 * (x + y + z) - x * y * z) ^ 2 + 4 * (x * y + y * z + z * x - 4) ^ 2 ≥ 8   :=  by sorry
+theorem lean_workbook_plus_41037 (a b c : ℝ) : a^2 * b + b^2 * c + c^2 * a ≤ Real.sqrt ((a^2 + b^2 + c^2)^3 / 3)   :=  by sorry
+theorem lean_workbook_plus_41048 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (4 / 3 * (a / (b + c) + b / (a + c) + c / (a + b))) + (abc / (a + b) / (b + c) / (a + c))^(1 / 3) ≥ 5 / 2   :=  by sorry
+theorem lean_workbook_plus_41069  (a : ℕ → ℚ)
+  (h₀ : a 0 = 0)
+  (h₁ : a 1 = 1)
+  (h₂ : ∀ n, a (n + 2) = 2 * a (n + 1) + 3 * a n) :
+  a 7 = 547   :=  by sorry
+theorem lean_workbook_plus_41089 (z : ℂ) (h : ‖z - 1‖ < ‖z + 3‖) : z.re > -1   :=  by sorry
+theorem lean_workbook_plus_41094 (x y z : ℝ) : (Real.sqrt ((x ^ 2 + y ^ 2) / 2) ≥ (x + y) / 2 ∧ Real.sqrt ((y ^ 2 + z ^ 2) / 2) ≥ (y + z) / 2 ∧ Real.sqrt ((z ^ 2 + x ^ 2) / 2) ≥ (z + x) / 2)   :=  by sorry
+theorem lean_workbook_plus_41102 (f : ℝ → ℝ) (hf: f x ^ 2 = x ^ 4) : f x = x ^ 2 ∨ f x = -x ^ 2   :=  by sorry
+theorem lean_workbook_plus_41116 (f : ℝ → ℝ) : 3 * x^3 + 8 * x^2 + 16 * x + 8 = (3 * x + 2) * (x^2 + 2 * x + 4)   :=  by sorry
+theorem lean_workbook_plus_41117 (m n : ℤ) : (2*m+1)^2 - (2*n+1)^2 ≡ 0 [ZMOD 8]   :=  by sorry
+theorem lean_workbook_plus_41127 : Function.Injective (fun x : ℝ => 2 * x + 1)   :=  by sorry
+theorem lean_workbook_plus_41130 (n : ℕ) : Real.sqrt (n * (n + 2)) < n + 1   :=  by sorry
+theorem lean_workbook_plus_41132 (n : ℕ) : ∑ m in Finset.range (500 + 1), (-1 : ℤ)^m * choose 1000 (2*m) = 2^500   :=  by sorry
+theorem lean_workbook_plus_41144 : 8 = 2 ^ 3   :=  by sorry
+theorem lean_workbook_plus_41146 (p : ℝ → ℝ) (hp : p = (10^8 - 2009) / 10^9) : p (1/10) = (10^8 - 2009) / 10^9   :=  by sorry
+theorem lean_workbook_plus_41163 : ∀ t : ℝ, t ≤ 1 → 1 / (1 + t ^ 2) ≤ 27 * (2 - t) / 50   :=  by sorry
+theorem lean_workbook_plus_41188 (x : ℝ) (hx : x = 1) : ∑' i : ℕ, (1/2)^i = 1   :=  by sorry
+theorem lean_workbook_plus_41189 (a b : ℕ) : a = 2 ^ 15 + 3 ^ 15 ∧ b = 2 ^ 25 + 3 ^ 25 → a.gcd b = 275   :=  by sorry
+theorem lean_workbook_plus_41191 :
+  1584 = 2^4 * 3^2 * 11   :=  by sorry
+theorem lean_workbook_plus_41192 (x y z : ℝ) : x ^ 4 + y ^ 4 + z ^ 4 ≥ x * y * z * (x + y + z)   :=  by sorry
+theorem lean_workbook_plus_41193 (x : ℝ) : sin x ^ 2 = sin (sin x) ∨ sin x ^ 2 = (sin x)^2   :=  by sorry
+theorem lean_workbook_plus_41194 : ∑ k in Finset.range 6, choose 5 k = 32   :=  by sorry
+theorem lean_workbook_plus_41195 (n m : ℕ) : Nat.gcd (Nat.fib n) (Nat.fib m) = Nat.fib (Nat.gcd n m)   :=  by sorry
+theorem lean_workbook_plus_41239 (x y: ℝ) : (x + y) ^ 2 ≥ 4 * x * y   :=  by sorry
+theorem lean_workbook_plus_41243 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) : 1 / (1 - a * b) + 1 / (1 - b * c) + 1 / (1 - c * a) ≤ 9 / 2   :=  by sorry
+theorem lean_workbook_plus_41249 {a b c : ℝ} :
+  a^4 + b^4 + c^4 + 3 * (b^2 * c^2 + c^2 * a^2 + a^2 * b^2) -
+    2 * (b * c * (b^2 + c^2) + c * a * (c^2 + a^2) + a * b * (a^2 + b^2)) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41254 (f : ℝ → ℝ) (hf: f x = if x ≥ 0 then x else 0) : f x = if x ≥ 0 then x else 0   :=  by sorry
+theorem lean_workbook_plus_41266 (x y z : ℝ) (hx : x ≥ 0) (hy : y ≥ 0) (hz : z ≥ 0) : x^3 + y^3 + 2 * z^3 ≥ y * z * (y + z) + x * z * (z + x)   :=  by sorry
+theorem lean_workbook_plus_41280 : 2^36 ≡ 736 [MOD 1000]   :=  by sorry
+theorem lean_workbook_plus_41286 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 + a * b * c = 4) : a * b + b * c + c * a ≤ a * b * c + 2   :=  by sorry
+theorem lean_workbook_plus_41288 (a b c : ℝ) (ha : 3 ≤ a ∧ a ≤ 4) (hb : 3 ≤ b ∧ b ≤ 4) (hc : 3 ≤ c ∧ c ≤ 4) : (a * (a ^ 2 + b ^ 2 - c ^ 2)) ^ (1 / 3) + (b * (b ^ 2 + c ^ 2 - a ^ 2)) ^ (1 / 3) + (c * (c ^ 2 + a ^ 2 - b ^ 2)) ^ (1 / 3) ≤ a + b + c   :=  by sorry
+theorem lean_workbook_plus_41292 :
+  ∀ θ : ℝ, θ ≠ 0 → θ ≠ π → sin θ = 2 * sin (θ / 2) * cos (θ / 2)   :=  by sorry
+theorem lean_workbook_plus_41314 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hab : a^3 + b^2 ≥ a^4 + b^3) : a^3 + b^3 ≤ 4   :=  by sorry
+theorem lean_workbook_plus_41326 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b + c = 3) : a + b + c ≥ a^(2/3) * b^(2/3) + b^(2/3) * c^(2/3) + c^(2/3) * a^(2/3)   :=  by sorry
+theorem lean_workbook_plus_41350 : ∀ a b c : ℝ, a * b * (a - c) * (c - b) + b * c * (b - a) * (a - c) + c * a * (c - b) * (b - a) ≤ 0   :=  by sorry
+theorem lean_workbook_plus_41351 : ∀ a b c : ℝ, (a > 0 ∧ b > 0 ∧ c > 0 → a / (b + c) + b / (a + c) + c / (a + b) ≥ 3 / 2)   :=  by sorry
+theorem lean_workbook_plus_41352  (x : ℝ)
+  (h₀ : 0 < x)
+  (h₁ : 15 / 4 = 60 / x) :
+  x = 16   :=  by sorry
+theorem lean_workbook_plus_41353 (x y : ℤ) : (x - y) ^ 2 + 2 * (x - y) + 1 = (x - y + 1) ^ 2   :=  by sorry
+theorem lean_workbook_plus_41357 (x : ℝ) : tan x = sin x / cos x   :=  by sorry
+theorem lean_workbook_plus_41360 {a b c : ℤ} (h : a + b + c = 0) :
+    a^3 * b + b^3 * c + c^3 * a = -(a^2 + a * b + b^2)^2   :=  by sorry
+theorem lean_workbook_plus_41364 (a b : ℝ) : 2 * (a ^ 4 + a ^ 2 * b ^ 2 + b ^ 4) ≥ 3 * (a ^ 3 * b + a * b ^ 3)   :=  by sorry
+theorem lean_workbook_plus_41395 (x y : ℝ) : (3 / 2) * ((x + (2 / 3)) ^ 2 + (y + (2 / 3)) ^ 2 + (x + y + (4 / 3)) ^ 2) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41407 (a b c : ℝ) (ha : 0 ≤ a ∧ a ≤ 1) (hb : 0 ≤ b ∧ b ≤ 1) (hc : 0 ≤ c ∧ c ≤ 1): 3 * (a + b + c) - a * b - b * c - c * a ≤ 6   :=  by sorry
+theorem lean_workbook_plus_41409 (x y : ℝ) (hx : 1 ≤ x) (hy : 1 ≤ y) : (x - 1/x) + (y - 1/y) ≤ (x*y - 1/(x*y))   :=  by sorry
+theorem lean_workbook_plus_41424 (a b : ℝ) (hab : a * b ≥ 1) : a^2 + b^2 ≥ a + b   :=  by sorry
+theorem lean_workbook_plus_41428 (n : ℕ) (x : ℝ) (hx : 0 ≤ x ∧ x ≤ 1) :
+  Real.log (1 + n * x / (n + 1)) ≤ Real.log (1 + n / (n + 1))   :=  by sorry
+theorem lean_workbook_plus_41484  (a b c : ℝ)
+  (h₀ : a + b + c = -3)
+  (h₁ : a * b * c = 1)
+  (h₂ : q = a^2 * b * c + a * b^2 * c + a * b * c^2) :
+  q = -3   :=  by sorry
+theorem lean_workbook_plus_41487 : ∃ x : ℕ → ℝ, x 2 = 0 ∧ x 3 = 0 ∧ x 2015 = 0 ∧ x 1 = 1   :=  by sorry
+theorem lean_workbook_plus_41493 {x y z : ℝ} (hx : x + y + z = 5) (hy : x * y + y * z + z * x = 8) : 1 ≤ x ∧ x ≤ 7 / 3 ∧ 1 ≤ y ∧ y ≤ 7 / 3 ∧ 1 ≤ z ∧ z ≤ 7 / 3   :=  by sorry
+theorem lean_workbook_plus_41501 (a b : ℝ) : a^4 + b^4 + 2 ≥ 4 * a * b   :=  by sorry
+theorem lean_workbook_plus_41503 (a b x y : ℝ) (h₀ : 0 < y) (h₁ : y ≤ 3 * x) :  x * (a^4 + b^4) + 2 * y * a^2 * b^2 ≥ (x + y) * (a^3 * b + a * b^3)   :=  by sorry
+theorem lean_workbook_plus_41515 (n : ℕ) : ∑ i in Finset.range n, (2 * i + 1) = n^2   :=  by sorry
+theorem lean_workbook_plus_41516 (x y : ℝ) (hx : 0 ≤ x) (hy : 0 ≤ y) : (1 / (1 + x) ^ 2 + 1 / (1 + y) ^ 2) ≥ 2 / (x ^ 2 + y ^ 2 + 2)   :=  by sorry
+theorem lean_workbook_plus_41525 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (h : x^3 + y^4 ≤ x^2 + y^3) : x^3 + y^3 ≤ 2   :=  by sorry
+theorem lean_workbook_plus_41527 : ∀ a b c d : ℝ, (c^2+a^2)*(d^2+b^2)-1/4*(c^2+a^2)*(b+d)^2-1/4*(d^2+b^2)*(c+a)^2 = 1/4*a^2*(b-d)^2+1/4*d^2*(a-c)^2+1/4*c^2*(d-b)^2+1/4*b^2*(c-a)^2   :=  by sorry
+theorem lean_workbook_plus_41536  (x y : ℝ) (hx : x ≥ 1) (hy : y ≥ 1) (hxy : x ≥ y) :
+  x + 1/x - (y + 1/y) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41540 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : (a * b / (a + b + 1) + c * d / (c + d + 1)) < ((a + c) * (b + d) / (a + b + c + d + 1))   :=  by sorry
+theorem lean_workbook_plus_41544 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : (a + b) * (a + c) * (b + c) / 8 ≥ (2 * a + b) * (2 * b + c) * (2 * c + a) / 27   :=  by sorry
+theorem lean_workbook_plus_41546 (a c : ℝ) : c^2 * (3 * a^2 + 1 - 3 * a) + c * (a - 3 * a^2) + a^2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41550 (u v : ℤ) : (u * (u ^ 100 + v ^ 100)) ^ 100 + (v * (u ^ 100 + v ^ 100)) ^ 100 = (u ^ 100 + v ^ 100) ^ 101   :=  by sorry
+theorem lean_workbook_plus_41551 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (h : x * y + y * z + z * x = 1) : (24 * x ^ 2)^(1 / 3) ≤ 1 / (y * z) + 1 / 3   :=  by sorry
+theorem lean_workbook_plus_41559 : ∀ n : ℕ, 10 ^ n ∣ (5 + Real.sqrt 35)^(2 * n - 1)   :=  by sorry
+theorem lean_workbook_plus_41583 : ∑ x in Finset.Icc 1 3, 2 * x = 12   :=  by sorry
+theorem lean_workbook_plus_41584 : 29 ∣ (3 * a + 2 * b) ↔ 29 ∣ (11 * a + 17 * b)   :=  by sorry
+theorem lean_workbook_plus_41586 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) (habcd : a * b * c * d = 1) (h : a^2 * b^2 + b^2 * c^2 + c^2 * d^2 + d^2 * a^2 ≤ 2 * (b * c + d * a)) : a * b - c * d ≤ 1   :=  by sorry
+theorem lean_workbook_plus_41591  (t : ℝ)
+  (h₀ : 0 < t) :
+  Real.sqrt ((12 * t)^2 + (18 * t)^2) = 6 * Real.sqrt 13 * t   :=  by sorry
+theorem lean_workbook_plus_41599 (x : ℝ) (hx: 0 ≤ x ∧ x ≤ 1) : (exp x - 1) / (exp x - x) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41619 (f : ℝ → ℝ) (hf: Continuous f) (h: ∀ x ≥ 0, 2 * f (2 * x) = (f x)^2 + 1) : ∃ x, ∃ y, ∀ z, x ≤ z ∧ y ≤ z → 2 * f (2 * z) = (f z)^2 + 1   :=  by sorry
+theorem lean_workbook_plus_41628 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) : a * b * c * (a / (a^4 + a^2 + b * c) + b / (b^4 + b^2 + c * a) + c / (c^4 + c^2 + a * b)) ≤ 3 / (4 + (Real.sqrt (a * b) + Real.sqrt (b * c) + Real.sqrt (c * a))^2)   :=  by sorry
+theorem lean_workbook_plus_41634 (m : ℕ) : ∑ n in Finset.range (m+1), choose (n+4) n = choose (m+5) m   :=  by sorry
+theorem lean_workbook_plus_41639 (a : ℝ) (h : a > 0) : (1 / Real.sqrt a) > 2 * (Real.sqrt (a + 1) - Real.sqrt a)   :=  by sorry
+theorem lean_workbook_plus_41641 : 2 / 8 = (2 * 1) / (2 * 4)   :=  by sorry
+theorem lean_workbook_plus_41651 (a b c : ℕ) (ha : a = 1) (hb : b = 1) (hc : c = 1) : a^5 * (a + 1) + b^5 * (b + 1) + c^5 * (c + 1) ≥ (3 / 4) * (a + 1) * (b + 1) * (c + 1)   :=  by sorry
+theorem lean_workbook_plus_41654 (x y z : ℝ) : x > 0 ∧ y > 0 ∧ z > 0 → 1/x + 1/y + 1/z ≥ (4 * (x + y + z) ^ 2 - 3 * (x*y + y*z + z*x)) / (x + y + z) / (x*y + y*z + z*x)   :=  by sorry
+theorem lean_workbook_plus_41656 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / (b * (b + 2 * c)))^(1 / 5) + (b / (c * (c + 2 * a)))^(1 / 5) + (c / (a * (a + 2 * b)))^(1 / 5) ≥ (81 * (a + b + c) / (a * b + a * c + b * c))^(1 / 5)   :=  by sorry
+theorem lean_workbook_plus_41666 (a b c : ℝ) : (a^2 * (a + b) * (a + c))^(1 / 3) + (b^2 * (b + c) * (b + a))^(1 / 3) + (c^2 * (c + a) * (c + b))^(1 / 3) ≥ ((a + b + c)^4 + 9 * a * b * c * (a + b + c))^(1 / 3)   :=  by sorry
+theorem lean_workbook_plus_41673 (n : ℕ) : 1998 = 2 * 3^3 * 37   :=  by sorry
+theorem lean_workbook_plus_41699 (a b c : ℝ) (h₁ : a ≥ 1) (h₂ : b + c ≤ -1) : a^4 + b^4 + c^4 ≥ a^3 + b^3 + c^3   :=  by sorry
+theorem lean_workbook_plus_41710 (x : ℝ) (hx : x ≥ Real.sqrt 3) : Real.sqrt (x ^ 2 - 3) ≤ 2 * x - 3   :=  by sorry
+theorem lean_workbook_plus_41714 (x y z : ℝ) (hx:0 ≤ x) (hy:0 ≤ y) (hz:0 ≤ z) : x * (x + y) ^ 2 + 2 * z ^ 3 ≥ 2 * x * (y * z + z ^ 2 + x * y)   :=  by sorry
+theorem lean_workbook_plus_41728 (a b : ℝ) (h₁ : 0 < b ∧ b ≤ a ∧ a ≤ 2) (h₂ : a * b ^ 2 ≤ 2) : a + 2 * b ≤ 4   :=  by sorry
+theorem lean_workbook_plus_41730 (A B : ℝ) : sin (2 * A + 2 * B) = sin (2 * A + 2 * B)   :=  by sorry
+theorem lean_workbook_plus_41733  (x : ℝ)
+  (h₀ : 0 < x)
+  (h₁ : x ≤ 1) :
+  1 / x ≥ 1   :=  by sorry
+theorem lean_workbook_plus_41738 : 7*m/12 ≤ m ↔ m ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41740 (a : ℝ) (h₁ : a^2 - 2*a + 2 = 11) : a = 1 - Real.sqrt 10 ∨ a = 1 + Real.sqrt 10   :=  by sorry
+theorem lean_workbook_plus_41741 : 2 ^ 3 = 8   :=  by sorry
+theorem lean_workbook_plus_41761 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 3 * ((a + b) * (b + c) * (c + a) / (4 * a * b * c))^(3 / 4) ≥ ((a + b) / c)^(3 / 4) + ((a + c) / b)^(3 / 4) + ((b + c) / a)^(3 / 4)   :=  by sorry
+theorem lean_workbook_plus_41770 (x y z : ℝ) (hx : x ≥ 0) (hy : y ≥ 0) (hz : z ≥ 0) : x ^ 3 + y ^ 3 + z ^ 3 + x ^ 2 * y + y ^ 2 * z + z ^ 2 * x ≥ 2 * (x * y ^ 2 + y * z ^ 2 + z * x ^ 2)   :=  by sorry
+theorem lean_workbook_plus_41773  (d : ℝ)
+  (h₀ : 3 * (13 - d^2) ≥ (7 - d)^2) :
+  d ≤ 5 / 2   :=  by sorry
+theorem lean_workbook_plus_41789 (n : ℤ) : n^2 * (n-1) * (3*n+1) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41793  (a b c : ℝ)
   (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
-  (h₁ : a * b * c ≥ 1) :
-  a^3 + b^3 + c^3 ≥ a * b + b * c + c * a   :=  by sorry
-theorem lean_workbook_plus_7595 (a b c : ℝ) : a^2 * b + b^2 * c + c^2 * a + a * b * c ≤ 4 ↔ a^2 * b + b^2 * c + c^2 * a ≤ 4 - a * b * c   :=  by sorry
-theorem lean_workbook_plus_19942 (f : ℝ → ℝ) (hf: f = fun (x:ℝ) => x^2 - 2) : ∃ x, x ∈ Set.Icc 0 2 ∧ f x = 0   :=  by sorry
-theorem lean_workbook_plus_14078 (k : ℤ) (n : ℝ) (hn : n = (k + Real.sqrt (k ^ 2 + 1)) ^ (1 / 3) + (k - Real.sqrt (k ^ 2 + 1)) ^ (1 / 3) + 1) : n ^ 3 - 3 * n ^ 2 ∈ Set.range (Int.cast)   :=  by sorry
-theorem lean_workbook_plus_6893 : ∀ k : ℤ, 22 * (3 * k - 1) + 6 * (4 - 11 * k) = 2   :=  by sorry
-theorem lean_workbook_plus_17089 (a b : ℝ) : |a * b| = |a| * |b| ∧  |b - a| = |a - b|   :=  by sorry
-theorem lean_workbook_plus_8949 (a b : ℝ) (ha : 1 ≤ a) (hb : 1 ≤ b) : (1 / (1 + a^2) + 1 / (1 + b^2)) ≥ 2 / (1 + a * b)   :=  by sorry
-theorem lean_workbook_plus_3642 (f : ℤ → ℝ) (hf: ∀ k > 0, f k + 4 / (f (k + 1))^2 = 3) : ∃ k, 0 < k ∧ ∀ k > 0, f k + 4 / (f (k + 1))^2 = 3   :=  by sorry
-theorem lean_workbook_plus_3454 : ∀ x₁ x₂ : ℝ, (1 - x₁) * (1 - x₂) ≥ 1 - x₁ - x₂ + x₁ * x₂   :=  by sorry
-theorem lean_workbook_plus_76166 (x : ℝ) (hx : 1 < x) :
-  x + (4 * x^3) / ((x - 1) * (x + 1)^3) > 3   :=  by sorry
-theorem lean_workbook_plus_56564 (a b c : ℝ) (ha : 1 ≤ a) (hb : 1 ≤ b) (hc : 1 ≤ c) : (a + b + c) ^ 3 ≥ 9 * (a * b + b * c + c * a)   :=  by sorry
-theorem lean_workbook_plus_25805 (x y z : ℝ) :
-  (x*y*z)^(1/3) ≤ ( (x^3 + y^3 + z^3)/3 )^(1/4)   :=  by sorry
-theorem lean_workbook_plus_47563 (x : ℝ) (hx : (x-2)*(x-3)*(x+1) = 0) : x = 3 ∨ x = 2 ∨ x = -1   :=  by sorry
-theorem lean_workbook_plus_9645 (a b c d : ℝ) (h : a * c + b * d = 0) :
-  (a + b + c + d) / 2 ≤ Real.sqrt ((a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2) / 2)   :=  by sorry
-theorem lean_workbook_plus_16843 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (h : x + y + z = 1) : (1 - 2 * x)^(1 / 3) + (1 - 2 * y)^(1 / 3) + (1 - 2 * z)^(1 / 3) ≥ 1 + 531441 * (3^(2 / 3) - 1) * x^4 * y^4 * z^4   :=  by sorry
-theorem lean_workbook_plus_11632 (n : ℕ) (h : n ≥ 2) : (n + 1).choose 2 = n * (n + 1) / 2   :=  by sorry
-theorem lean_workbook_plus_75048 (f : ℝ → ℝ) (hf: f = fun (x:ℝ) => 2 * x) (hx: 0 < x) : f x = 2 * x   :=  by sorry
-theorem lean_workbook_plus_50977 : ∀ x : ℝ, abs (sin x + cos x) ≤ Real.sqrt 2   :=  by sorry
-theorem lean_workbook_plus_77103 : a ^ 2 + 1 ≡ 0 [ZMOD 3] → a ^ 2 ≡ -1 [ZMOD 3]   :=  by sorry
-theorem lean_workbook_plus_22656 (a b : ℝ) (h1 : a > b) (h2 : b > 0) (h3 : a^5 + b^5 = a - b) : a^4 + b^4 < 1   :=  by sorry
-theorem lean_workbook_plus_45164 : ∀ a b c x y z : ℝ, a + b + c = 0 ∧ x + y + z = 0 → 4 * (a * x + b * y + c * z) ^ 3 - 3 * (a * x + b * y + c * z) * (a ^ 2 + b ^ 2 + c ^ 2) * (x ^ 2 + y ^ 2 + z ^ 2) - 2 * (a - b) * (b - c) * (c - a) * (x - y) * (y - z) * (z - x) = 54 * a * b * c * x * y * z   :=  by sorry
-theorem lean_workbook_plus_27167 : ∀ a b c d : ℝ, a^4+b^4+c^4+d^4 ≥ a^2*b*c + b^2*c*d + c^2*d*a + d^2*a*b   :=  by sorry
-theorem lean_workbook_plus_32083 :
-  Nat.choose 5 3 = 10   :=  by sorry
-theorem lean_workbook_plus_28443 (x r : ℝ) (h : x^5 - x^3 + x = r) : x^6 ≥ 2 * r - 1   :=  by sorry
-theorem lean_workbook_plus_32077 : 5 ^ (2 * k) ≡ 25 [ZMOD 100] → 5 ^ (2 * (k + 1)) ≡ 25 [ZMOD 100]   :=  by sorry
-theorem lean_workbook_plus_76046 : ∑ n in Finset.range 101, n = 5050   :=  by sorry
-theorem lean_workbook_plus_35157 (f : ℝ → ℝ) (hf: f (y - f x) = f (x^2 - y) + 4*y * f x) : ∃ f0, f = f0   :=  by sorry
-theorem lean_workbook_plus_69623 (a b c : ℝ) (h : a + b + c = 3) : (3 - a) ^ 2 + (3 - b) ^ 2 + (3 - c) ^ 2 ≥ 12   :=  by sorry
-theorem lean_workbook_plus_35629  (x : ℕ)
-  (h₀ : 10 * x + 5 * (x - 8) + 25 * (2 * x - 16) = 665) :
-  x = 17   :=  by sorry
-theorem lean_workbook_plus_47215 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (9 / (a + b + c) : ℝ) ≤ 2 * (1 / (a + b) + 1 / (b + c) + 1 / (c + a)) ∧ (2 * (1 / (a + b) + 1 / (b + c) + 1 / (c + a)) : ℝ) ≤ (1 / a + 1 / b + 1 / c)   :=  by sorry
-theorem lean_workbook_plus_62268 (x y z : ℝ) (hx : x ^ 2 + y ^ 2 + z ^ 2 = 3) : 1 ≥ (x + y + z) / 3   :=  by sorry
-theorem lean_workbook_plus_12482 : 2 ^ 1000 ≡ 1 [ZMOD 3]   :=  by sorry
-theorem lean_workbook_plus_43533 (a b c : ℝ) : 2 * (a * b + b * c + c * a) ≤ (2 / 3) * (a + b + c) ^ 2   :=  by sorry
-theorem lean_workbook_plus_36672 (a b c x y z : ℝ) (h1 : x = a + b - c) (h2 : y = a - b + c) (h3 : z = -a + b + c) : x + y + z = a + b + c   :=  by sorry
-theorem lean_workbook_plus_49491 (a b c : ℤ) : (a^2-b*c) * (b+c) + (b^2-c*a) * (c+a) + (c^2-a*b) * (a+b) = 0   :=  by sorry
-theorem lean_workbook_plus_75043 (x y : ℝ) (h₁ : 0 < x ∧ 0 < y) (h₂ : x + y = 2020) : 2 ≤ 2020 * x / y + y / (2020 * x)   :=  by sorry
-theorem lean_workbook_plus_71245 (a q x y z w : ℝ) : (x = -46 - a - 6*q + 3*a*q ∧ y = -5*a + 6*q - 2*a*q ∧ z = 46 - 17*a ∧ w = q - 23 → x/w = (-46 - a - 6*q + 3*a*q)/(q - 23) ∧ y/w = (-5*a + 6*q - 2*a*q)/(q - 23) ∧ z/w = (46 - 17*a)/(q - 23))   :=  by sorry
-theorem lean_workbook_plus_15920 : 2 * π / 3 - π / 2 = π / 6   :=  by sorry
-theorem lean_workbook_plus_13467 (k : ℤ) :  k ^ 3 - 1 = (k - 1) * (k ^ 2 + k + 1) → k ^ 2 + k + 1 ∣ k ^ 3 - 1   :=  by sorry
-theorem lean_workbook_plus_3902 (x y : ℝ) (hx: x > 2 ∧ y > 2) : x^2 + x*y + y^2 - 3*x - 3*y > 0   :=  by sorry
-theorem lean_workbook_plus_29806  (n : ℕ)
-  (h₀ : Even n) :
-  3 ∣ (2^n - 1)   :=  by sorry
-theorem lean_workbook_plus_49234 : ∀ a b c : ℝ, a^2 + b^2 + c^2 + 2 * a * b + 2 * a * c + 2 * b * c = (a + b + c)^2 ∧ (a + b + c)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_2941  (x y z : ℝ)
-  (h₀ : 0 < x ∧ 0 < y ∧ 0 < z) :
-  4 / (x^2 + y * z) ≤ 1 / (x * y) + 1 / (x * z)   :=  by sorry
-theorem lean_workbook_plus_28717 (a b c : ℝ) : a^2+b^2+c^2 ≥ 2*(a+b+c)-3   :=  by sorry
-theorem lean_workbook_plus_39336 (a b c : ℤ) : (a + b + c) * (a * b + b * c + a * c) - a * b * c = (a + b) * (b + c) * (a + c)   :=  by sorry
-theorem lean_workbook_plus_63825 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : (a * b / (a + b) + c * d / (c + d)) ≤ (a + c) * (b + d) / (a + b + c + d)   :=  by sorry
-theorem lean_workbook_plus_54393 (a b c : ℝ) : a ^ 4 + b ^ 4 + c ^ 4 ≥ a ^ 2 * b * c + a * b ^ 2 * c + a * b * c ^ 2   :=  by sorry
-theorem lean_workbook_plus_15092 : ∀ n : ℕ, ∑ r in Finset.range (n+1), choose n r = 2^n   :=  by sorry
-theorem lean_workbook_plus_32385 : ∀ x : ℝ, sin x ^ 4 - cos x ^ 4 = -cos (2 * x)   :=  by sorry
-theorem lean_workbook_plus_32793 (x y : ℝ) : x^2 + y^2 ≥ 2 * x * y   :=  by sorry
-theorem lean_workbook_plus_36775  (a b c : ℂ)
-  (h₀ : a + b + c = 0)
-  (h₁ : a * b + b * c + c * a = -19)
-  (h₂ : a * b * c = -30) :
-  (a + 1) * (b + 1) * (c + 1) = -48   :=  by sorry
-theorem lean_workbook_plus_20462 (a b : ℝ) (ha : 1 ≤ a) (hb : 1 ≤ b) : a * b - 1 / (a * b) ≥ a - 1 / a + b - 1 / b   :=  by sorry
-theorem lean_workbook_plus_40225 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : a^3 + b^3 + c^3 - 3 * a * b * c ≥ (1 / 4) * (b + c - 2 * a)^3   :=  by sorry
+  (h₁ : a ≤ b ∧ b ≤ c) :
+  a * b * (a + b) + b * c * (b + c) + c * a * (c + a) ≤ 2 * (a^3 + b^3 + c^3)   :=  by sorry
+theorem lean_workbook_plus_41794 (x : ℝ) : x + x = 4 → 2 * x = 4   :=  by sorry
+theorem lean_workbook_plus_41796 (f : ℝ → ℝ) (hf : ∀ x, x ≠ 0 ∧ x ≠ 1 → f x + f ((1 / (1 - x))) = x) : f 5 = 121 / 40   :=  by sorry
+theorem lean_workbook_plus_41798 (x : ℝ) (n : ℕ) : x = (4:ℝ) / 39 * (10 ^ n - 4) ↔ x = (4:ℝ) / 39 * (10 ^ n - 4)   :=  by sorry
+theorem lean_workbook_plus_41799 : sin (4*x) = 8 * sin x * cos x ^ 3 - 4 * sin x * cos x   :=  by sorry
+theorem lean_workbook_plus_41800 (x : ℝ) : sin x * cos x ≤ 1 / 2   :=  by sorry
+theorem lean_workbook_plus_41801 (A B : Set α) (hA : A.Nonempty) (hB : B.Nonempty) (hAB : A ∩ B = ∅) : (∀ x ∈ A, x ∉ B) ∨ (∀ x ∈ B, x ∉ A)   :=  by sorry
+theorem lean_workbook_plus_41806 (n : ℕ) (a : ℕ → ℕ) (b : ℕ → ℕ) (h₁ : b 1 = 1) (h₂ : ∀ n, b (n + 1) = b n / (b n + 6)) (h₃ : ∀ n, a n = b n + 4): 1 / b (n + 1) = 1 + 6 / b n   :=  by sorry
+theorem lean_workbook_plus_41824  (a : ℝ)
+  (h₀ : 1 ≤ a) :
+  a^4 + a ≥ a^3 + 1   :=  by sorry
+theorem lean_workbook_plus_41848 (a1 a2 a3 : ℝ) (ha1 : 0 ≤ a1) (ha2 : 0 ≤ a2) (ha3 : 0 ≤ a3) : (a1 + (a2 + (a3)^(1/4))^(1/3))^(1/2) ≥ (a1 * a2 * a3)^(1/32)   :=  by sorry
+theorem lean_workbook_plus_41864 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 1 / a + 1 / b + 1 / c + 3 / (a + b + c) ≥ 4 * (a + b + c) / (a * b + b * c + a * c)   :=  by sorry
+theorem lean_workbook_plus_41884 (n : ℕ) (a : ℕ → ℕ) : 0 ≤ ∑ k in Finset.range n, (a k - 1) ^ 2   :=  by sorry
+theorem lean_workbook_plus_41899 (x y z : ℝ) : x / (y / z) = x * (z / y)   :=  by sorry
+theorem lean_workbook_plus_41900 : ∀ x : ℝ, x^4 + 4 * x^2 + 16 = (x^2 + 2 * x + 4) * (x^2 - 2 * x + 4)   :=  by sorry
+theorem lean_workbook_plus_41921 : 3 ^ 18 ≡ 1 [ZMOD 19]   :=  by sorry
+theorem lean_workbook_plus_41922 : ∀ x : ℝ, (cos x)^3 - (cos x)^2 = (cos x)^2 * (cos x - 1) ∧ (cos x)^2 * (cos x - 1) ≤ 0   :=  by sorry
+theorem lean_workbook_plus_41929 (k : ℕ) : (1 + Real.sqrt 5) ^ k / 2 ^ k + (1 + Real.sqrt 5) ^ (k + 1) / 2 ^ (k + 1) = (1 + Real.sqrt 5) ^ (k + 2) / 2 ^ (k + 2) ∧ (1 - Real.sqrt 5) ^ k / 2 ^ k + (1 - Real.sqrt 5) ^ (k + 1) / 2 ^ (k + 1) = (1 - Real.sqrt 5) ^ (k + 2) / 2 ^ (k + 2)   :=  by sorry
+theorem lean_workbook_plus_41932 (x y z : ℝ) (hx : x ≥ 0) (hy : y ≥ 0) (hz : z ≥ 0) (h : x + y + z ≥ 3) : x * y * z + x ^ 3 + y ^ 3 + z ^ 3 ≥ (4 / 9) * (x + y + z) * (x * y + x * z + y * z)   :=  by sorry
+theorem lean_workbook_plus_41937 (x y z : ℝ) : (x*y + y*z + z*x)^2 ≥ 3*(x + y + z)*x*y*z   :=  by sorry
+theorem lean_workbook_plus_41948 (a b c : ℝ) :
+  (a + b + c) ^ 6 - 27 * (a ^ 2 + b ^ 2 + c ^ 2) * (a * b + b * c + c * a) ^ 2 =
+    (a ^ 2 + b ^ 2 + c ^ 2 + 8 * (a * b + b * c + c * a)) * (a ^ 2 + b ^ 2 + c ^ 2 - a * b - b * c - c * a) ^ 2   :=  by sorry
+theorem lean_workbook_plus_41954 (A B C a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) (hA: 0 < A ∧ A <= π ∧ cos A = (b^2 + c^2 - a^2)/(2*b*c))  (hB: 0 < B ∧ B <= π ∧ cos B = (a^2 + c^2 - b^2)/(2*a*c)) (hC: 0 < C ∧ C <= π ∧ cos C = (a^2 + b^2 - c^2)/(2*a*b)) : (cos A * cos B)/(a * b) + (cos B * cos C)/(b * c) + (cos A * cos C)/(a * c) = (sin A)^2/(a^2)   :=  by sorry
+theorem lean_workbook_plus_41962 (x y : ℝ) (hx : x > 0) (hy : y > 0) : 1/x + 1/y ≥ 4/(x + y)   :=  by sorry
+theorem lean_workbook_plus_41967 (a b c : ℝ) : a ^ 2 * (a - b) * (a - c) + b ^ 2 * (b - a) * (b - c) + c ^ 2 * (c - a) * (c - b) + (3 / 2) * ((a * b - c * a) ^ 2 + (b * c - a * b) ^ 2 + (c * a - b * c) ^ 2) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_41976 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x / y + y / z + z / x + 67 * x * y * z / ((x + y) * (y + z) * (z + x) + 4 * x * y * z)) ≥ 9 / 12   :=  by sorry
+theorem lean_workbook_plus_41982 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : 3 * (x ^ 4 + y ^ 4 + z ^ 4) + 15 * (x ^ 2 * y ^ 2 + y ^ 2 * z ^ 2 + z ^ 2 * x ^ 2) ≥ 6 * (x ^ 3 * y + y ^ 3 * z + z ^ 3 * x) + 6 * (x * y ^ 3 + y * z ^ 3 + z * x ^ 3) + 6 * (x ^ 2 * y * z + y ^ 2 * z * x + z ^ 2 * x * y)   :=  by sorry
+theorem lean_workbook_plus_41989 {a b c : ℝ} (ha : a > 0) (hb : b > 0) (hc : c > 0) : a^3 * b + a^2 * b * c + c^2 * a * b ≥ 3 * a^2 * b * c   :=  by sorry
+theorem lean_workbook_plus_41991 : sin 18 ^ 3 + sin 18 ^ 2 = sin 18 ^ 2 * (sin 18 + 1)   :=  by sorry
+theorem lean_workbook_plus_41996    (a d c : ℝ) (hc : 0 < c) (ha : 0 < a ∧ a < c) (hd : 0 < d ∧ d < c)
+    (had : a * d < c^2) :
+  0 < (a + d) / (1 + a * d / c^2) ∧ (a + d) / (1 + a * d / c^2) < c   :=  by sorry
+theorem lean_workbook_plus_42013 (a b : ℝ) :
+  9 * a ^ 2 * b ^ 2 + (9 / 4) * (a + b) ^ 2 ≥ -9 * a * b * (a + b)   :=  by sorry
+theorem lean_workbook_plus_42019 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 1 / (a + b) + 1 / (b + c) + 1 / (c + a) ≤ 1 / 2 * (1 / a + 1 / b + 1 / c)   :=  by sorry
+theorem lean_workbook_plus_42029 (f : ℝ → ℝ) (k : ℕ) (x : ℝ) : (f x = (x^2 + 1)^k) ↔ (f x = (x^2 + 1)^k)   :=  by sorry
+theorem lean_workbook_plus_42055 (a b c : ℝ) (hx: a > b ∧ b > c) : a^2 * (b - c) + b^2 * (c - a) + c^2 * (a - b) > 0   :=  by sorry
+theorem lean_workbook_plus_42056 (a b: ℝ) (ha : 0 < a ∧ a < π / 2) (hb : 0 < b ∧ b < π / 2): a ≥ b → sin a ≥ sin b   :=  by sorry
+theorem lean_workbook_plus_42059 (y : ℝ) (n : ℕ) (hy : y > 0) : y ^ n - 1 ≥ n * (y - 1)   :=  by sorry
+theorem lean_workbook_plus_42060 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a + b) * (b + c) * (c + a) ≥ 8 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_42070 (a b c : ℝ) : 3 * (a * b - a * c + b * c) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_42072 (x y z : ℝ) (hx : x + y + z = 1) (hx' : 0 ≤ x) (hy' : 0 ≤ y) (hz' : 0 ≤ z) : 1 / (x ^ 2 + 1) ≤ (54 - 27 * x) / 50   :=  by sorry
+theorem lean_workbook_plus_42088 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : a^3 + b^3 + c^3 - 3*a*b*c ≥ 2 * ((b + c) / 2 - a)^3   :=  by sorry
+theorem lean_workbook_plus_42100 (n : ℕ) (hn : 0 < n) : n^5 ≡ n [ZMOD 10]   :=  by sorry
+theorem lean_workbook_plus_42103  (r b : ℚ)
+  (h₀ : 0 < r ∧ 0 < b)
+  (h₁ : r = 2 * b)
+  (h₂ : (2 * r / 7 + 5 * b / 7) = 1 / 6) :
+  r = 7 / 27   :=  by sorry
+theorem lean_workbook_plus_42107  (a : ℝ)
+  (f : ℝ → ℝ)
+  (h : ℝ → ℝ)
+  (h_def : ∀ x, h x = f x - f (a + x))
+  (h0 : h 0 = f 0 - f a)
+  (h1a : h (1 - a) = f (1 - a) - f 1) :
+  h 0 * h (1 - a) = (f 0 - f a) * (f (1 - a) - f 1)   :=  by sorry
+theorem lean_workbook_plus_42117 (a b c : ℝ) (h : b - c ≥ a - b ∧ a - b ≥ 0) :
+  3 * (a^2 * b + b^2 * a + b^2 * c + c^2 * b + a^2 * c + c^2 * a) ≥
+    2 * (a^3 + b^3 + c^3) + 12 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_42122 (n : ℕ) (x : ℕ → ℕ) (h₀ : x 0 = 1) (h₁ : x 1 = 1) (h₂ : ∀ n, (n + 3) * x (n + 1) = (2 * n + 3) * x n + 3 * n * x (n - 1)) : ∀ n, ∃ k : ℤ, x n = k   :=  by sorry
+theorem lean_workbook_plus_42133 : 3 ∣ c → 3^2 ∣ c → 3 ∣ c   :=  by sorry
+theorem lean_workbook_plus_42146 (F : ℕ → ℕ) (hF : F = fib) : Nat.gcd (F 66) (F 300) = F (Nat.gcd 66 300)   :=  by sorry
+theorem lean_workbook_plus_42147 (j : ℕ) : (j + 2).choose 3 = j.choose 3 + j^2   :=  by sorry
+theorem lean_workbook_plus_42153 (n : ℕ) : ∑ r in Finset.Icc 1 n, r / (r + 1) / (r + 2) / (r + 3) = 1 / 4 + 1 / 2 * (1 / (n + 2) - 3 / (n + 3))   :=  by sorry
+theorem lean_workbook_plus_42155 (x y : ℝ) : x^2 + 2*x*y + 3*y^2 - 6*x - 2*y + 11 = (x + y - 3)^2 + 2*(y + 1)^2   :=  by sorry
+theorem lean_workbook_plus_42159 (P : Polynomial ℤ) (a b : ℤ) : a - b ∣ P.eval a - P.eval b   :=  by sorry
+theorem lean_workbook_plus_42161 (q : ℕ) (hq : Nat.Coprime q 10) : ∃ n : ℕ, q ∣ (10^n - 1)   :=  by sorry
+theorem lean_workbook_plus_42173 (c : ℝ) : √(c^2 - (c - 1)^2) = √(2 * c - 1)   :=  by sorry
+theorem lean_workbook_plus_42185 (a b : ℝ) : 2 * (a^4 + b^4) ≥ 2 * (a * b^3 + b * a^3)   :=  by sorry
+theorem lean_workbook_plus_42220 {a b c : ℂ} (h : (a - b) * (b - c) * (c - a) = 0) :
+  a = b ∨ b = c ∨ c = a   :=  by sorry
+theorem lean_workbook_plus_42229 (p : ℕ) (hp : p.Prime) (a : ZMod p) (ha : a ≠ 0) : a = a⁻¹ ↔ a = 1 ∨ a = p-1   :=  by sorry
+theorem lean_workbook_plus_42239 (a : ℕ → ℕ) (a1 : a 0 = 1) (a2 : a 1 = 2) (a3 : a 2 = 2) (a_rec : ∀ n, a (n + 3) = a (n + 2) + a (n + 1) - 2 * a n) : ∃ f : ℕ → ℕ, ∀ k, a k = f k   :=  by sorry
+theorem lean_workbook_plus_42251 (x : ℝ) (hx : 0 < x) : exp x > 2 * x / (x ^ 2 + 1)   :=  by sorry
+theorem lean_workbook_plus_42255 (f : ℝ → ℝ) (hf : ∀ x y, f (x + y) = f x * f y) (h : f 0 ≠ 0) : ∀ x, f (-x) = 1 / f x   :=  by sorry
+theorem lean_workbook_plus_42261 : 5 * (3 + 2) - 8 = 17   :=  by sorry
+theorem lean_workbook_plus_42269  (x : ℝ)
+  (h₀ : x = 100)
+  (h₁ : (1 - 0.3) * (1 - 0.2) = 0.56) :
+  x * (1 - 0.3) * (1 - 0.2) = 56   :=  by sorry
+theorem lean_workbook_plus_42270 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : (2:ℝ) ^ (2 * a) * a ^ a * b ^ b < (a + b) ^ (a + b) ↔ 2 * a * Real.log 2 + a * Real.log a + b * Real.log b - (a + b) * Real.log (a + b) < 0   :=  by sorry
+theorem lean_workbook_plus_42290 :
+  ∑ k in (Finset.range 20), (2^k) % 25 = 250   :=  by sorry
+theorem lean_workbook_plus_42308 {a b c u v : ℝ} (ha : a ≥ 0) (hb : b = a + u) (hc : c = a + u + v) (hu : u ≥ 0) (hv : v ≥ 0) : a^4 * (351 * u^2 + 351 * u * v + 351 * v^2) + a^3 * (900 * u^3 + 1350 * u^2 * v + 1458 * u * v^2 + 504 * v^3) + a^2 * (972 * u^4 + 1944 * u^3 * v + 2484 * u^2 * v^2 + 1512 * u * v^3 + 378 * v^4) + a * (488 * u^5 + 1220 * u^4 * v + 1892 * u^3 * v^2 + 1618 * u^2 * v^3 + 778 * u * v^4 + 160 * v^5) + (92 * u^6 + 276 * u^5 * v + 511 * u^4 * v^2 + 562 * u^3 * v^3 + 396 * u^2 * v^4 + 161 * u * v^5 + 27 * v^6) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_42310 (x : ℝ) (hx : x + 2/x = 4) : x^3/2 + 4/x^3 = 20   :=  by sorry
+theorem lean_workbook_plus_42311 (n : ℕ) : ∑ k in divisors n, φ k = n   :=  by sorry
+theorem lean_workbook_plus_42314 (x : ℝ) : x^4 - 14 * x^3 + 64 * x^2 - 114 * x + 63 = 0 → 0 < x ∧ x < 14   :=  by sorry
+theorem lean_workbook_plus_42317 (a b c : ℝ) (habc : a = 1 ∧ b = -16 ∧ c = 60) : b^2 - 4*a*c = 16^2 - 4*1*60   :=  by sorry
+theorem lean_workbook_plus_42324 (p : ℕ) (hp : p.Prime) (hpo : Odd p) : (Nat.choose (p - 1) (p - 1) / 2) ≡ (-1) ^ (p - 1) / 2 * (2 ^ p - 1) [ZMOD p ^ 2]   :=  by sorry
+theorem lean_workbook_plus_42340 (f : ℝ → ℝ) (hf: ∀ c > 0, f c > 1) : ∀ c > 0, ∃ k > 0, f c > k  :=  by sorry
+theorem lean_workbook_plus_42343 (a b : ℝ) (hab : a * b = 1) : a ^ 2 + b ^ 2 + 4 ≥ 3 * (a + b)   :=  by sorry
+theorem lean_workbook_plus_42349 {α β γ : ℝ} : sin α * sin γ + sin β * sin (α + β + γ) = sin (α + β) * sin (β + γ)   :=  by sorry
+theorem lean_workbook_plus_42361 (a1 a2 b1 b2 : ℝ) (ha1 : 0 < a1) (ha2 : 0 < a2) (hb1 : 0 < b1) (hb2 : 0 < b2) : (a1 ^ 2 / b1 + a2 ^ 2 / b2) ≥ (a1 + a2) ^ 2 / (b1 + b2)   :=  by sorry
+theorem lean_workbook_plus_42372 (x y z : ℝ) (h₁ : 2 = x^2 + y^2 + z^2) (h₂ : x^2 + y^2 ≥ 2 * x * y) : 1 - x * y ≥ 0 ∧ 1 - x * z ≥ 0 ∧ 1 - y * z ≥ 0   :=  by sorry
+theorem lean_workbook_plus_42389 (a : ℝ) : (a - 1) * (3 * a - 7) ≥ 4 * |a - 5 / 3| - 8 / 3   :=  by sorry
+theorem lean_workbook_plus_42396 (t : ℝ) (ht : 1 ≤ t) : (t + 2) / (t + 1) ≥ 5 / 6 + 2 / (3 * t)   :=  by sorry
+theorem lean_workbook_plus_42405 (x y z: ℝ) : (x - z) ^ 2 + (y - z) ^ 2 ≥ (x - z) * (y - z)   :=  by sorry
+theorem lean_workbook_plus_42412 (G : Type*) [Group G] [Infinite G]
+    (H : Subgroup G) [H.FiniteIndex] : ∃ N : Subgroup G, N.Normal ∧ N.FiniteIndex ∧ N ≤ H   :=  by sorry
+theorem lean_workbook_plus_42414 : ∃ a b c : ℤ, a + b + c = 9   :=  by sorry
+theorem lean_workbook_plus_42420 (x : ℂ) : (x^4 - 3 * x^2 + 9) = (x^2 + 3 * x + 3) * (x^2 - 3 * x + 3)   :=  by sorry
+theorem lean_workbook_plus_42429  (f : ℝ → ℝ)
+  (h₀ : ∀ x, f x = 0) :
+  f⁻¹' Set.Icc (-1) 1 = Set.univ ∧ f '' Set.univ = {0}   :=  by sorry
+theorem lean_workbook_plus_42432 :
+  (3 / 10 * (4 / 5)^3) = 96 / 625   :=  by sorry
+theorem lean_workbook_plus_42434 (a b c : ℝ) (ha : a ≠ 0) (hb : b ≠ 0) (hc : c ≠ 0) (hab : 3*a = 4*b) (hbc : 5*b = 6*c) : c/(a+b) = 5/14   :=  by sorry
+theorem lean_workbook_plus_42446 : ∃ S : Set ℕ, ∀ n, n ∈ S ↔ n = m^2 + 1   :=  by sorry
+theorem lean_workbook_plus_42451 (b : ℤ) (z : ℤ) (h₁ : b = z^13) (h₂ : y^13 = b^1911 - 1) : y^13 = (z^1911)^13 - 1   :=  by sorry
+theorem lean_workbook_plus_42467 (a b c : ℝ) : a^2 + b^2 + c^2 - a * b - b * c - c * a ≥ (3 / 4) * (a - b)^2   :=  by sorry
+theorem lean_workbook_plus_42472  (x : ℝ)
+  (h₀ : 0 < x)
+  (h₁ : x < 2) :
+  0 < x ∧ x < 2   :=  by sorry
+theorem lean_workbook_plus_42482 (a : ℝ) : 3 * Real.sin a - Real.sin (3*a) = 2 * Real.sin a * (1 - Real.cos (2*a))   :=  by sorry
+theorem lean_workbook_plus_42484 (a b c : ℝ) (h : a + b + c = 1) : 1 - (a ^ 2 + b ^ 2 + c ^ 2) ≤ 3 / 4   :=  by sorry
+theorem lean_workbook_plus_42496 (a b c : ℝ) (ha : a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b + c = 6) : a / (b^3 + 1)^(1/2) + b / (c^3 + 1)^(1/2) + c / (a^3 + 1)^(1/2) ≥ 2   :=  by sorry
+theorem lean_workbook_plus_42515 (f : ℝ → ℝ) (hf: ∀ x y, f (y^2 + 2 * x * f y + f x ^ 2) = (y + f x) * (x + f y)) : ∃ g : ℝ → ℝ, ∀ x, f x = g x   :=  by sorry
+theorem lean_workbook_plus_42537  (x j : ℝ)
+  (h₀ : x ≠ 1)
+  (h₁ : j ≠ 0) :
+  1 / (1 - x) - x = 1 + x^2 / (1 - x)   :=  by sorry
+theorem lean_workbook_plus_42555 (a b c : ℝ) (h₁ : b < c) (h₂ : b + c < a + 1) (h₃ : a > 1) : b < a   :=  by sorry
+theorem lean_workbook_plus_42556 (a b c : ℝ) (h₀ : 0 ≤ a) (h₁ : a ≤ b) (h₂ : b ≤ c) : (a + 3 * b) * (b + 4 * c) * (c + 2 * a) ≥ 60 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_42559 (n : ℕ) : ∃ l, ∑ i in Finset.range n, (1 / (2 ^ i)) = l   :=  by sorry
+theorem lean_workbook_plus_42563 (n : ℕ) : 1 / 2 ≤ ∑ k in Finset.Icc 1 n, (k / (n ^ 2 + k)) ∧ ∑ k in Finset.Icc 1 n, (k / (n ^ 2 + k)) ≤ (n + 1) / (2 * n)   :=  by sorry
+theorem lean_workbook_plus_42570 (x : ℝ) (h : x > 3) : (x - 1) ^ 3 < x ^ 3 - x + 3 ∧ x ^ 3 - x + 3 < x ^ 3   :=  by sorry
+theorem lean_workbook_plus_42574 (h : ∀ x : ℂ, x ^ 3 - 3 * x + 1 = 0 → x.im = 0) : ∀ x : ℂ, x ^ 3 - 3 * x + 1 = 0 → x ∈ Set.univ   :=  by sorry
+theorem lean_workbook_plus_42585 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a * b + b * c + c * a + (a + b + c) ^ 2 ≥ 9 * (a + b) * (b + c) * (c + a) / (2 * (a + b + c))   :=  by sorry
+theorem lean_workbook_plus_42589 : (factorial 21 * factorial 17 * factorial 5) / (factorial 22 * factorial 17 * factorial 4) = 5/22   :=  by sorry
+theorem lean_workbook_plus_42602 (f : Fin 3 → Fin 3) : (∃ g : Fin 3 → Fin 3, ∃ x : Fin 3, f x = g x)   :=  by sorry
+theorem lean_workbook_plus_42611 (x y : ℝ) (hx : x ≠ 0) (hy : y ≠ 0) (hxy : x ≠ y) : x + 2/x = y + 2/y → x*y = 2   :=  by sorry
+theorem lean_workbook_plus_42612  (n : ℕ)
+  (h₀ : 0 < n) :
+  ((Nat.gcd n n) / n * (n.choose n) : ℚ).den = 1   :=  by sorry
+theorem lean_workbook_plus_42638 : ∀ x : ℂ, x^13 + x + 90 = (x^11 + x^10 - x^9 - 3*x^8 - x^7 + 5*x^6 + 7*x^5 - 3*x^4 - 17*x^3 - 11*x^2 + 23*x + 45) * (x^2 - x + 2)   :=  by sorry
+theorem lean_workbook_plus_42642 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : a^4 + b^4 + c^4 ≥ a * b * c * (a + b + c)   :=  by sorry
+theorem lean_workbook_plus_42644  (a b c : ℝ)
+  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
+  (h₁ : b + c = a^2)
+  (h₂ : a * b - a * c = 1)
+  (h₃ : b * c = 1) :
+  x^4 - x + 1 = (x^2 + a * x + b) * (x^2 - a * x + c)   :=  by sorry
+theorem lean_workbook_plus_42647  (x k : ℝ)
+  (h₀ : x < 0)
+  (h₁ : x + k < 0)
+  (h₂ : k ≠ 0) :
+  |x + k| ≠ -x + k   :=  by sorry
+theorem lean_workbook_plus_42648  (x : ℝ)
+  (h₀ : x = (1 + Real.sqrt 5) / 2) :
+  x^2 - x - 1 = 0   :=  by sorry
+theorem lean_workbook_plus_42652 (x y : ℝ) : (x ^ 2 + y ^ 2) / 2 ≥ Real.sqrt (x ^ 2 * y ^ 2)   :=  by sorry
+theorem lean_workbook_plus_42668 (a b : ℝ) : (a - b) ^ 2 + (a - 1) ^ 2 + (b - 1) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_42680  (x y : ℝ)
+  (h₀ : 0 < x ∧ 0 < y)
+  (h₁ : y + Real.sqrt (y^2 + 1) = 16 * (Real.sqrt (x^2 + 1) - x))
+  (h₂ : x + 16 * y = 16 * Real.sqrt (y^2 + 1) - Real.sqrt (x^2 + 1)) :
+  17 * (x + y) ≥ 15 * (Real.sqrt (x^2 + 1) + Real.sqrt (y^2 + 1))   :=  by sorry
+theorem lean_workbook_plus_42693 (a b c d : ℝ) (ha : 1 ≤ a) (hb : 1 ≤ b) (hc : 1 ≤ c) (hd : 1 ≤ d) : 8 + a * b * c + b * c * d + c * d * a + d * a * b ≥ 3 * (a + b + c + d)   :=  by sorry
+theorem lean_workbook_plus_42708 : ∀ a b c : ℝ, a ≥ 0 ∧ b ≥ 0 ∧ c ≥ 0 → a^2 + 2 * b^2 + c^2 ≥ (2 * Real.sqrt 3) / 3 * (a + 2 * b) * c   :=  by sorry
+theorem lean_workbook_plus_42720 (a b c : ℝ) (h1 : a = 1) (h2 : b = 1) (h3 : c = 1) : a * b + b * c + c * a ≥ a + b + c   :=  by sorry
+theorem lean_workbook_plus_42746 (a b : ℝ) (ha : 0 ≤ a ∧ a ≤ 1) (hb : 0 ≤ b ∧ b ≤ 1) : a * (1 - a) * (3 - 2 * b) + b * (1 - b) * (3 - 2 * a) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_42749 (a b : ℝ) : (a^2 + 1) * (b^2 + 1) ≥ a * (b^2 + 1) + b * (a^2 + 1) ↔ a / (a^2 + 1) + b / (b^2 + 1) ≤ 1   :=  by sorry
+theorem lean_workbook_plus_42755 : ∀ t b : ℤ, (2 * t + 2) ^ 2 = 4 * (t + 1) ^ 2 → 4 * b ^ 2 + 4 * b + 4 = (2 * b + 1) ^ 2 + 3   :=  by sorry
+theorem lean_workbook_plus_42756 (f : ℝ → ℝ) (hf: f 0 + f x = 2 * f 0 + x) : f x = x + f 0   :=  by sorry
+theorem lean_workbook_plus_42761 (a b c : ℝ) (ha : 0 ≤ a ∧ a ≤ 1 / 2) (hb : 0 ≤ b ∧ b ≤ 1 / 2) (hc : 0 ≤ c ∧ c ≤ 1 / 2) (habc : a + b + c = 3) : a^3 + b^3 + c^3 + 4 * a * b * c ≤ 9 / 32   :=  by sorry
+theorem lean_workbook_plus_42777 {x y S P : ℝ} (hx : x + y = S) (hy : x * y = P) : S^2 ≥ 4 * P   :=  by sorry
+theorem lean_workbook_plus_42780 : Real.cos (36 * Real.pi / 180) * Real.sin (36 * Real.pi / 180) = Real.sin (72 * Real.pi / 180) / 2   :=  by sorry
+theorem lean_workbook_plus_42783 (x : ℝ) : (1 / 2 + 1 / 4 + 1 / 4 = 1 / 3 + 1 / 3 + 1 / 3)   :=  by sorry
+theorem lean_workbook_plus_42799  (f g : ℕ)
+  (h₀ : 0 < f ∧ 0 < g)
+  (h₁ : 6 * f + 9 * g = 36) :
+  (f, g) = (3, 2) ∨ (f, g) = (6, 0) ∨ (f, g) = (0, 4)   :=  by sorry
+theorem lean_workbook_plus_42801  (P : ℝ → ℝ)
+  (h₀ : ∀ x, P x = (x - 3 / 2) * (x - 1 / 2) * (x + 1 / 2) * (x + 3 / 2))
+  (h₁ : 0 < x) :
+  P x = (x^4 - (10 / 4) * x^2 + 9 / 16)   :=  by sorry
+theorem lean_workbook_plus_42805 (x y : ℝ) : (1 + x + y) ^ 2 ≥ 3 * (x + y + x * y)   :=  by sorry
+theorem lean_workbook_plus_42806  (p : ℝ)
+  (h₀ : p = 1 / 2 + 1 / 2 * (1 - p)) :
+  p = 2 / 3   :=  by sorry
+theorem lean_workbook_plus_42808 (x : ℝ) : 1 / 4 < x ↔ x > 1 / 4   :=  by sorry
+theorem lean_workbook_plus_42812 (a : ℕ → ℤ) (h : ∀ i, ¬ 2018 ∣ (∑ j in Finset.range i, a j)) :
+    ∃ m n, m < n ∧ 2018 ∣ (∑ j in Finset.Icc m n, a j)   :=  by sorry
+theorem lean_workbook_plus_42823 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^3 + b^3 + c^3 + 8 * a * b * c ≥ (a + b) * (b + c) * (c + a)   :=  by sorry
+theorem lean_workbook_plus_42826 (a b c : ℝ) (h1 : a ≥ b ∧ b ≥ c) : (a + b + c) ^ 2 ≥ 3 * (a * b + b * c + a * c)   :=  by sorry
+theorem lean_workbook_plus_42857  (x : ℝ)
+  (h₀ : 0 < x)
+  (h₁ : x^5 - x^2 + 3 ≥ x^3 + 2) :
+  1 / (x^5 - x^2 + 3) ≤ 1 / (x^3 + 2)   :=  by sorry
+theorem lean_workbook_plus_42865 (a b : ℕ) (x : ℝ) (hx : 0 < x ∧ x < 1) :
+  x^a / (1 - x)^(a + 1) * (x^b / (1 - x)^(b + 1)) = x^(a + b) / (1 - x)^(a + b + 2)   :=  by sorry
+theorem lean_workbook_plus_42875 (a b c : ℝ) : (a / (b + c) + b / (c + a) + c / (a + b) ≥ 3 / 2 ∧ (a = b ∧ b = c ∧ c = 3 / 2)) ↔ a = b ∧ b = c ∧ c = 3 / 2   :=  by sorry
+theorem lean_workbook_plus_42893 : 2^(0 + 1) = 2   :=  by sorry
+theorem lean_workbook_plus_42894  (x : ℝ)
+  (h₀ : x = 1)
+  (h₁ : x^2 - 1 = 0) :
+  (x + 1) * (x - 1) = 0   :=  by sorry
+theorem lean_workbook_plus_42896 (m n : ℕ) (h₁ : m = n^2): ∃ k, k^2 = m   :=  by sorry
+theorem lean_workbook_plus_42905 : ∀ n : ℤ, n^4 + n^2 + 1 = (n^2 - n + 1) * (n^2 + n + 1)   :=  by sorry
+theorem lean_workbook_plus_42944 (a b c d : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (hd : 0 ≤ d) : 16 * (a * b * c + b * c * d + c * d * a + d * a * b) ≤ (a + b + c + d) ^ 3   :=  by sorry
+theorem lean_workbook_plus_42946  (x y : ℝ)
+  (h₀ : 0 < x)
+  (h₁ : 0 < y)
+  (h₂ : x = 1 / Real.sin y)
+  (h₃ : y = Real.arcsin (1 / x)) :
+  x = 1 / Real.sin (Real.arcsin (1 / x))   :=  by sorry
+theorem lean_workbook_plus_42947 :
+  (2^4 / 3^4) * (3^4 - 2^4) / (3^4 - 1) * 2 = 2^4 * (3^4 - 2^4) / (3^4 * (3^4 - 1))   :=  by sorry
+theorem lean_workbook_plus_42952 : 12 + 13 ≡ 7 + 8 [ZMOD 5]   :=  by sorry
+theorem lean_workbook_plus_42963 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : (a / b + b / a + 2) ≥ 4 * (1 + a^2) * (1 + b^2) / (1 + a * b)^2   :=  by sorry
+theorem lean_workbook_plus_42964    (x y : ℝ)
+    (a b : ℝ)
+    (h₀ : x = a^2 + b^2)
+    (h₁ : y = a * b) :
+    (x - 2 * y)^2 * (17 * x^2 + 4 * x * y + 4 * y^2) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_42966 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : (a + b + c + Real.sqrt (a * b * c)) = 1 → (a + b + c) ^ 2 + 2 * Real.sqrt (a * b * c) * (a + b + c) ≥ 4 * (a * b + b * c + a * c)   :=  by sorry
+theorem lean_workbook_plus_42969 (a b c : ℝ) : a^4 + b^4 + c^4 + a^2 * b^2 + b^2 * c^2 + c^2 * a^2 - 2 * a^3 * b - 2 * b^3 * c - 2 * c^3 * a ≥ 0   :=  by sorry
+theorem lean_workbook_plus_42974 (a b c : ℝ) (h₁ : a + b + c = 5) (h₂ : a * b + b * c + c * a = 3) : -1 ≤ c ∧ c ≤ 13 / 3   :=  by sorry
+theorem lean_workbook_plus_42981 (x y : ℝ) (h₁ : x > 2) (h₂ : y > 2) (h₃ : x < y) :
+  x + (4 / (4 + x)) < y + (4 / (4 + y))   :=  by sorry
+theorem lean_workbook_plus_42995 (n k : ℕ) (h₁ : n ≥ k) (h₂ : k ≥ 0) : choose n k = choose n (n-k)   :=  by sorry
+theorem lean_workbook_plus_43008 (a b : ℕ) : ∃ k : ℕ, (5 * a)! * (5 * b)! / (a! * b! * (3 * a + b)! * (a + 3 * b)!) = k   :=  by sorry
+theorem lean_workbook_plus_43013 (f : Polynomial ℤ) (a : ℕ → ℤ) (a0 : a 0 = 0) (a_rec : ∀ n, a (n + 1) = f.eval (a n)) : ∃ m > 0, a m = 0 → a 1 = 0 ∨ a 2 = 0   :=  by sorry
+theorem lean_workbook_plus_43014 (a b c x y z : ℝ) : x = a / (-a + b + c) ∧ y = b / (a - b + c) ∧ z = c / (a + b - c) ↔ x = a / (-a + b + c) ∧ y = b / (a - b + c) ∧ z = c / (a + b - c)   :=  by sorry
+theorem lean_workbook_plus_43022 (a : ℝ) (ha : a^5 - a^3 + a - 2 = 0) : ⌊a^6⌋ = 3   :=  by sorry
+theorem lean_workbook_plus_43025 (x : ℕ → ℝ) (hx: ∀ n, 1 <= x n ∧ x n <= 2) : ∀ n, x n ^ 3 + 1 / x n < 8 + 1   :=  by sorry
+theorem lean_workbook_plus_43028 (x : ℝ) (n : ℕ) : ∑ k in Finset.range (n + 1), (Int.floor (x / 2^k) - Int.floor (x / 2^(k + 1))) = Int.floor x - Int.floor (x / 2^(n + 1))   :=  by sorry
+theorem lean_workbook_plus_43043 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (habc : a * b * c = 1) : (a + b^(1/2) + c^(1/3)) * (b + c^(1/2) + a^(1/3)) * (c + a^(1/2) + b^(1/3)) ≥ 27/8   :=  by sorry
+theorem lean_workbook_plus_43044 (x : ℝ) (hx : x ≥ 3) : (x - 3) * (x^3 + 3 * x^2 + 9 * x - 27) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_43068 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a + b + c = 3) : (a^2 + b^2 + c^2) / 3 ≥ ((a^3 + b^3 + c^3) / 3)^(1 / 4)   :=  by sorry
+theorem lean_workbook_plus_43075 (n : ℕ) : (n^2)/(n^3+n) ≥ 1/(2*n)   :=  by sorry
+theorem lean_workbook_plus_43083 (f : ℕ → ℕ): (∀ a b : ℕ, f (a + b + a*b) = f (a*b)) ↔ ∃ c :ℕ, ∀ n : ℕ, f n = c   :=  by sorry
+theorem lean_workbook_plus_43093 (x y z : ℝ) (hx : 5 ≤ x) (hy : 6 ≤ y) (hz : 7 ≤ z) (h : 125 ≤ x ^ 2 + y ^ 2 + z ^ 2) : 339 ≤ (x + y + z) ^ 2   :=  by sorry
+theorem lean_workbook_plus_43104 : ∀ a b c : ℝ, (a^2 + b^2 + c^2)^2 ≥ 3 * a * b * c * (a + b + c)   :=  by sorry
+theorem lean_workbook_plus_43107 (a b : ℝ) (h₁ : 1 ≤ a ∧ a ≤ 3) (h₂ : 1 ≤ b ∧ b ≤ 3) (h₃ : a + b = 4) : |Real.sqrt a - Real.sqrt b| ≤ Real.sqrt 3 - 1   :=  by sorry
+theorem lean_workbook_plus_43116 (N : Type) [AddCommMonoid N] [Mul N] (h₁ : ∀ a b c : N, (a + b) * c = a * c + b * c) (h₂ : ∀ a b c : N, a * (b + c) = (a * b) * c) : 5 * 5 = 160 → 7 * 7 = 896   :=  by sorry
+theorem lean_workbook_plus_43123 (b c : ℝ) : (b + c - 2 * b * c) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_43132 : ∃ f : ℤ → ℤ, ∀ x, f x = -x + 2017   :=  by sorry
+theorem lean_workbook_plus_43133 (a b c : ℝ) : (a^2 - a * b + b^2) * (b^2 - b * c + c^2) + (b^2 - b * c + c^2) * (c^2 - c * a + a^2) + (c^2 - c * a + a^2) * (a^2 - a * b + b^2) ≥ 1/3 * (a^2 + b^2 + c^2)^2   :=  by sorry
+theorem lean_workbook_plus_43142 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (hxy : x^3 + y^3 = x - y) : x^2 + y^2 < 1   :=  by sorry
+theorem lean_workbook_plus_43151 (a b c : ℤ) (h : ∃ q : ℚ, (a * Real.sqrt 3 + b) / (b * Real.sqrt 3 + c) = q) : (a ^ 2 + b ^ 2 + c ^ 2) / (a + b + c) = ⌊(a ^ 2 + b ^ 2 + c ^ 2) / (a + b + c)⌋   :=  by sorry
+theorem lean_workbook_plus_43169  (a : ℝ)
+  (h₀ : 0 < a)
+  (h₁ : (↑52 / a - 1) * 24 + (↑24 / a - 1) * 52 ≤ 1994) :
+  a ≥ 416 / 345   :=  by sorry
+theorem lean_workbook_plus_43171 : ∑ k in Finset.filter (λ x => 2∣x ∨ 3∣x ∨ 5∣x) (Finset.Icc 1 2004), 1 = 1469   :=  by sorry
+theorem lean_workbook_plus_43176 : ∀ m : ℝ, m ∈ Set.Icc (-1) 1 → ∃ θ : ℝ, θ ∈ Set.Icc (-Real.pi/2) (Real.pi/2) ∧ m = Real.sin θ   :=  by sorry
+theorem lean_workbook_plus_43185 (m : ℕ) (hm: m > 0) (h: ∀ n : ℕ, Odd n → (529^n + m * 132^n) % 262417 = 0) : m >= 1984   :=  by sorry
+theorem lean_workbook_plus_43204  (x : ℝ)
+  (h₀ : (2 * x - 1) * (x - 2) = 0) :
+  x = 1 / 2 ∨ x = 2   :=  by sorry
+theorem lean_workbook_plus_43212 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) :  3 * (a ^ 2 + b ^ 2 + c ^ 2) / (2 * (a * b + b * c + a * c)) ≥ a / (b + c) + b / (a + c) + c / (b + a)   :=  by sorry
+theorem lean_workbook_plus_43222 (x y z : ℝ) :
+  Real.sqrt ((x ^ 2 + y ^ 2 + z ^ 2) ^ 3) ≥ x ^ 3 + y ^ 3 + z ^ 3 - 3 * x * y * z   :=  by sorry
+theorem lean_workbook_plus_43239 (x y z : ℝ) (h : x*y*z = 1) :
+  x^6 + y^6 + z^6 ≥ x*y*z*(x^3 + y^3 + z^3)   :=  by sorry
+theorem lean_workbook_plus_43243 (f : ℤ → ℤ) (hf: f = fun n => n) : ∀ m n, f (n + f m) = f (f n) + f m   :=  by sorry
+theorem lean_workbook_plus_43244 (a b c d : ℝ) (hab : a + b = c + d) (hab' : a + b ≠ 0) : (a + b) ^ 3 = (c + d) ^ 3   :=  by sorry
+theorem lean_workbook_plus_43253 (D : ℕ → ℕ) (h : D 1 = 0 ∧ D 2 = 1 ∧ ∀ n, D (n + 1) = n * (D n + D (n - 1))) : ∃ f : ℕ → ℕ, ∀ n, D n = f n   :=  by sorry
+theorem lean_workbook_plus_43255 (x y : ℝ) : (3*x-4*y+2 = 0 ∧ 2*y+2 = 0) ↔ x = -2 ∧ y = -1   :=  by sorry
+theorem lean_workbook_plus_43259 (x y z : ℝ) (h : x*y*z = 1) : x^2 + y^2 + z^2 ≥ x*y + y*z + x*z   :=  by sorry
+theorem lean_workbook_plus_43261 (n : ℕ) (hn : 1 ≤ n) : 133 ∣ 11 ^ (n + 2) + 12 ^ (2 * n + 1)   :=  by sorry
+theorem lean_workbook_plus_43262 (n : ℕ) : ∑ n in Finset.Icc 1 98, n * (100 - n) = ∑ n in Finset.Icc 1 98, (100 * n - n ^ 2)   :=  by sorry
+theorem lean_workbook_plus_43268 : 1.61803399 < Real.sqrt 5   :=  by sorry
+theorem lean_workbook_plus_43269 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b + c = 1) : a / (a^2 + 8 * b * c)^(1 / 3) + b / (b^2 + 8 * c * a)^(1 / 3) + c / (c^2 + 8 * a * b)^(1 / 3) ≥ 1   :=  by sorry
+theorem lean_workbook_plus_43285 (a b c : ℝ) : 11 * (a + b) ^ 2 + 22 * c ^ 2 ≥ (3 * a + 3 * b + 2 * c) ^ 2   :=  by sorry
+theorem lean_workbook_plus_43303 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : (a / (a + 2 * b + 1) + b / (b + 2 * a + 1) = 1 / 2 → a + b ≤ 2)   :=  by sorry
+theorem lean_workbook_plus_43305 (f : ℝ → ℝ) (c : ℝ) (hf: f = fun x ↦ c) : f x = c   :=  by sorry
+theorem lean_workbook_plus_43327 (n : ℕ) : 7 ^ (4 * n + 1) ≡ 7 [ZMOD 10]   :=  by sorry
+theorem lean_workbook_plus_43331 (n : ℕ) (hn: n > 0) (S : Finset (Finset ℕ)) (hS: S.card = 2^(n-1)) (hS2: ∀ A B : Finset ℕ, A ∈ S ∧ B ∈ S → A ∩ B ≠ ∅) : S.card = 2^(n-1)   :=  by sorry
 theorem lean_workbook_plus_43338 : ∀ a b : ℝ, 2 * (a ^ 2 + b ^ 2) ^ 2 ≥ (a ^ 2 - b ^ 2) ^ 2   :=  by sorry
-theorem lean_workbook_plus_75612 (N : ℕ) (hN : 1 ≤ N ∧ N ≤ 999) : 1001 * N = 1000 * N + N   :=  by sorry
-theorem lean_workbook_plus_6109 (n : ℕ) (x : ℕ → ℂ) : ∑ j in Finset.range n, ‖x j‖ ≥ ‖∑ j in Finset.range n, x j‖   :=  by sorry
-theorem lean_workbook_plus_68339 (a b : ℝ) (ha : a > 1) (hb : b > 1) : (a^2 / (b - 1) + b^2 / (a - 1)) ≥ 8   :=  by sorry
-theorem lean_workbook_plus_1896 (f : ℕ → ℕ) (hf: f 1 = 1) (hf1: ∀ m n: ℕ, f (m + n) = f m + f n + m * n): ∀ n:ℕ, f n = n * (n + 1) / 2   :=  by sorry
-theorem lean_workbook_plus_70408 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / (a + b + c) + 2 / 3) * (b / (a + b + c) + 2 / 3) * (c / (a + b + c) + 2 / 3) ≤ 1   :=  by sorry
-theorem lean_workbook_plus_32379 : ∀ x : ℝ, cos x ^ 2 - sin x ^ 2 = cos (2 * x)   :=  by sorry
+theorem lean_workbook_plus_43343 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a / (1 + a * (1 + b)) + b / (1 + b * (1 + c)) + c / (1 + c * (1 + a)) ≤ 1   :=  by sorry
+theorem lean_workbook_plus_43345 : (1 - cos x) / (1 + cos x) = tan (x / 2) ^ 2   :=  by sorry
+theorem lean_workbook_plus_43346  (k : ℂ)
+  (h₀ : k ≠ 1)
+  (h₁ : k ≠ -1) :
+  1 / (k^2 - 1) = 1 / 2 * (1 / (k - 1) - 1 / (k + 1))   :=  by sorry
+theorem lean_workbook_plus_43368 : ∀ t : ℝ, (cos t)^3 = (3 * cos t + cos (3 * t)) / 4   :=  by sorry
+theorem lean_workbook_plus_43373 (b c m_b m_c : ℝ) : (2 / 3 * m_b + 1 / 3 * m_c > 1 / 2 * c ∧ 2 / 3 * m_c + 1 / 3 * m_b > 1 / 2 * b) → 2 * (m_b + m_c) > b + c   :=  by sorry
+theorem lean_workbook_plus_43374 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : (x^2 + y^2) / (x + y) ≥ (x + y) / 2   :=  by sorry
+theorem lean_workbook_plus_43402  (a b c : ℝ)
+  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
+  (h₁ : a + b + c = 1)
+  (h₂ : a / b = b / c)
+  (h₃ : b / c = c / a) :
+  a / b = 1 ∧ b / c = 1 ∧ c / a = 1   :=  by sorry
+theorem lean_workbook_plus_43410 (a b: ℝ): (a^2 + b)^(1 / 2) + (b^2 + a)^(1 / 2) + (1 + a * b)^(1 / 2) ≤ 3   :=  by sorry
+theorem lean_workbook_plus_43418 (f : ℝ → ℝ) (a : ℝ) (ha : 0 < a) (h : ∀ x, f (a * x) = a * f x) : ∀ x, f (a^(1/3) * x) = a^(1/3) * f x   :=  by sorry
+theorem lean_workbook_plus_43423 : (1.8582 : ℝ) / 1.05 > 1.7697   :=  by sorry
+theorem lean_workbook_plus_43429 (x : ℝ) (hx : x = (2 : ℝ)^(1/3) - 1) : (x^(1/3) : ℝ) = (1/9 : ℝ)^(1/3) - (2/9 : ℝ)^(1/3) + (4/9 : ℝ)^(1/3)   :=  by sorry
+theorem lean_workbook_plus_43436 (n : ℕ) (s : Finset α) (hs : s.card = n) :
+  s.powerset.card = 2 ^ n   :=  by sorry
+theorem lean_workbook_plus_43466 (a b c : ℝ) (h1 : a ≥ b ∧ b ≥ c ∧ c > 0 ∧ a + b + c = 1) :
+  b / (b + c) + c / (c + a) + a / (a + b) ≥ 3 / 2   :=  by sorry
+theorem lean_workbook_plus_43471 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : 1 / (1 + a) + 1 / (1 + b) + 1 / (1 + c) = 1 → a * b * c ≥ 8   :=  by sorry
+theorem lean_workbook_plus_43472 (x : ℝ) : x = (x + 1) / 2 + (x - 1) / 2   :=  by sorry
+theorem lean_workbook_plus_43478 (x y z : ℝ) : (9*x+8*y+7*z=987 ∧ 3*x+4*y+2*z=342 ∧ 2*x+5*y+8*z=258) ↔ x=100 ∧ y=10 ∧ z=1   :=  by sorry
+theorem lean_workbook_plus_43483 : 3 * 7^5 < 5^7   :=  by sorry
+theorem lean_workbook_plus_43532 : ∀ n : ℤ, 8 * n ^ 2 + 16 * n + 9 > 0   :=  by sorry
+theorem lean_workbook_plus_43533 (a b c : ℝ) : 2 * (a * b + b * c + c * a) ≤ (2 / 3) * (a + b + c) ^ 2   :=  by sorry
+theorem lean_workbook_plus_43538 : ∑' k : ℕ, (3 * k).choose k * (9 * k ^ 2 - 3 * k - 1) / ((3 * k - 1) * (3 * k - 2)) * (2 / 27) ^ k = 1 / 4   :=  by sorry
+theorem lean_workbook_plus_43547 : ∀ n : ℕ, Even ((2 + Real.sqrt 3) ^ n + (2 - Real.sqrt 3) ^ n)   :=  by sorry
+theorem lean_workbook_plus_43557 {a b c d: ℝ} : 3 * (a + b + c + d) ^ 2 ≥ 8 * (a * b + a * c + a * d + b * c + b * d + c * d)   :=  by sorry
+theorem lean_workbook_plus_43561 (x y : ℝ) (hx : 1 ≤ x) (hy : 1 ≤ y) : (y^3 - y^2) * x^3 + x^2 - (y^2 + 1) * x + y ≥ 0   :=  by sorry
+theorem lean_workbook_plus_43563 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : a^3 + b^3 + c^3 - 3 * a * b * c - 2 * (c - b)^3 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_43573  (x : ℝ)
+  (f : ℝ → ℝ)
+  (h₀ : 0 < x)
+  (h₁ : ∀ x, f x = (1 / 2 * x * Real.log x) + (1 / 4 * x)) :
+  f x = (1 / 2 * x * Real.log x) + (1 / 4 * x)   :=  by sorry
+theorem lean_workbook_plus_43574 (I J : ℝ) (h₁ : I + J = 4) (h₂ : I - J = Real.pi) : I = (4 + Real.pi) / 2 ∧ J = (4 - Real.pi) / 2   :=  by sorry
+theorem lean_workbook_plus_43578 (a b c d : ℝ) : (a + b + c) / 3 = d - 8 ∧ (a + b + c + d) / 4 = 42 → (3 * d - 2 + d + 5) / 2 = 97.5   :=  by sorry
+theorem lean_workbook_plus_43579 : 131^5 > 21^8   :=  by sorry
+theorem lean_workbook_plus_43583 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : 1 / (1 + a) + 2 / (1 + b) + 1 / (1 + c) ≤ 1) : a * b^2 * c * (a + b) * (b + c) ≥ 2916   :=  by sorry
+theorem lean_workbook_plus_43590 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : a^2 + b^4 = 5) : a + b ≤ 3   :=  by sorry
+theorem lean_workbook_plus_43592 : ∀ n ≥ 2, (2^n - 1) % 4 = 3   :=  by sorry
+theorem lean_workbook_plus_43594  (a b c d : ℂ) :
+  (a + b + c + d) * (a * b + b * c + c * d + d * a) - 4 * a * c * d - 4 * a * b * d - 4 * a * b * c - 4 * b * c * d = (b - d)^2 * c + (c - a)^2 * d + (d - b)^2 * a + (a - c)^2 * b   :=  by sorry
+theorem lean_workbook_plus_43597 (a : ℕ → ℤ) (a1 : a 0 = 1) (a2 : a 1 = 3) (a_rec : ∀ n, a (n + 2) = a (n + 1) - 2 * a n - 1) : ∃ f : ℕ → ℤ, ∀ n, a n = f n   :=  by sorry
+theorem lean_workbook_plus_43612 : ∀ x : ℝ, x^4 - 6 * x^3 + 12 * x^2 - 10 * x + 3 = 0 ↔ x = 1 ∨ x = 1 ∨ x = 1 ∨ x = 3  :=  by sorry
+theorem lean_workbook_plus_43617 (a b : ℝ) (ha : a > 0) (hb : b > 0) : (1 / (a + b)) ≤ (1 / (4 * a)) + (1 / (4 * b))   :=  by sorry
+theorem lean_workbook_plus_43619 (x : ℤ) : (7835^3 / (7837^3 - 7836^2 - 78357) - 1) = -5 / 7840   :=  by sorry
+theorem lean_workbook_plus_43622 (x : ℝ) (hx : x ≠ 0) : x ^ 12 - x ^ 9 - x ^ 3 + 1 = (x ^ 9 - 1) * (x ^ 3 - 1)   :=  by sorry
+theorem lean_workbook_plus_43634 (f : ℝ → ℝ): (∀ x y, f (x + y) = f x + y) ↔ ∃ a, ∀ x, f x = x + a   :=  by sorry
+theorem lean_workbook_plus_43635 (m : ℝ) (a b c : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) (hm : 0.03 ≤ m ∧ m ≤ 3.99) : (a^2 + m * b * c)^(1 / 4) + (b^2 + m * c * a)^(1 / 4) + (c^2 + m * a * b)^(1 / 4) ≥ (a^2 + b^2 + c^2 + (27 * m + 26) * (a * b + b * c + c * a))^(1 / 4)   :=  by sorry
+theorem lean_workbook_plus_43643 :  ∀ a b c d : ℝ, (1 - a) * (1 - b) * (1 - c) * (1 - d) > 0 → 1 + a * b + a * c + a * d + b * c + b * d + c * d - (a * b * c + a * b * d + a * c * d + b * c * d) + a * b * c * d > a + b + c + d   :=  by sorry
+theorem lean_workbook_plus_43663 : ∀ x y : ℝ, x^5 + y^5 = (x + y) * (x^4 - x^3 * y + x^2 * y^2 - x * y^3 + y^4)   :=  by sorry
+theorem lean_workbook_plus_43677 (x y z : ℝ) (hx: x ∈ Set.Icc 0 1) (hy: y ∈ Set.Icc 0 1) (hz: z ∈ Set.Icc 0 1): (x+y+z)+3*x*y*z ≥ 2*(x*y + y*z + z*x)   :=  by sorry
+theorem lean_workbook_plus_43695 (a b c : ℝ) : (a - b) ^ 2 * (a - c) ^ 2 * (b - c) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_43713 (p x : ℝ) : ∃ f : ℝ → ℝ, f x = p * x + 1 - p / 2   :=  by sorry
+theorem lean_workbook_plus_43714 (n : ℕ) : ∃ q r : ℕ, 0 ≤ r ∧ r < 3 ∧ n = 3 * q + r   :=  by sorry
+theorem lean_workbook_plus_43717 : ∀ x : ℝ, (exp x / (4 + 5 * exp (3 * x))) * (exp (-x) / exp (-x)) = 1 / (4 * exp (-x) + 5 * exp (2 * x))   :=  by sorry
+theorem lean_workbook_plus_43720 (x : ℤ) : 1010^2 - 1009^2 - 1 = 2018   :=  by sorry
+theorem lean_workbook_plus_43723 (a b c : ℝ) : a^2 + b^2 + c^2 - (a * b + a * c + b * c) = b^2 + c^2 + a^2 - (b * c + b * a + c * a)   :=  by sorry
+theorem lean_workbook_plus_43728 (a b c : ℝ) (ha : a ≥ 3 / 2) (hb : b ≥ 3 / 2) (hc : c ≥ 3 / 2) : a + 2 * b + 3 * c ≥ 9 / 8 * (1 / a + 2 / b + 3 / c + 4)   :=  by sorry
+theorem lean_workbook_plus_43729 (p : ℕ) (hp1 : p ≡ 3 [ZMOD 5]) (hp2 : p ≡ 3 [ZMOD 8]) : 40 ∣ 13 * p + 1   :=  by sorry
+theorem lean_workbook_plus_43733 (x : ℕ) : x^2 ≡ 1 [ZMOD 5] ↔ x ≡ 1 [ZMOD 5] ∨ x ≡ 4 [ZMOD 5]   :=  by sorry
+theorem lean_workbook_plus_43735 (n : ℕ) : 3 * ((n - 1) * n) / 2 + n = (3 * n ^ 2 - n) / 2   :=  by sorry
+theorem lean_workbook_plus_43737  (s : ℕ)
+  (h₀ : s = ∑ k in Finset.Icc (1 : ℕ) 100, (2 * k - 1)) :
+  s = 10000   :=  by sorry
+theorem lean_workbook_plus_43738 (s p : ℝ) : 9/5 * s - 16/5 * p = 0 → s = 16/9 * p   :=  by sorry
+theorem lean_workbook_plus_43741 (a b c : ℝ) : ((a + 1) / (a + b))^(2/5) + ((b + 1) / (b + c))^(2/5) + ((c + 1) / (c + a))^(2/5) ≥ 3   :=  by sorry
+theorem lean_workbook_plus_43745 : ¬ Function.Injective (fun x : ℝ => 9*x - x^3)   :=  by sorry
+theorem lean_workbook_plus_43746 (x : ℤ) : ∃ m n : ℤ, x / 2 = m / n ∧ m.gcd n = 1   :=  by sorry
+theorem lean_workbook_plus_43748 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 1) (h : 1 = (a + b) * (b + c) * (c + a)) : a * b + b * c + c * a ≤ 3 / 4   :=  by sorry
+theorem lean_workbook_plus_43751 (n : ℕ) (_hn : 2 ≤ n) :
+    ∃ a : ℕ → ℕ,
+      ∀ i j : ℕ,
+        i < j →
+          i ≤ n ∧
+            j ≤ n →
+              (a j - a i) ∣ (a j + a i)   :=  by sorry
+theorem lean_workbook_plus_43757 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : (a + b) * (1 / (b + d) + 1 / (a + c)) ≥ 4 * (a + b) / (a + b + c + d)   :=  by sorry
+theorem lean_workbook_plus_43770 (x y z : ℝ) : y^4 * z^2 + z^4 * x^2 + x^4 * y^2 ≥ y * z * x * (z * x^2 + y^2 * x + z^2 * y)   :=  by sorry
+theorem lean_workbook_plus_43785 :
+  ∑' k : ℕ, (↑(k + 1))^2 / (4^(k + 1)) = 20 / 27   :=  by sorry
+theorem lean_workbook_plus_43787  (x y : ℝ)
+  (f : ℝ → ℝ)
+  (h₀ : ∀ x, f x = x^2 / 2)
+  (h₁ : ∀ x, ∀ y, f (x + y) + f (x - y) = (x + y)^2 / 2 + (x - y)^2 / 2) :
+  f (x + y) + f (x - y) = x^2 + y^2   :=  by sorry
+theorem lean_workbook_plus_43788 : (n+1)^3 = ((n+1)^2)*(n+1)   :=  by sorry
+theorem lean_workbook_plus_43792 (a b c : ℝ) : (a - b) ^ 2 + (b - c) ^ 2 + (c - a) ^ 2 >= 0   :=  by sorry
+theorem lean_workbook_plus_43795 (x : ℕ) : x ≡ 4 [ZMOD 5] ↔ x ≡ 4 [ZMOD 5]   :=  by sorry
+theorem lean_workbook_plus_43799 : ∀ a b c d : ℝ, (a - 1 / 2)^2 + (b - 1 / 2)^2 + (c - 1 / 2)^2 + (d - 1 / 2)^2 >= 0   :=  by sorry
+theorem lean_workbook_plus_43801 (a b : ℤ) (ha : a ≠ 0) (hb : b ≠ 0) : gcd a b ∣ lcm a b   :=  by sorry
+theorem lean_workbook_plus_43809 (x : ℝ) (k : ℤ) : ∃ k, x = 2018 * k - 2 / 1009   :=  by sorry
+theorem lean_workbook_plus_43824 (x y z : ℝ) : (x+y+z)^2 >= 3*(x*y+y*z+z*x)   :=  by sorry
+theorem lean_workbook_plus_43848 (a b c : ℝ) : 6 * (a ^ 2 + b ^ 2 + c ^ 2) ^ 2 + 3 * (a ^ 2 * b + b ^ 2 * c + c ^ 2 * a) * (a + b + c) ≥ (a + b + c) ^ 4   :=  by sorry
 theorem lean_workbook_plus_43874  (x a b c : ℝ)
   (h₀ : x ≠ -c)
   (h₁ : c ≠ a)
   (h₂ : c ≠ b) :
   x + a + b - c + (a - c) * (b - c) / (x + c) = x + c + (a - c) * (b - c) / (x + c) + a + b - 2 * c   :=  by sorry
-theorem lean_workbook_plus_75556 : 1 = 1 / 1   :=  by sorry
-theorem lean_workbook_plus_15566 (a b c : ℝ) : (a - b + c) ^ 2 * (a + c - b) ^ 2 + (b - c + a) ^ 2 * (b + a - c) ^ 2 + (c - a + b) ^ 2 * (c + b - a) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_20796 (x : ℝ) (z : ℤ) : (z = ⌊x⌋) → z ≤ x ∧ x < z + 1   :=  by sorry
-theorem lean_workbook_plus_77089 (a b d x y : ℤ) (h₁ : d = gcd a b) : d ∣ a * x + b * y   :=  by sorry
-theorem lean_workbook_plus_51504 :
-  ((100 ^ 2 - 7 ^ 2):ℝ) / (70 ^ 2 - 11 ^ 2) * ((70 - 11) * (70 + 11) / ((100 - 7) * (100 + 7))) = 1   :=  by sorry
-theorem lean_workbook_plus_44288 : ¬ p ∨ q ↔ p → q   :=  by sorry
-theorem lean_workbook_plus_73246 (f : ℕ → ℕ) (hf: f 1 = 1 ∧ ∀ n:ℕ, f (2*n + 1) = f (2*n) + 1 ∧ f (2*n) = 3 * f n) : ∃ A: Set ℕ, A = {n:ℕ | ∃ k:ℕ, n = f k}   :=  by sorry
-theorem lean_workbook_plus_7163 (a : ℕ → ℝ) (ha : ∀ i, 0 < a i) : ∑ i in Finset.range 6, ((a i) / (a (i + 1) + a (i + 2) + a (i + 3)))^(1 / 4) ≥ 2   :=  by sorry
-theorem lean_workbook_plus_17035 (x y : ℝ) (h₁ : x - 9*y = 0) (h₂ : 9*x - y = 0) : x + y = 0   :=  by sorry
-theorem lean_workbook_plus_63429 (h₁ : ∑ i in Finset.range 25, (i + 1)^2 = 5525) : ∑ i in Finset.range 25, (2 * (i + 1))^2 = 22100   :=  by sorry
-theorem lean_workbook_plus_79910 (a b c : ℝ) (h : a + b + a * b = 3) (h1 : a > 0 ∧ b > 0 ∧ c > 0): a + b >= 2   :=  by sorry
-theorem lean_workbook_plus_81985  (x y z : ℝ) :
-  4 * x^4 * z^2 + 4 * y^4 * x^2 + 4 * z^4 * y^2 + x^4 * y^2 + z^4 * x^2 + y^4 * z^2 ≥ 15 * x^2 * y^2 * z^2   :=  by sorry
-theorem lean_workbook_plus_73506 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a + 2 * b + 3 * c) / (4 * a + 5 * b + 6 * c) + (2 * a + 3 * b + c) / (5 * a + 6 * b + 4 * c) + (3 * a + b + 2 * c) / (6 * a + 4 * b + 5 * c) ≤ 6 / 5   :=  by sorry
-theorem lean_workbook_plus_25819 (a b c d : ℝ) : 3 * (a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2) ≥ 2 * (a * b + a * c + a * d + b * c + b * d + c * d)   :=  by sorry
-theorem lean_workbook_plus_73732 (x y : ℝ) : |x + y| = |x| + |y| ↔ x*y ≥ 0   :=  by sorry
-theorem lean_workbook_plus_53314 (x_n : ℕ → ℝ) (hx_n : ∀ n, x_n = ∏ k in Finset.range n, (2 * k - 1) / (2 * k)) : ∀ ε > 0, ∃ N : ℕ, ∀ n ≥ N, |x_n| < ε   :=  by sorry
-theorem lean_workbook_plus_73304 (x : ℝ) (h : ℝ → ℝ) (hx: (x-1)/2 * h ((x-1)/2) - (1-x)/2 * h ((1-x)/2) = (x-1) * h 0) (hy: (1-x)/2 * h ((1-x)/2) - (x+1)/2 * h ((x+1)/2) = -x * h 1) (hz: (x+1)/2 * h ((x+1)/2) - (x-1)/2 * h ((x-1)/2) = h x) : h x = x * (h 1 - h 0) + h 0   :=  by sorry
-theorem lean_workbook_plus_61497 (p : ℕ) (b c : ℕ) (hp : p.Prime) (h : p ∣ b * c) : p ∣ b ∨ p ∣ c   :=  by sorry
-theorem lean_workbook_plus_8556 (a b : ℤ) (x0 : ℤ) (hx0 : x0 ≠ 0) (h : x0^2 + a * x0 + b = 0) : x0 ∣ b   :=  by sorry
-theorem lean_workbook_plus_16619  (a : ℕ → ℝ)
-  (h₀ : 0 < a 1)
-  (h₁ : ∀ n, a (n + 1)^3 = 99 * (a 1)^3)
-  (h₂ : ∀ n, 0 < a n) :
-  a 100 = 99^33   :=  by sorry
+theorem lean_workbook_plus_43889 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 3) : (a / (b^2 + c^3)^(1/3) + b / (c^2 + a^3)^(1/3) + c / (a^2 + b^3)^(1/3) ≥ 3 / (2^(1/3)))   :=  by sorry
+theorem lean_workbook_plus_43894 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : a^10 + b^10 + c^10 + (b^4 * c^4 * (b^2 + c^2) + c^4 * a^4 * (c^2 + a^2) + a^4 * b^4 * (a^2 + b^2)) + 4 * a^2 * b^2 * c^2 * (a^4 + b^4 + c^4) ≥ 2 * (b^2 * c^2 * (b^6 + c^6) + c^2 * a^2 * (c^6 + a^6) + a^2 * b^2 * (a^6 + b^6)) + 3 * a^2 * b^2 * c^2 * (b^2 * c^2 + c^2 * a^2 + a^2 * b^2)   :=  by sorry
+theorem lean_workbook_plus_43897 (A : Matrix (Fin 2) (Fin 2) ℤ) (hA : A =!![-89, 77; 66, -80]) : A * (Matrix.adjugate A) = Matrix.det A • (1 : Matrix (Fin 2) (Fin 2) ℤ)   :=  by sorry
+theorem lean_workbook_plus_43932 :  ∀ a : ℝ, a >= 3 → (a^2 - 2 * a + 4) / a ≥ 2 + a^2 / (3 * (6 + a))   :=  by sorry
+theorem lean_workbook_plus_43939 : ∀ a b c : ℝ, (a * b + b * c + c * a - 1) ^ 2 ≤ (a ^ 2 + 1) * (b ^ 2 + 1) * (c ^ 2 + 1)   :=  by sorry
+theorem lean_workbook_plus_43943 (z : ℂ) : ‖z‖^2 = ‖z^2‖   :=  by sorry
+theorem lean_workbook_plus_43945 (x : ℂ) : x^3 + x^2 + x + 1 = (x^2 + 1) * (x + 1)   :=  by sorry
+theorem lean_workbook_plus_43949 (r₁ r₂ r₃ : ℝ) : (r₁ * r₂ + r₁ * r₃ + r₂ * r₃) ^ 2 = r₁ ^ 2 * r₂ ^ 2 + r₁ ^ 2 * r₃ ^ 2 + r₂ ^ 2 * r₃ ^ 2 + 2 * r₁ ^ 2 * r₂ * r₃ + 2 * r₁ * r₂ ^ 2 * r₃ + 2 * r₁ * r₂ * r₃ ^ 2   :=  by sorry
+theorem lean_workbook_plus_43951 : x^2 - 2*x - 1 = 0 ↔ x = 1 + Real.sqrt 2 ∨ x = 1 - Real.sqrt 2   :=  by sorry
+theorem lean_workbook_plus_43954 (x y : ℝ) (h₁ : x + 2*y = 8) (h₂ : 3*x - y = 10) : x = 4 ∧ y = 2   :=  by sorry
+theorem lean_workbook_plus_43955 (final initial : ℕ) : (final - initial)/initial * 100 = ((final:ℝ) - (initial:ℝ)) / (initial:ℝ) * 100   :=  by sorry
+theorem lean_workbook_plus_43961 (a b c d : ℝ) (h1 : a > b ∧ b > 0) (h2 : c ≥ d ∧ d > 0) : a * c > b * d ∧ b * d > 0   :=  by sorry
+theorem lean_workbook_plus_43985 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^2 - b^2) / (b + c) + (b^2 - c^2) / (c + a) ≥ (a^2 - c^2) / (a + b)   :=  by sorry
+theorem lean_workbook_plus_43987  (n : ℕ)
+  (z omega : Fin n → ℂ)
+  (h₀ : ∀ k, ‖z k‖ = ‖omega k‖)
+  (h₁ : ∀ k, 0 < ‖z k‖) :
+  ∑ k, ‖z k‖^2 ≤ ∑ k, ‖omega k‖^2   :=  by sorry
+theorem lean_workbook_plus_44009 (a b c x y z : ℝ) : x = c * (3 * a ^ 2 - 6 * a * b - b ^ 2) ∧ y = c * (b ^ 2 - 2 * a * b - 3 * a ^ 2) ∧ z = c * (3 * a ^ 2 + b ^ 2) ↔ x = c * (3 * a ^ 2 - 6 * a * b - b ^ 2) ∧ y = c * (b ^ 2 - 2 * a * b - 3 * a ^ 2) ∧ z = c * (3 * a ^ 2 + b ^ 2)   :=  by sorry
+theorem lean_workbook_plus_44014 (a b : ℝ) : ∃ x y z : ℝ, x^3 + (a - 1) * Real.sqrt 3 * x^2 - 6 * a * x + b = 0 ∧ y^3 + (a - 1) * Real.sqrt 3 * y^2 - 6 * a * y + b = 0 ∧ z^3 + (a - 1) * Real.sqrt 3 * z^2 - 6 * a * z + b = 0 → |b| ≤ |a + 1|^3   :=  by sorry
+theorem lean_workbook_plus_44017 : 2003 ^ ((2002 ^ 2001) % 10000) ≡ 241 [MOD 1000]   :=  by sorry
+theorem lean_workbook_plus_44023 : ∀ x y z : ℝ, (2 / 27 ≥ 2 / 3 * (x * y + x * z + y * z) ^ 2 ↔ 1 ≥ 9 * (x * y + x * z + y * z) ^ 2)   :=  by sorry
+theorem lean_workbook_plus_44025 (v : ℕ → ℤ) (h₀ : v 0 = 2) (h₁ : v 1 = 12) (h₂ : ∀ n, v (n + 2) = 6 * v (n + 1) - v n) : ∀ n, ∃ k : ℤ, v n = k   :=  by sorry
+theorem lean_workbook_plus_44040 {x y z : ℝ} (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (hxy : x < y) : x / y < (x + z) / (y + z)   :=  by sorry
+theorem lean_workbook_plus_44052 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : (1 / 2) * y ^ 6 + (1 / 2) * x ^ 2 * y ^ 2 ≥ x * y ^ 4   :=  by sorry
+theorem lean_workbook_plus_44075 (a b c : ℝ) : (a + c) ^ 2 + 3 * b ^ 2 ≥ 3 * a * b + 3 * b * c + a * c   :=  by sorry
+theorem lean_workbook_plus_44082 (x y z : ℝ) (hx : x ≥ y) (hy : y ≥ z) (hz : z > 0) : x^2 * z + y^2 * z + z^2 * y + x * y * z > 0   :=  by sorry
+theorem lean_workbook_plus_44086 : 2 ^ 2009 ≡ 2 [MOD 10]   :=  by sorry
+theorem lean_workbook_plus_44087 (x y z : ℂ) : (x^4 * z + y^4 * x + z^4 * y - x^4 * y - y^4 * z - z^4 * x) = (x - y) * (z - y) * (x - z) * (x^2 + y^2 + z^2 + x * y + y * z + z * x)   :=  by sorry
+theorem lean_workbook_plus_44088 : ∀ x ≥ 0, (663*x^4 - 620*x^3 - 790*x^2 + 284*x + 503) > 0   :=  by sorry
+theorem lean_workbook_plus_44090 : ∑ i in Finset.range 101, i = 5050   :=  by sorry
+theorem lean_workbook_plus_44100 : (x + y + z - 3) ^ 2 ≥ 0 ↔ (x + y + z) ^ 2 - 6 * (x + y + z) + 9 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_44138 (a b : ℝ) : a^2 + b^2 + 1 / 12 ≥ 3 * a * b * (1 - a * b) ↔ 12 * a^2 + 12 * b^2 + 1 ≥ 36 * a * b * (1 - a * b)   :=  by sorry
+theorem lean_workbook_plus_44151 : ∑ k in Finset.Icc (997 : ℕ) 1995, (1 : ℝ) / k < 1   :=  by sorry
+theorem lean_workbook_plus_44165 : 2 * Real.cos B * Real.cos C ≤ 1 - Real.cos A ↔ Real.cos (B + C) + Real.cos (B - C) ≤ 1 - Real.cos A   :=  by sorry
 theorem lean_workbook_plus_44180 (a : ℝ) : a / 2 < 0 ∨ 0 ≤ a / 2 ∧ a / 2 ≤ 2 ∨ a / 2 > 2   :=  by sorry
-theorem lean_workbook_plus_59476 (a b : ℤ) : a^3 + b^3 = (a^2 + b^2) * (a + b) - a * b * (a + b)   :=  by sorry
-theorem lean_workbook_plus_37835 : 2 - Real.sqrt 2 > Real.sqrt 5 - 2   :=  by sorry
-theorem lean_workbook_plus_17986 : ∀ a b : ℝ, a^4 + b^4 + 4 * a^2 * b^2 ≥ 3 * a * b * (a^2 + b^2)   :=  by sorry
-theorem lean_workbook_plus_42559 (n : ℕ) : ∃ l, ∑ i in Finset.range n, (1 / (2 ^ i)) = l   :=  by sorry
-theorem lean_workbook_plus_37591 x : Real.sin (2 * x) = 2 * Real.sin x * Real.cos x   :=  by sorry
-theorem lean_workbook_plus_16774 (a : ℝ) (h : a^2 = 1 + a) : a = (1 + Real.sqrt 5) / 2 ∨ a = (1 - Real.sqrt 5) / 2   :=  by sorry
-theorem lean_workbook_plus_13695  (x y : ℝ)
-  (h₀ : x + y = 7)
-  (h₁ : x^2 - y^2 = 21)
-  (h₂ : y = 7 - x)
-  (h₃ : x^2 - (7 - x)^2 = 21) :
-  2 * x + 3 * y = 16   :=  by sorry
-theorem lean_workbook_plus_19462 : ∀ a b c : ℝ, a ≥ 0 ∧ b ≥ 0 ∧ c ≥ 0 → (a^2 + a * b + b^2) * (b^2 + b * c + c^2) * (c^2 + c * a + a^2) ≥ 1 / 3 * (a * b + b * c + c * a)^2 * (2 * a^2 + 2 * b^2 + 2 * c^2 + a * b + b * c + c * a)   :=  by sorry
-theorem lean_workbook_plus_31186 :  ∀ a b c : ℝ, 100 * (a ^ 2 + b ^ 2 + c ^ 2) ^ 2 - 192 * (a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_43643 :  ∀ a b c d : ℝ, (1 - a) * (1 - b) * (1 - c) * (1 - d) > 0 → 1 + a * b + a * c + a * d + b * c + b * d + c * d - (a * b * c + a * b * d + a * c * d + b * c * d) + a * b * c * d > a + b + c + d   :=  by sorry
-theorem lean_workbook_plus_82531 (p : ℕ) (hp : p.Prime) (h : 3 ∣ (p+1)) : ∃ s : ℕ, p+1 = 3 * s   :=  by sorry
-theorem lean_workbook_plus_41292 :
-  ∀ θ : ℝ, θ ≠ 0 → θ ≠ π → sin θ = 2 * sin (θ / 2) * cos (θ / 2)   :=  by sorry
-theorem lean_workbook_plus_10524 (f : ℝ → ℝ) (h : ∀ x, f x / x ^ 2 = 0) : ∀ x, f x / x = 0   :=  by sorry
-theorem lean_workbook_plus_81473 (n : ℕ) : ∑ k in Finset.range (n+1), (1:ℝ) / ((k + 1) * (k + 2)) = (n + 1) / (n + 2)   :=  by sorry
-theorem lean_workbook_plus_31350 (f : ℕ → ℕ) (hf₁ : f 1 = f 0 + 1) (hf₂ : f 1 = (f 1)^3) (hf₃ : f 0 = (f 0)^3) : f 0 = 0 ∧ f 1 = 1   :=  by sorry
-theorem lean_workbook_plus_5724 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a + b + c) / (a * b * c) ≤ 1 / a ^ 2 + 1 / b ^ 2 + 1 / c ^ 2   :=  by sorry
-theorem lean_workbook_plus_40536 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) : (a^2 + b + 3 / 4) * (b^2 + a + 3 / 4) ≥ (2 * a + 1 / 2) * (2 * b + 1 / 2)   :=  by sorry
-theorem lean_workbook_plus_70802 (a b : ℝ) : (a - b) ^ 3 = a ^ 3 - 3 * a ^ 2 * b + 3 * a * b ^ 2 - b ^ 3   :=  by sorry
-theorem lean_workbook_plus_24916 (y : ℝ) (hy : 1 ≤ y) : y ^ (y - 1) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_46912  (x : ℝ)
-  (h₀ : 0 < x)
-  (h₁ : x = Real.sqrt (2 + x)) :
-  x = 2   :=  by sorry
-theorem lean_workbook_plus_76592 (x : ℝ) (hx : 0 ≤ x) : (1 / (1 + 7 * x))^(1 / 3) + (x / (x + 7))^(1 / 3) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_21682 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : 3 * (a * b + b * c + c * a) ≤ (a + b + c) ^ 2 ∧ (a + b + c) ^ 2 ≤ 4 * (a * b + b * c + c * a)   :=  by sorry
-theorem lean_workbook_plus_38908 :
-  8265 / 5^6 = 1653 / 3125   :=  by sorry
-theorem lean_workbook_plus_12679 (f : ℝ → ℝ) (h : ∀ x y z : ℝ, (x + y + z) * f (x * y * z) = 0) : f 0 = 0   :=  by sorry
-theorem lean_workbook_plus_54965 (a b c : ℝ) : a^2+b^2+c^2 + (a+b+c)^2 = (a+b)^2 + (b+c)^2 + (c+a)^2   :=  by sorry
-theorem lean_workbook_plus_74351 :
-  (1 / 16 + 3 / 32 + 1 / 8) = 9 / 32   :=  by sorry
-theorem lean_workbook_plus_66791 (α : ℝ) : (sin α)^2 + (cos α)^2 = 1   :=  by sorry
-theorem lean_workbook_plus_51595  (x y z : ℤ)
-  (h₀ : x^2 = y^2 - Real.sqrt (y^2 + x))
-  (h₁ : y^2 + x = z^2) :
-  x = z^2 - y^2   :=  by sorry
-theorem lean_workbook_plus_27733 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 3 * (a ^ 2 + b ^ 2 + c ^ 2) ≥ (a + b + c) ^ 2   :=  by sorry
-theorem lean_workbook_plus_42805 (x y : ℝ) : (1 + x + y) ^ 2 ≥ 3 * (x + y + x * y)   :=  by sorry
-theorem lean_workbook_plus_70868 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : a + b ≥ 3) : (a + 1 / b + 1) * (b + 1 / a + 1) ≥ 10   :=  by sorry
-theorem lean_workbook_plus_35030 (x : ℝ) (k : ℤ) (hx : 0 < x) (hk : 0 < k) : x * (k - 1) / x - (x + 1) * k / (x + 1) ≤ 0   :=  by sorry
-theorem lean_workbook_plus_55030 : ∀ x y : ℝ, 3 * (x ^ 2 + x * y + y ^ 2) ≥ (9 / 4) * (x + y) ^ 2   :=  by sorry
-theorem lean_workbook_plus_46832 : 2 ^ 1000 ≡ 2 [MOD 7]   :=  by sorry
-theorem lean_workbook_plus_19905 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : x^4 + y^4 + z^4 + x*y*z*(x + y + z) ≥ (2/3)*(x*y + y*z + z*x)^2   :=  by sorry
-theorem lean_workbook_plus_18730 (k : ℕ) (h₁ : 4 < k) : 5 * k ^ 4 + 500 * k > (k + 1) ^ 4 + 100 * k + 100   :=  by sorry
-theorem lean_workbook_plus_21928 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : Real.sqrt ((a + b + c) * (1 / a + 1 / b + 1 / c)) ≥ 1 + (4.1 + 1.3 * Real.sqrt ((a^3 + b^3 + c^3) * (1 / a^3 + 1 / b^3 + 1 / c^3)))^(1 / 3)   :=  by sorry
+theorem lean_workbook_plus_44182 (p a : ℕ) : a + 1 ≡ 0 [ZMOD p] ↔ p ∣ a + 1   :=  by sorry
+theorem lean_workbook_plus_44185  (t0 t1 t2 : ℝ)
+  (h0 : t0 = 1 + t0 / 2 + t1 / 2)
+  (h1 : t1 = 1 + t0 / 2 + t2 / 2)
+  (h2 : t2 = 1 + t0 / 2) :
+  t2 = 8 ∧ t1 = 12 ∧ t0 = 14   :=  by sorry
+theorem lean_workbook_plus_44187  (x y z : ℝ)
+  (h₀ : x - (0.6 * x + 6) = 2)
+  (h₁ : y - (0.5 * y + 5) = x)
+  (h₂ : z - (0.4 * z + 4) = y) :
+  z = 90   :=  by sorry
+theorem lean_workbook_plus_44209 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) (habc : a * b * c * d = 1) (h : a^2 + b^2 + c^2 + d^2 = 1) : a^2 / (a^2 + b * c) + b^2 / (b^2 + c * d) + c^2 / (c^2 + d * a) + d^2 / (d^2 + a * b) ≥ 1 + 16 * a * b * c * d   :=  by sorry
+theorem lean_workbook_plus_44214 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (habc : a * b * c = 1) (h : a + b + c = 1 / a + 1 / b + 1 / c) : b * c + a * c + a * b + a * b * c ≥ 4   :=  by sorry
+theorem lean_workbook_plus_44215 (a b c: ℝ) : a^2 + b^2 ≥ 2*a*b ∧ b^2 + c^2 ≥ 2*b*c ∧ c^2 + a^2 ≥ 2*c*a   :=  by sorry
+theorem lean_workbook_plus_44218  (x : ℝ)
+  (h₀ : x ≠ 1)
+  (h₁ : x ≠ -1) :
+  (x^2 + 1) / (x^2 - 1) = x / (x + 1) + 1 / (x - 1)   :=  by sorry
+theorem lean_workbook_plus_44220 : 1997 ∣ (1336 ^ 1997 + 1339 ^ 1997 - 1995 ^ 1997 - 1998 ^ 1997)   :=  by sorry
+theorem lean_workbook_plus_44226 (x : ℝ) : (5 * Real.logb 3 2) + (2 * Real.logb 9 10) = Real.logb 3 (2^6 * 5)   :=  by sorry
+theorem lean_workbook_plus_44227 (a b : ℝ) (h₁ : a < b) : a < (a + b) / 2 ∧ (a + b) / 2 < b   :=  by sorry
+theorem lean_workbook_plus_44228 : k + 3 ≠ 7 ↔ k ≠ 4   :=  by sorry
+theorem lean_workbook_plus_44231  (n : ℕ)
+  (h₀ : 5^n = 3125) :
+  n = 5   :=  by sorry
+theorem lean_workbook_plus_44232 :  ∀ a : ℝ, 1 ≤ a → (a + 1) ^ 2 / a ≥ 12 * (a ^ 2 + 2) / (a + 2) ^ 2   :=  by sorry
+theorem lean_workbook_plus_44243 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 + 3 * a * b * c = 6) : a * b + b * c + c * a ≤ 3   :=  by sorry
+theorem lean_workbook_plus_44260 (x y z : ℝ) : (x^2 + 1/y^2)^(1/2) + (y^2 + 1/z^2)^(1/2) + (z^2 + 1/x^2)^(1/2) ≥ 3 * 2^(1/2)   :=  by sorry
+theorem lean_workbook_plus_44265 (x : ℝ) : 2 * Real.sin x * Real.cos x = Real.sin (2 * x)   :=  by sorry
+theorem lean_workbook_plus_44281 (t : ℕ) (h : t = 2 ^ s) : t ∣ 2 ^ t   :=  by sorry
+theorem lean_workbook_plus_44283 :
+  6*1 + 10*1 + 15*2 + 7*1 = 53   :=  by sorry
+theorem lean_workbook_plus_44288 : ¬ p ∨ q ↔ p → q   :=  by sorry
+theorem lean_workbook_plus_44294 (f : ℝ → ℝ): (∀ x y : ℝ, (x + y) * (f x - f y) = (x - y) * (f x + f y)) ↔ ∃ a:ℝ, ∀ x : ℝ, f x = a * x   :=  by sorry
+theorem lean_workbook_plus_44309 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a * b + b * c + c * a = 9) : (a ^ 4 / (b ^ 2 + b * c + c ^ 2)) ^ (1 / 15) + (b ^ 4 / (c ^ 2 + c * a + a ^ 2)) ^ (1 / 15) + (c ^ 4 / (a ^ 2 + a * b + b ^ 2)) ^ (1 / 15) ≥ 81 / (a + b + c) ^ 2   :=  by sorry
+theorem lean_workbook_plus_44312 (a b : ℝ) (h₁ : a^3 = 3*a*b^2 + 11) (h₂ : b^3 = 3*a^2*b + 2) : a^2 + b^2 = 5   :=  by sorry
+theorem lean_workbook_plus_44317 :  ∀ a b : ℝ, (5*a^2 - 3*a*b + b^2)*(a - 3*b)^2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_44319 (x y : ℝ) (hx : x > 0) (hy : y > 0) : x^4 + y^4 + (x^2 + 1) * (y^2 + 1) ≥ (abs y + 1) * abs x^3 + (abs x + 1) * abs y^3 + abs x + abs y   :=  by sorry
+theorem lean_workbook_plus_44320 (x : ℕ → ℝ) (n : ℕ) (hx: x 1 = 1) (hn: ∀ n, (x n)^2 + 1 = (n + 1) * (x (n + 1))^2) : ∃ f : ℕ → ℝ, ∀ n, x n = f n   :=  by sorry
+theorem lean_workbook_plus_44335  (a : ℝ)
+  (n : ℕ)
+  (x y : ℕ → ℝ)
+  (h₀ : a ≠ 0)
+  (h₁ : ∀ n, y n = x n - x (n - 1) * a)
+  (h₂ : ∑ k in Finset.Icc 1 n, (y k / a^k) = x n / a^n - x 0)
+  (h₃ : ∀ n, x n = ∑ k in Finset.range (n + 1), a^(n - k) * y k) :
+  x n = ∑ k in Finset.range (n + 1), a^(n - k) * y k   :=  by sorry
+theorem lean_workbook_plus_44339 (x : ℕ → ℕ) (a : ℕ → ℕ) (b : ℕ → ℕ) (n : ℕ) (h₀ : x n = a n ^ 2 + b n ^ 2) (h₁ : a n = 5 * (a (n - 1) - a (n - 2)) + a (n - 3)) (h₂ : a 0 = 0) (h₃ : a 1 = 0) (h₄ : a 2 = 2) (h₅ : b n = a n + 1) : x n = a n ^ 2 + b n ^ 2   :=  by sorry
+theorem lean_workbook_plus_44345 (p q : ℕ) (h : p = q^2 + q + 1) : p + q = (q + 1)^2   :=  by sorry
+theorem lean_workbook_plus_44363 {a b c : ℝ} (h : a * b * c * (a ^ 2 - a * b + b ^ 2) * (b ^ 2 - b * c + c ^ 2) * (c ^ 2 - c * a + a ^ 2) = a ^ 3 * b ^ 3 * c ^ 3) : a * b * c = 0 ∨ (a ^ 2 - a * b + b ^ 2) * (b ^ 2 - b * c + c ^ 2) * (c ^ 2 - c * a + a ^ 2) = a ^ 2 * b ^ 2 * c ^ 2   :=  by sorry
+theorem lean_workbook_plus_44371 (x y z : ℝ) (hx : x ≥ 0) (hy : y ≥ 0) (hz : z ≥ 0) : x^3 + y^3 + z^3 - 3 * x * y * z ≥ 0   :=  by sorry
+theorem lean_workbook_plus_44381 (x : ℝ) (hx : x = 2^Real.logb 6 18 * 3^Real.logb 6 3) : x = 6   :=  by sorry
+theorem lean_workbook_plus_44389 (a b c : ℝ) :
+  (a^2 * b + b^2 * c + c^2 * a) * (a * b + b * c + c * a) - a * b * c * (a + b + c)^2 ≥
+  a^2 * c * (b - c)^2 + a * b^2 * (c - a)^2 + b * c^2 * (a - b)^2   :=  by sorry
+theorem lean_workbook_plus_44396  (f : ℝ → ℝ)
+  (h₀ : ∀ x, (x = 0 ∨ f x * (f x - x) = 0)) :
+  ∀ x, (x = 0 ∨ f x = 0) ∨ f x = x   :=  by sorry
+theorem lean_workbook_plus_44405 (a x y p : ℤ) (hp : Prime p) (hpa : ¬ p ∣ a) (h0 : 0 < x ∧ 0 < y) (hxp : x ≤ p) (hyp : y ≤ p) (h : x * a ≡ y * a [ZMOD p]) : x ≡ y [ZMOD p]   :=  by sorry
+theorem lean_workbook_plus_44417 (a b c : ℝ) : (a + b + c) ^ 2 ≥ 3 * (b * c + c * a + a * b)   :=  by sorry
+theorem lean_workbook_plus_44420 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : 1 / (a * (b + 1)) + 1 / (b * (a + 1)) = 1) : a + b + 1 ≥ 3 * a * b   :=  by sorry
+theorem lean_workbook_plus_44446 (f : ℝ → ℝ) (A : Set ℝ) (hA : A = Set.Icc 0 1) :
+  ContinuousOn f A ↔ ∀ x ∈ A, ContinuousWithinAt f A x   :=  by sorry
+theorem lean_workbook_plus_44451 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x + y + z) ^ 2 * (x * y + y * z + z * x) ^ 2 ≤ 3 * (x ^ 2 + x * y + y ^ 2) * (z ^ 2 + z * x + x ^ 2) * (y ^ 2 + y * z + z ^ 2)   :=  by sorry
+theorem lean_workbook_plus_44452 (x : ℝ) : x^4 - x^3 + 1 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_44469 (a : ℕ) (ha : a ≠ 2 ^ k - 2009) : ∃ n, n ∣ a ^ n + 2009 ^ n   :=  by sorry
+theorem lean_workbook_plus_44473 : ∀ x ∈ Set.Ioo 0 1, ∃ n : ℤ, 1/3 ≤ Int.fract n * x ∧ Int.fract n * x < 1/2   :=  by sorry
+theorem lean_workbook_plus_44480 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) : a / Real.sqrt (1 + b * c) + b / Real.sqrt (1 + a * c) + c / Real.sqrt (1 + a * b) ≤ 3 / 2   :=  by sorry
+theorem lean_workbook_plus_44488 : ∀ n : ℕ, n ≥ 2 → 0 < 1 / (Real.log n) ^ (Real.log n)   :=  by sorry
+theorem lean_workbook_plus_44492 (c d : ℝ) : c^2 - c * d + d^2 ≥ c * d   :=  by sorry
+theorem lean_workbook_plus_44496  (x : ℝ)
+  (h₀ : x = 2020) :
+  ((2019 + 2020) * (2020 + 2021) * (2021 + 2019) + 2019 * 2020 * 2021) / (2019 * 2020 + 2020 * 2021 + 2021 * 2019) = 6060   :=  by sorry
+theorem lean_workbook_plus_44499 : 2 ^ 99 ≡ 8 [MOD 10]   :=  by sorry
+theorem lean_workbook_plus_44506 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (habc : a * b * c = 1) : a^2 / (a^2 + a + 1) + b^2 / (b^2 + b + 1) + c^2 / (c^2 + c + 1) ≥ 1   :=  by sorry
+theorem lean_workbook_plus_44512 (a b c : ℝ) : (a^2 + b^2 + c^2) * 3 ≥ (a + b + c)^2   :=  by sorry
+theorem lean_workbook_plus_44519 (a b : ℝ) (n : ℕ) : (1 / sin b) * (tan (a + n * b) - tan a) = ∑ i in Finset.range n, (1 / sin b) * (tan (a + (i + 1) * b) - tan (a + i * b))   :=  by sorry
+theorem lean_workbook_plus_44527 : ∀ n : ℕ, ∑ k in Finset.range (n+1), fib k = fib (n + 2) - 1   :=  by sorry
+theorem lean_workbook_plus_44537 (n : ℕ) (h : n = 3) : 1 * n + 2 * (n-1) + 3 * (n-2) = 10   :=  by sorry
+theorem lean_workbook_plus_44541 (x : ℝ) : (x - 2) * (x + 3) > 0 ↔ x < -3 ∨ x > 2   :=  by sorry
+theorem lean_workbook_plus_44543 (x:ℝ) : x^4 ≥ 4*x-3   :=  by sorry
+theorem lean_workbook_plus_44544 (n : ℕ) : n ≡ 1 [ZMOD 6] ∨ n ≡ 5 [ZMOD 6] ↔ n % 6 = 1 ∨ n % 6 = 5   :=  by sorry
+theorem lean_workbook_plus_44546 (a b c d : ℤ) (ha : a ≠ 0) (hd : d ≠ 0) : (a * b ≡ a * c [ZMOD a * d]) ↔ (b ≡ c [ZMOD d])   :=  by sorry
+theorem lean_workbook_plus_44548 : sin (123 : ℝ) = sin (100 : ℝ) * cos (23 : ℝ) + sin (23 : ℝ) * cos (100 : ℝ)   :=  by sorry
+theorem lean_workbook_plus_44553 : 2003 * x^2 + 2004 * x + 2004 = 0 → x₁ + x₂ = -2004/2003   :=  by sorry
+theorem lean_workbook_plus_44565 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) : a^3 / (b^2 + c) + b^3 / (c^2 + a) + c^3 / (a^2 + b) ≥ Real.sqrt 3 / (1 + a + b + c)   :=  by sorry
+theorem lean_workbook_plus_44583  (x y z : ℝ)
+  (h₀ : 2 < x ∧ x ≤ 3)
+  (h₁ : y = x)
+  (h₂ : z = x / (x - 2)) :
+  (x - 2) * (x - 3)^2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_44588 : ∀ n : ℕ, n ≥ 2 → 0 ≤ 1 / (n * (Real.log n)^(3/2)) ∧ ∀ n : ℕ, n ≥ 2 → 1 / (n * (Real.log n)^(3/2)) ≤ 1 / ((n:ℝ) * (Real.log n)^(3/2))  :=  by sorry
+theorem lean_workbook_plus_44616 : ∀ x y z : ℝ, (x - y) * (y - z) * (z - x) = x * (y^2 - z^2) + y * (z^2 - x^2) + z * (x^2 - y^2)   :=  by sorry
+theorem lean_workbook_plus_44620 (f : ℕ → ℕ) (hf: ∀ n, n > 0 → f (2 * n) = 2 * n - 1) : ∀ n, n > 0 → f (2 * n) = 2 * n - 1   :=  by sorry
+theorem lean_workbook_plus_44637 : a + b + c = 0 → 8^a + 8^b + 8^c ≥ 2^a + 2^b + 2^c   :=  by sorry
+theorem lean_workbook_plus_44662 (f : ℝ → ℝ) (f_def : ∀ x, f x = x^2 + 2*x + 1) : f 2 = 9   :=  by sorry
+theorem lean_workbook_plus_44665 (x : ℝ) (hx : 0 < x) : (27 + 8 * x)^(1/3) < (1 + x)^(1/3) + (1 + 8 * x)^(1/3)   :=  by sorry
+theorem lean_workbook_plus_44670 (a b c d : ℝ) : a * b * (c ^ 2 + d ^ 2) + c * d * (a ^ 2 + b ^ 2) ≤ (a + b) ^ 2 * (c + d) ^ 2 / 4   :=  by sorry
+theorem lean_workbook_plus_44680  (x y : ℂ)
+  (h₀ : x * y - x - y - 1 = 0) :
+  (x - 1) * (y - 1) = 2   :=  by sorry
+theorem lean_workbook_plus_44725 (x : ℝ) : x^4 + x^3 + x^2 + x + 1 = (x^2 + 3 * x + 1)^2 - 5 * x * (x + 1)^2   :=  by sorry
+theorem lean_workbook_plus_44727 (f : ℝ → ℝ) (hf: f = fun x ↦ a) : f x = a ∧ ∀ x, f x = a   :=  by sorry
+theorem lean_workbook_plus_44739 (n : ℕ) (hn: n = 64) : (2^n) ∣ (Nat.choose 2 1 * Nat.choose 4 2 * Nat.choose 6 3 * Nat.choose 8 4 * Nat.choose 10 5 * Nat.choose 12 6 * Nat.choose 14 7 * Nat.choose 16 8 * Nat.choose 18 9 * Nat.choose 20 10 * Nat.choose 22 11 * Nat.choose 24 12 * Nat.choose 26 13 * Nat.choose 28 14 * Nat.choose 30 15 * Nat.choose 32 16 * Nat.choose 34 17 * Nat.choose 36 18 * Nat.choose 38 19 * Nat.choose 40 20 * Nat.choose 42 21 * Nat.choose 44 22 * Nat.choose 46 23 * Nat.choose 48 24 * Nat.choose 50 25 * Nat.choose 52 26 * Nat.choose 54 27 * Nat.choose 56 28 * Nat.choose 58 29 * Nat.choose 60 30 * Nat.choose 62 31 * Nat.choose 64 32 * Nat.choose 66 33 * Nat.choose 68 34 * Nat.choose 70 35 * Nat.choose 72 36 * Nat.choose 74 37 * Nat.choose 76 38 * Nat.choose 78 39 * Nat.choose 80 40 * Nat.choose 82 41 * Nat.choose 84 42 * Nat.choose 86 43 * Nat.choose 88 44 * Nat.choose 90 45 * Nat.choose 92 46 * Nat.choose 94 47 * Nat.choose 96 48 * Nat.choose 98 49 * Nat.choose 100 50 * Nat.choose 102 51 * Nat.choose 104 52 * Nat.choose 106 53 * Nat.choose 108 54 * Nat.choose 110 55 * Nat.choose 112 56 * Nat.choose 114 57 * Nat.choose 116 58 * Nat.choose 118 59 * Nat.choose 120 60 * Nat.choose 122 61 * Nat.choose 124 62 * Nat.choose 126 63 * Nat.choose 128 64)   :=  by sorry
+theorem lean_workbook_plus_44743 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : (1/x + 2/y) ≥ 25 * (x + 2 * y) ^ 2 / ((x + 2 * y) ^ 3 + 48 * x * y ^ 2)   :=  by sorry
+theorem lean_workbook_plus_44747 : 11 ^ 10 ≡ 1 [ZMOD 100]   :=  by sorry
+theorem lean_workbook_plus_44749 (a b : ℝ) (ha : a = (Real.sqrt 6 + Real.sqrt 2) / (Real.sqrt 6 - Real.sqrt 2)) (hb : b = (Real.sqrt 6 - Real.sqrt 2) / (Real.sqrt 6 + Real.sqrt 2)) : a - b = (Real.sqrt 6 + Real.sqrt 2) / (Real.sqrt 6 - Real.sqrt 2) - (Real.sqrt 6 - Real.sqrt 2) / (Real.sqrt 6 + Real.sqrt 2) ∧ a * b = (Real.sqrt 6 + Real.sqrt 2) / (Real.sqrt 6 - Real.sqrt 2) * (Real.sqrt 6 - Real.sqrt 2) / (Real.sqrt 6 + Real.sqrt 2) ∧ a ^ 2 + b ^ 2 = (Real.sqrt 6 + Real.sqrt 2) ^ 2 / (Real.sqrt 6 - Real.sqrt 2) ^ 2 + (Real.sqrt 6 - Real.sqrt 2) ^ 2 / (Real.sqrt 6 + Real.sqrt 2) ^ 2 ∧ a ^ 3 - b ^ 3 = (Real.sqrt 6 + Real.sqrt 2) ^ 3 / (Real.sqrt 6 - Real.sqrt 2) ^ 3 - (Real.sqrt 6 - Real.sqrt 2) ^ 3 / (Real.sqrt 6 + Real.sqrt 2) ^ 3   :=  by sorry
+theorem lean_workbook_plus_44751 (x : ℕ) (hx : x ≡ 5 [ZMOD 7] ∧ x ≡ 7 [ZMOD 11] ∧ x ≡ 3 [ZMOD 13]) : x >= 887   :=  by sorry
+theorem lean_workbook_plus_44760 (a b c : ℝ) : 3 * (a ^ 2 + b ^ 2 + 1) * (c ^ 2 + 2) ≥ 3 * (a + b + c) ^ 2   :=  by sorry
+theorem lean_workbook_plus_44767  (a b : ℝ)
+  (h₀ : 0 < a ∧ 0 < b)
+  (h₁ : a * b = 4)
+  (h₂ : a + b = 4) :
+  a = 2 ∧ b = 2   :=  by sorry
+theorem lean_workbook_plus_44792 (h : ℕ) : (2^(2 * h) * Real.sqrt ((2^(2 * h))) : ℝ) = 2^(3 * h)   :=  by sorry
+theorem lean_workbook_plus_44797 (α β : ℝ) : tan (α + β) = sin (α + β) / cos (α + β)   :=  by sorry
+theorem lean_workbook_plus_44804 : Continuous fun t => (cos t, sin t)   :=  by sorry
+theorem lean_workbook_plus_44806 (n : ℕ) (hn : 1 ≤ n) : ∃ m, (2^n ∣ m) ∧ (Nat.digits 10 m).all (· ∈ ({8, 9} : Finset ℕ))   :=  by sorry
+theorem lean_workbook_plus_44809 (a b c : ℝ) (hab : a ≥ b) (hbc : b ≥ c) : a^2 + a*c + c^2 ≥ 3*b*(a - b + c)   :=  by sorry
+theorem lean_workbook_plus_44821 (x : ℝ) (hx : 0 < x) : x / (x^3 + 9 * x + 6) ≤ 3 / (25 * x) + 1 / 100   :=  by sorry
+theorem lean_workbook_plus_44828 (a b c : ℝ) (ha : 1 ≤ a) (hb : 1 ≤ b) (hc : 1 ≤ c) : 4 * (a * b * c + 1) ≥ (1 + a) * (1 + b) * (1 + c)   :=  by sorry
+theorem lean_workbook_plus_44840 (x : ℝ) (hx : 0 ≤ x) : Real.cos x = Real.sin (Real.pi / 2 - x)   :=  by sorry
+theorem lean_workbook_plus_44843 : 7 % 2 = 1   :=  by sorry
+theorem lean_workbook_plus_44855 : ∀ a b c : ℝ, (ab - bc) ^ 2 + (bc - ca) ^ 2 + (ca - ab) ^ 2 >= 0   :=  by sorry
+theorem lean_workbook_plus_44862 (a b : ℝ) : a^6 + 3*a^4*b^2 + 8*b^6 >= 2*a^3*b^3 + 2*a^2*b^4 + 8*a*b^5   :=  by sorry
+theorem lean_workbook_plus_44870 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a + b + c) ^ 2 / (a * b + b * c + a * c) ≥ (a + b) / (b + c) + (b + c) / (c + a) + (c + a) / (a + b)   :=  by sorry
+theorem lean_workbook_plus_44876 (x y : ℝ) (h₁ : x + y = 3) (h₂ : x ≥ 0 ∧ y ≥ 0) : x * y ^ 2 ≤ 4   :=  by sorry
+theorem lean_workbook_plus_44878 (h₁ : 0 < 22) (h₂ : 0 < 15) : ∑ k in Finset.range 11, (Nat.choose 22 (10 - k) * Nat.choose 15 k) = 348330136   :=  by sorry
+theorem lean_workbook_plus_44887 (A B C D : ℝ × ℝ) (hA : A = (0,-5)) (hB : B = (1,7)) (hC : C = (-3/2,-23)) (hD : D = (-3,-41)) (h : ∀ p : ℝ × ℝ, p ∈ ({A, B, C, D} : Finset (ℝ × ℝ))) : (A.1 + B.1 + C.1 + D.1) / 4 = -7/8   :=  by sorry
+theorem lean_workbook_plus_44889 (f : ℝ → ℝ) (k : ℝ) : (fun x => k * f x) = k • f   :=  by sorry
+theorem lean_workbook_plus_44891 (A B : ℕ) (hA : A = ∑ i in Finset.filter (λ x => x % 3 = 1) (Finset.Icc 1 2011), i) (hB : B = ∑ i in Finset.filter (λ x => x % 3 = 2) (Finset.Icc 1 2011), i) : A - B = 1341   :=  by sorry
+theorem lean_workbook_plus_44893 : 2 ^ 65 + 1 ≡ 0 [ZMOD 3]   :=  by sorry
+theorem lean_workbook_plus_44904 : 2 * Real.sin b * Real.cos b ≤ Real.sin b ^ 2 + Real.cos b ^ 2 ∧ Real.sin b ^ 2 + Real.cos b ^ 2 = 1   :=  by sorry
+theorem lean_workbook_plus_44927  (a b c : ℝ) :
+  (a^2 * b + b^2 * c + c^2 * a)^2 ≤ (a^2 + b^2 + c^2) * (a^2 * b^2 + b^2 * c^2 + c^2 * a^2)   :=  by sorry
+theorem lean_workbook_plus_44935 (a b c : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) (hab : a + b^2 + c = 1) : (1 + a^2) * (1 + b^2) * (1 + c^2) ≥ 25 / 16 ∧ (a = 1 / 2 ∧ b = 0 ∧ c = 1 / 2) → (1 + a^2) * (1 + b^2) * (1 + c^2) = 25 / 16   :=  by sorry
+theorem lean_workbook_plus_44938 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : 8 * (x ^ 3 + y ^ 3 + z ^ 3) ^ 2 ≥ 9 * (x ^ 2 + y * z) * (y ^ 2 + z * x) * (z ^ 2 + x * y)   :=  by sorry
+theorem lean_workbook_plus_44958 (a : ℝ) (ha : a ≥ 0) : 2 * (a^2 + 1)^3 ≥ (a^3 + 1) * (a + 1)^3   :=  by sorry
+theorem lean_workbook_plus_44960 (k : ℕ) (x : ℕ → ℕ) (a : ℕ → ℕ) (hx: ∑ i in Finset.range k, (1 / x i) < 1) (hab : a 1 = 2 ∧ ∀ n, a (n + 1) = (a n) ^ 2 - a n + 1): ∑ i in Finset.range k, (1 / x i) ≤ ∑ i in Finset.range k, (1 / a i)   :=  by sorry
+theorem lean_workbook_plus_44961 (x y : ℝ) : (x ^ 2 + y ^ 2) / 2 ≥ (x + y) ^ 2 / 4   :=  by sorry
+theorem lean_workbook_plus_44974 (n : ℕ) (hn : n > 0) : (n + 1/2) < Real.sqrt (n^2 + n + 1) ∧ Real.sqrt (n^2 + n + 1) < n + 1   :=  by sorry
+theorem lean_workbook_plus_44975 : 9^6 ≡ 1 [ZMOD 130]   :=  by sorry
+theorem lean_workbook_plus_44976 (a b c : ℝ) (ha : 0 < a ∧ a ≤ 1) (hb : 0 < b) (hc : 0 < c) : a * Real.sqrt (b * c) ≤ Real.sqrt (a * b * c)   :=  by sorry
+theorem lean_workbook_plus_44977 (t : ℝ) (ht : 0 < t ∧ t < 1) :
+  (27 * t ^ 4 + 1) / (t ^ 2 - 2 * t + 1) ≥ 18 * t - 3   :=  by sorry
+theorem lean_workbook_plus_44985 (x : ℝ) : |sin x| ≤ 1   :=  by sorry
+theorem lean_workbook_plus_44987 {a b : ℝ} (h : b ≠ 0) : a - b = a + -b   :=  by sorry
+theorem lean_workbook_plus_44988 (f : ℝ → ℝ) (h : ∀ ε > 0, ∃ δ > 0, ∀ x, |x| < δ → |f x| < ε) : ∀ ε > 0, ∃ δ > 0, ∀ x, |x| < δ → |f x + f (2 * x)| < ε   :=  by sorry
+theorem lean_workbook_plus_44993 :
+  ((27 / 64) / (27 / 64 + 1 / 216) * (3 / 4) + (1 / 216) / (27 / 64 + 1 / 216) * (1 / 6)) = (6577 / 8844)   :=  by sorry
+theorem lean_workbook_plus_44995 (n : ℕ) (k : ℕ) (h₁ : n = 6 * k) (h₂ : Nat.gcd k 6 = 1) (h₃ : k > 1) : n < Nat.factorial n   :=  by sorry
+theorem lean_workbook_plus_45003 (x : ℤ) : (10^2 - 9^2 + 8^2 - 7^2 + 6^2 - 5^2 + 4^2 - 3^2 + 2^2 - 1^2) = 55   :=  by sorry
+theorem lean_workbook_plus_45012 (x : ℝ) : x/8 + x/12 + x/6 = 2 ↔ x = 16/3   :=  by sorry
+theorem lean_workbook_plus_45014 (a : ℤ) (h : a ≡ 1 [ZMOD 3] ∨ a ≡ 2 [ZMOD 3]) : a^2 ≡ 1 [ZMOD 3]   :=  by sorry
+theorem lean_workbook_plus_45015 (x : ℝ) : x^2 + 2 ≥ 2 * Real.sqrt (x^2 + 1)   :=  by sorry
+theorem lean_workbook_plus_45016 (x y : ℝ) (hx : -1 < x ∧ x < 0) (hy : 0 < y ∧ y < 1) : x^2 + y^2 + x * y < 1   :=  by sorry
+theorem lean_workbook_plus_45026 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^4 / (b^2 + b * c + c^2))^(1/5) + (b^4 / (c^2 + c * a + a^2))^(1/5) + (c^4 / (a^2 + a * b + b^2))^(1/5) ≥ (27 * (a * b + b * c + c * a))^(1/5)   :=  by sorry
+theorem lean_workbook_plus_45031 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) : a / (a^3 + b * c) + b / (b^3 + c * a) + c / (c^3 + a * b) > 3   :=  by sorry
+theorem lean_workbook_plus_45032 (f : ℤ → ℤ) (hf: f = fun (x:ℤ) ↦ x+1) : ∀ x y, f x * f y - f (x*y) = x + y   :=  by sorry
+theorem lean_workbook_plus_45039 (x y : ℝ) (hx : 0 ≤ x) (hy : 0 ≤ y) : √x + √y ≥ √(x + y)   :=  by sorry
+theorem lean_workbook_plus_45051  (x : ℕ)
+  (h₀ : Even x) :
+  (x : ℤ) - 2 * (x / 2) = 0   :=  by sorry
+theorem lean_workbook_plus_45068 :
+  Nat.factorial 8 / (Nat.factorial 6 * Nat.factorial 2) = 28   :=  by sorry
+theorem lean_workbook_plus_45069 (x : ℝ) : (8 * cos x ^ 4 - 8 * cos x ^ 2 + 1) = cos (4 * x)   :=  by sorry
+theorem lean_workbook_plus_45074 : 7 ^ 4 ≡ 1 [ZMOD 5]   :=  by sorry
+theorem lean_workbook_plus_45077 (a b : ℝ) : a - b = -1 * (b - a)   :=  by sorry
+theorem lean_workbook_plus_45082 (n : ℕ) : n^2 + (n + 1)^2 + (n^2 + n)^2 = (n^2 + n + 1)^2   :=  by sorry
+theorem lean_workbook_plus_45086 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^3*c^2 + a^2*b^3 + a*b^4 + b^2*c^3 + b^3*c^2 ≥ a^2*b^2*c + 2*a*b^3*c + 2*a*b^2*c^2   :=  by sorry
+theorem lean_workbook_plus_45111 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^3 + b^3 + c^3 - 3 * a * b * c ≥ 2 * ((b + c) / 2 - a)^3   :=  by sorry
+theorem lean_workbook_plus_45115 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x + y) * (y + z) * (3 * z + x) ≥ (4 + 3 * (3 : ℝ) ^ (1 / 3) + 3 * (9 : ℝ) ^ (1 / 3)) * x * y * z   :=  by sorry
+theorem lean_workbook_plus_45123 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a * b * c = 1) : a / (a + 1) + 3 * b / (b + 1) + 3 * c / (c + 1) = 1 → a * b * c ≤ 1 / 120   :=  by sorry
+theorem lean_workbook_plus_45124 (hx: a + b + c + d = 1) (ha: a > 0 ∧ b > 0 ∧ c > 0 ∧ d > 0): a^3 / (b + c) + b^3 / (c + d) + c^3 / (d + a) + d^3 / (a + b) ≥ 1 / 8   :=  by sorry
+theorem lean_workbook_plus_45127 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) : (a + b) / 2 ≥ Real.sqrt (a * b) + (|a^(1/3) - b^(1/3)|^3) / 2   :=  by sorry
+theorem lean_workbook_plus_45137 {x : ℝ} (hx : 0 ≤ x ∧ x ≤ 1) : x^3 ≥ 4 * x - 3   :=  by sorry
+theorem lean_workbook_plus_45145 (x : ℝ) (hx : x ≥ 3) : (x - 3) ^ 2 * (x ^ 2 + 2 * x + 3) + 9 * (x - 3) * (x + 3) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_45149 (a b c : ℝ) (ha : 1 ≤ a ∧ a ≤ 2) (hb : 1 ≤ b ∧ b ≤ 2) (hc : 1 ≤ c ∧ c ≤ 2): a * (a + b) + b * (b + c) + c * (c + a) ≥ a ^ 3 + b ^ 3 + c ^ 3   :=  by sorry
+theorem lean_workbook_plus_45152 (a b c d : ℝ) (h₁ : a * 0 ^ 3 + b * 0 ^ 2 + c * 0 + d = 1) (h₂ : a * 1 ^ 3 + b * 1 ^ 2 + c * 1 + d = 2) (h₃ : a * 2 ^ 3 + b * 2 ^ 2 + c * 2 + d = 4) (h₄ : a * 3 ^ 3 + b * 3 ^ 2 + c * 3 + d = 8) : a * 4 ^ 3 + b * 4 ^ 2 + c * 4 + d = 15   :=  by sorry
+theorem lean_workbook_plus_45153 (x y z : ℝ) : (x^4 + y^4 + z^4) + 2 * (x^2 * y^2 + y^2 * z^2 + z^2 * x^2) ≥ (2 * (x^3 * y + y^3 * z + z^3 * x)) + (x * y^3 + y * z^3 + z * x^3)   :=  by sorry
+theorem lean_workbook_plus_45164 : ∀ a b c x y z : ℝ, a + b + c = 0 ∧ x + y + z = 0 → 4 * (a * x + b * y + c * z) ^ 3 - 3 * (a * x + b * y + c * z) * (a ^ 2 + b ^ 2 + c ^ 2) * (x ^ 2 + y ^ 2 + z ^ 2) - 2 * (a - b) * (b - c) * (c - a) * (x - y) * (y - z) * (z - x) = 54 * a * b * c * x * y * z   :=  by sorry
+theorem lean_workbook_plus_45165 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a + b + c) * (1 / a + 1 / b + 1 / c) ≥ 9 + 2 * ((a - b) ^ 2 + (b - c) ^ 2 + (c - a) ^ 2) / (a * b + b * c + c * a)   :=  by sorry
+theorem lean_workbook_plus_45183 (f g : ℝ → ℝ) (x : ℝ) (f_def : f x = x) (g_def : g x = Real.sin x) : f x * g x = x * Real.sin x   :=  by sorry
+theorem lean_workbook_plus_45201 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (1 / (a * (b + 1)) + 1 / (b * (c + 1)) + 1 / (c * (a + 1))) ≥ 3 / (1 + a * b * c)   :=  by sorry
+theorem lean_workbook_plus_45237 (a b c : ℝ) (ha : a + b + c = 3) : a * b + b * c + c * a ≤ 3   :=  by sorry
+theorem lean_workbook_plus_45240  (x a b c : ℝ)
+  (h₀ : x = a + b + c) :
+  x^2 + (3 - x)^2 = 2 * (x - 3 / 2)^2 + 9 / 2   :=  by sorry
+theorem lean_workbook_plus_45241 (x : ℝ) : x ≥ Int.floor x   :=  by sorry
+theorem lean_workbook_plus_45242  (n d q : ℕ)
+  (h₀ : 0 < n ∧ 0 < d ∧ 0 < q)
+  (h₁ : n + d + q = 100)
+  (h₂ : 5 * n + 10 * d + 25 * q = 835) :
+  3 ≤ d ∧ d ≤ 67   :=  by sorry
+theorem lean_workbook_plus_45243 (m : ℕ) : Nat.Coprime m (m + 1)   :=  by sorry
+theorem lean_workbook_plus_45244 : 10^k * 10^3 = 500 → 10^(k + 3) = 500   :=  by sorry
+theorem lean_workbook_plus_45245 (a b : ℤ) (h : Nat.gcd a.natAbs b.natAbs = 1) : ∃ x y : ℤ, a*x + b*y = 1   :=  by sorry
+theorem lean_workbook_plus_45247 (a b c : ℂ) : (a * b - 1) * (a * c - 1) * (b * c - 1) = (a * b * c) ^ 2 - (a + b + c) * a * b * c + (a * b + a * c + b * c) - 1   :=  by sorry
+theorem lean_workbook_plus_45249 : ∀ n : ℕ, 1 < n → ∑ k in Finset.filter (fun k => Nat.gcd k n = 1) (Finset.Icc 1 n), 1 = Nat.totient n   :=  by sorry
+theorem lean_workbook_plus_45265 (n m : ℕ) (h₁ : Odd n) (h₂ : m = (2 * n ^ (n - 1) - 1) * n) : m = (2 * n ^ (n - 1) - 1) * n   :=  by sorry
+theorem lean_workbook_plus_45278 (hx: 1 ≤ x) : x^x ≥ 1 + x^2 - x   :=  by sorry
+theorem lean_workbook_plus_45324 (a b c: ℝ) : (a^2+b^2+c^2)^2 ≥ (a+b+c)*(a*b*(a+b) + b*c*(b+c) + c*a*(c+a) - 3*a*b*c) ↔ a^4+b^4+c^4+(a*b*c)*(a+b+c) ≥ b*c*(b^2+c^2) + c*a*(c^2+a^2) + a*b*(a^2+b^2)   :=  by sorry
 theorem lean_workbook_plus_45335  (a₀ a₁ a₂ a₃ a₄ : ℝ)
   (f : ℂ → ℂ)
   (h₀ : ∀ z, f z = a₀ + a₁ * z + a₂ * z^2 + a₃ * z^3 + a₄ * z^4)
@@ -242,1121 +872,546 @@ theorem lean_workbook_plus_45335  (a₀ a₁ a₂ a₃ a₄ : ℝ)
   (h₄ : f (ω^3) = 2^400)
   (h₅ : f (ω^4) = 2^400) :
   2^2000 = a₀ + a₁ + a₂ + a₃ + a₄   :=  by sorry
-theorem lean_workbook_plus_47342 (a b c d e : ℕ) : (a + b + c + d + e) + 150 = (a + 30 + b + 30 + c + 30 + d + 30 + e + 30)   :=  by sorry
-theorem lean_workbook_plus_81931 : 2 * (2 * (sin A * sin B * sin C) - 0) = 4 * sin A * sin B * sin C   :=  by sorry
-theorem lean_workbook_plus_56820 (x : ℝ) (hx : x = 3) : (x^2 - 6*x + 5) / (x^2 + 2*x + 2) = -4/17   :=  by sorry
-theorem lean_workbook_plus_5632 : ∑' i : ℕ, (1/(2^i)) = 1   :=  by sorry
-theorem lean_workbook_plus_57257 (a b c : ℝ) : |a| + |b| + |c| + |a + b + c| ≥ |a + b| + |b + c| + |c + a|   :=  by sorry
-theorem lean_workbook_plus_78624 (a b : ℝ) : (abs (a + b) : ℝ) / (1 + abs (a + b)) ≤ abs a / (1 + abs a) + abs b / (1 + abs b)   :=  by sorry
-theorem lean_workbook_plus_81773 : ∀ x y : ℝ, x^2 + x*y + y^2 - x - y + 1 ≥ 2/3   :=  by sorry
-theorem lean_workbook_plus_53871 (n : ℕ) (a : Fin n → ℝ) : (∑ i, (a i) ^ 3) ^ (1 / 3) ≤ (∑ i, (a i) ^ 2) ^ (1 / 2)   :=  by sorry
-theorem lean_workbook_plus_57368 (p : ℝ) : 1 < p → ∃ l, ∑' n : ℕ, (1/(n^p) : ℝ) = l   :=  by sorry
-theorem lean_workbook_plus_2806 (n : ℕ) (p : Polynomial (Fin n → ℤ)) : ∑ v in p.support, p.coeff v = p.eval (1 : Fin n → ℤ)   :=  by sorry
-theorem lean_workbook_plus_76298 {a b c : ℝ} (h : a + b * c = b + c * a ∧ b + c * a = c + a * b) : (a - b) * (c - 1) = 0 ∧ (b - c) * (a - 1) = 0 ∧ (c - a) * (b - 1) = 0   :=  by sorry
-theorem lean_workbook_plus_47972 (A B C : ℝ) (hx: A > 0 ∧ B > 0 ∧ C > 0) (hab : A + B + C = π) : 4 * Real.cos (A / 2) * Real.cos (B / 2) * Real.cos (C / 2) ≥ Real.sin (A + B + C)   :=  by sorry
-theorem lean_workbook_plus_62514 (a b c : ℝ) (habc : a * b * c = 1) : (1 / (a ^ 2 - a + 1) ≤ (3 / 2) * (a ^ 2 + 1) / (a ^ 4 + a ^ 2 + 1))   :=  by sorry
-theorem lean_workbook_plus_15957 : Real.logb 5 10 < 3 / 2   :=  by sorry
-theorem lean_workbook_plus_75036 (x y : ℝ) (h : x ^ 2 + y ^ 2 = 1) : x + y ≤ Real.sqrt 2   :=  by sorry
-theorem lean_workbook_plus_32852 : ∀ N : ℕ, ∃ M : ℝ, ∀ n : ℕ, n ≥ N → M ≤ ∑ i in Finset.range n, (1 : ℝ) / i ^ 4   :=  by sorry
-theorem lean_workbook_plus_12010  (t D : ℂ)
-  (x q ω : ℂ)
-  (h₀ : ω = x + k * q - 3 / 2)
-  (h₁ : q = (2 * t * ω) / (t + 2) + D / ω^(t + 1))
-  (h₂ : x = (2 * ω) / (t + 2) - D / (2 * ω^(t + 1)) + 3 / 2)
-  (h₃ : y = x^2 - q^2) :
-  ω = x + k * q - 3 / 2   :=  by sorry
-theorem lean_workbook_plus_70074 (a b : ℝ) : 3 * a ^ 4 - 4 * a ^ 3 * b + b ^ 4 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_1623 (x : ℝ) : x^2 - 9*x + 20 = 0 ↔ x = 4 ∨ x = 5   :=  by sorry
-theorem lean_workbook_plus_62021 (x y : ℝ) (h : x + y = 4) : 8 ≤ x ^ 2 + y ^ 2   :=  by sorry
-theorem lean_workbook_plus_8064 (x y z s q : ℝ) (hx : x + y + z = s) (hy : x*y + y*z + z*x = q) : s^2 ≥ 3*q   :=  by sorry
-theorem lean_workbook_plus_26032 (x y : ℝ) : 2 * (x + y) = 14 → x + y = 7   :=  by sorry
+theorem lean_workbook_plus_45343 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a * b * c = 1) (h : a ^ 2 + b ^ 2 + c ^ 2 + a * b * c = 4) : 2 + a * b * c ≥ a * b + b * c + c * a   :=  by sorry
 theorem lean_workbook_plus_45363 (a b : ℕ) (hgcd : Nat.gcd a b = 12) (hlcm : Nat.lcm a b = 168) : a * b = 2016   :=  by sorry
-theorem lean_workbook_plus_16652 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : (a^4 / (a + b)^4)^(1 / 7) + (b^4 / (b + c)^4)^(1 / 7) + (c^4 / (c + a)^4)^(1 / 7) ≤ 3 / (16^(1 / 7))   :=  by sorry
-theorem lean_workbook_plus_35822 (f : ℝ → ℝ) (h₁ : ∀ x, f x = x^3) : Function.Injective f   :=  by sorry
-theorem lean_workbook_plus_1672 (θ : ℝ) : Real.cos (Real.pi / 2 + θ) = - Real.sin θ   :=  by sorry
-theorem lean_workbook_plus_3193 (a b c d : ℝ) (h1 : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d) (h2 : a ≤ b ∧ b ≤ c ∧ c ≤ d) : 7 * a ^ 2 + 5 * b ^ 2 + 3 * c ^ 2 + d ^ 2 ≤ (a + b + c + d) ^ 2 ∧ (a + b + c + d) ^ 2 ≤ a ^ 2 + 3 * b ^ 2 + 5 * c ^ 2 + 7 * d ^ 2   :=  by sorry
-theorem lean_workbook_plus_39724 (a b : ℕ) : Real.sqrt (a * b) ≤ (a + b) / 2   :=  by sorry
-theorem lean_workbook_plus_65530 {a b c x y z : ℝ} :
-  (a * x + b * y + c * z) ^ 2 ≤ (a ^ 2 + b ^ 2 + c ^ 2) * (x ^ 2 + y ^ 2 + z ^ 2)   :=  by sorry
-theorem lean_workbook_plus_26014 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x^2*y + x^2*z - 2*x*y*z) + (y^2*z + y^2*x - 2*y*z*x) + (z^2*x + z^2*y - 2*z*x*y) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_63764 (a b c : ℤ) : a^3 + b^3 + c^3 = 3 * a * b * c + (a + b + c) * (a^2 + b^2 + c^2 - a * b - b * c - c * a)   :=  by sorry
-theorem lean_workbook_plus_76835 (a b c : ℝ) : 3 * (a^2 - a * b + b^2 - b * c + c^2 - c * a) ≥ (a + b + c)^2 - 3 * (a * b + b * c + c * a)   :=  by sorry
-theorem lean_workbook_plus_33893 (u v w : ℝ) (hu : 0 ≤ u) (hv : 0 ≤ v) (hw : 0 ≤ w) : 2 * u ^ 3 + 2 * v ^ 3 + 2 * w ^ 3 - u ^ 2 * v - u ^ 2 * w - v ^ 2 * w - w ^ 2 * u ≥ 0   :=  by sorry
-theorem lean_workbook_plus_69126 (x y z : ℝ) : (x^2 * (x + y) * (x + z))^(1 / 3) + (y^2 * (y + z) * (y + x))^(1 / 3) + (z^2 * (z + x) * (z + y))^(1 / 3) ≥ ((x + y + z)^4 + 9 * x * y * z * (x + y + z))^(1 / 3)   :=  by sorry
-theorem lean_workbook_plus_54054 (a b c : ℝ) (ha : a = xy) (hb : b = yz) (hc : c = zx) : (a + b + c) ^ 2 ≥ 3 * (a * b + b * c + c * a)   :=  by sorry
-theorem lean_workbook_plus_59627 (a b c : ℝ) : a * (b + c) / 2 + b * (c + a) / 2 + c * (a + b) / 2 ≤ (a + b + c) ^ 2 / 3   :=  by sorry
-theorem lean_workbook_plus_64572 (f : ℝ → ℝ) (h : Set.range f = {0}) : ∀ x, f x = 0   :=  by sorry
-theorem lean_workbook_plus_69039 (L : ℝ) (h : 0 < L) : ∀ θ1 θ2 : ℝ, ∃ r : ℝ, r^2 = 2 * L^2 - 2 * L^2 * Real.cos (θ1 + θ2)   :=  by sorry
-theorem lean_workbook_plus_26989 {n : ℕ} (h : n = 2*m + 1) : 8 ∣ n^2 - 1   :=  by sorry
-theorem lean_workbook_plus_72862 (x : ℤ) : (x^2 - x + 1) * (x + 1) = x^3 + 1   :=  by sorry
-theorem lean_workbook_plus_55131 (a b : ℝ) (h : a / b = 1) : a = b   :=  by sorry
-theorem lean_workbook_plus_73132 :  ∀ x : ℝ, (9*x^6 - 90*x^5 + 431*x^4 - 1100*x^3 + 1927*x^2 - 2394*x + 2241) * (x - 1)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_37534 (a b : ℝ) : 4 * (a ^ 2 + b ^ 2) ≥ 8 * a * b   :=  by sorry
-theorem lean_workbook_plus_54488 (a b : ℝ) : 2 * (a ^ 2 + b ^ 2) - (a + b) ^ 2 = (a - b) ^ 2 ∧ (a - b) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_8523 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^3 / (b + c))^(1 / 9) + (b^3 / (c + a))^(1 / 9) + (c^3 / (a + b))^(1 / 9) ≥ (1 / (2^(1 / 9))) * ((a * b)^(1 / 9) + (b * c)^(1 / 9) + (c * a)^(1 / 9))   :=  by sorry
-theorem lean_workbook_plus_17600 (x : ℝ) (hx : 1 ≤ x) : x^4 - x^3 + x^2 - x + 1 > 0   :=  by sorry
-theorem lean_workbook_plus_52386 {a b c : ℝ} (h₁ : a^2 + b^2 = c^2) (h₂ : 0 < a ∧ 0 < b ∧ 0 < c) (h₃ : a < b) (h₄ : b < c) : a + b > c   :=  by sorry
-theorem lean_workbook_plus_5855 (x y z : ℝ) : (x + y + z > 0 ∧ x > 0 ∧ y > 0 ∧ z > 0) → 2 / (x + y) + 2 / (y + z) + 2 / (x + z) ≥ 9 / (x + y + z)   :=  by sorry
-theorem lean_workbook_plus_26236 : ∀ x ≥ 1, x + (1/x) - (1/(x+1)) ≥ (3/2)   :=  by sorry
-theorem lean_workbook_plus_32368 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a + b + c = 1) : 1 / (a^3 + 7)^(1 / 3) + 1 / (b^3 + 7)^(1 / 3) + 1 / (c^3 + 7)^(1 / 3) ≥ 1 / 2 + 2 / (7 : ℝ)^(1 / 3)   :=  by sorry
-theorem lean_workbook_plus_65018 (a b c : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) : 9 * (a^3 + 3 * b^3 + 5 * c^3) ≥ (a^2 + 3 * b^2 + 5 * c^2) * (a + 3 * b + 5 * c)   :=  by sorry
-theorem lean_workbook_plus_15018 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 1 / (√a + √((a + b) * (a + c))) ≤ 1 / 9 * (1 / √a + 4 / √((a + b) * (a + c)))   :=  by sorry
-theorem lean_workbook_plus_77088 (n : ℕ) : fib n * fib (n + 1) + fib (n - 1) * fib n = fib (2 * n)   :=  by sorry
-theorem lean_workbook_plus_62241 :
-  (1 / 2 * (2 / 17 + 1 / 17)) = 3 / 34   :=  by sorry
-theorem lean_workbook_plus_41801 (A B : Set α) (hA : A.Nonempty) (hB : B.Nonempty) (hAB : A ∩ B = ∅) : (∀ x ∈ A, x ∉ B) ∨ (∀ x ∈ B, x ∉ A)   :=  by sorry
-theorem lean_workbook_plus_76697 (n : ℕ) : ∑ r in Finset.Icc 1 50, (1 / (49 + r) - 1 / (2 * r * (2 * r - 1))) = 1 / 100   :=  by sorry
-theorem lean_workbook_plus_30885 (a b c : ℝ) : a^2 + b^2 + c^2 + 2 * (a * b + b * c + c * a) ≥ 3 * (a * b + b * c + c * a)   :=  by sorry
-theorem lean_workbook_plus_13649 (f : ℝ → ℝ) (hf: ∀ x, f x = x): ∀ x, f x = x   :=  by sorry
-theorem lean_workbook_plus_14811 (a b c : ℝ) (h₁ : a + b - c = 5) (h₂ : a - b + c = 7) : a^2 + b^2 + c^2 - 2 * b * c = 37   :=  by sorry
-theorem lean_workbook_plus_23000 :  ∀ a b c : ℝ, a = b ∧ c = -2 * a + 3 → (3 / 64) * (4 * a - 3) ^ 2 * (48 * a ^ 2 - 104 * a + 57) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_44100 : (x + y + z - 3) ^ 2 ≥ 0 ↔ (x + y + z) ^ 2 - 6 * (x + y + z) + 9 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_3721 (X : Type*) [MetricSpace X]
-  (α : ℝ) (hα : 0 < α ∧ α < 1) (f : X → X) (hf : ∀ x y, dist (f x) (f y) ≤ α * dist x y) :
-  Continuous (λ x => dist (f x) x)   :=  by sorry
-theorem lean_workbook_plus_3225 (a : ℝ) (ha : 0 < a) :  (∃! x : ℝ, (a^x = x^a ∧ 0 < x)) ∨ (∃ x1 x2 : ℝ, (a^x1 = x1^a ∧ 0 < x1) ∧  (a^x2 = x2^a ∧ 0 < x2) ∧ x1 ≠ x2)   :=  by sorry
-theorem lean_workbook_plus_13950 {x y : ℝ} : x ^ 2 + y ^ 2 ≥ 2 * x * y   :=  by sorry
-theorem lean_workbook_plus_27538 (x : ℕ) : 108 * x ≡ 171 [ZMOD 529] ↔ x ≡ 222 [ZMOD 529]   :=  by sorry
-theorem lean_workbook_plus_66598 (x : ℝ) (A : ℝ) : x = cos A ↔ cos A = x   :=  by sorry
-theorem lean_workbook_plus_31091 (x y : ℝ) (h : x ^ 2 + y ^ 2 = 2) : x + y ≤ 2   :=  by sorry
-theorem lean_workbook_plus_8633 {X : Type*} [MetricSpace X] (E : Set X) : IsClosed (closure E)   :=  by sorry
-theorem lean_workbook_plus_14707 (x y : ℝ) : x^2 - 4 * x * y - y^2 ≤ 3 * x^2 + y^2   :=  by sorry
-theorem lean_workbook_plus_44075 (a b c : ℝ) : (a + c) ^ 2 + 3 * b ^ 2 ≥ 3 * a * b + 3 * b * c + a * c   :=  by sorry
-theorem lean_workbook_plus_16181 {x a : ℤ} (h : x^2 + y = a^2 + b) : y - b = (a - x) * (a + x)   :=  by sorry
-theorem lean_workbook_plus_42995 (n k : ℕ) (h₁ : n ≥ k) (h₂ : k ≥ 0) : choose n k = choose n (n-k)   :=  by sorry
-theorem lean_workbook_plus_15488 (p : ℕ) (hp : 3 < p) (hp1 : Nat.Prime p) : ∃ x y z : ℕ, x^2 + y^2 + z^2 = 4 * p^2 + 1   :=  by sorry
-theorem lean_workbook_plus_56997  (x : ℝ)
-  (h₀ : 0 < x)
-  (h₁ : (3 / 2) / 400 = (3 / 16) / x) :
-  x = 50   :=  by sorry
-theorem lean_workbook_plus_43483 : 3 * 7^5 < 5^7   :=  by sorry
-theorem lean_workbook_plus_14748 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 1) : (a^(1 - a) * b^(1 - b) * c^(1 - c))^(1 / 3) ≥ 1 / 3   :=  by sorry
-theorem lean_workbook_plus_16182 (n : ℕ) : ∑ k in Finset.range (n+1), (Nat.choose n k) = 2^n   :=  by sorry
-theorem lean_workbook_plus_28552 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 + 2 * a * b * c = 1) :
-  (a * b * Real.sqrt (2 - 2 * c)) / (a + b) + (b * c * Real.sqrt (2 - 2 * a)) / (b + c) + (c * a * Real.sqrt (2 - 2 * b)) / (c + a) ≤ 3 / 4   :=  by sorry
-theorem lean_workbook_plus_22458 (x : ℝ) : (4:ℝ)^(1/3) / (7 + 4 * Real.sqrt 3) = (4:ℝ)^(1/3) / (7 + 4 * Real.sqrt 3) * (7 - 4 * Real.sqrt 3) / (7 - 4 * Real.sqrt 3)   :=  by sorry
-theorem lean_workbook_plus_15056 : ∀ x y : ℝ, 0 ≤ (1 - Real.sin x) * (1 - Real.sin y)   :=  by sorry
-theorem lean_workbook_plus_54271 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + 3 * b + 4 * c = 1) : (a^3 + 3 * c^3)^(1/3) + (3 * b^3 + c^3)^(1/3) ≥ (4:ℝ)^(1/3) / 4   :=  by sorry
-theorem lean_workbook_plus_58491  (x : ℝ)
-  (h₀ : x / 2 - 3 = 4) :
-  x = 14   :=  by sorry
-theorem lean_workbook_plus_71508  (x : ℝ)
-  (f : ℝ → ℝ)
-  (h₀ : x ≠ 0)
-  (h₁ : 2 * f x * f (-x) = 2 - x * f (-x) + x)
-  (h₂ : 2 * f x * f (-x) = 2 + x * f x - x) :
-  f (-x) = 2 - f x   :=  by sorry
-theorem lean_workbook_plus_54491 : ⌈(14 : ℝ) / 3⌉ = 5   :=  by sorry
-theorem lean_workbook_plus_66146 (a : ℝ) (ha1 : 1 ≥ a) (ha2 : a ≥ 1/3) : 4 * a ^ 3 + 2 * a ^ 2 + 13 * a - 1 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_28654 (a b c : ℤ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 2 * a ^ 2 * b ^ 2 + 2 * a ^ 2 * c ^ 2 + 2 * b ^ 2 * c ^ 2 ≥ 2 * a * b + 2 * a * c + 2 * b * c   :=  by sorry
-theorem lean_workbook_plus_16622 (a b c : ℝ) : (a + b + c) ^ 2 ≥ 3 * (a * b + b * c + a * c)   :=  by sorry
-theorem lean_workbook_plus_5754 (p : ℝ) : 36 + 2 * (p ^ 3 / 3) ≥ 18 * p ↔ (p - 3) ^ 2 * (p + 6) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_20307 (x : ℝ) : x / (1 + x ^ 2) ≤ 1 / 2   :=  by sorry
-theorem lean_workbook_plus_55739 (a b c d e : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (hd : d > 0) (he : e > 0) : (a^4 + b^4 + c^4 + d^4 + e^4)^(1/4) ≥ (a^5 + b^5 + c^5 + d^5 + e^5)^(1/5)   :=  by sorry
-theorem lean_workbook_plus_79087 {m n : ℤ} (h : Even (m * n)) : Even m ∨ Even n   :=  by sorry
-theorem lean_workbook_plus_52659  (a b c : ℝ) :
-  a * b + b * c + c * a = 1 ↔ a * (b + c) = 1 - b * c   :=  by sorry
-theorem lean_workbook_plus_2811 (a b : ℝ) (h : 4 * b^2 - 4 * a ≥ 0) : ∃ x, x^2 + 2 * b * x + a = 0   :=  by sorry
-theorem lean_workbook_plus_47270 (n : ℕ) (hn : 3 < n) (a : ℕ → ℕ) (ha : Function.Bijective a) : ∃ k l : ℕ, k > l ∧ n ∣ k * a k - l * a l   :=  by sorry
-theorem lean_workbook_plus_50876  (p : ℝ)
-  (h₀ : 0 ≤ p ∧ p ≤ 1)
-  (h₁ : (p^2) + ((1 - p)^2) = 5 / 8) :
-  p = 1 / 4 ∨ p = 3 / 4   :=  by sorry
-theorem lean_workbook_plus_34839 (x : ℝ) (f : ℝ → ℝ) (hf: f x - f (x^3) = x/(x^2-1)) : ∃ y, f x = y + Real.log (x^2-1)   :=  by sorry
-theorem lean_workbook_plus_37670 :  ∀ a b c : ℝ, a > 0 ∧ b > 0 ∧ c > 0 ∧ 1 / a ^ 2 + 1 / b ^ 2 + 1 / c ^ 2 = 1 / 2 → a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2 ≥ a * b * c * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_67605  (f : ℝ → ℝ)
-  (h₀ : ∀ x, x ∈ Set.Icc 0 13 → f x = x^2 + x + 5) :
-  f 13 = 187   :=  by sorry
-theorem lean_workbook_plus_16302 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (y + z) / x + 2 ≥ 4 * (z / (z + x) + y / (x + y))   :=  by sorry
-theorem lean_workbook_plus_69589 (x a b : ℤ) (ha : a = x^3 - 1) (hb : b = (x + 1)^3 + 1) :
-  a^3 + b^3 = (a + b)^3 ↔ a * b * (a + b) = 0   :=  by sorry
-theorem lean_workbook_plus_8263 (n p : ℤ) : (2 * Real.sqrt (143 * n ^ 2 + 864 * n + 1081) = p ^ 2 - 24 * n - 70) ↔ (2 * Real.sqrt (143 * n ^ 2 + 864 * n + 1081) = p ^ 2 - 24 * n - 70)   :=  by sorry
-theorem lean_workbook_plus_12331 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (h : x + y + z = 1 / (2 * x * y * z)) :  Real.sqrt (1 + x^4 + y^4 + z^4) ≥ x * y + y * z + z * x   :=  by sorry
-theorem lean_workbook_plus_52050 : ∑ k in Finset.range 26, choose 25 k = 2^25   :=  by sorry
-theorem lean_workbook_plus_19095 (x y : ℝ) (hx : x ≠ 0) (hy : y ≠ 0) : 2 * (x * y) / (x + y) = 2 / (1 / x + 1 / y)   :=  by sorry
-theorem lean_workbook_plus_40018 : a ≡ 19 [ZMOD 30] → 3 * a ≡ 7 [ZMOD 10]   :=  by sorry
-theorem lean_workbook_plus_57893 (x y z : ℝ) : z ^ 4 * x ^ 2 + x ^ 4 * y ^ 2 + y ^ 4 * z ^ 2 ≥ 1 / 3 * (x ^ 2 * y + z * y ^ 2 + z ^ 2 * x) ^ 2   :=  by sorry
-theorem lean_workbook_plus_50938 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b + c = 1) : a / (a + 2 * b) ^ (1 / 2) + b / (b + 2 * c) ^ (1 / 2) + c / (c + 2 * a) ^ (1 / 2) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_30086 (x : ℕ → ℝ) (n : ℕ) (h₁ : n = 5) :
-  ∑ i in Finset.range n, (x i - (∑ j in Finset.range n, x j)/n)^2 =
-    ∑ i in Finset.range 5, (x i - (∑ j in Finset.range 5, x j)/5)^2   :=  by sorry
-theorem lean_workbook_plus_16533 (a : ℕ → ℕ) (a1 : a 0 = 2) (a2 : a 1 = 1) (a3 : a 2 = 4) (h : ∀ n, a (n + 3) = 2 * a (n + 2) ^ 2 + a (n + 1) ^ 3 + a n) : ∃ f : ℕ → ℕ, ∀ k, a k = f k   :=  by sorry
-theorem lean_workbook_plus_36186 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : 2 * (a^2 + b^2 + 2) ≥ 2 * (a + 1) * (b + 1)   :=  by sorry
-theorem lean_workbook_plus_54607 : 20^2 + 21^2 = 29^2   :=  by sorry
-theorem lean_workbook_plus_38760 (n : ℕ) (h : n % 8 = 5) : n % 8 = 5   :=  by sorry
-theorem lean_workbook_plus_28866 : ∀ n ≥ 0, (4^(2*n + 1) + 3^(n + 2)) % 13 = 0   :=  by sorry
-theorem lean_workbook_plus_66199 : 99 ^ 49 + 100 ^ 49 < 101 ^ 49   :=  by sorry
-theorem lean_workbook_plus_76112 (a b: ℝ) : a ^ 2 + b ^ 2 + 1 ≥ a * b + a + b   :=  by sorry
-theorem lean_workbook_plus_75456 (A B C : Set α) : (A ∩ B ∩ C)ᶜ = Aᶜ ∪ Bᶜ ∪ Cᶜ   :=  by sorry
-theorem lean_workbook_plus_8357 (E : Type) (g : E → E) (a : E) : ∃! f : ℕ → E, f 0 = a ∧ ∀ n, f (n + 1) = g (f n)   :=  by sorry
-theorem lean_workbook_plus_13122 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : (a + b - c - Real.sqrt ((a + c - b) * (b + c - a))) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_3778 : (x^2 + x + 2)^2 = x^4 + 2*x^3 + 5*x^2 + 4*x + 4   :=  by sorry
-theorem lean_workbook_plus_19517 (a b : ℝ) (hab : a ≥ 0 ∧ b ≥ 0) : a^2 + a*b + b^2 ≥ 3/4 * (a + b)^2   :=  by sorry
-theorem lean_workbook_plus_40380 (x : ℝ) : 360 * (x + 4) = 400 * x + 640 ↔ x = 20   :=  by sorry
-theorem lean_workbook_plus_68629 : ∀ a b c : ℝ, (a+b+c)*(a^2+b^2+c^2-a*b-b*c-c*a) - (a+b+c)^3 = -3*(a+b+c)*(a*b+b*c+c*a)   :=  by sorry
-theorem lean_workbook_plus_9209 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b + c = a * b * c + 2) : (a + b) * (b + c) * (c + a) + 2 ≥ 2 * (a * b + b * c + a * c) + 4 * a * b * c   :=  by sorry
-theorem lean_workbook_plus_72941 (α β : ℝ) : sin (α + β) = cos α * sin β + cos β * sin α   :=  by sorry
-theorem lean_workbook_plus_62928 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^2 * b^2 + b^2 * c^2 + c^2 * a^2 ≥ a * b * c * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_68381 (k : ℤ) (h₁ : 5 ≤ k) : ∃ p, p.Prime ∧ ∃ k, p = k^2 - 22   :=  by sorry
-theorem lean_workbook_plus_20231 (p : ℕ) (hp : p.Prime) (h : p ≡ 0 [ZMOD 3]) : p = 3   :=  by sorry
-theorem lean_workbook_plus_22774 (a b : ℝ) : (a > 0 ∧ b > 0) ∨ (a < 0 ∧ b < 0) → a * b > 0   :=  by sorry
-theorem lean_workbook_plus_56561 (a b c : ℝ) (hab : a + b + c = 0) : (a^5 + b^5 + c^5) / 5 = (a^3 + b^3 + c^3) / 3 * (a^2 + b^2 + c^2) / 2   :=  by sorry
-theorem lean_workbook_plus_44725 (x : ℝ) : x^4 + x^3 + x^2 + x + 1 = (x^2 + 3 * x + 1)^2 - 5 * x * (x + 1)^2   :=  by sorry
-theorem lean_workbook_plus_34773 (a b c : ℝ) : a * (a + b) * (a + c) ≥ (a + b) * b * c + (a + c) * b * c ↔ (a^2 - b * c) * (a + b + c) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_47189 : ∀ x y z : ℝ, x ≥ 0 ∧ y ≥ 0 ∧ z ≥ 0 → 3 * (x ^ 2 + x * y + y ^ 2) * (y ^ 2 + y * z + z ^ 2) * (z ^ 2 + z * x + x ^ 2) ≥ (x + y + z) ^ 2 * (x * y + x * z + y * z) ^ 2   :=  by sorry
-theorem lean_workbook_plus_19207 :
-  ((Nat.choose 15 2 * Nat.choose 10 1) / Nat.choose 25 3 : ℚ) = 21 / 46   :=  by sorry
-theorem lean_workbook_plus_1007 :
-  100 + 99 + 98 + 97 + 96 + 95 = 585   :=  by sorry
-theorem lean_workbook_plus_39680 : ((3 * (2^(1/3)) - (3^(1/3)))/((3^(1/3)) - (2^(1/3))))^3 - 9 * ((3 * (2^(1/3)) - (3^(1/3)))/((3^(1/3)) - (2^(1/3))))^2 - 45 * ((3 * (2^(1/3)) - (3^(1/3)))/((3^(1/3)) - (2^(1/3)))) - 51 = 0   :=  by sorry
-theorem lean_workbook_plus_56652 (h : π = 3.14) : Int.ceil π + Int.floor π + Int.ceil (-π) + Int.fract π + Int.fract (-π) = 5   :=  by sorry
-theorem lean_workbook_plus_53074 (n r : ℕ) (hn : 3 ≤ n) (hr : 0 ≤ r ∧ r ≤ n-1) : ∃ k : ℝ, k = 3 + 2 * Real.cos (2 * r * π / (n - 1))   :=  by sorry
-theorem lean_workbook_plus_55148 : ∀ ε : ℝ, 0 < ε ∧ ε < 1 → 1 - ε + (1 / (1 - ε)) ≥ 1 + ε + (1 / (1 + ε))   :=  by sorry
-theorem lean_workbook_plus_17667 : ∀ x y : ℝ, x > 0 ∧ y > 0 → x^4*y^4 ≥ x^3*y^3 + Real.log (x*y)   :=  by sorry
-theorem lean_workbook_plus_49958 (r : ℕ → ℤ) (n : ℕ) : (r n = 2 * r (n - 1) - 1) ↔ (r n - 1 = 2 * (r (n - 1) - 1))   :=  by sorry
-theorem lean_workbook_plus_45672 : 5 ^ 4 ≡ 1 [ZMOD 16]   :=  by sorry
-theorem lean_workbook_plus_32903 (n : ℕ) (a b c : ℤ) (h : b + c = 0) :
-  a^(2 * n + 1) + b^(2 * n + 1) + c^(2 * n + 1) = (a + b + c)^(2 * n + 1)   :=  by sorry
-theorem lean_workbook_plus_22625 (a b x z : ℝ) : a * x = z + b ∧ b * z = x + a → (a - 1) * x + (b - 1) * z = a + b   :=  by sorry
-theorem lean_workbook_plus_11478 (x : ℚ) (hx : x = 70) : ⌈x⌉ = 70   :=  by sorry
-theorem lean_workbook_plus_52737 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (hab : a + b + c = 3) : √(a + b) + (b + c)^(1/3) + (c + a)^(1/4) ≥ (3:ℝ)^(1/3) + (3:ℝ)^(1/4)   :=  by sorry
-theorem lean_workbook_plus_79765 (n : ℕ) : 2 * (∑ k in Finset.range (n+1), (Nat.choose (2 * n + 1) k)) = 2^(2 * n + 1)   :=  by sorry
-theorem lean_workbook_plus_38524 (n : ℕ) (h : n % 2 = 1) : Nat.gcd n (n + 32) = Nat.gcd n 32   :=  by sorry
-theorem lean_workbook_plus_52908 (a : ℝ) : 3 * a * (a + 4) ≤ (3 * a + a + 4) ^ 2 / 4   :=  by sorry
-theorem lean_workbook_plus_32073 (x : ℝ) : (cos x)^4 = 1 / 8 * cos (4 * x) + 1 / 2 * cos (2 * x) + 3 / 8   :=  by sorry
-theorem lean_workbook_plus_34563 (a b c d : ℝ) : a * b + a * c + a * d + b * c + b * d + c * d - 6 * Real.sqrt (a * b * c * d) = (a * b + c * d - 2 * Real.sqrt (a * b * c * d)) + (a * c + b * d - 2 * Real.sqrt (a * b * c * d)) + (a * d + b * c - 2 * Real.sqrt (a * b * c * d))   :=  by sorry
-theorem lean_workbook_plus_7867 (x_i x_j : ℝ) (h : x_i > x_j) :
-  x_i * x_j * (x_i - x_j) < (x_i ^ 2 + x_i * x_j + x_j ^ 2) * (x_i - x_j)   :=  by sorry
-theorem lean_workbook_plus_47133 (p : ℕ) (b c x y z : ℤ) (hp : 0 < p) (h : 0 ≤ x ∧ 0 ≤ y ∧ 0 ≤ z) (h2 : x < p ∧ y < p ∧ z < p) (h3 : y ≡ b * x [ZMOD p]) (h4 : z ≡ c * y [ZMOD p]) : z ≡ b * c * x [ZMOD p]   :=  by sorry
-theorem lean_workbook_plus_55348 (n : ℕ) : (n + 1).choose 2 + n.choose 2 = n^2   :=  by sorry
-theorem lean_workbook_plus_78744 (a b c : ℝ) (ha : a > 0 ∧ b > 0 ∧ c > 0 ∧ a + b + c ≥ 3) : a^4 + b^3 + c^2 ≥ a^3 + b^2 + c   :=  by sorry
-theorem lean_workbook_plus_16247 (x : ℝ) : (x + 1) * (x ^ 2 + 1) * (x ^ 3 + 1) ≤ 4 * (x ^ 6 + 1)   :=  by sorry
-theorem lean_workbook_plus_38715 (x y : ℝ) : (y = -1/2 * x + 2 ∧ y = 2 * x) ↔ (x = 4/5 ∧ y = 8/5)   :=  by sorry
-theorem lean_workbook_plus_70266 (b : ℝ) : 90 ≥ b^2 + 4^2 + 6^2 → b ≤ Real.sqrt 38   :=  by sorry
-theorem lean_workbook_plus_44187  (x y z : ℝ)
-  (h₀ : x - (0.6 * x + 6) = 2)
-  (h₁ : y - (0.5 * y + 5) = x)
-  (h₂ : z - (0.4 * z + 4) = y) :
-  z = 90   :=  by sorry
-theorem lean_workbook_plus_37219 (x : ℕ → ℝ) (hx : CauchySeq x) :
-    ∃ n : ℕ → ℕ, ∀ k : ℕ, k > 0 → |x (n (k + 1)) - x (n k)| < 1 / 2 ^ k   :=  by sorry
-theorem lean_workbook_plus_48848 (a b : ℝ) (hab : 0 ≤ a ∧ 0 ≤ b ∧ a + b ≤ 1) (k : ℝ) (hk : k ≥ 1) : a / (b + 1) + k * b / (a + 1) ≤ k   :=  by sorry
-theorem lean_workbook_plus_6070 (x y z : ℝ) : 3 * (x ^ 5 + y ^ 5 + z ^ 5) = 3 * (x + y + z) ^ 5 + 5 * (x ^ 2 + y ^ 2 + z ^ 2 + x * y + y * z + z * x) * (x ^ 3 + y ^ 3 + z ^ 3 - (x + y + z) ^ 3)   :=  by sorry
-theorem lean_workbook_plus_25569 (a b c d : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (hd : 0 ≤ d) : (a + b + c + d) ^ 3 ≥ 16 * (a * b * c + b * c * d + c * d * a + d * a * b)   :=  by sorry
-theorem lean_workbook_plus_67976 (n : ℤ) (h : n%2 = 1) : 8 ∣ (n^2 - 1)   :=  by sorry
-theorem lean_workbook_plus_73232 (x y z : ℝ) (h₁ : x = 3 / 2) (h₂ : y = 3 / 2) (h₃ : z = 4 / 9) (h₄ : x * y * z = 1) : x = 3 / 2 ∧ y = 3 / 2 ∧ z = 4 / 9   :=  by sorry
-theorem lean_workbook_plus_62457 (x y z : ℝ) (hx : 0 ≤ x ∧ x ≤ 1) (hy : 0 ≤ y ∧ y ≤ 1) (hz : 0 ≤ z ∧ z ≤ 1) : x*y*z + (1 - x)*(1 - y)*(1 - z) ≤ 1   :=  by sorry
-theorem lean_workbook_plus_29209 (x : ℝ) (f : ℝ → ℝ) (hf: f x > 1 / Real.sqrt x): ∃ x, f x > 1 / Real.sqrt x   :=  by sorry
-theorem lean_workbook_plus_49878 (t : ℝ) : (t - 1) ^ 2 * (t ^ 2 + 2 * t + 5) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_22634 (y1 y2 : ℝ) (hy1 : y1 ≠ y2) (h1 : y1^3 - y1 / 4 = y2^3 - y2 / 4) : y1^3 - y2^3 = y1 / 4 - y2 / 4   :=  by sorry
-theorem lean_workbook_plus_39194 (a b c : ℂ) (h₁ : a.im = c.im) (h₂ : b.im = 0) : a * b * c = a * c * b   :=  by sorry
-theorem lean_workbook_plus_70618 (a b c : ℝ) : (a + b + c) ^ 2 ≥ 2 * (a * b + b * c + c * a) + a ^ 2 + b ^ 2 + c ^ 2   :=  by sorry
-theorem lean_workbook_plus_68650 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) : (a / (b + c))^(1 / 2) + (b / (c + a))^(1 / 2) + (c / (a + b))^(1 / 2) ≥ 2   :=  by sorry
-theorem lean_workbook_plus_14746  (f : ℝ → ℝ)
-  (h₀ : (∀ x, (f x)^2 = 2 * f x)) :
-  f 2 = 0 ∨ f 2 = 2   :=  by sorry
-theorem lean_workbook_plus_75242  (x : ℝ)
-  (f : ℝ → ℝ)
-  (h₀ : f x = 0)
-  (h₁ : f x = (x^2 * (x - 4)^2 - 16 * (2 * x + 1)^2)) :
-  x^2 + 4 * x + 4 = 0 ∨ x^2 - 12 * x - 4 = 0   :=  by sorry
-theorem lean_workbook_plus_80259 {a b c : ℝ} (ha : a > 0) (hb : b > 0) (hc : c > 0) : (1 / 2) * (a ^ 2 + b ^ 2 + c ^ 2 + (9 * a * b * c) / (a + b + c) - 2 * a * b - 2 * b * c - 2 * c * a) + (7 / 4) * ((a - b) ^ 2 + (b - c) ^ 2 + (c - a) ^ 2) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_50827 : (2^1398 + 1 : ℤ) = 6917257425689530036622985546718721032458048899171898480735288332161153759265304724368239531227090326307349383041499823466971386343244651801294157545363169233480268460307612535996044740389512799159954588308125393833558110056091314603315306137267161874183473373214673459734004841723514031219907235701547001390855970990191853377446857678811103668220504652391954935598744989572362036837653935170399380502807145490246317113345   :=  by sorry
-theorem lean_workbook_plus_54983 (a b c : ℝ) (h : a + b + c = 3) : 4 * a + 4 * b + c = 3 * (a + b + 1)   :=  by sorry
-theorem lean_workbook_plus_74718 : ∀ x y : ℝ, x^3 + y^3 = 2 → x + y ≤ 2   :=  by sorry
-theorem lean_workbook_plus_79054  (a b : ℤ)
-  (h₀ : 0 < a ∧ 0 < b)
-  (h₁ : ∀ k : ℕ, (2 * k * b) ≤ (2 * k + 1) * a)
-  (h₂ : ∀ j : ℕ, (2 * j + 1) * a ≤ (2 * j + 2) * b) :
-  a = b   :=  by sorry
-theorem lean_workbook_plus_23028 (a b x: ℝ) : a * Real.sin x + b * Real.cos x ≤ Real.sqrt (a ^ 2 + b ^ 2)   :=  by sorry
-theorem lean_workbook_plus_34501 : ∀ a b c : ℝ, a > 0 ∧ b > 0 ∧ c > 0 → a / (a ^ 2 + b * c) ≤ (1 / 4) * (1 / b + 1 / c)   :=  by sorry
-theorem lean_workbook_plus_81488 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a / (b + c) + b / (c + a) + c / (a + b) ≥ a / (a + b) + b / (b + c) + c / (c + a)   :=  by sorry
-theorem lean_workbook_plus_13305  (x y : ℕ)
-  (h₀ : x + y = 27)
-  (h₁ : x - y = 1) :
-  x = 14 ∧ y = 13   :=  by sorry
-theorem lean_workbook_plus_27478 (a b c d : ℝ) (hab : a + b + c + d = 8) : a / (8 + b - d)^(1/3) + b / (8 + c - a)^(1/3) + c / (8 + d - b)^(1/3) + d / (8 + a - c)^(1/3) ≥ 4   :=  by sorry
-theorem lean_workbook_plus_7570 (x y z : ℝ) (h : x ^ 2 + y ^ 2 + z ^ 2 = 1) : 1 ≤ x ^ 2 + 2 * y ^ 2 + 3 * z ^ 2 ∧ x ^ 2 + 2 * y ^ 2 + 3 * z ^ 2 ≤ 3   :=  by sorry
-theorem lean_workbook_plus_50830 (x : ℝ) : x^2 - 6*x + 8 = 0 ↔ x = 2 ∨ x = 4   :=  by sorry
-theorem lean_workbook_plus_5671 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : a^3 * b + b^3 * c + c^3 * a >= a^(7 / 4) + b^(7 / 4) + c^(7 / 4) + 16 * (a^(1 / 4) + b^(1 / 4) + c^(1 / 4)) * (a^(1 / 4) - b^(1 / 4))^2 * (a^(1 / 4) - c^(1 / 4))^2 * (b^(1 / 4) - c^(1 / 4))^2   :=  by sorry
-theorem lean_workbook_plus_63835 (t : ℝ) (ht1 : t ≥ 1) : (t - 1) ^ 2 * (7 * t ^ 2 - 4 * t + 1) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_82033 (M : ℝ) (x : ℕ → ℝ) (hM : 0 ≤ M) (hx : ∀ n, |x n| ≤ M)
-    (h'x : ∀ ε > 0, ∃ N : ℕ, ∀ n, N ≤ n → |x (n + 1) - x n| < ε) :
-  ∀ ε > 0, ∃ N : ℕ, ∀ n, N ≤ n → |x (n + 1) - x n| < ε   :=  by sorry
-theorem lean_workbook_plus_70886 (a b c : ℝ) : (a^2 + b^2 + c^2)^2 ≥ a^2 * (b^2 + b * c + a^2) + b^2 * (c^2 + c * a + b^2) + c^2 * (a^2 + a * b + c^2)   :=  by sorry
-theorem lean_workbook_plus_70312 (n : ℕ) : ((n:ℝ)^n / (n:ℝ)^n) = 1   :=  by sorry
-theorem lean_workbook_plus_50566 (n a b : ℕ) (ha : a^2 + b^2 = 2^n) (hb : 2 ≤ n) : Even a ∧ Even b   :=  by sorry
-theorem lean_workbook_plus_55964 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (hab : a + b + c = 1) : 1 / (a^3 + 7)^(1 / 3) + 1 / (b^3 + 7)^(1 / 3) + 1 / (c^3 + 7)^(1 / 3) ≥ 1 / 2 + 2 / (7 : ℝ)^(1 / 3)   :=  by sorry
-theorem lean_workbook_plus_81291 (k : ℤ) (P Q : ℤ → ℤ) (hP : P = fun x => x / 2) (hQ : Q = fun x => x + 1) (h : P 2 = Q (2 * k)) : k = 0   :=  by sorry
-theorem lean_workbook_plus_11271 (y z : ℝ) : (4 * z - 3 * y) ^ 2 - 5 * (5 * y ^ 2 + 5 * z ^ 2 - 8 * y * z) ≤ 0   :=  by sorry
-theorem lean_workbook_plus_30235 (f : ℝ → ℝ) (k : ℤ) (hf: f = fun x => -2009 * x + (2 * k + 1) * π) : ∀ x, f x = -2009 * x + (2 * k + 1) * π   :=  by sorry
-theorem lean_workbook_plus_64801 (r s : ℂ) (hr : r^2 - 8 * r + 12 = 0) (hs : s^2 - 8 * s + 12 = 0) : r + s + (4 - r) + (4 - s) = 8   :=  by sorry
-theorem lean_workbook_plus_30981 (n : ℤ) (hn : n > 0) : ∃ m : ℤ, 0 ≤ n / m - m ∧ n / m - m ≤ 2   :=  by sorry
-theorem lean_workbook_plus_18331  (a b c : ℝ) :
-  2 * (a^2 + b^2 + c^2) * (a + b + c) = 3 * (a * b + b * c + c * a) * (a + b + c) ↔
-  2 * (a^3 + b^3 + c^3) = a * b * (a + b) + b * c * (b + c) + c * a * (c + a) + 9 * a * b * c   :=  by sorry
-theorem lean_workbook_plus_26119 (a b c : ℕ) (hab : a ≤ 9 ∧ b ≤ 9 ∧ c ≤ 9) (h : 3 ∣ a + b + c) : 3 ∣ c + b + a   :=  by sorry
-theorem lean_workbook_plus_31221  (x : ℝ)
-  (h₀ : 0 < x)
-  (h₁ : 2 * 2 * x / (2 + x) = 3) :
-  x = 6   :=  by sorry
-theorem lean_workbook_plus_21227 :
-  ∀ (A B C : ℝ), (Real.pi / 2 < A ∧ Real.pi / 2 < B ∧ Real.pi / 2 < C ∧ A + B + C = Real.pi) →
-    Real.sin (A / 2) * Real.sin (B / 2) * Real.sin (C / 2) ≤ (1 / 8) * (Real.cos ((B - C) / 2))^2   :=  by sorry
-theorem lean_workbook_plus_70219 :
-  ((1 / 2)^2 * (6! / (3! * 2!) * (1 / 2)^3 * (1 / 2)^2 + 6! / (1! * 5!) * (1 / 2) * (1 / 2)^5)) = 13 / 128 ∧
-  ((4! / (2! * 2!) * (1 / 2)^2 * (1 / 2)^2) * (4! / (1! * 3!) * (1 / 2) * (1 / 2)^3)) = 3 / 32   :=  by sorry
-theorem lean_workbook_plus_37550 (x y z : ℝ) (h : x*y*z = 1) : (x / (y + 6 * (2:ℝ)^(1/3)))^(1/2) + (y / (z + 6 * (2:ℝ)^(1/3)))^(1/2) + (z / (x + 6 * (2:ℝ)^(1/3)))^(1/2) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_55522 (x : ℝ) (hx : 1 ≤ x) : x ^ 12 - x ^ 9 + x ^ 4 - x + 1 > 0   :=  by sorry
-theorem lean_workbook_plus_19573 :
-  ((10^2 * 9^2)/10^5 : ℚ) = 81/1000   :=  by sorry
-theorem lean_workbook_plus_3092 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a ≥ 3) (hbc : a / 3 + b / 2 ≥ 2) (habc : a / 3 + b / 2 + c ≥ 3) : a ^ 3 + b ^ 3 + c ^ 3 ≥ 36   :=  by sorry
-theorem lean_workbook_plus_10621  (a b c : ℝ)
-  (f : ℝ → ℝ)
-  (h₀ : ∀ x, f x = a * x^2 + b * x + c)
-  (h₁ : a ≠ 0) :
-  -(b^2 - 4 * a * c) / (4 * a) = c - b^2 / (4 * a)   :=  by sorry
-theorem lean_workbook_plus_40975 (a b c : ℝ) (h1 : a + b ≥ 0) (h2 : b + c ≥ 0) (h3 : c + a ≥ 0) : a + b + c ≥ (|a| + |b| + |c|) / 3   :=  by sorry
-theorem lean_workbook_plus_29682 {a b c : ℝ} : 2 * (a ^ 4 + b ^ 4 + c ^ 4) + 4 * (a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2) ≥ 3 * (a * b * (a ^ 2 + b ^ 2) + b * c * (b ^ 2 + c ^ 2) + c * a * (c ^ 2 + a ^ 2))   :=  by sorry
-theorem lean_workbook_plus_20196 (a b c : ℝ) (hab : a + b + c = 0) : (a * b) ^ 2 + (b * c) ^ 2 + (a * c) ^ 2 + 6 * a * b * c ≥ -3   :=  by sorry
-theorem lean_workbook_plus_52329 : ∀ ε : ℝ, ε > 0 → ∃ N : ℕ, ∀ t : ℝ, t > 0 ∧ t < 1 / N → |(1 / t - 1 / 2 - 1 / (t * (t + 1))) - 1 / 2| < ε   :=  by sorry
-theorem lean_workbook_plus_37608 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 1) : a^2 + b^2 + c^2 = 1 → a^3 / (2 * b + 3 * c) + b^3 / (2 * c + 3 * a) + c^3 / (2 * a + 3 * b) ≥ 1 / 5   :=  by sorry
-theorem lean_workbook_plus_73113 :  ∀ a b c : ℝ, a > 0 ∧ b > 0 ∧ c > 0 ∧ a + b + c = 3 → a * b * (a ^ 2 + b ^ 2) ≤ (a + b) ^ 4 / 8   :=  by sorry
-theorem lean_workbook_plus_15193 (f : ℝ → ℝ) (hf: f = fun x => x^3) : ∀ x, f x = x^3   :=  by sorry
-theorem lean_workbook_plus_14790 (f : ℝ → ℝ) (A : Set ℝ) (hA: A = {x : ℝ | ∀ y : ℝ, f (x * y) = x * f y}) : 1 ∈ A   :=  by sorry
-theorem lean_workbook_plus_29731 (a b c : ℝ) : (1 / (9^9 * (a * b * c)^8))^(1 / 12) ≥ Real.sqrt 3 / 3   :=  by sorry
-theorem lean_workbook_plus_12058 (f : ℝ → ℝ) : ∀ x, f x = (f x + f (-x)) / 2 + (f x - f (-x)) / 2   :=  by sorry
-theorem lean_workbook_plus_50763 (x y : ℝ) (hx: x₁ ≥ x₂ ∧ x₂ ≥ x₃) (hy: y₁ ≤ y₂ ∧ y₂ ≤ y₃) : (x₁ + x₂ + x₃) * (y₁ + y₂ + y₃) ≥ 3 * (x₁ * y₁ + x₂ * y₂ + x₃ * y₃)   :=  by sorry
-theorem lean_workbook_plus_70012 (A B C: ℝ) : (A + B + C) ^ 2 ≥ 3 * (A * B + B * C + C * A)   :=  by sorry
-theorem lean_workbook_plus_39152 :  ∀ a b c : ℝ, (a^2 + b^2) * (b^2 + c^2) * (c^2 + a^2) ≥ (8/9) * (a^2 + b^2 + c^2) * (a^2 * b^2 + b^2 * c^2 + c^2 * a^2)   :=  by sorry
-theorem lean_workbook_plus_30905 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b + c = 3) : a^(1/3) + b^(1/3) + c^(1/3) ≥ a * b + b * c + c * a   :=  by sorry
-theorem lean_workbook_plus_14989 (f : ℝ → ℝ) (ε : ℝ) (hε : ε > 0) : ∃ δ, ∀ x y, abs (x - y) < δ → abs (f x - f y) < ε   :=  by sorry
-theorem lean_workbook_plus_45051  (x : ℕ)
-  (h₀ : Even x) :
-  (x : ℤ) - 2 * (x / 2) = 0   :=  by sorry
-theorem lean_workbook_plus_34941 (a b c : ℝ) : a^3 + b^3 + c^3 - 3*a*b*c = (a + b + c)*(a^2 + b^2 + c^2 - a*b - a*c - b*c)   :=  by sorry
-theorem lean_workbook_plus_71556 (x y z : ℝ) (h : x + y + z = 0) :
-  x^3 + y^3 + z^3 = 3 * x * y * z   :=  by sorry
-theorem lean_workbook_plus_63378 (t : ℝ) (ht : t > 0) : t ^ 3 ≥ 3 * t - 2   :=  by sorry
-theorem lean_workbook_plus_30782 (x y z : ℝ) (hx : x + y + z = 4) (hx' : 0 ≤ x) (hy' : 0 ≤ y) (hz' : 0 ≤ z) : (x^2 + 2) * (y^2 + 2) * (z^2 + 2) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_45367 (b : ℝ) (hb : b = π / 3 ∨ b = 2 * π / 3) : b = π / 3 ∨ b = 2 * π / 3   :=  by sorry
+theorem lean_workbook_plus_45372  (x y : ℝ)
+  (h₀ : 0 ≤ x ∧ 0 ≤ y)
+  (h₁ : Real.sqrt x = Real.sqrt y) :
+  x = y   :=  by sorry
 theorem lean_workbook_plus_45385 (k : ℕ) : ∑ n in Finset.range (k+1), choose (k + n) (2 * n) = ∑ n in Finset.range (k+1), choose (k + n) (k - n)   :=  by sorry
-theorem lean_workbook_plus_24062 (a : ℝ) : Set.range (fun x : ℝ => x^2 + a) = Set.Ici a   :=  by sorry
-theorem lean_workbook_plus_36125 (n : ℕ) (a : ℕ → ℝ) (x : ℝ) : ∃ y, y = (∑ i in Finset.range (n+1), (a i * x ^ (i + 1) / (i + 1)))   :=  by sorry
-theorem lean_workbook_plus_62003 :
-  ∀ a b c : ℝ, a^2 + b^2 + c^2 + 2 * a * b * c = 1 → (a + b * c) * (b + a * c) * (c + a * b) = (1 - a^2) * (1 - b^2) * (1 - c^2)   :=  by sorry
-theorem lean_workbook_plus_370 {x y z : ℝ} : x ^ 3 + y ^ 3 + z ^ 3 - 3 * x * y * z = (x + y + z) * (x ^ 2 + y ^ 2 + z ^ 2 - x * y - y * z - x * z)   :=  by sorry
-theorem lean_workbook_plus_24381 (n k : ℕ) : (n.choose k) + (n.choose (k + 1)) = (n + 1).choose (k + 1)   :=  by sorry
-theorem lean_workbook_plus_18145 (a b : ℝ) (ha : a ≠ 0) (hb : b ≠ 0) (hab : a ≠ b) : (a^2 + b^2) * (1 / a^2 + 1 / b^2) + 4 ≥ 2 * (a + b) * (1 / a + 1 / b)   :=  by sorry
-theorem lean_workbook_plus_38834 (n k : ℕ) (h₀ : k ≤ n) : choose n k ≤ choose n (n/2)   :=  by sorry
-theorem lean_workbook_plus_64441 (n m : ℤ) : n^4+4*m^4=(n^2+2*m^2)^2-(2*n*m)^2   :=  by sorry
-theorem lean_workbook_plus_37275  (a b m : ℤ)
-  (h₀ : 0 < m)
-  (h₁ : a ≡ b [ZMOD m]) :
-  a % m = b % m   :=  by sorry
-theorem lean_workbook_plus_77842 {a b c m : ℤ} (hab : a ≡ b [ZMOD m]) (hbc : b ≡ c [ZMOD m]) : a ≡ c [ZMOD m]   :=  by sorry
-theorem lean_workbook_plus_50771 (a b c : ℝ) : 4 * (a ^ 2 + b ^ 2 + c ^ 2) ^ 2 ≥ 3 * (a ^ 4 + b ^ 4 + c ^ 4 + 3 * (a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2))   :=  by sorry
-theorem lean_workbook_plus_11637 (n : ℕ) : 14 ∣ 3^(4*n+2) + 5^(2*n+1)   :=  by sorry
-theorem lean_workbook_plus_24191 (a b k : ℝ) (h₁ : 0 < k) (h₂ : (a + Real.sqrt (a^2 + 1)) * (b + Real.sqrt (b^2 + 1)) = k) : (1 + k) * (a + b) = (k - 1) * (Real.sqrt (a^2 + 1) + Real.sqrt (b^2 + 1))   :=  by sorry
-theorem lean_workbook_plus_43044 (x : ℝ) (hx : x ≥ 3) : (x - 3) * (x^3 + 3 * x^2 + 9 * x - 27) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_72963 (a b c : ℝ) : 2 * (a + b + c) ^ 4 + 3 * (a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2) ≥ 6 * (a + b + c) * (a + b) * (b + c) * (c + a)   :=  by sorry
-theorem lean_workbook_plus_44185  (t0 t1 t2 : ℝ)
-  (h0 : t0 = 1 + t0 / 2 + t1 / 2)
-  (h1 : t1 = 1 + t0 / 2 + t2 / 2)
-  (h2 : t2 = 1 + t0 / 2) :
-  t2 = 8 ∧ t1 = 12 ∧ t0 = 14   :=  by sorry
-theorem lean_workbook_plus_2320 :
-  (2^14 - 2^10) = 15360   :=  by sorry
-theorem lean_workbook_plus_45003 (x : ℤ) : (10^2 - 9^2 + 8^2 - 7^2 + 6^2 - 5^2 + 4^2 - 3^2 + 2^2 - 1^2) = 55   :=  by sorry
-theorem lean_workbook_plus_44809 (a b c : ℝ) (hab : a ≥ b) (hbc : b ≥ c) : a^2 + a*c + c^2 ≥ 3*b*(a - b + c)   :=  by sorry
-theorem lean_workbook_plus_47673 (a b : ℕ) (hab : Nat.Coprime a b) (n : ℕ) : Nat.Coprime a (b^n)   :=  by sorry
-theorem lean_workbook_plus_67342  (a b : ℝ) :
-  2 * (a^4 + b^4) ≥ (a^2 + b^2)^2 ∧ (a^2 + b^2)^2 ≥ 4 * a^2 * b^2   :=  by sorry
-theorem lean_workbook_plus_75020 (n : ℕ) : (n * (n - 1)) / 2 = (n.choose 2)   :=  by sorry
-theorem lean_workbook_plus_14749 (x y z : ℝ) (hx : x ≥ -1) (hy : y ≥ -1) (hz : z ≥ -1) (h : x^3 + y^3 + z^3 ≥ x^2 + y^2 + z^2) : x^5 + y^5 + z^5 ≥ x^2 + y^2 + z^2   :=  by sorry
-theorem lean_workbook_plus_13556 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^4 + b^4 + c^4 + a^2 * b^2 + b^2 * c^2 + c^2 * a^2 ≥ a^3 * b + b^3 * c + c^3 * a + a * b^3 + b * c^3 + c * a^3   :=  by sorry
-theorem lean_workbook_plus_27660 {a b x y : ℝ} (ha : 0 < a) (hb : 0 < b) (hx : 0 < x) (hy : 0 < y) :
-  (a * x + b * y) / (a + b) ≥ (a + b) / (a / x + b / y)   :=  by sorry
-theorem lean_workbook_plus_50110  (m n : ℂ)
-  (h₀ : m^3 + n^3 + 3 * m * n = 1) :
-  (m + n - 1) * (m^2 + n^2 - m * n + m + n + 1) = 0   :=  by sorry
-theorem lean_workbook_plus_79665 (d : ℕ) (x y : ℕ → ℕ) (h₀ : x 1 = 1 ∧ y 1 = 1) (h₁ : ∀ n, x (n + 1) = (2 * d + 1) * x n + (2 * d + 2) * y n) (h₂ : ∀ n, y (n + 1) = 2 * d * x n + (2 * d + 1) * y n) : ∀ n, d * x n ^ 2 + 1 = (d + 1) * y n ^ 2   :=  by sorry
-theorem lean_workbook_plus_80351 (b c : ℝ) : (b + c) ^ 2 ≥ 4 * b * c   :=  by sorry
-theorem lean_workbook_plus_4562 (A B C : ℝ) (hx: A > 0 ∧ B > 0 ∧ C > 0) (hab : A + B + C = π) : (1 - Real.sin A * Real.sin B)^(1/3) + (1 - Real.sin B * Real.sin C)^(1/3) + (1 - Real.sin C * Real.sin A)^(1/3) ≥ 3/2 * (2)^(1/3)   :=  by sorry
-theorem lean_workbook_plus_11427 (k : ℕ) (h : 1 ≤ k) : (1 : ℝ) + 1/k ≤ 2   :=  by sorry
-theorem lean_workbook_plus_49486 (n : ℝ) : 1/3 * n = 34 → n = 102   :=  by sorry
-theorem lean_workbook_plus_13156 {a b c d : ℝ} (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) (hab : a^2 + b^2 = 1) (hcd : c^2 + d^2 = 1) : b / a + d / c ≥ 2 * (b + d) / (a + c)   :=  by sorry
-theorem lean_workbook_plus_79469 (a b : ℝ) (hab : 1 < a ∧ 1 < b) : 2 * (a * b + 1) > (a + 1) * (b + 1)   :=  by sorry
-theorem lean_workbook_plus_48558 : ∀ y : ℝ, y^2 + y + 1 + 2 * Real.sqrt (y^2 + y) ≥ y^2 - y ↔ 2 * y + 1 + 2 * Real.sqrt (y^2 + y) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_3370 (p : ℕ) (hp : p.Prime) (h2 : p > 2) : 2 ∣ p - 1   :=  by sorry
-theorem lean_workbook_plus_63262 (x : ℝ) : x^2 - 6*x + 8 = 0 ↔ x = 4 ∨ x = 2   :=  by sorry
-theorem lean_workbook_plus_1011 (a : ℕ → ℝ) (c x : ℝ) (hc : 0 < c) (hx : |x| < c) : ∃ y : ℝ, y = ∑' k : ℕ, a k * x ^ k   :=  by sorry
-theorem lean_workbook_plus_70634 (a b c : ℝ) : a * b * c * (a + b + c) ≤ (1 / 3) * (a * b + b * c + c * a) ^ 2   :=  by sorry
-theorem lean_workbook_plus_33258 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (hxy : 1/(x + 2) + 2/(y + 2) = 1/3) : x + 2*y ≥ 21   :=  by sorry
-theorem lean_workbook_plus_16659 (a b : ℤ) : a^2 + b^2 ≡ (a + b)^2 [ZMOD a * b]   :=  by sorry
-theorem lean_workbook_plus_11756 : ∀ x : ℝ, 2 * Real.sqrt (1 + 2 * (x - 3) ^ 2) * Real.sqrt ((x - 2) ^ 2 + 1) ≥ -3 * x ^ 2 + 16 * x - 87 / 4   :=  by sorry
-theorem lean_workbook_plus_31326 (x a : ℝ) (h : x^5 - x^3 + x = a) :
-  (x - 1)^2 * (x^2 + x * Real.sqrt 3 + 1) * (x^2 - x * Real.sqrt 3 + 1) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_39 :
-  ∑' n : ℕ, (1 / 2) * ((1 / 4)^n) = 2 / 3   :=  by sorry
-theorem lean_workbook_plus_21017 (n : ℕ) : ∑ n in Finset.Icc 1 40, 39 * n * (41 - n) ^ 2 = 9178260   :=  by sorry
-theorem lean_workbook_plus_46374 : ∀ a : ℤ, a ^ 2 ≡ 0 [ZMOD 4] ∨ a ^ 2 ≡ 1 [ZMOD 4]   :=  by sorry
-theorem lean_workbook_plus_14387  (x y u v : ℝ)
-  (h₀ : u = x + y)
-  (h₁ : v = x * y)
-  (h₂ : u^3 - 2 * u * v = 8 * u^2 - 8 * v + 8) :
-  u^3 - 2 * u * v = 8 * u^2 - 8 * v + 8   :=  by sorry
-theorem lean_workbook_plus_18234 (n : ℝ) : 100 * n - 5050 = 0 ↔ n = 101 / 2   :=  by sorry
-theorem lean_workbook_plus_29688 (a b c x y z : ℝ) (hx : x = Real.sqrt (a ^ 2 + (b - c) ^ 2)) (hy : y = Real.sqrt (b ^ 2 + (c - a) ^ 2)) (hz : z = Real.sqrt (c ^ 2 + (a - b) ^ 2)) : x ^ 2 + y ^ 2 - z ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_43799 : ∀ a b c d : ℝ, (a - 1 / 2)^2 + (b - 1 / 2)^2 + (c - 1 / 2)^2 + (d - 1 / 2)^2 >= 0   :=  by sorry
-theorem lean_workbook_plus_64773 (a b : ℕ) (k : ℕ) (m n : ℕ) (h₁ : a = k * m ^ 2) (h₂ : b = k * n ^ 2) (h₃ : a + 1 = ℓ * r ^ 2) (h₄ : b + 1 = ℓ * s ^ 2) : ℓ * r ^ 2 - k * m ^ 2 = 1 ∧ ℓ * s ^ 2 - k * n ^ 2 = 1   :=  by sorry
-theorem lean_workbook_plus_77449 (f : ℝ → ℝ) (a : ℝ) (h₁ : ∀ x, f x = 1/3 + a * (1/(2*x + 1) - 1/3)) : ∀ x, f x = a * 1/(2*x + 1) + (1 - a) * 1/3   :=  by sorry
-theorem lean_workbook_plus_7377 {α : Type} [AddCommMonoid α] (f : α → α → α → α) (a b c : α) :
-  f a b c + f a c b + f b a c + f b c a + f c a b + f c b a = (fun x y z => f x y z + f x z y + f y x z + f y z x + f z x y + f z y x) a b c   :=  by sorry
-theorem lean_workbook_plus_75257 (f : ℝ → ℝ) (hf: ∀ x ≥ 0, f x = x) : ∀ x ≥ 0, f x = x   :=  by sorry
-theorem lean_workbook_plus_41127 : Function.Injective (fun x : ℝ => 2 * x + 1)   :=  by sorry
-theorem lean_workbook_plus_22401 (x : ℝ) (hx : 1 < x) : 2 / x < 1 + 1 / x ^ 2   :=  by sorry
+theorem lean_workbook_plus_45391 (a b c d : ℝ) (h : a^2 + b^2 = c^2 + d^2) : (a - c) * (a + c) = (d - b) * (d + b)   :=  by sorry
+theorem lean_workbook_plus_45401 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / b) + (b / c)^(1 / 2) + (c / a)^(1 / 3) > 2   :=  by sorry
+theorem lean_workbook_plus_45411 (a b : ℝ) : a^2 + 141 * a * b + 5476 * b^2 - 5 * a - 1346 * b + 512 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_45426 (x y z : ℝ) (h : x + y + z = 3) : x*y + x*z + y*z ≤ 3   :=  by sorry
+theorem lean_workbook_plus_45433 {a b : ℂ} (hab : a ≠ b) (h : a^4 + a + 1 = 0) (h' : b^4 + b + 1 = 0) : a^3 + a^2*b + a*b^2 + b^3 = -1   :=  by sorry
+theorem lean_workbook_plus_45444 (x y z : ℝ) (h : x + y + z ≥ x * y * z) : x^2 + y^2 + z^2 ≥ x * y * z   :=  by sorry
+theorem lean_workbook_plus_45452 (k₁ k₂ a b : ℝ) (hk₁ : 0 < k₁) (hk₂ : 0 < k₂) (ha : 0 < a) (hb : 0 < b) : k₁ * k₂ * a ^ 3 + (k₁ ^ 2 + k₂ ^ 2 + k₁ * k₂) * (a ^ 2 * b + a * b ^ 2) + k₁ * k₂ * b ^ 3 ≤ (k₁ + k₂) ^ 2 * (a + b) ^ 3 / 4   :=  by sorry
+theorem lean_workbook_plus_45463 (p₁ p₂ : ℝ) : p₁ / p₂ + p₂ / p₁ = (p₁ ^ 2 + p₂ ^ 2) / (p₁ * p₂)   :=  by sorry
+theorem lean_workbook_plus_45467 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a * b + b * c + c * a + 2 * a * b * c = 1) : 1 / (a + b + 2) + 1 / (b + c + 2) + 1 / (c + a + 2) ≤ 1   :=  by sorry
+theorem lean_workbook_plus_45475 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : a * b = 1) (h : a^3 / b + 2 * b / a = 3) : a^2 + a * b + b^2 ≤ 3   :=  by sorry
+theorem lean_workbook_plus_45482  (m n : ℤ)
+  (a : ℚ)
+  (h₀ : 0 < a)
+  (h₁ : 0 < n)
+  (h₂ : ¬ 5 * m = 13 * n)
+  (h₃ : (m : ℚ) / n = a)
+  (h₄ : a = (7 + 1 / a) / (65 - 1 / a)) :
+  a = 1 / 5   :=  by sorry
+theorem lean_workbook_plus_45492 (a b c d : ℝ) (h : a ≥ b ∧ b ≥ c ∧ c ≥ d ∧ d ≥ 0) (h2: a^2 + b^2 + c^2 + d^2 = 1) : a + b ≥ 1 ∧ 1 ≥ c + d   :=  by sorry
+theorem lean_workbook_plus_45516 (L : ℕ → ℝ) (h : ∀ n, L (n + 2) = L (n + 1) + L n) (h0 : L 1 = 1 ∧ L 2 = 3) : ∃ k, ∀ ε : ℝ, ε > 0 → (∑ n in Finset.range k, L n / 3 ^ n) - 1 < ε   :=  by sorry
+theorem lean_workbook_plus_45517 (a b c: ℝ): a * b + b * c + c * a <= a ^ 2 + b ^ 2 + c ^ 2   :=  by sorry
+theorem lean_workbook_plus_45519 (n : ℤ) : n^7 ≡ n [ZMOD 7]   :=  by sorry
+theorem lean_workbook_plus_45523 (x y z : ℕ) (hx : x = 0 ∨ x = 1) (hy : y = 0 ∨ y = 1) (hz : z = 0 ∨ z = 1) : x^2 + y^2 + z^2 ≤ x^2 * y + y^2 * z + z^2 * x + 1   :=  by sorry
+theorem lean_workbook_plus_45531 (x y : ℝ) (hx : x ∈ Set.Icc 0 1) (hy : y ∈ Set.Icc 0 1) : x ^ 2 + y ^ 2 ≤ 1 + x * y   :=  by sorry
+theorem lean_workbook_plus_45535 : ¬ ∃ v : ℤ, v > 0 ∧ v^3 + 2 * v^2 - 1 = 0   :=  by sorry
+theorem lean_workbook_plus_45538 (x y z : ℝ) (hx : x > 0 ∧ y > 0 ∧ z > 0) : 4 * (x ^ 2 + y ^ 2 + z ^ 2) ≥ 3 * (x * y + y * z + x * z)   :=  by sorry
+theorem lean_workbook_plus_45545 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : (1 / (1 / a + 1 / b) + 1 / (1 / c + 1 / d)) ≤ 1 / (1 / (a + c) + 1 / (b + d))   :=  by sorry
+theorem lean_workbook_plus_45580 (a b c d e f : ℝ) : (a + d) ^ 2 + (b + e) ^ 2 + (c + f) ^ 2 ≥ (a + d) * (b + e) + (b + e) * (c + f) + (c + f) * (a + d)   :=  by sorry
+theorem lean_workbook_plus_45600 (p q : ℤ → ℤ) (h₁ : ∀ x, q x = p (x - 1)) (h₂ : ∀ x, p (x^2 - 1) = (p (x - 1))^2) : ∀ x, q (x^2) = (q x)^2   :=  by sorry
+theorem lean_workbook_plus_45614 (n : ℕ) : (∑' n : ℕ, (2 * n) / (4 ^ n)) = 2 / 3   :=  by sorry
+theorem lean_workbook_plus_45619 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) : a + b + 25 / (4 * (a ^ 2 + a * b + b + 1)) ≥ 13 / 4   :=  by sorry
 theorem lean_workbook_plus_45623 (x : ℝ) (n : ℕ) (hn : 0 < n) (hx : 0 ≤ x ∧ x ≤ n) :
   (1 - x / n)^n ≤ exp (- x)   :=  by sorry
-theorem lean_workbook_plus_62263 (x y z : ℝ) :
-  3 * x ^ 2 * y * z + 3 * y ^ 2 * x * z + 3 * z ^ 2 * x * y ≤
-    2 * x ^ 2 * y * z + 2 * y ^ 2 * x * z + 2 * z ^ 2 * x * y + x ^ 2 * y ^ 2 + x ^ 2 * z ^ 2 + y ^ 2 * z ^ 2   :=  by sorry
-theorem lean_workbook_plus_80700 : 2 * Real.cos a * Real.sin b = Real.sin (a + b) - Real.sin (a - b)   :=  by sorry
-theorem lean_workbook_plus_21016  (x y : ℝ)
-  (h₀ : x^2 * y + y = x^2 + x + 1) :
-  1 / 2 ≤ y ∧ y ≤ 3 / 2   :=  by sorry
-theorem lean_workbook_plus_39783 (n : ℕ) (q : ℝ) (hq : 0 < q ∧ q < 1) : ∃ x : ℕ → ℂ, x 1 = 1 / x 1 + q ^ 2 * x 2 ∧ x 2 = 1 / x 2 + q ^ 4 * x 3 ∧ ∀ i ∈ Finset.range n, x i = 1 / x i + q ^ (2 * i) * x (i + 1)   :=  by sorry
-theorem lean_workbook_plus_59212 (α : ℝ) (h : α > 1.41313) : α ^ 12 > 61   :=  by sorry
-theorem lean_workbook_plus_66134 (x y : ℤ) (f : Polynomial ℤ) (h : x ≡ y [ZMOD 3]) : f.eval x ≡ f.eval y [ZMOD 3]   :=  by sorry
-theorem lean_workbook_plus_49874 : (a^2 + 1) * (b^2 + 1) ≥ (3 / 4) * ((a + b)^2 + (a * b)^2) ↔ (a - b)^2 + (a * b - 2)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_31863 (n : ℕ) : (∏ k in Finset.Icc 2 n, (Real.sqrt (k - 1) / (1 + Real.sqrt k))) = ∏ k in Finset.Icc 2 n, (Real.sqrt (1 - 1 / k) / (1 + 1 / Real.sqrt k))   :=  by sorry
-theorem lean_workbook_plus_78974 (x y z : ℝ) : 2 * (x ^ 4 + y ^ 4 + z ^ 4) + 7 * (x ^ 2 * y ^ 2 + x ^ 2 * z ^ 2 + y ^ 2 * z ^ 2) ≥ 3 * (x ^ 3 * y + y ^ 3 * z + z ^ 3 * x) + 3 * (x ^ 2 * y * z + y ^ 2 * z * x + z ^ 2 * x * y)   :=  by sorry
-theorem lean_workbook_plus_12372 (a b c d : ℝ) : a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2 ≥ 2 * a * c + 2 * b * d   :=  by sorry
-theorem lean_workbook_plus_53065 (a b c : ℝ) (hab : a > 0 ∧ b > 0 ∧ c > 0) (habc : a * b + b * c + c * a = 3) : a * b * c * (a + b + c) ≤ 3   :=  by sorry
-theorem lean_workbook_plus_69811 (f : ℤ → ℤ) (hf: f = fun x ↦ x) : ∀ x y, f (2 * f x) = f (x - f y) + f x + y   :=  by sorry
-theorem lean_workbook_plus_64748 {f : Polynomial ℤ} {a b c : ℤ} (h₁ : a ≡ b [ZMOD c]) : f.eval a ≡ f.eval b [ZMOD c]   :=  by sorry
-theorem lean_workbook_plus_19450 {a : ℤ} (h : a%2 = 1) : a ^ 2 ≡ 1 [ZMOD 2]   :=  by sorry
-theorem lean_workbook_plus_60103 (a b : ℝ) (f : ℝ → ℝ) (h₁ : a ≠ -b) (h₂ : ∀ x, a * f x + b * f (1 - x) = x) : ∀ x, f x + f (1 - x) = 1 / (a + b)   :=  by sorry
-theorem lean_workbook_plus_26090 : ∀ x y : ℤ, x*y = y*x   :=  by sorry
-theorem lean_workbook_plus_44977 (t : ℝ) (ht : 0 < t ∧ t < 1) :
-  (27 * t ^ 4 + 1) / (t ^ 2 - 2 * t + 1) ≥ 18 * t - 3   :=  by sorry
-theorem lean_workbook_plus_68219 {x y z : ℤ} (hx : x ≠ y) (hy : y ≠ z) (hz : z ≠ x) : 5 * (x - y) * (y - z) * (z - x) ∣ (x - y) ^ 5 + (y - z) ^ 5 + (z - x) ^ 5   :=  by sorry
-theorem lean_workbook_plus_58834 (a b c : ℝ) (n : ℕ) (x : ℕ → ℝ) (h : ∀ n, x (n + 3) = a * x (n + 2) - b * x (n + 1) + c * x n) : (x (n + 6))^2 = (a^2 - b) * (x (n + 5))^2 + (a * c + b^2 - a^2 * b) * (x (n + 4))^2 + (a^3 * c + b^3 + 2 * c^2 - 4 * a * b * c) * (x (n + 3))^2 + (a^2 * c^2 + b * c^2 - a * b^2 * c) * (x (n + 2))^2 + (b^2 * c^2 - a * c^3) * (x (n + 1))^2 - c^4 * (x n)^2   :=  by sorry
-theorem lean_workbook_plus_3121 (n : ℕ) : n * (n - 1) = 2 * choose n 2   :=  by sorry
-theorem lean_workbook_plus_33919 (n x a : ℕ) (h₁ : 10^(n-1) > x ∧ x ≥ 10^(n-2)) (h₂ : a ∈ Finset.range 10) (h₃ : a*10^(n-1) + x = 9*(10*x + a)) : 89*x = a*(10^(n-1) - 9)   :=  by sorry
-theorem lean_workbook_plus_9788 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : (a / (a + 7 * b))^(1 / 3) + (b / (b + 7 * a))^(1 / 3) ≥ (a / (a + 3 * b))^(1 / 2) + (b / (b + 3 * a))^(1 / 2) ∧ (a / (a + 3 * b))^(1 / 2) + (b / (b + 3 * a))^(1 / 2) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_57489 : ∀ x y : ℝ, x + y = 0 → sin y = -sin x   :=  by sorry
-theorem lean_workbook_plus_16642 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : 1 / (a + b + c - 1) + (b + c) / a + (c + a) / b + (a + b) / c ≥ 2 + 1 / a + 1 / b + 1 / c ↔ 1 / (a + b + c - 1) + (a + b + c - 1) * (1 / a + 1 / b + 1 / c) ≥ 5   :=  by sorry
-theorem lean_workbook_plus_68872 : 1 + 17 * y ≤ 4000 → 17 * y ≤ 3999   :=  by sorry
-theorem lean_workbook_plus_37230 (u : ℝ) : (4 * u ^ 2) / (u ^ 4 + 2 * u ^ 2 + 1) = -4 / (1 + u ^ 2) ^ 2 + 4 / (1 + u ^ 2)   :=  by sorry
-theorem lean_workbook_plus_53373 (a b : ℝ) : |a| + |b| ≥ |a - b|   :=  by sorry
-theorem lean_workbook_plus_48861 (f : ℝ → ℝ) (hf: f x = (2*x-1)/x) : f x = (2*x-1)/x   :=  by sorry
-theorem lean_workbook_plus_4760 : ¬IsClosed (Set.Ico (0 : ℝ) 1)   :=  by sorry
-theorem lean_workbook_plus_29419 (x₁ x₂ : ℝ) (hx₁ : 0 < x₁) (hx₂ : 0 < x₂) : (1 / x₁ + 2 / (x₁ + x₂)) < 2 * (1 / x₁ + 1 / x₂)   :=  by sorry
-theorem lean_workbook_plus_38995 (x y : ℤ) (h : 19 ∣ 3 * x + 7 * y) : 19 ∣ 43 * x + 75 * y   :=  by sorry
-theorem lean_workbook_plus_41932 (x y z : ℝ) (hx : x ≥ 0) (hy : y ≥ 0) (hz : z ≥ 0) (h : x + y + z ≥ 3) : x * y * z + x ^ 3 + y ^ 3 + z ^ 3 ≥ (4 / 9) * (x + y + z) * (x * y + x * z + y * z)   :=  by sorry
-theorem lean_workbook_plus_44151 : ∑ k in Finset.Icc (997 : ℕ) 1995, (1 : ℝ) / k < 1   :=  by sorry
-theorem lean_workbook_plus_42708 : ∀ a b c : ℝ, a ≥ 0 ∧ b ≥ 0 ∧ c ≥ 0 → a^2 + 2 * b^2 + c^2 ≥ (2 * Real.sqrt 3) / 3 * (a + 2 * b) * c   :=  by sorry
-theorem lean_workbook_plus_38118 {x y z : ℝ} : 0 ≤ 1 / 2 * (x ^ 2 * (y - z) ^ 2 + y ^ 2 * (z - x) ^ 2 + z ^ 2 * (x - y) ^ 2)   :=  by sorry
-theorem lean_workbook_plus_33407 : 2014*x+1337=1337*x+2014 → x=1   :=  by sorry
-theorem lean_workbook_plus_55769 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : (2*x*y+x+y)*(x+y)+1-x*y ≥ 3*(2*x*y+x+y)/2   :=  by sorry
-theorem lean_workbook_plus_62680  (x : ℝ)
-  (a b : ℝ)
-  (h₀ : x = a * b)
-  (h₁ : a + b = 2) :
-  x * (3 - 2 * x) ≤ 9 / 8   :=  by sorry
-theorem lean_workbook_plus_81606 (x : ℝ) : 2 ≤ (sin x ^ 2 + 1) * (2 * cos x ^ 2 + 1) ∧ (sin x ^ 2 + 1) * (2 * cos x ^ 2 + 1) ≤ 4   :=  by sorry
-theorem lean_workbook_plus_79998 (x : ℝ) : (sin x)^4 = 3/8 - 4/8 * cos (2 * x) + 1/8 * cos (4 * x)   :=  by sorry
-theorem lean_workbook_plus_29351 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : a + b = 1) : a * b ≤ 1 / 4   :=  by sorry
-theorem lean_workbook_plus_58813 (a b c : ℝ) : (a^2 + b^2 + c^2 + 5 * b * c + 5 * c * a + 5 * a * b)^2 ≥ 12 * (a + b + c)^2 * (b * c + c * a + a * b)   :=  by sorry
-theorem lean_workbook_plus_34622  (x : ℝ)
-  (h₀ : x = 18 / 1991)
-  : ∃ (a : ℕ → ℕ),
-    ∀ (k : ℕ),
-      (a k) = 0 ∨ (a k) = 1 ∨ (a k) = 2 ∧
-    ∑' k : ℕ, (a k) / 3^k = x ∧
-    ∑' k : ℕ, (a k) / 2^k = 5 / 128   :=  by sorry
-theorem lean_workbook_plus_43013 (f : Polynomial ℤ) (a : ℕ → ℤ) (a0 : a 0 = 0) (a_rec : ∀ n, a (n + 1) = f.eval (a n)) : ∃ m > 0, a m = 0 → a 1 = 0 ∨ a 2 = 0   :=  by sorry
-theorem lean_workbook_plus_61356 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : 8 * (a ^ 3 + b ^ 3 + c ^ 3) ≤ 9 * (a ^ 2 + b * c) * (b ^ 2 + a * c) * (c ^ 2 + a * b)   :=  by sorry
-theorem lean_workbook_plus_66580 (a b c : ℝ) : 3 * (a ^ 2 + b ^ 2 + c ^ 2) ^ 2 ≥ (a + b + c) * (2 * (a ^ 3 + b ^ 3 + c ^ 3) + 3 * a * b * c)   :=  by sorry
-theorem lean_workbook_plus_8741 (S E G : ℝ) : S / (E + G) = 30 → E + G = S / 30   :=  by sorry
-theorem lean_workbook_plus_35807 : (x+1)*(y+1)*(z+1) = x*y*z + x*y + x*z + y*z + x + y + z + 1   :=  by sorry
-theorem lean_workbook_plus_69149 (y : ℝ) (k : ℝ) (hy: y ∈ Set.Icc 0 (4 * k - 1 / 2)) : 1 / 8 + y / 4 ∈ Set.Icc 0 k   :=  by sorry
-theorem lean_workbook_plus_65772 : a - 1 ≥ 0 ∧ b - 1 ≤ 0 → (a - 1) * (b - 1) ≤ 0   :=  by sorry
-theorem lean_workbook_plus_59700 (a : ℝ) (f : ℝ → ℝ) (h₁ : ∀ x, f x = x + a) : ∀ x, f x = x + a   :=  by sorry
-theorem lean_workbook_plus_40129 (z : ℝ) (h : z ≥ 2) : z / (z^2 + 1) ≤ 2/5   :=  by sorry
-theorem lean_workbook_plus_81119 (S E G I : ℝ) : S / (E + G + I) = 20 → E + G + I = S / 20   :=  by sorry
-theorem lean_workbook_plus_13843  (a b c : ℝ)
-  (h₀ : 0 ≤ a ∧ 0 ≤ b ∧ 0 ≤ c)
-  (h₁ : a + b + c = 3) :
-  a^(1/3) + b^(1/3) + c^(1/3) ≥ a * b + b * c + c * a   :=  by sorry
-theorem lean_workbook_plus_55749 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : (a + b) ^ 3 + (2 * a + b) ^ 3 + (3 * a) ^ 3 ≤ 8 * (9 * a ^ 3 + b ^ 3)   :=  by sorry
-theorem lean_workbook_plus_71095 (f : ℕ → ℝ) (hf : ∀ n, 1 < n → f n = (n + 1) / (n - 1)) : f 100 = 101 / 99   :=  by sorry
-theorem lean_workbook_plus_13808 (a b c : Prop) (hab : a → b) (hbc : b → c) : a → c   :=  by sorry
-theorem lean_workbook_plus_27297 (x : ℝ) (hx: x ≠ -1) (h : x ≠ 3): (x-2)*(x+1)^2/(x-3) < 0 ↔ 2 < x ∧ x < 3   :=  by sorry
-theorem lean_workbook_plus_39750 (m : ℕ) (a : ℕ → ℕ) (S : ℕ → ℕ) (h₁ : ∀ i, S i = a i * (m - a i)) : ∑ i in Finset.range m, S i = ∑ i in Finset.range m, a i * (m - a i)   :=  by sorry
-theorem lean_workbook_plus_68354 (n : ℕ) (hn : n ≠ 0 ∧ n ≠ 1) : ∃ (m1 m2 : ℕ), (m1 ≠ 0 ∧ m2 ≠ 0) ∧ 1/n = ∑ k in Finset.Icc m1 m2, 1/(k*(k+1))   :=  by sorry
-theorem lean_workbook_plus_78490 (n : ℕ) (a_n : ℝ) (α : ℝ) (β : ℝ) (h₁ : α = (3 + Real.sqrt 5) / 2) (h₂ : β = (3 - Real.sqrt 5) / 2) (h₃ : a_n = α^(2^(n - 1)) + β^(2^(n - 1))) : a_n = α^(2^(n - 1)) + β^(2^(n - 1))   :=  by sorry
-theorem lean_workbook_plus_56268  (a b c : ℕ)
-  (h₀ : 1 ≤ a ∧ a ≤ 9)
-  (h₁ : 1 ≤ b ∧ b ≤ 9)
-  (h₂ : 1 ≤ c ∧ c ≤ 9)
-  (N : ℕ)
-  (h₃ : N = 100 * a + 10 * b + c)
-  (h₄ : 0 < N) :
-  N + (100 * a + 10 * c + b) + (100 * b + 10 * a + c) + (100 * b + 10 * c + a) + (100 * c + 10 * b + a) + (100 * c + 10 * a + b) = 222 * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_46073 (n : ℕ) (w z : Fin n → ℂ) (h : ∀ i, ‖w i‖ = ‖z i‖) : ∑ i, ‖z i‖^2 ≤ ∑ i, ‖w i‖^2   :=  by sorry
-theorem lean_workbook_plus_68543 (a b c : ℝ) (ha : a + b + c = 0) (hb : a ^ 2 + b ^ 2 + c ^ 2 = 0) (hc : a ^ 3 + b ^ 3 + c ^ 3 = 0) : a = 0 ∧ b = 0 ∧ c = 0   :=  by sorry
-theorem lean_workbook_plus_15038 {a b c d : ℕ} (h : a^c ≡ b^c [ZMOD d]) : a^(2*c) ≡ b^(2*c) [ZMOD d]   :=  by sorry
-theorem lean_workbook_plus_54507 (x y : ℝ) : 8*x*(x*y - 2) + 48*(x*y - 2) = 8*(x + 6)*(x*y - 2)   :=  by sorry
-theorem lean_workbook_plus_12113 (x y z : ℝ) : (x^2 - y * z - 1)^2 + (y^2 - z * x - 1)^2 + (z^2 - x * y - 1)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_24066 (x y z : ℝ) : (x * y + y * z + x * z - 1) ^ 2 ≤ (1 + x ^ 2) * (1 + y ^ 2) * (1 + z ^ 2)   :=  by sorry
-theorem lean_workbook_plus_71754  (f : ℕ → ℕ)
-  (h₀ : ∀ n, 1 ≤ n ∧ n ≤ 100 → f n = 9 * 2 + 90 * 3 + 1 * 4) :
-  f 100 = 292   :=  by sorry
-theorem lean_workbook_plus_63416 (f : ℝ → ℝ) (hf: f = fun x ↦ c * x ^ 2) : ∀ x, f x = c * x ^ 2   :=  by sorry
-theorem lean_workbook_plus_80493 (R r s : ℝ) (h₁ : 0 < R ∧ 0 < r ∧ 0 < s) (h₂ : R + r = s) : 4 * R ^ 2 + 4 * R * r + 3 * r ^ 2 ≥ s ^ 2   :=  by sorry
-theorem lean_workbook_plus_28715  (a b c : ℝ)
-  (h₀ : 1001 * c - 2002 * a = 4004)
-  (h₁ : 1001 * b + 3003 * a = 5005) :
-  (a + b + c) / 3 = 3   :=  by sorry
-theorem lean_workbook_plus_50874 : ∀ a : ℝ, (∃ x, x^2 - a*x + 2 = 0) → a^2 ≥ 8   :=  by sorry
-theorem lean_workbook_plus_68657    (A B : ℝ)
-    (h₀ : abs (A - B) > abs (A + B))
-    : A * B < 0   :=  by sorry
-theorem lean_workbook_plus_82031 (a b c V: ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a + b + c = 3) (hV: V = a^3 * b + b^3 * c + c^3 * a): (a = 4/3 ∧ b = 4/3 ∧ c = 4/3 → V = 27 * (4/27)^4) ∧ (a = 4/3 ∧ b = 4/3 ∧ c = 4/3 → ∀ x y z : ℝ, x + y + z = 3 ∧ x^3 * y + y^3 * z + z^3 * x ≤ V)   :=  by sorry
-theorem lean_workbook_plus_36474 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c)(habc : a * b * c = 1) : 1 / (a^2 + 1) + 2 / (b^2 + 1) + 2 / (c^2 + 1) = 1 → a + 2 * b + 2 * c ≥ 10   :=  by sorry
-theorem lean_workbook_plus_3104 {a b c : ℝ} : (a - b) ^ 2 * (a ^ 2 + b ^ 2 - c ^ 2) + (b - c) ^ 2 * (b ^ 2 + c ^ 2 - a ^ 2) + (c - a) ^ 2 * (c ^ 2 + a ^ 2 - b ^ 2) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_65620 (x a b c : ℝ) (h : x = a + b + c) : (a + b + c) ^ 2 + (3 - a - b - c) ^ 2 = 2 * (x - 3 / 2) ^ 2 + 9 / 2   :=  by sorry
-theorem lean_workbook_plus_22241 (n : ℚ) : n^2 = (n-1)*(n+1)+1   :=  by sorry
-theorem lean_workbook_plus_1376 (n : ℕ) (a : ℕ → ℕ) (h : ∀ i, 1 ≤ a i) : 2 ^ (n - 1) * (1 + ∏ i in Finset.range n, a i) - ∏ i in Finset.range n, (1 + a i) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_49152 (n : ℕ) : ∑ k in Finset.Icc 1 n, (2 : ℝ)^k / k = ∑ k in Finset.Icc 1 n, (2 : ℝ)^k / k   :=  by sorry
-theorem lean_workbook_plus_38996 : ∀ θ, sin θ = cos (π / 2 - θ)   :=  by sorry
-theorem lean_workbook_plus_250 (k : ℝ) (f : ℝ → ℝ) (hf: f = fun x ↦ k * x) : f x = k * x   :=  by sorry
-theorem lean_workbook_plus_56646 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : (a + b) * (1 / a + 1 / b) ≥ 4   :=  by sorry
-theorem lean_workbook_plus_2158 (f : ℝ → ℝ) (hf: f x = 0) (hx: x ≥ 0) : f x = 0   :=  by sorry
-theorem lean_workbook_plus_74263 {a b : ℤ} (h₁ : a ∣ b) : a^3 ∣ b^3   :=  by sorry
-theorem lean_workbook_plus_25860 (n : ℕ) (x : ℕ → ℝ) (hx : ∀ i, x i > 0) : (∑ i in Finset.range n, x i + ∑ i in Finset.range n, (1 / x i)) ≥ 2 * n → (∑ i in Finset.range n, x i) ≥ n ∨ (∑ i in Finset.range n, (1 / x i)) ≥ n   :=  by sorry
-theorem lean_workbook_plus_3213 (n : ℤ) : n ^ 2 ≡ 1 [ZMOD 5] ↔ n ≡ 1 [ZMOD 5] ∨ n ≡ -1 [ZMOD 5]   :=  by sorry
-theorem lean_workbook_plus_66226 (f : ℝ → ℂ) (x : ℝ) : (1 + x) + x * Complex.I = (1 + x) + (0 + x) * Complex.I   :=  by sorry
-theorem lean_workbook_plus_53107 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (b + c) / (a + 3 * b + 3 * c) + (c + a) / (b + 3 * c + 3 * a) + (a + b) / (c + 3 * a + 3 * b) ≤ 6 / 7   :=  by sorry
-theorem lean_workbook_plus_16357 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : x^3 + y^3 + 2 ≥ 2 * x * y + x + y   :=  by sorry
-theorem lean_workbook_plus_6576 (a : ℕ) (h : 307^2 ∣ a) : a % 307^2 = 0   :=  by sorry
-theorem lean_workbook_plus_25912 : 3 ^ 20 ≡ 1 [ZMOD 25]   :=  by sorry
-theorem lean_workbook_plus_40829 (n j : ℕ) (h₁ : 2 * j + 1 > n) : choose n (2 * j + 1) = 0   :=  by sorry
-theorem lean_workbook_plus_27601 (x y z: ℝ) : (x - y) ^ 2 + (y - z) ^ 2 + (x - z) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_66385 : sin θ * cos θ * tan θ * (sin θ / cos θ) = sin θ * sin θ * tan θ   :=  by sorry
-theorem lean_workbook_plus_1312 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (hxy : x + y < 1) : (1 - x) / (1 + x) * (1 - y) / (1 + y) ≥ (1 - x - y) / (1 + x + y)   :=  by sorry
-theorem lean_workbook_plus_19642 {a b c : ℝ} : (b - c) ^ 2 * (-2 * b + a - 2 * c) ^ 2 + (c - a) ^ 2 * (-2 * c + b - 2 * a) ^ 2 + (a - b) ^ 2 * (-2 * a + c - 2 * b) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_30124 (a b : ℝ) (f : ℕ → ℝ) (h₀ : f 0 = a) (h₁ : f 1 = b) (h₂ : ∀ n, f (2 * n) = 2 * n + a) (h₃ : ∀ n, f (2 * n + 1) = 2 * n + b) : ∃ a b, f 0 = a ∧ f 1 = b ∧ (∀ n, f (2 * n) = 2 * n + a) ∧ (∀ n, f (2 * n + 1) = 2 * n + b)   :=  by sorry
-theorem lean_workbook_plus_13424 (a b c: ℝ) : a^2 + b^2 + c^2 - (a * b + b * c + c * a) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_70360 :
-  (10:ℝ)^30 ≤ 2^100 ∧ 2^100 ≤ (10:ℝ)^31   :=  by sorry
-theorem lean_workbook_plus_24900 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : x * Real.sqrt (y + z) + y * Real.sqrt (x + z) + z * Real.sqrt (x + y) = Real.sqrt ((x + y) * (y + z) * (z + x)) + (2 * (x * y + y * z + z * x)) / (Real.sqrt (x + y) + Real.sqrt (y + z) + Real.sqrt (x + z))   :=  by sorry
-theorem lean_workbook_plus_9324 (a : ℝ) (h : sin a + cos a = 1/5) : sin a ^ 3 + cos a ^ 3 = 37/125   :=  by sorry
-theorem lean_workbook_plus_1674 (k : ℕ) : ∃ a : ℕ, (2 * k + 2)! / ((2 : ℕ) ^ (k + 1) * (k + 1)!) = a   :=  by sorry
-theorem lean_workbook_plus_20318 (x y z : ℝ) (hx : x = a * Real.sqrt (a * b)) (hy : y = b * Real.sqrt (b * c)) (hz : z = c * Real.sqrt (c * a)) : x ^ 2 + y ^ 2 + z ^ 2 + 3 / 4 ≥ x + y + z   :=  by sorry
-theorem lean_workbook_plus_24912 (a b : ℝ) (hab : 0 < a ∧ 0 < b) : 4 * (a^3 + b^3) ≥ (a + b)^3   :=  by sorry
-theorem lean_workbook_plus_35564 (k : ℤ) (h : k > 0) : 2 ≡ k^2 [ZMOD k^2 - 2]   :=  by sorry
-theorem lean_workbook_plus_78448 (x₁ x₂ m p : ℤ) (h₁ : x₁ * x₂ = p^2 + 1) (h₂ : x₁ + x₂ = -2*m) : p^4 + 4*m^2 = (x₁^2 + 1)*(x₂^2 + 1)   :=  by sorry
-theorem lean_workbook_plus_77146 (x : ℝ) (hx : x < 0) : 1 - x > 0 ∧ 2 * x^7 < 0   :=  by sorry
-theorem lean_workbook_plus_55988 (a b c d : ℝ) (h1 : a + b + c + d >= 4) (h2 : a * b * c * d >= 1) : (a + b + c + d) ^ 2 + 48 * a * b * c * d >= 64   :=  by sorry
-theorem lean_workbook_plus_82717 : ∀ x : ℝ, 1 + x ^ 2 ≥ 2 * x ↔ (1 - x) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_82573 : ∀ a b A B : ℝ, (∀ x : ℝ, 0 ≤ 1 - a * Real.cos x - b * Real.sin x - A * Real.cos (2 * x) - B * Real.sin (2 * x)) → a ^ 2 + b ^ 2 ≥ 0 ∧ A ^ 2 + B ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_67973  (n : ℝ) :
-  (n^2 + 7) / (n^2 + 4) = 1 + 3 / (n^2 + 4)   :=  by sorry
-theorem lean_workbook_plus_34052 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^3 / (b^3 + (c + a)^3))^(1 / 2) + (b^3 / (c^3 + (a + b)^3))^(1 / 2) + (c^3 / (a^3 + (b + c)^3))^(1 / 2) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_56144 (f : ℝ → ℝ) : (f ∘ f) x = f (f x)   :=  by sorry
-theorem lean_workbook_plus_8058 (a b c x y z : ℝ) (ha : a ≥ 4) (hb : b ≥ 0) (hc : c ≥ 0) (hab : a + b ≤ 2 * c) : (a - 3) * (b - x ^ 2 - y ^ 2 - z ^ 2) ≤ (c - x - y - z) ^ 2   :=  by sorry
-theorem lean_workbook_plus_78361 (n : ℕ) (A : Finset ℕ) (hA : A.card = n + 1) (hA2 : ∀ a ∈ A, a ∈ Finset.Icc 1 (2 * n)) : ∃ a b, a ∈ A ∧ b ∈ A ∧ a ∣ b   :=  by sorry
-theorem lean_workbook_plus_10747 : ∀ n : ℕ, ((n-2)*(n-1)*n*(n+1)*(n+2)*(n+3)+3) % 10 = 3   :=  by sorry
-theorem lean_workbook_plus_19390 (x y : ℝ) (h₁ : y = x^2 + 1) : y ≥ 0   :=  by sorry
-theorem lean_workbook_plus_72103 (A: Finset ℕ) (hA: A.card >= 5) : ∃ x y z: ℕ, x ∈ A ∧ y ∈ A ∧ z ∈ A ∧ (x + y + z) % 3 = 0   :=  by sorry
-theorem lean_workbook_plus_53349 : (1 / 3 + 1 / 4 + 1 / 5 + 1 / 6) < 1   :=  by sorry
-theorem lean_workbook_plus_49682 (t : ℝ) (ht : 2 ≤ t) : (7 - 2 * t) ^ 3 ≤ 3 * (t ^ 2 - 1) ^ 2   :=  by sorry
-theorem lean_workbook_plus_6872 (k : ℕ) (h₁ : 1 < k) : 3 ^ (k - 1) > k   :=  by sorry
-theorem lean_workbook_plus_49034 (a b : ℝ) (x : ℝ) : a * Real.sin x + b * Real.cos x ≤ Real.sqrt (a ^ 2 + b ^ 2)   :=  by sorry
-theorem lean_workbook_plus_13420 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : 2 * (x + y) ^ 2 * z + 2 * (y + z) ^ 2 * x + 2 * (z + x) ^ 2 * y ≤ 3 * (x + y) * (y + z) * (z + x)   :=  by sorry
-theorem lean_workbook_plus_66384 (n : ℕ) : (∏ i in Finset.Icc 1 n, (10:ℝ)^(i/11)) > 100000 → n ≥ 11   :=  by sorry
-theorem lean_workbook_plus_68924 (a b c : ℝ) :
-  ((a + b + c) / 3)^2 ≤ (a^2 + b^2 + c^2) / 3   :=  by sorry
-theorem lean_workbook_plus_28289 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (b + c) / a + a ^ 2 / (b * c) ≥ 3 + (c - a) ^ 2 / (c * (a + b))   :=  by sorry
-theorem lean_workbook_plus_7982 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b + c = 3) : (a + b * c)^(1 / 3) + (b + c * a)^(1 / 3) + (c + a * b)^(1 / 3) ≥ (2 * (a * b + b * c + c * a))^(1 / 3)   :=  by sorry
-theorem lean_workbook_plus_13104 : ∀ a b c : ℝ, 3 * a ^ 2 + 3 * b ^ 2 + 3 * c ^ 2 + 9 ≥ 6 * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_55945 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (habc : a * b * c = 1) : 3 / (a + 3) + 2 / (b + 2) + 1 / (c + 1) = 9 / 4 → 1 / a + 1 / b + 1 / c ≥ 1   :=  by sorry
-theorem lean_workbook_plus_72196 (a b c : ℝ) : (1 / 2) * ((a - b) ^ 2 * (a ^ 2 + b ^ 2) + (b - c) ^ 2 * (b ^ 2 + c ^ 2) + (c - a) ^ 2 * (c ^ 2 + a ^ 2)) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_18233 (a b c x y z : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) (h : x = a / b) (h' : y = b / c) (h'' : z = c / a) : a * b * c ≥ (a + b - c) * (a + c - b) * (b + c - a)   :=  by sorry
-theorem lean_workbook_plus_64337 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^5 * c^2 + b^5 * a^2 + c^5 * b^2 ≥ a * b * c * (a^3 * c + b^3 * a + c^3 * b)   :=  by sorry
-theorem lean_workbook_plus_19627 (a b : ℝ) : (a - b) ^ 2 / 4 + 3 * ((a + b) / 2 - 1) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_82548 (R : Type*) [Ring R] (A B : Matrix (Fin 2) (Fin 2) R) (h : A * B = -(B * A)) : A ^ 3 * B = -(B * A ^ 3) ∧ A * B ^ 3 = -(B ^ 3 * A)   :=  by sorry
-theorem lean_workbook_plus_53661 (n : ℕ) (hn : n = 258) : n^3 - 2*n^2 + n = 258^3 - 2 * 258^2 + 258   :=  by sorry
-theorem lean_workbook_plus_61327 (p : ℕ) (hp : p.Prime) (hp1 : Odd p) : ∃ k : ℕ, (2^(p-2) + 3^(p-2) + 6^(p-2) ≡ k [ZMOD p])   :=  by sorry
-theorem lean_workbook_plus_64131 (x : ℝ) (f : ℝ → ℝ) (hf: f x = -x * f (1/x)) : f x = -x * f (1/x)   :=  by sorry
-theorem lean_workbook_plus_65824 (x : ℝ) (h : x ≥ 2) : ∃ y, ∑' n : ℕ, (1/(n^x) : ℝ) = y   :=  by sorry
-theorem lean_workbook_plus_39158 (S a b : ℝ) : S = a * b * (a ^ 2 - b ^ 2) → S = a * b * (a + b) * (a - b)   :=  by sorry
-theorem lean_workbook_plus_79816 : (100 + 1) ^ 1000 ≥ 1000 * 100 ^ 1000   :=  by sorry
-theorem lean_workbook_plus_47848 : (1 + Real.sin θ) * (1 - Real.sin θ) = (Real.cos θ) ^ 2   :=  by sorry
-theorem lean_workbook_plus_32943 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (3 : ℝ)^(1/3) ≤ (1 + a - b)^(1/3) + (1 + b - c)^(1/3) + (1 + c - a)^(1/3) ∧ (1 + a - b)^(1/3) + (1 + b - c)^(1/3) + (1 + c - a)^(1/3) ≤ 3   :=  by sorry
-theorem lean_workbook_plus_4758 : ∀ x : ℝ, 1 ≤ x → 2 / (x * (1 + exp (-x))) ≥ 1 / x   :=  by sorry
-theorem lean_workbook_plus_14447 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) :  x*y*z + (x + y)*(y + z)*(z + x) = (x + y + z)*(x*y + x*z + y*z)   :=  by sorry
-theorem lean_workbook_plus_71778 : ∀ (a b c : ℝ), a ^ 2 + b ^ 2 + c ^ 2 ≥ a * b + b * c + c * a   :=  by sorry
-theorem lean_workbook_plus_2024 (a : ℝ) : a^2 + 1 / 9 ≥ 2 / 3 * a   :=  by sorry
-theorem lean_workbook_plus_16719 (a b c : ℝ) : |a * 0 ^ 2 + b * 0 + c| = |c|   :=  by sorry
-theorem lean_workbook_plus_69080 (hn : 0 < 165) : 2013 ∣ (10^(4*165) - 1) / (10^4 - 1)   :=  by sorry
-theorem lean_workbook_plus_42310 (x : ℝ) (hx : x + 2/x = 4) : x^3/2 + 4/x^3 = 20   :=  by sorry
-theorem lean_workbook_plus_25929 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : 9 * (a^3 + b^3 + c^3) ≥ (a + b + c)^3   :=  by sorry
-theorem lean_workbook_plus_14025  (a b c p : ℂ)
-  (f : ℂ → ℂ)
-  (h₀ : ∀ x, f x = x^3 - p * x^2 + (a * b + a * c + b * c) * x - p)
-  (h₁ : f a = 0)
-  (h₂ : f b = 0)
-  (h₃ : f c = 0)
-  (h₄ : a ≠ b)
-  (h₅ : a ≠ c)
-  (h₆ : b ≠ c) :
-  ∃ S y, ∀ x, f x = x^3 - S * x^2 + y * x - p   :=  by sorry
-theorem lean_workbook_plus_82230 (a b c: ℝ): a^2 + b^2 + c^2 = a * b + b * c + c * a ↔ a = b ∧ b = c   :=  by sorry
-theorem lean_workbook_plus_66282 (x y : ℝ) (hx : 0 ≤ x) (hy : 0 ≤ y) (h : 2 * x + y ^ 2 = y ^ 3 + y + 1) : 2 * y + x ^ 2 ≤ x ^ 3 + x + 1   :=  by sorry
-theorem lean_workbook_plus_76921 (x y : ℝ) : (5*x) % 1 + (5*y) % 1 = (3*x + y) % 1 + (3*y + x) % 1   :=  by sorry
-theorem lean_workbook_plus_71539 (a b : ℝ) (hab : a + b > 2) : (a + b) ^ 2 / (a + b - 2) ≥ 8 ↔ (a + b - 4) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_3432 (f : ℕ → ℕ) (P : ℕ → ℕ → Prop) (hP : ∀ x y, P (f x) y → f (x * y) = f x * f y) : ∀ x y, P (f x) y → f x * f y = f x * f y   :=  by sorry
-theorem lean_workbook_plus_28559 (x y : ℝ) (h : x + y = 0) : (x + Real.sqrt (1 + x^2)) * (y + Real.sqrt (1 + y^2)) = 1   :=  by sorry
-theorem lean_workbook_plus_29831 : ∑ i in Finset.range 2019, Nat.gcd i (2019 - i) = 6725   :=  by sorry
-theorem lean_workbook_plus_22756 (x : ℝ) (hx : 0 < x) : 2 - x < 2   :=  by sorry
-theorem lean_workbook_plus_51283 (n : ℕ) (a b : Fin n → ℝ) : ∑ i, a i * b i = ∑ i, a i * b i   :=  by sorry
-theorem lean_workbook_plus_8750 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : a + b = 1 → a * b ≤ 1 / 4   :=  by sorry
-theorem lean_workbook_plus_29233 : 4 * (3 + 2 * a * b + 2 * a * c + 2 * b * c) ≥ 12 * (a + b + c) ↔ 3 + 2 * a * b + 2 * a * c + 2 * b * c ≥ 3 * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_56436 (x : ℕ) : ∑ k in Finset.Icc 1155 1155, k = 1155   :=  by sorry
-theorem lean_workbook_plus_45531 (x y : ℝ) (hx : x ∈ Set.Icc 0 1) (hy : y ∈ Set.Icc 0 1) : x ^ 2 + y ^ 2 ≤ 1 + x * y   :=  by sorry
-theorem lean_workbook_plus_56424 (a b c : ℝ) (ha : a ≠ 0) (hb : b ≠ 0) (hc : c ≠ 0) : 1 / a ^ 2 + 1 / b ^ 2 + 1 / c ^ 2 ≥ (a + b + c) / (a * b * c)   :=  by sorry
-theorem lean_workbook_plus_3775  (n : ℕ)
-  (a : ℕ → ℕ)
-  (h₀ : 0 < n)
-  (h₁ : ∀ i, 0 < i → a i ≥ a (i + 1)) :
-  ∀ i, 0 < i → a i - 1 ≥ a (i + 1) - 1   :=  by sorry
-theorem lean_workbook_plus_65415 : 162 ∣ 19^93 - 13^99   :=  by sorry
-theorem lean_workbook_plus_44209 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) (habc : a * b * c * d = 1) (h : a^2 + b^2 + c^2 + d^2 = 1) : a^2 / (a^2 + b * c) + b^2 / (b^2 + c * d) + c^2 / (c^2 + d * a) + d^2 / (d^2 + a * b) ≥ 1 + 16 * a * b * c * d   :=  by sorry
-theorem lean_workbook_plus_40069 (x y : ℝ) (h₁ : y = (x^2 + x + 1) / (x^2 + 1)) : 1 / 2 ≤ y ∧ y ≤ 3 / 2   :=  by sorry
-theorem lean_workbook_plus_40978 : ∀ a b : ℤ, b^4+4*a^4 = (2*a^2-2*a*b+b^2) * (2*a^2+2*a*b+b^2)   :=  by sorry
-theorem lean_workbook_plus_70453 (k n : ℕ) : ∃ a : ℕ, (k + n).choose k = a   :=  by sorry
-theorem lean_workbook_plus_25579 (p : ℝ) (hp : p > 1) (hf: ∀ x : ℝ, 0 < x → ∃ y : ℝ, y + p * y = 1) : ∃ f : ℝ → ℝ, Continuous f ∧ ∀ x : ℝ, 0 < x → f x + p * f (p * x) = 1   :=  by sorry
-theorem lean_workbook_plus_42746 (a b : ℝ) (ha : 0 ≤ a ∧ a ≤ 1) (hb : 0 ≤ b ∧ b ≤ 1) : a * (1 - a) * (3 - 2 * b) + b * (1 - b) * (3 - 2 * a) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_51582  (a b c : ℝ) :
-  a^4 + a^4 + a^4 + b^4 ≥ 4 * (a^3 * b) ∧
-  b^4 + b^4 + b^4 + c^4 ≥ 4 * (b^3 * c) ∧
-  c^4 + c^4 + c^4 + a^4 ≥ 4 * (c^3 * a)   :=  by sorry
-theorem lean_workbook_plus_14533 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x + y + x * y) * (y + z + y * z) * (z + x + z * x) ≥ x * y * z * (x + 2) * (y + 2) * (z + 2)   :=  by sorry
-theorem lean_workbook_plus_3410 (a b : ℝ) : 2 * a ^ 2 + b ^ 2 ≥ 2 * Real.sqrt 2 * a * b   :=  by sorry
-theorem lean_workbook_plus_65961 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : (x / y ^ 2 + y / x ^ 2) ≥ (1 / x + 1 / y)   :=  by sorry
-theorem lean_workbook_plus_81151 :
-  (sin β + cos θ + 1)^2 ≥ 2 * (sin β + 1) * (cos θ + 1) → sin β ^ 2 ≥ sin θ ^ 2   :=  by sorry
-theorem lean_workbook_plus_78762 : ∀ a b c : ℝ, (1/2)*((a-b)^2 + (b-c)^2 + (c-a)^2) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_49995 (n m : ℤ) : ∃ w x y z : ℤ, w = 6*n^2 - 4*n*m + 4*m^2 ∧ x = 3*n^2 + 5*n*m - 5*m^2 ∧ y = 4*n^2 - 4*n*m + 6*m^2 ∧ z = 5*n^2 - 5*n*m - 3*m^2   :=  by sorry
-theorem lean_workbook_plus_6081 (x : ℝ) : (x-2)*(x-4)*(x-6) = 0 ↔ x^3 - 12*x^2 + 44*x - 48 = 0   :=  by sorry
-theorem lean_workbook_plus_35982 : 64 > 35   :=  by sorry
-theorem lean_workbook_plus_51546 (x y z : ℝ) (hx : x ≥ 0) (hy : y ≥ 0) (hz : z ≥ 0) : (x^3 + y^3 + z^3) * (x + y + z) ≥ (x^2 + y^2 + z^2)^2   :=  by sorry
-theorem lean_workbook_plus_17775 (a b c : ℝ) (hab : a + b + c = 0) : 9 * (a ^ 2 + b ^ 2) * (b ^ 2 + c ^ 2) * (c ^ 2 + a ^ 2) ≥ 2 * (a ^ 2 + b ^ 2 + c ^ 2) ^ 3   :=  by sorry
-theorem lean_workbook_plus_41132 (n : ℕ) : ∑ m in Finset.range (500 + 1), (-1 : ℤ)^m * choose 1000 (2*m) = 2^500   :=  by sorry
-theorem lean_workbook_plus_38417 :
-  (444 * 418) % 703 = 0   :=  by sorry
-theorem lean_workbook_plus_65393 {a b c : ℝ} :  (a^2 - b^2)^2 + (b^2 - c^2)^2 + (c^2 - a^2)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_4594 (p q : ℕ) (h₁ : 2 * p + 1 = q) : (q - 1) / 2 = p   :=  by sorry
-theorem lean_workbook_plus_17061 (a b c d e : ℝ) : (a+b+c+d+e)*(c^2+a^2+b^2+d^2+e^2) - 5*a*b*c - 5*b*c*d - 5*c*d*e - 5*a*d*e - 5*a*b*e = (e-a)^2*(2*b+3/4*d) + (d-e)^2*(2*a+3/4*c) + (c-d)^2*(2*e+3/4*b) + (b-c)^2*(2*d+3/4*a) + (a-b)^2*(2*c+3/4*e) + 1/4*(2*c-d-e)^2*c + 1/4*(2*d-e-a)^2*d + 1/4*(2*e-a-b)^2*e + 1/4*(2*b-c-d)^2*b + 1/4*(2*a-b-c)^2*a   :=  by sorry
-theorem lean_workbook_plus_64162 : Function.Bijective (fun x : ℝ => 1 / x)   :=  by sorry
-theorem lean_workbook_plus_81713 (a b : ℝ) : ∀ x : ℝ, cos (x + a) + cos (Real.sqrt 2 * x + b) ≤ 2   :=  by sorry
-theorem lean_workbook_plus_50554 (a : ℝ) (ha : a ≥ 0) : a + 1 ≥ 2 * Real.sqrt a   :=  by sorry
-theorem lean_workbook_plus_13994 (f : ℝ → ℝ) (h : f = fun t ↦ 4^t + 9^t) : ∀ t₁ t₂, t₁ < t₂ → f t₁ < f t₂   :=  by sorry
-theorem lean_workbook_plus_40301 (f : ℝ → ℝ) (hf: f 0 = 10 ∧ ∀ x, x ≠ 0 → f x = Real.exp (x^2)) : f x = if x = 0 then 10 else Real.exp (x^2)   :=  by sorry
-theorem lean_workbook_plus_78692 (f : ℕ → ℕ) (hf: f = fun n => n * f 1 - n + 1) : ∀ n : ℕ, f n = n * f 1 - n + 1   :=  by sorry
-theorem lean_workbook_plus_66898 :
-  Real.logb 4 6 = Real.logb 2 (Real.sqrt 6)   :=  by sorry
-theorem lean_workbook_plus_2410  (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) :
-  Real.sqrt ((ab + 2 * c^2) / (1 + ab - c^2)) + Real.sqrt ((bc + 2 * a^2) / (1 + bc - a^2)) + Real.sqrt ((ca + 2 * b^2) / (1 + ca - b^2)) ≥ 2 + ab + bc + ca   :=  by sorry
-theorem lean_workbook_plus_42777 {x y S P : ℝ} (hx : x + y = S) (hy : x * y = P) : S^2 ≥ 4 * P   :=  by sorry
-theorem lean_workbook_plus_59478 : 6 ^ 2003 ≡ 6 [ZMOD 49]   :=  by sorry
-theorem lean_workbook_plus_28705 {a b c d : ℝ} (h : a^2 + b^2 + (a - b)^2 = c^2 + d^2 + (c - d)^2) : a^4 + b^4 + (a - b)^4 = c^4 + d^4 + (c - d)^4   :=  by sorry
-theorem lean_workbook_plus_39229 (x_A y_A : ℝ) (h : x_A > 0 ∧ y_A > 0) : (x_A / y_A = 1 ↔ x_A = y_A)   :=  by sorry
-theorem lean_workbook_plus_58714 : ∀ x : ℝ, x^4 + 3*x^2 - 6*x + 10 = 0 → x = 1 ∨ x = -1 ∨ x = 2 ∨ x = -2   :=  by sorry
-theorem lean_workbook_plus_15291 : ∀ n : ℕ, 2 ≤ n → 5 ^ n + 9 < 6 ^ n   :=  by sorry
-theorem lean_workbook_plus_1895  (a b : ℝ)
-  (h₀ : 0 < a ∧ 0 < b)
-  (h₁ : a^2 + 2 * b ≥ a^2 + 2 * a + 1) :
-  2 * b ≥ 2 * a + 1   :=  by sorry
-theorem lean_workbook_plus_3264 : ∀ a : ℕ, a ^ 2 ≡ 0 [ZMOD 8] ∨ a ^ 2 ≡ 1 [ZMOD 8] ∨ a ^ 2 ≡ 4 [ZMOD 8]   :=  by sorry
-theorem lean_workbook_plus_65607 (x y z : ℝ) : (x^2 + y^2 + z^2) * (y^2 * z^2 + z^2 * x^2 + x^2 * y^2) ≥ (x^2 * y + y^2 * z + z^2 * x)^2   :=  by sorry
-theorem lean_workbook_plus_143 (h : 1 + 1 = 2) : 1 / (1 + 1) = 1 / 2   :=  by sorry
-theorem lean_workbook_plus_59300 :
-  Real.sqrt 3 / 2 * 3 / 2 - 1 / 2 * (3 * Real.sqrt 3) / 2 = 0   :=  by sorry
-theorem lean_workbook_plus_16312 (a b c : ℚ) (h₁ : a = 8 / 4) (h₂ : b = 8 / 3) (h₃ : c = 8 / 2) : a < b ∧ b < c   :=  by sorry
-theorem lean_workbook_plus_50286 (h₁ : 31 * 2 + 4 + 5 = 71) : 31 * 2 + 4 + 5 = 71   :=  by sorry
-theorem lean_workbook_plus_50578 (x y z: ℝ) (hx: x + y + z = 0): (x^2 + y^2 + z^2) / 2 * (x^5 + y^5 + z^5) / 5 = (x^7 + y^7 + z^7) / 7   :=  by sorry
-theorem lean_workbook_plus_70207 (a b c : ℝ) (h₁ : a ≥ b + c) (h₂ : a = 6 - (b + c)) : a ≥ 3   :=  by sorry
-theorem lean_workbook_plus_6861 (k u v : ℕ) (h₁ : 2 * k + 1 = u ^ 2) (h₂ : 3 * k + 1 = v ^ 2) : ∃ k u v : ℕ, 2 * k + 1 = u ^ 2 ∧ 3 * k + 1 = v ^ 2   :=  by sorry
-theorem lean_workbook_plus_71845 (k : ℤ) (U : Set (ℝ × ℝ)) (hU : U = {p : ℝ × ℝ | p ≠ (0, 0)}) :
-  ∀ p : ℝ × ℝ, (p ∈ U ↔ p ≠ (0, 0))   :=  by sorry
-theorem lean_workbook_plus_82094 : ∀ A B C : ℝ, sin (A + C) * sin B + sin B ^ 2 = sin B * (sin A * cos C + cos A * sin C) + sin B ^ 2   :=  by sorry
-theorem lean_workbook_plus_45614 (n : ℕ) : (∑' n : ℕ, (2 * n) / (4 ^ n)) = 2 / 3   :=  by sorry
-theorem lean_workbook_plus_78455 : ∀ x y z : ℝ, 8 * (x * y * z) ^ 2 ≤ (x ^ 2 + y ^ 2) * (y ^ 2 + z ^ 2) * (z ^ 2 + x ^ 2)   :=  by sorry
-theorem lean_workbook_plus_61011 :
-  a^4 + 4 * b^4 = (a^2 + 2 * b^2)^2 - 4 * a^2 * b^2   :=  by sorry
-theorem lean_workbook_plus_29600 (x : ℝ) : (1 / 9) * (2^(1/3) + 20^(1/3) - 25^(1/3))^2 = 2^(2/3) / 9   :=  by sorry
-theorem lean_workbook_plus_24732 (x y z : ℝ) (h : x + y + z = 0) : (x^5 + y^5 + z^5)/5 = (x^2 + y^2 + z^2)/2 * (x^3 + y^3 + z^3)/3 ∧ (x^7 + y^7 + z^7)/7 = (x^5 + y^5 + z^5)/5 * (x^2 + y^2 + z^2)/2   :=  by sorry
-theorem lean_workbook_plus_13937 (x y z : ℝ) : 3 * (y - z) ^ 2 * (x - z) ^ 2 * (x - y) ^ 2 / (y ^ 2 * x ^ 2 * z ^ 2) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_65865 :
-  Finset.card (Finset.filter (λ x => ¬ 2∣x ∧ ¬ 3∣x) (Finset.Icc 2 999)) = 332   :=  by sorry
-theorem lean_workbook_plus_66159 (a b c r : ℝ) : (a^r + b^r - c^r)*(a - b)^2 + (b^r + c^r - a^r)*(b - c)^2 + (c^r + a^r - b^r)*(c - a)^2 = 2*(a^r*(a - b)*(a - c) + b^r*(b - c)*(b - a) + c^r*(c - a)*(c - b))   :=  by sorry
-theorem lean_workbook_plus_61629  (a b : ℝ)
-  (h₀ : a * b = 9 / 4)
-  (h₁ : a + b = 3) :
-  a = 3 / 2 ∧ b = 3 / 2   :=  by sorry
-theorem lean_workbook_plus_38876 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (hxy : x ≠ y) (hyz : y ≠ z) (hxz : x ≠ z) (hab : x + y > z) (hbc : y + z > x) (hca : z + x > y) : (x * (y - z) ^ 2) ^ (1 / 3) + (y * (x - z) ^ 2) ^ (1 / 3) > (z * (x - y) ^ 2) ^ (1 / 3)   :=  by sorry
-theorem lean_workbook_plus_51685 (x : ℤ) : ∃ n, n ≤ x ∧ x < n + 1   :=  by sorry
-theorem lean_workbook_plus_61082 : ∀ a b c : ℝ, a > 0 ∧ b > 0 ∧ c > 0 → (4 * (a ^ 3 + b ^ 3) ≥ (a + b) ^ 3 ∧ 9 * (a ^ 3 + b ^ 3 + c ^ 3) ≥ (a + b + c) ^ 3)   :=  by sorry
-theorem lean_workbook_plus_39014 (f : ℕ → ℕ) (hf: f 1 = 5 ∧ ∀ n, f (f n) = 4*n + 9 ∧ f (2^n) = 2^(n+1) + 3) : ∃ f : ℕ → ℕ, f 1 = 5 ∧ ∀ n, f (f n) = 4*n + 9 ∧ f (2^n) = 2^(n+1) + 3   :=  by sorry
-theorem lean_workbook_plus_19206 (x : ℝ) : 7 + Real.sqrt 50 + 7 - Real.sqrt 50 = 14   :=  by sorry
-theorem lean_workbook_plus_15851 (f : ℝ → ℝ) (hf1 : ∀ x, f (f x) = x) (hf2 : ∀ x y, (x + f y) * (f x + y) = x * f x + y * f y + 2 * y * f x) : ∃ h :ℝ, ∀ x, f x = h * x   :=  by sorry
-theorem lean_workbook_plus_74487 (a : ℝ) (ha : a - a^3 + a^5 >= 3) : a^6 >= 5   :=  by sorry
-theorem lean_workbook_plus_42432 :
-  (3 / 10 * (4 / 5)^3) = 96 / 625   :=  by sorry
-theorem lean_workbook_plus_79750 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) : a^4 + b^4 + c^4 ≥ a * b * c * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_7388 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : 1 + 8 / (a + b) * (1 + 1 / c) ≥ 9 / (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_11942 (a b : ℝ) : (2 * a ^ 4 + 2 * b ^ 4 + 2 * (a + b) ^ 4) = (2 * a ^ 2 + 2 * a * b + 2 * b ^ 2) ^ 2   :=  by sorry
-theorem lean_workbook_plus_49273 (x y z : ℤ) (h : (x - y) ^ 2 + (y - z) ^ 2 + (z - x) ^ 2 = x * y * z) : (x + y + z + 6) ∣ (x ^ 3 + y ^ 3 + z ^ 3)   :=  by sorry
-theorem lean_workbook_plus_32072 (h : 14 * 13 = 182) : 182 / 2 = 91   :=  by sorry
-theorem lean_workbook_plus_26795 (v₀ : ℝ) (μ : ℝ) (g : ℝ) : (5 * v₀ ^ 2) / (2 * μ * g) = (2 * v₀ ^ 2) / (μ * g) + (v₀ ^ 2) / (2 * μ * g)   :=  by sorry
-theorem lean_workbook_plus_76998 : 1 - (2 - 2^2 * (-2^3 - 2^4) - (2^5 - 2^6 - 2^7)) - (2^8 - 2^9) - 2^10 = -1025   :=  by sorry
-theorem lean_workbook_plus_44317 :  ∀ a b : ℝ, (5*a^2 - 3*a*b + b^2)*(a - 3*b)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_53422 (a b c : ℝ) (ha : 0 ≤ a ∧ a ≤ 1) (hb : 0 ≤ b ∧ b ≤ 1) (hc : 0 ≤ c ∧ c ≤ 1) : 2 * (a + b + c) - a * b - b * c - c * a ≤ 3   :=  by sorry
-theorem lean_workbook_plus_57900 (a : ℝ) (h : a = 1 / 2) : ∑' i : ℕ, a ^ i = 2   :=  by sorry
-theorem lean_workbook_plus_66608 (a b : ℝ) : 2 * (1 - a + a^2) * (1 - b + b^2) ≥ 1 + a^2 * b^2   :=  by sorry
-theorem lean_workbook_plus_6274 (x : ℂ) : (Real.sqrt (-3) / (x ^ 2 + x + 1) : ℂ) = 1 / (x + 1 / 2 - Real.sqrt (-3) / 2) - 1 / (x + 1 / 2 + Real.sqrt (-3) / 2)   :=  by sorry
-theorem lean_workbook_plus_16446 :
-  (1998^1999 + 1999^1998) % 7 = 4   :=  by sorry
-theorem lean_workbook_plus_62977 (x y z : ℝ) : (x^4+y^4+z^4-3*x^2*y*z-3*x*y^2*z-3*x*y*z^2+x^3*y+x*y^3+x^3*z+x*z^3+y^3*z+y*z^3) = (x+y+z)^2*(x^2+y^2+z^2-x*y-x*z-y*z)   :=  by sorry
-theorem lean_workbook_plus_34036 : ∀ k ≥ 0, (k+2)^2+(k+3)^2+(k+5)^2+(k+8)^2=(k+1)^2+(k+4)^2+(k+6)^2+(k+7)^2   :=  by sorry
-theorem lean_workbook_plus_61379 :
-  (a + b + c) / 3 ≤ Real.sqrt ((a ^ 2 + b ^ 2 + c ^ 2) / 3)   :=  by sorry
-theorem lean_workbook_plus_74199 (a : ℝ) : (sin a)^2 = (1 - cos (2 * a)) / 2   :=  by sorry
-theorem lean_workbook_plus_54209 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (2*a/(b+c))^(27/46) + (2*b/(a+c))^(27/46) + (2*c/(a+b))^(27/46) ≥ 3   :=  by sorry
-theorem lean_workbook_plus_26754 (x y z: ℝ) : (x^2 + y^2) / 2 ≥ x * y ∧ (x^2 + z^2) / 2 ≥ x * z ∧ (y^2 + z^2) / 2 ≥ y * z   :=  by sorry
-theorem lean_workbook_plus_78829 (a b : ℤ) : (a^2 - 1) * (b^2 - 1) = (a * b + 1)^2 - (a + b)^2   :=  by sorry
-theorem lean_workbook_plus_39055 (e : ℝ) (x : ℝ) (h₁ : 4 * x + 3 * x = 1 / 2 * e) (h₂ : e = 500) : x = 1 / 14 * 500   :=  by sorry
-theorem lean_workbook_plus_77107 : ∀ n : ℕ, ∃ a b c : ℚ, a + b + c = a * b * c ∧ a * b * c = 6   :=  by sorry
-theorem lean_workbook_plus_43343 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a / (1 + a * (1 + b)) + b / (1 + b * (1 + c)) + c / (1 + c * (1 + a)) ≤ 1   :=  by sorry
-theorem lean_workbook_plus_28767  (z₁ z₂ : ℂ)
-  (h₀ : ‖z₁‖ = 1 ∧ ‖z₂‖ = 1)
-  (h₁ : ‖z₁ + z₂‖ = 3) :
-  ‖z₁ - z₂‖ = 1   :=  by sorry
-theorem lean_workbook_plus_40071 (a b c x y : ℝ) : (a+b+c)*(a^2+b^2+c^2-a*b-b*c-c*a) = a^3+b^3+c^3-3*a*b*c ∧ (x+y)*(x^2-x*y+y^2) = x^3+y^3   :=  by sorry
-theorem lean_workbook_plus_8361 (x : ℝ) : x^2 - 59*x + 114 = 0 ↔ x = 2 ∨ x = 57   :=  by sorry
-theorem lean_workbook_plus_21 (n p q : ℕ) (hp : p ≤ n) (hq : q ≤ p) : (n - q).choose (p - q) * n.choose q = n.choose p * p.choose q   :=  by sorry
-theorem lean_workbook_plus_77425 (n : ℕ) (x : ℕ → ℕ) (hx: x 1 = 50) (hn: n = 49) (hx2: ∀ i, 2 <= i ∧ i <= 49 → x i = 1): x 1 * x 2 * x 3 * x 4 * x 5 * x 6 * (x 1 + x 2 + x 3 + x 4 + x 5 + x 6 + n - 6) = 100 * n   :=  by sorry
-theorem lean_workbook_plus_10794  (a b : ℝ)
-  (h₀ : a + b = 4)
-  (h₁ : a * b = 7 / 2) :
-  1 / (2 * a) + 1 / (2 * b) = 4 / 7   :=  by sorry
-theorem lean_workbook_plus_13602 (x y z : ℝ) : x ^ 2 * y ^ 2 + y ^ 2 * z ^ 2 + z ^ 2 * x ^ 2 ≥ x ^ 2 * y * z + y ^ 2 * z * x + z ^ 2 * x * y   :=  by sorry
-theorem lean_workbook_plus_38522 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : √((x ^ 2 + x * y + y ^ 2) / 3) ≥ (x + y) / 2   :=  by sorry
-theorem lean_workbook_plus_1424 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) (habc : a * b * c > 0) (hcd : c * d * b > 0) (habd : a * b * d > 0) : (a^2 + b^2 ≥ c^2 + d^2) → b / (a + c) + a / (b + d) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_78160 (x : ℝ) (f : ℝ → ℝ) (h₁ : ∀ x, f (-x) = f x) (h₂ : ∀ x, f (2 * x) = 3 * f x + x) : f 0 + 2 * f (2 * x) = 3 * f x + x   :=  by sorry
-theorem lean_workbook_plus_47184 {a b c : ℝ} (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : a^2 / b + b^2 / c + c^2 / a ≥ a + b + c   :=  by sorry
-theorem lean_workbook_plus_64527 (x y z : ℝ) :
-  (x^2 * y^2 + y^2 * z^2) / 2 ≥ x * y^2 * z ∧
-  (y^2 * z^2 + z^2 * x^2) / 2 ≥ x * y * z^2 ∧
-  (x^2 * y^2 + z^2 * x^2) / 2 ≥ x^2 * y * z   :=  by sorry
-theorem lean_workbook_plus_75904  (c : ℕ)
-  (h₀ : (c + 1) % 3 = 0) :
-  c % 3 = 2   :=  by sorry
-theorem lean_workbook_plus_56573 :
-  ∀ (a : ℕ), (a > 0) → (∑ x in Finset.range a, 0) % a = 0   :=  by sorry
-theorem lean_workbook_plus_3575 (n : ℤ) : n % 8 = 0 ∨ n % 8 = 1 ∨ n % 8 = 2 ∨ n % 8 = 3 ∨ n % 8 = 4 ∨ n % 8 = 5 ∨ n % 8 = 6 ∨ n % 8 = 7   :=  by sorry
-theorem lean_workbook_plus_78552 (x : ℂ) : (Complex.sin (3 * x) = 3 * Complex.sin x - 4 * (Complex.sin x)^3)   :=  by sorry
-theorem lean_workbook_plus_56720 (x y : ℝ) (hx : x ≥ 1) (hy : y ≥ 1) : (x + 1) * (y + 1) ≤ 2 * (x * y + 1)   :=  by sorry
-theorem lean_workbook_plus_73087 :
-  ∀ A B : ℝ, (sin A * cos B = sin B * cos A) ↔ sin (A - B) = 0   :=  by sorry
-theorem lean_workbook_plus_56312 (a b : ℝ) : (a^4 + 1) * (b^4 + 1) ≥ (a^2 + b^2)^2   :=  by sorry
-theorem lean_workbook_plus_65673 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) : a^3 + b^3 ≥ a^2 * b + b^2 * a   :=  by sorry
-theorem lean_workbook_plus_41733  (x : ℝ)
-  (h₀ : 0 < x)
-  (h₁ : x ≤ 1) :
-  1 / x ≥ 1   :=  by sorry
-theorem lean_workbook_plus_61583 : ∀ k : ℕ, (2:ℝ)^k * (2/(k+2)) + (2:ℝ)^(k+1) * (2/(k+3)) - (2:ℝ)^k * (1/(k+1)) - (2:ℝ)^(k+1) * (1/(k+2)) = (2:ℝ)^(k+2) / (k+3) - (2:ℝ)^k / (k+1)   :=  by sorry
-theorem lean_workbook_plus_70682 (a b c d : ℕ) (h₁ : a ≠ c) (h₂ : b ∉ Finset.Icc 0 1) (h₃ : d ∉ Finset.Icc 0 1) : ∃ a b c d, a ≠ c ∧ b ∉ Finset.Icc 0 1 ∧ d ∉ Finset.Icc 0 1 ∧ choose a b = choose c d   :=  by sorry
-theorem lean_workbook_plus_67538 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (habc : a * b * c = 1) : (a / (a + 1) * b + 1) + (b / (b + 1) * c + 1) + (c / (c + 1) * a + 1) ≥ 3 / 4   :=  by sorry
-theorem lean_workbook_plus_77495 (k a b c d : ℝ) (h₁ : 0 < k) (h₂ : 0 ≤ a ∧ 0 ≤ b ∧ 0 ≤ c ∧ 0 ≤ d) (h₃ : a ≤ k ∧ b ≤ k ∧ c ≤ k ∧ d ≤ k) : 2 * k ^ 2 - k * (a + b + c + d) + a * b + b * c + c * d + d * a ≥ 0   :=  by sorry
-theorem lean_workbook_plus_42515 (f : ℝ → ℝ) (hf: ∀ x y, f (y^2 + 2 * x * f y + f x ^ 2) = (y + f x) * (x + f y)) : ∃ g : ℝ → ℝ, ∀ x, f x = g x   :=  by sorry
-theorem lean_workbook_plus_40202  (x y z : ℝ)
-  (h₀ : 0 < x ∧ 0 < y ∧ 0 < z)
-  (h₁ : x^2 + y^2 = z^2) :
-  x + y > z   :=  by sorry
-theorem lean_workbook_plus_4286 (k : ℕ) (h : 1 ≤ k) :
-  (1:ℝ) / Real.sqrt (k ^ 2 + k) > (1:ℝ) / (2 * k)   :=  by sorry
-theorem lean_workbook_plus_41130 (n : ℕ) : Real.sqrt (n * (n + 2)) < n + 1   :=  by sorry
-theorem lean_workbook_plus_71142 : ∃ x : ZMod 2004, x^2 = 1   :=  by sorry
-theorem lean_workbook_plus_5838 (a b m : ℤ) (n : ℕ) (h₁ : a ≡ b [ZMOD m]) : a ^ n ≡ b ^ n [ZMOD m]   :=  by sorry
-theorem lean_workbook_plus_47299 : (2:ℝ) ^ 845 > 3 ^ 362   :=  by sorry
-theorem lean_workbook_plus_20616 (a b c : ℝ) : (a - b) ^ 5 + (b - c) ^ 5 + (c - a) ^ 5 = 0 → (5 / 2 * (a - c) * (c - b) * (b - a)) * ((a + c - 2 * b) ^ 2 + (a + b - 2 * c) ^ 2 + (b + c - 2 * a) ^ 2) = 0   :=  by sorry
-theorem lean_workbook_plus_74962 (D : Set ℝ) (hD : D.Countable) (ε : ℕ → ℝ) (hε : Summable ε) : ∃ f : ℝ → ℝ, ∀ x, f x = ∑' n : {n : ℕ | x_n ≤ x}, ε n   :=  by sorry
-theorem lean_workbook_plus_75143 (n : ℕ) : n * (n + 1) / 2 + 1 = (n ^ 2 + n + 2) / 2   :=  by sorry
-theorem lean_workbook_plus_78696 (U : ℕ → ℕ) (h : U 1 = 1 ∧ ∀ n, U (n + 1) = U n + 3 * n ^ 2 + 5 * n ^ 4) : ∃ f : ℕ → ℕ, ∀ n, U n = f n   :=  by sorry
-theorem lean_workbook_plus_8922 (n : ℕ) (x : ℝ) (hx: x >= 1): n * (x ^ 2 - 1) ^ 2 * (2 * x ^ n + 1) + 2 * x ^ n * (x ^ 4 + 4 * x ^ 2 + 3) + 2 * (x ^ 4 - 1) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_10287 : ∃ n, (1 ≤ n ∧ n ≤ 2014 ∧ ∃ k : ℤ, 8 * n = k * (9999 - n))   :=  by sorry
-theorem lean_workbook_plus_66382 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / (b + c) + b / (a + c) + c / (a + b)) ≥ 3 / 2   :=  by sorry
-theorem lean_workbook_plus_21330 (a b c : ℝ) :
-  (a^3 + b^3)^(1 / 3) + (b^3 + c^3)^(1 / 3) + (c^3 + a^3)^(1 / 3) ≥
-  (2 * (a + b + c))^(1 / 3)   :=  by sorry
-theorem lean_workbook_plus_58640  (x y : ℕ)
-  (h₀ : x^2 + y^2 < 20)
-  (h₁ : x^2 + y^2 % 10 = 0) :
-  (x,y) = (0,0) ∨ (x,y) = (1,9) ∨ (x,y) = (4,6) ∨ (x,y) = (5,5) ∨ (x,y) = (6,4) ∨ (x,y) = (9,1)   :=  by sorry
-theorem lean_workbook_plus_62217 (a b c d e : ℝ) : √a + √b + 2 * √(c - 2) + √d + √e = a + b + c + d + e ↔ √a + √b + 2 * √(c - 2) + √d + √e = a + b + c + d + e   :=  by sorry
-theorem lean_workbook_plus_26583 : 1 + 6 * x ^ 25 + 11 * x ^ 50 + 6 * x ^ 75 + x ^ 100 = (x ^ 50 + 3 * x ^ 25 + 1) ^ 2   :=  by sorry
-theorem lean_workbook_plus_46671 (p q x y : ℝ) (h₁ : x - y = p) (h₂ : x + y = q) (h₃ : p * q = 240) (h₄ : p ≤ q) : x = (q + p) / 2 ∧ y = (q - p) / 2   :=  by sorry
-theorem lean_workbook_plus_55288 :
-  (∑ k in Finset.Icc 1 2016, k^2) % 17 = 11   :=  by sorry
-theorem lean_workbook_plus_28337  (a : ℕ → ℕ)
-  (b : ℕ → ℕ)
-  (h₀ : b 0 = 1)
-  (h₁ : b 1 = 5)
-  (h₂ : ∀ n ≥ 2, b n = 4 * b (n - 1) - b (n - 2))
-  (h₃ : ∀ n, Odd (b n))
-  (h₄ : ∀ n, a n = (b n + 1)^2 / 2^2 + (b n - 1)^2 / 2^2) :
-  ∀ n, ∃ x y : ℕ, a n = x^2 + y^2   :=  by sorry
-theorem lean_workbook_plus_25436 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (1 / (2 * a) + 1 / (2 * b) + 1 / (2 * c)) ≥ (1 / (a + b) + 1 / (b + c) + 1 / (c + a))   :=  by sorry
-theorem lean_workbook_plus_25915 (a b c : ℝ) (habc : a * b * c ≠ 0) : a * b + b * c + c * a ≤ a ^ 2 + b ^ 2 + c ^ 2   :=  by sorry
-theorem lean_workbook_plus_66012  (a m : ℕ)
-  (h₀ : 0 < a ∧ 0 < m) :
-  (x^m - 1 ∣ x^(a * m) - 1)   :=  by sorry
-theorem lean_workbook_plus_64837 (x : ℝ) (hx : 0 < x) : 1 ≤ floor x + floor (1 / x)   :=  by sorry
-theorem lean_workbook_plus_47316 (n : ℕ) : 9 * n * (n + 1) * (n + 3) ^ 2 ≤ (3 * n + 5) ^ 2 * (n + 2) ^ 2   :=  by sorry
-theorem lean_workbook_plus_58310 (x y : ℕ) (h : 0 < x ∧ 0 < y) (hxy : 4 * x ^ 2 + x = 3 * y ^ 2 + y) : ∃ h : ℕ, h ^ 2 = x - y   :=  by sorry
-theorem lean_workbook_plus_8442 (x y : ℝ) : 3 * (x ^ 2 + y ^ 2 + 1 ^ 2 + y * x + x + y) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_25787 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : 1 / (2 * a) + 1 / (b + 1) + 1 / (a * b + b) ≥ 3 / (a * b + 1)   :=  by sorry
-theorem lean_workbook_plus_33970 (α β : ℝ) : sin (α + β) = sin α * cos β + sin β * cos α   :=  by sorry
-theorem lean_workbook_plus_60791 (θ : ℝ) :
-  Real.cos θ + Real.sqrt 3 * Real.sin θ =
-    2 * (1 / 2 * Real.cos θ + Real.sqrt 3 / 2 * Real.sin θ)   :=  by sorry
-theorem lean_workbook_plus_69216 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hab : a^2 + b^2 = 6) (α β : ℝ) : α * a + β * b ≤ Real.sqrt (6 * (α^2 + β^2))   :=  by sorry
-theorem lean_workbook_plus_22032 (c d : ℝ) (hc : c ≠ 0) (P Q : ℝ → ℝ) (hPQ: ∀ x, (P x, Q x) = (c * x, c * x + d)) : ∃ c' d', c' ≠ 0 ∧ ∀ x, (P x, Q x) = (c' * x, c' * x + d')   :=  by sorry
-theorem lean_workbook_plus_29959 : ∀ x : ℝ, (Int.floor x - 2 * Int.floor (x / 2)) < 2   :=  by sorry
-theorem lean_workbook_plus_3076 (a b : ℝ) : a / b = 1 / (b / a)   :=  by sorry
-theorem lean_workbook_plus_17325 (a c : ℝ) (h₁ : a ≠ 0) (h₂ : a * c = 0) : c = 0   :=  by sorry
-theorem lean_workbook_plus_125 (a b c d : ℤ) (h : ∀ x, 5 ∣ a * x ^ 3 + b * x ^ 2 + c * x + d) : 5 ∣ a ∧ 5 ∣ b ∧ 5 ∣ c ∧ 5 ∣ d   :=  by sorry
-theorem lean_workbook_plus_8402 (x : ℝ) : (-1 ≤ cos x ^ 6 - sin x ^ 4 ∧ cos x ^ 6 - sin x ^ 4 ≤ 1)   :=  by sorry
-theorem lean_workbook_plus_72088 : (Real.sqrt 511 + Complex.I) * (Real.sqrt 511 - Complex.I) = 512   :=  by sorry
-theorem lean_workbook_plus_65508 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : 3 * a + 4 * c ≥ 18) : a + b + c + 6 / (a * b * c) ≥ 7   :=  by sorry
-theorem lean_workbook_plus_86 (a b c : ℝ) (h : a > 0 ∧ b > 0 ∧ c > 0) (habc : a * b * c = 1) (h : (1 - a * b) / (1 + b) + (1 - b * c) / (1 + c) + (1 - c * a) / (1 + a) = 0) : a * b * c ≤ 1   :=  by sorry
-theorem lean_workbook_plus_24744 : ∀ x : ℝ, ∀ n : ℤ, (Int.ceil (x + n) = Int.ceil x + n)   :=  by sorry
-theorem lean_workbook_plus_65416 (f : ℝ → ℝ) (hf: f = fun (x:ℝ) => x) : ∀ x, f x = x   :=  by sorry
-theorem lean_workbook_plus_81335 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) : c < a + b   :=  by sorry
-theorem lean_workbook_plus_48591  (s : ℝ)
-  (h₀ : s = ∑ k in (Finset.range 101), (3^k)) :
-  s = (3^101 - 1) / 2   :=  by sorry
-theorem lean_workbook_plus_33659 : (985:ℝ) / 108 ≥ (985:ℝ) / 108   :=  by sorry
-theorem lean_workbook_plus_49433 (x : ℝ) (hx : 0 ≤ x) : x^5 - x^3 - x^2 + 1 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_68095 : 6 * k + 1 ≡ 1 [ZMOD 3] → (6 * k + 1) ^ 2 ≡ 1 [ZMOD 3]   :=  by sorry
-theorem lean_workbook_plus_25742 : ∀ e : ℕ, ∑ d in Finset.Icc 1 e, (1/6 * d * (d+1) * (d+2)) = (1/24 * e * (e+1) * (e+2) * (e+3))   :=  by sorry
-theorem lean_workbook_plus_59540 (a b : ℕ) (h₁ : a = 2) (h₂ : b = 5) : a + b = 7   :=  by sorry
-theorem lean_workbook_plus_5878 (a b c : ℝ) : (a^2 + ab + b^2)^(1/3) + (b^2 + bc + c^2)^(1/3) + (c^2 + ca + a^2)^(1/3) ≥ 3 * (ab + bc + ca)^(1/3)   :=  by sorry
-theorem lean_workbook_plus_53984 (a b c : ℝ) : a^3 + b^3 + c^3 = 3 * a * b * c + (a + b + c) * (a^2 + b^2 + c^2 - a * b - b * c - c * a)   :=  by sorry
-theorem lean_workbook_plus_65921 :
-  6 * Real.sin (60 * Real.pi / 180) = 3 * Real.sqrt 3   :=  by sorry
-theorem lean_workbook_plus_47039 (a b c : ℝ) : (a * b + a * c + b * c) / (a ^ 2 + b ^ 2 + c ^ 2) ≤ 1   :=  by sorry
-theorem lean_workbook_plus_53934 (a b c d : ℝ) (h : a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2 = 4) :
-  (a + b + c + d) ^ 2 ≤ 16   :=  by sorry
-theorem lean_workbook_plus_82401 (f : ℝ → ℝ) (hf : ∀ x, 15 * f x = 3 * x + 3) : ∀ x, f x = 1/5 * x + 1/5   :=  by sorry
-theorem lean_workbook_plus_69336 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : (2 * a / (b + c))^(3/5) + (2 * b / (c + a))^(3/5) + (2 * c / (a + b))^(3/5) ≥ 3   :=  by sorry
-theorem lean_workbook_plus_38236 (A : Type*) [Ring A] (hA : ∀ a : A, a ^ 2 = 0) (hA' : ∀ n : ℕ, ∀ a : A, n * a = 0 → a = 0) (a b c : A) : a * b * c = 0   :=  by sorry
-theorem lean_workbook_plus_67995 : ∃ n, Nat.Prime n ∧ n ∣ 3 ^ (n - 1) - 2 ^ (n - 1)   :=  by sorry
-theorem lean_workbook_plus_20495 (n : ℕ) (f : ℝ → ℝ) (hf: f = fun x ↦ abs (x - ↑i)) : ∀ x ∈ Set.Icc (i - 1 / 2) (i + 1 / 2), f x = abs (x - i)   :=  by sorry
-theorem lean_workbook_plus_51744  (f : ℝ → ℝ)
-  (h₀ : ∀ x, (¬ ∃ a : ℤ, x = a) → (f x = 1 ∨ f x = -1)) :
-  ∀ x, (¬ ∃ a : ℤ, x = a) → f x = 1 ∨ f x = -1   :=  by sorry
-theorem lean_workbook_plus_79673 (t r z : ℤ) : 2 * t ^ 2 + 4 * r ^ 2 = 2 * z ^ 2 → t ^ 2 + 2 * r ^ 2 = z ^ 2   :=  by sorry
-theorem lean_workbook_plus_36843 (a b : ℝ) : (a - b) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_43729 (p : ℕ) (hp1 : p ≡ 3 [ZMOD 5]) (hp2 : p ≡ 3 [ZMOD 8]) : 40 ∣ 13 * p + 1   :=  by sorry
-theorem lean_workbook_plus_9482 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (y + z) * (z + x) * (x + y) / (4 * x * y * z) ≥ 1 + (x ^ 2 + y ^ 2 + z ^ 2) / (x * y + y * z + z * x)   :=  by sorry
-theorem lean_workbook_plus_48988 (a : ℤ) : a^2 ≡ 0 [ZMOD 4] ∨ a^2 ≡ 1 [ZMOD 4]   :=  by sorry
-theorem lean_workbook_plus_27459 (A B : ℕ) : 34 * A + 200 * B = 2004 ↔ A = 6 ∧ B = 9   :=  by sorry
-theorem lean_workbook_plus_67713 : 2 ^ 32 ≡ -1 [ZMOD 641]   :=  by sorry
-theorem lean_workbook_plus_72607 (n : ℕ) (h : n ≥ 2) : 9 * n ^ 2 > 16   :=  by sorry
-theorem lean_workbook_plus_45923 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) : a / (b^2 + c^2) + b / (a^2 + c^2) + c / (a^2 + b^2) ≥ 3 / 2 * Real.sqrt 3   :=  by sorry
-theorem lean_workbook_plus_67836 : ∑ i in Finset.Icc 1 2019, Nat.gcd i (2019 - i) = 6725   :=  by sorry
-theorem lean_workbook_plus_56177 : (2010 / 2009 : ℝ) ^ (2009:ℕ) > 2   :=  by sorry
-theorem lean_workbook_plus_2722 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / b)^(1 / 3) + (b / c)^(1 / 5) + (c / a)^(1 / 7) > 5 / 2   :=  by sorry
-theorem lean_workbook_plus_23231 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : a^2 / b^2 + b / (a + b) > 4 / 5   :=  by sorry
-theorem lean_workbook_plus_46789 (n : ℕ) (h : n = p^4 * q) (hp : p.Prime) (hq : q.Prime) (hpq : p ≠ q) (h1 : p ∣ n) : p^3 ∣ p^4 ∨ p^3 ∣ q   :=  by sorry
-theorem lean_workbook_plus_82124 (x y z: ℝ) : (x^2 + y^2 + z^2 - x * y - x * z - y * z)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_21514 : ∀ a b : ℝ, (a - b * Complex.I) / (a ^ 2 + b ^ 2) = (a + b * Complex.I)⁻¹   :=  by sorry
-theorem lean_workbook_plus_30544 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : 3 * (a ^ 2 * b + b ^ 2 * c + c ^ 2 * a) * (a * b ^ 2 + b * c ^ 2 + c * a ^ 2) ≤ (a ^ 2 + b ^ 2 + c ^ 2) ^ 3   :=  by sorry
-theorem lean_workbook_plus_77407 (a b c : ℝ) : a + b + c = 0 → (a ^ 2 + b ^ 2 + c ^ 2) / 2 * (a ^ 3 + b ^ 3 + c ^ 3) / 3 = (a ^ 5 + b ^ 5 + c ^ 5) / 5   :=  by sorry
-theorem lean_workbook_plus_17544 (x y z : ℝ) : (x ^ 2 + y ^ 2) * (y ^ 2 + z ^ 2) * (z ^ 2 + x ^ 2) ≥ (x ^ 2 + 2 * y ^ 2 - z ^ 2) * (y ^ 2 + 2 * z ^ 2 - x ^ 2) * (z ^ 2 + 2 * x ^ 2 - y ^ 2)   :=  by sorry
-theorem lean_workbook_plus_82769 (a : ℝ) (ha : a^3 - a - 2 = 0) : (5:ℝ)^(1/4) < a ∧ a < 2   :=  by sorry
-theorem lean_workbook_plus_64416 (p : ℕ → ℕ) (hp : ∀ x, p x = ∑ i in Finset.range 1008, Nat.choose x i) : p 2015 = 2^2014   :=  by sorry
+theorem lean_workbook_plus_45653 : (1 + Real.sqrt 12) > Real.sqrt 6   :=  by sorry
+theorem lean_workbook_plus_45659 (a b c : ℝ) (h₁ : a + b ≥ c) (h₂ : c ≥ 0) : a^2 + b^2 ≥ c^2 / 2   :=  by sorry
+theorem lean_workbook_plus_45670 (f : ℝ → ℝ) : -8 * x^6 + 22 * x^5 - 14 * x^4 - 12 * x^3 + 24 * x^2 - 8 * x - 1 = 0 → x = -1 ∨ x = 1 ∨ x = 1/2   :=  by sorry
+theorem lean_workbook_plus_45671 {a b : ℝ} (hab : a > b) (hb : b > 0) : Real.sqrt a > Real.sqrt b   :=  by sorry
+theorem lean_workbook_plus_45672 : 5 ^ 4 ≡ 1 [ZMOD 16]   :=  by sorry
+theorem lean_workbook_plus_45673 (x y : ℝ) (h₁ : 3 * x * y = 30) : x * y = 10   :=  by sorry
 theorem lean_workbook_plus_45675 (P r t : ℝ) : P * r * t = P * r * t   :=  by sorry
-theorem lean_workbook_plus_80233 (a b c : ℝ) (h1 : a + b + c > 0) (h2 : a * b + b * c + c * a > 0) (h3 : a * b * c > 0) : a > 0 ∧ b > 0 ∧ c > 0   :=  by sorry
-theorem lean_workbook_plus_21642 : ∀ a b c : ℤ, (a - b) ^ 3 + (b - c) ^ 3 + (c - a) ^ 3 - (a + b - c) * (b - a) * (a - c) - (b + c - a) * (c - b) * (b - a) - (c + a - b) * (a - c) * (c - b) = a * (a - b) * (a - c) + b * (b - c) * (b - a) + c * (c - a) * (c - b)   :=  by sorry
-theorem lean_workbook_plus_77524  (x : ℝ) :
-  (10 * x^2)^3 - 1^3 = (10 * x^2 - 1) * (100 * x^4 + 10 * x^2 + 1)   :=  by sorry
-theorem lean_workbook_plus_79300 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : (x^3 + 1) * (1 + y^3) * (1 + 1) ≥ (x + y)^3   :=  by sorry
-theorem lean_workbook_plus_42589 : (factorial 21 * factorial 17 * factorial 5) / (factorial 22 * factorial 17 * factorial 4) = 5/22   :=  by sorry
-theorem lean_workbook_plus_53311 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^2 / b + b^2 / c + c^2 / a) ≥ (a + b + c) * (a^2 + b^2 + c^2) / (a * b + b * c + a * c)   :=  by sorry
-theorem lean_workbook_plus_47773 (x y z : ℝ) : (x + y + z) * (x + y - z) * (y + z - x) * (z + x - y) = 2 * x ^ 2 * y ^ 2 + 2 * y ^ 2 * z ^ 2 + 2 * z ^ 2 * x ^ 2 - x ^ 4 - y ^ 4 - z ^ 4   :=  by sorry
-theorem lean_workbook_plus_59644 : ∃ n : ℕ, (∑ k in Finset.Icc 1 n, 1 / (k^4 + k^2 + 1)) = (∑ k in Finset.Icc 1 n, 1 / (2 * k) * (1 / (k^2 - k + 1) - 1 / (k^2 + k + 1)))   :=  by sorry
-theorem lean_workbook_plus_49955 : ∀ x : ℝ, x^4 + 2*x^3 + 3*x^2 + 2*x + 1 ≥ 4*x^3 + 4*x^2   :=  by sorry
-theorem lean_workbook_plus_15240 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c)(habc : a * b * c = 1) : a^3 + b^3 + c^3 = 1 / 9 → a^2 + b^2 + c^2 + 1 / (a^2 * b^2) + 1 / (b^2 * c^2) + 1 / (c^2 * a^2) ≥ 730 / 3   :=  by sorry
-theorem lean_workbook_plus_50710 : ∃ k : ℕ, k = 1 * 2 * 3 * 2 * 5 * 7 * 2 * 3   :=  by sorry
-theorem lean_workbook_plus_10784  (x y : ℝ)
-  (h₀ : 3 * y = 440 - 4 * x)
-  (h₁ : x * (440 - 4 * x) = k) :
-  -4 * x^2 + 440 * x - k = 0   :=  by sorry
-theorem lean_workbook_plus_29310 (n : ℕ) : (2 * n).choose 2 = 2 * n.choose 2 + n ^ 2   :=  by sorry
-theorem lean_workbook_plus_75 {a b c : ℝ} (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) : 2 * (a ^ 3 + b ^ 3 + c ^ 3) + 3 * a * b * c ≥ (a * b + b * c + c * a) * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_15332 (m n : ℤ) (h : m.gcd n = 1) : ∃ N : ℕ, ∀ n : ℤ, n >= N → ∃ a b : ℤ, n = m * a + n * b   :=  by sorry
-theorem lean_workbook_plus_32028 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (h : x + y + z = 3) : ∃ x y z : ℝ, (x + y + z = 3 ∧ (x * (x + y - z) ≤ 1 ∨ y * (y + z - x) ≤ 1 ∨ z * (z + x - y) ≤ 1))   :=  by sorry
-theorem lean_workbook_plus_52296 (x : ℝ) : x / (x^2 + 1) ≤ 1 / 2   :=  by sorry
-theorem lean_workbook_plus_80867  (a b c x y : ℝ)
-  (f : ℝ → ℝ)
-  (h₀ : ∀ x, f x = a * x^2 + b * x + c)
-  (h₁ : x ≠ y) :
-  f x - f y = (x - y) * (a * (x + y) + b)   :=  by sorry
-theorem lean_workbook_plus_8603 (a b c : ℝ) (f : ℝ → ℝ) (h : ∀ x, f x = a * x ^ 2 + b * x + c) : ∀ x, f (x + 3) - 3 * f (x + 2) + 3 * f (x + 1) - f x = 0   :=  by sorry
-theorem lean_workbook_plus_59477 (x y : ℕ) : choose x y + choose x (y + 1) = choose (x + 1) (y + 1)   :=  by sorry
-theorem lean_workbook_plus_82317 {x : ℤ} (h : x ≡ 2 [ZMOD 4]) : x^2 ≡ 0 [ZMOD 4]   :=  by sorry
-theorem lean_workbook_plus_54051 (n:ℕ) : 133 ∣ 11^(n+2) + 12^(2*n+1)   :=  by sorry
-theorem lean_workbook_plus_34342 (b : ℝ) (h : b * (b + 1) = 0) : b = 0 ∨ b = -1   :=  by sorry
-theorem lean_workbook_plus_298 :
-  ((55 * 35) / (12^7) : ℚ) = (55 * 35) / (12^7)   :=  by sorry
-theorem lean_workbook_plus_37482 (a b c : ℤ) : (2 * a) ^ 2 + (b ^ 2 + 1) ^ 2 + (2 * c) ^ 2 - 1 = 4 * a ^ 2 + b ^ 4 + 2 * b ^ 2 + 4 * c ^ 2   :=  by sorry
-theorem lean_workbook_plus_79471  (n k : ℕ)
-  (h₀ : 0 < k ∧ 0 < n)
-  (h₁ : n ≥ k) :
-  Nat.choose n (k - 1) = Nat.choose n (n - k + 1)   :=  by sorry
-theorem lean_workbook_plus_35100 (w v : ℝ) : A * (2 * w - 3 * v) = 2 * (A * w) - 3 * (A * v)   :=  by sorry
-theorem lean_workbook_plus_59884 : ∀ x : ℝ, sin x ^ 6 + cos x ^ 6 - 1 = -3 * sin x ^ 2 * cos x ^ 2   :=  by sorry
-theorem lean_workbook_plus_43429 (x : ℝ) (hx : x = (2 : ℝ)^(1/3) - 1) : (x^(1/3) : ℝ) = (1/9 : ℝ)^(1/3) - (2/9 : ℝ)^(1/3) + (4/9 : ℝ)^(1/3)   :=  by sorry
-theorem lean_workbook_plus_30063 (a b c : ℝ) (h : a > 0 ∧ b > 0 ∧ c > 0 ∧ a * b + b * c + c * a = 3): a * b * c * (a + b + c) ≤ 3   :=  by sorry
-theorem lean_workbook_plus_26353 (x y z : ℝ) (hx : x ≥ 0) (hy : y ≥ 0) (hz : z ≥ 0) (h : x + y + z = 1) : (x + 1) * (y + 2) * (z + 3) ≥ 8   :=  by sorry
-theorem lean_workbook_plus_45600 (p q : ℤ → ℤ) (h₁ : ∀ x, q x = p (x - 1)) (h₂ : ∀ x, p (x^2 - 1) = (p (x - 1))^2) : ∀ x, q (x^2) = (q x)^2   :=  by sorry
-theorem lean_workbook_plus_69790 : ∀ a : ℝ, sin (a / 2) * (sin (a / 2) - 1) ≥ -1 / 4   :=  by sorry
-theorem lean_workbook_plus_34502  (n : ℕ)
-  (h₀ : 0 < n)
-  (h₁ : n.choose 2 ≥ 16) :
-  5 ≤ n - 2   :=  by sorry
-theorem lean_workbook_plus_8030 : ∀ x y z : ℝ, x^2*y + y^2*z + z^2*x = x*y^2 + y*z^2 + z*x^2 ↔ x = y ∨ y = z ∨ z = x   :=  by sorry
-theorem lean_workbook_plus_5124 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x + y + z) ^ 2 * (y * z + z * x + x * y) ^ 2 ≤ 3 * (y ^ 2 + y * z + z ^ 2) * (z ^ 2 + z * x + x ^ 2) * (x ^ 2 + x * y + y ^ 2)   :=  by sorry
-theorem lean_workbook_plus_79175 (f : ℤ → ℤ) (hf: f = fun x ↦ x) : ∀ x y, f (f (x + y)) = f (x + y) + f x * f y - x * y   :=  by sorry
-theorem lean_workbook_plus_31217 : 1000000 ≡ 1 [ZMOD 7]   :=  by sorry
-theorem lean_workbook_plus_33525 (a b c : ℝ) (h1 : a + 2 * b + 3 * c = 5) (h2 : 2 * a + 3 * b + c = -2) (h3 : 3 * a + b + 2 * c = 3) : 3 * a + 3 * b + 3 * c = 3   :=  by sorry
-theorem lean_workbook_plus_76461 (a b c : ℝ) : (a * b + b * c + c * a - 1) ≤ (a ^ 2 + 1) * (b ^ 2 + 1) * (c ^ 2 + 1)   :=  by sorry
-theorem lean_workbook_plus_10986 (a₁ a₂ b₁ b₂ : ℝ) : ∃ d, d = Real.sqrt ((a₁ - b₁) ^ 2 + (a₂ - b₂) ^ 2)   :=  by sorry
-theorem lean_workbook_plus_76494 (n : ℕ) (hn : 2 ≤ n) : ((n^2 - 1)/(n^2))^(2*n) * ((n + 1)/(n - 1)) < 1   :=  by sorry
-theorem lean_workbook_plus_52055 : ∀ x y z : ℝ, (x + y + z) ^ 3 - 8 * (y ^ 2 * x + z ^ 2 * y + x ^ 2 * z) = x * (x - y) * (x - z) + y * (y - z) * (y - x) + z * (z - x) * (z - y) + 4 * (x - y) * (x - z) * (y - z) + 3 * x * y * z   :=  by sorry
-theorem lean_workbook_plus_41424 (a b : ℝ) (hab : a * b ≥ 1) : a^2 + b^2 ≥ a + b   :=  by sorry
-theorem lean_workbook_plus_1331 (n : ℕ) (hn : 1 ≤ n) : Real.cos (π / (n + 1)) > Real.cos (π / n)   :=  by sorry
-theorem lean_workbook_plus_75982 (x y : ℝ) (hx : x ≥ 1) (hy : y ≥ 1) : (x - 1) * (y - 1) ≥ 0   :=  by sorry
-theorem lean_workbook_plus_38378 (x : ℝ) : x^2 - x - 6 = 0 ↔ x = 3 ∨ x = -2   :=  by sorry
-theorem lean_workbook_plus_71830 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a * b ^ 3 + a * c ^ 3 + b * c ^ 3 + b * a ^ 3 + c * a ^ 3 + c * b ^ 3 ≤ 2 * (a ^ 4 + b ^ 4 + c ^ 4)   :=  by sorry
-theorem lean_workbook_plus_52702 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / (a + 5 * b + 3 * c) + b / (b + 5 * c + 3 * a) + c / (c + 5 * a + 3 * b) ≥ 1 / 3)   :=  by sorry
-theorem lean_workbook_plus_3671 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (h : x + y = x^2 * y^3) : 3 / x + 5 / y ≥ 4 * (8:ℝ) ^ (1 / 4)   :=  by sorry
-theorem lean_workbook_plus_61761 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : a^3 + b^3 = a - b) : a^2 + b^2 < 1   :=  by sorry
-theorem lean_workbook_plus_21311 (x : ℝ) : x^2 + 3*x + 1 = 0 ↔ x = (-3 + Real.sqrt 5)/2 ∨ x = (-3 - Real.sqrt 5)/2   :=  by sorry
-theorem lean_workbook_plus_29475 (f : ℝ → ℝ) (hf: f = fun x => x^4) : ∀ x, f x = x^4   :=  by sorry
-theorem lean_workbook_plus_81292 (a b c : ℝ) (hab : a > 0 ∧ b > 0 ∧ c > 0) (h : a^2 + b^2 - a * b = c^2) : (a - c) * (b - c) ≤ 0   :=  by sorry
-theorem lean_workbook_plus_56994 : ∃ x y z a b c : ℝ, x = y ∧ y = z ∧ z = -1 ∧ a = b ∧ b = c ∧ c = 0   :=  by sorry
-theorem lean_workbook_plus_47985 (a b c : ℝ) (h : a + b + c = 0) :
-  (a * b + b * c + c * a) ^ 2 = (1 / 4) * (a ^ 2 + b ^ 2 + c ^ 2) ^ 2   :=  by sorry
-theorem lean_workbook_plus_17492 (f : ℕ → ℕ) (hf: ∃ n, f (f n) + n = 2009) : ∃ n, f (f n) + n = 2009   :=  by sorry
-theorem lean_workbook_plus_32902 :
-  (1998997 : ℚ) / 1997996 = (1997 : ℚ) / 1996   :=  by sorry
-theorem lean_workbook_plus_48903 (h₁ : 7 * 11 * 13 * 1003 - 3 * 17 * 59 * 331 = 8024) : 7 * 11 * 13 * 1003 - 3 * 17 * 59 * 331 = 8024   :=  by sorry
-theorem lean_workbook_plus_12858 {a b : ℚ} (ha : 0 < a) (hb : 0 < b) (hab : ∃ r : ℚ, a^(1/3) + b^(1/3) = r) : ∃ r : ℚ, a^(1/3) = r ∧ ∃ r : ℚ, b^(1/3) = r   :=  by sorry
-theorem lean_workbook_plus_47397 :  ∀ x : ℝ, (sin x * (1 - cos x) / (1 - cos x ^ 2) - sin x * (1 + cos x) / (1 - cos x ^ 2) = -2 * cos x * sin x / sin x ^ 2)   :=  by sorry
-theorem lean_workbook_plus_13413 : ∀ a b c : ℂ, (a^2 + 1) * (b^2 + 1) * (c^2 + 1) = a^2 * b^2 * c^2 + a^2 * b^2 + b^2 * c^2 + c^2 * a^2 + a^2 + b^2 + c^2 + 1   :=  by sorry
-theorem lean_workbook_plus_54546 {a b c : ℝ} (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : 3 / 2 * a ^ 2 ≥ a * b + a * c - b * c   :=  by sorry
-theorem lean_workbook_plus_71937 (f : ℕ → ℚ) (f_def : f 0 = 1 ∧ ∀ x, 1 ≤ x → f x = (f (x - 1) + 1) / (x + 1)) : (0! + 1! + 2! + 3! + 4! + 5! + 6! + 7!) / f 7 = 8!   :=  by sorry
-theorem lean_workbook_plus_31159 (f : ℝ → ℝ) (h : ∀ x, f (x + 1) = f x + 1) : ∀ x, f (x + 1) = f x + 1   :=  by sorry
-theorem lean_workbook_plus_30088 : ∀ n m : ℤ, Odd n ∧ Odd m → Even (n - m)   :=  by sorry
-theorem lean_workbook_plus_22863 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 1) (h : (a / (b + c)) + (b / (c + a)) + (c / (a + b)) = 2) (h' : (a ^ 2 / (b + c)) + (b ^ 2 / (c + a)) + (c ^ 2 / (a + b)) = 5 / 2) : a * b * c ≤ 3 / 8   :=  by sorry
-theorem lean_workbook_plus_55919 (p o : ℝ) : (1 / 3 * p + 7 / 2 * o = 3 / 4 * p + 1 / 2 * o) → (o = 1 / 4 → p = 9 / 5)   :=  by sorry
-theorem lean_workbook_plus_59309  (z₁ z₂ z₃ : ℂ)
-  (h₀ : ‖z₁‖ = 1 ∧ ‖z₂‖ = 1 ∧ ‖z₃‖ = 1)
-  (h₁ : z₁ / z₂ + z₂ / z₃ + z₃ / z₁ = 1) :
-  z₁ / z₂ * z₂ / z₃ * z₃ / z₁ = 1   :=  by sorry
-theorem lean_workbook_plus_67395 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) :
-  (a + b) / (1 - a * b) + (b + c) / (1 - b * c) + (a + c) / (1 - a * c) ≤ 3 * (a + b + c)   :=  by sorry
-theorem lean_workbook_plus_5373 (a : ℝ) (ha : a ≠ 0) : a ^ 2 > 0   :=  by sorry
-theorem lean_workbook_plus_53179 (m n : ℕ) (h₁ : Nat.gcd m 2*n = 1) (h₂ : ∃ k : ℕ, m^4 - 2*n^4 = k^2) : ∃ x y : ℕ, Nat.gcd x 2*y = 1 ∧ ∃ k : ℕ, x^4 - 2*y^4 = k^2   :=  by sorry
-theorem lean_workbook_plus_79160 (n : ℕ) : ∃ k_n : ℝ, ∀ x : ℕ → ℝ, ∑ i in Finset.range n, x i = 0 → k_n * ∑ i in Finset.range n, (x i) ^ 2 ≥ ∑ i in Finset.range n, ∑ j in Finset.range n, x i * x j   :=  by sorry
-theorem lean_workbook_plus_6732 (f : ℝ → ℝ) (f_def : ∀ x, x < 5 → f x = 3 * x + 6 ∧ ∀ x, 5 ≤ x → f x = 7 * x - 20) : f (f (f 2)) = 428   :=  by sorry
-theorem lean_workbook_plus_47123 (a:ℝ) (ha : a ≥ 0) : a^6 + 2 ≥ a^3 + a^2 + a   :=  by sorry
-theorem lean_workbook_plus_37687 (h m f : ℝ) : 3 * h + 5 * m + 1 * f = 23.50 ∧ 5 * h + 9 * m + 1 * f = 39.50 → 2 * h + 2 * m + 2 * f = 15   :=  by sorry
-theorem lean_workbook_plus_15974 (n : ℕ) :
-  ∑ k in Finset.range n, (k - 1) = ∑ k in Finset.range (n - 1), k   :=  by sorry
-theorem lean_workbook_plus_74512 : 3 ^ 2001 * 7 ^ 2002 * 13 ^ 2003 ≡ 9 [ZMOD 10]   :=  by sorry
-theorem lean_workbook_plus_26813 (a b c : ℝ) (h : 1 / (1 + a ^ 2) + 1 / (1 + b ^ 2) + 1 / (1 + c ^ 2) = 2) :
-  a ^ 2 / (a ^ 2 + 1) + b ^ 2 / (b ^ 2 + 1) + c ^ 2 / (c ^ 2 + 1) = 1   :=  by sorry
-theorem lean_workbook_plus_44086 : 2 ^ 2009 ≡ 2 [MOD 10]   :=  by sorry
-theorem lean_workbook_plus_12137 (x y : ℝ) : (abs x * y ^ 2 - x ^ 2 * abs y) ^ 2 + (2 * abs (x * y) + 1) * (abs (x * y) - 1) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_19387 (n : ℕ) (h : n % 4 = 0) : ∃ a b, a % 2 = 0 ∧ b % 2 = 0 ∧ n = a * b   :=  by sorry
-theorem lean_workbook_plus_10183 : ∀ y : ℤ, y % 4 = 3 → (y^3 + 27) % 4 = 2   :=  by sorry
-theorem lean_workbook_plus_79051 (a b c : ℝ) (hab : 0 < a) (hbc : 0 < b) (hca : 0 < c) (habc : 0 < a * b * c) (h : a * b + b * c + c * a + a * b * c >= 4) : a + b + c >= 3 + (b - c) ^ 2 / (b + c + 4)   :=  by sorry
-theorem lean_workbook_plus_31211 (n : ℕ) : ∃ k, 2 ^ k ≥ n   :=  by sorry
-theorem lean_workbook_plus_29816  (n k : ℕ)
-  (h₀ : 0 < n ∧ 0 < k)
-  (h₁ : k < 60)
-  (h₂ : (n * k) = 90 * 11) :
-  18 ≤ n   :=  by sorry
+theorem lean_workbook_plus_45707 (f : ℝ → ℝ) (hf: f x = x + 1) : f x = x + 1   :=  by sorry
+theorem lean_workbook_plus_45711 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x / (x + y) + y / (z + y) + z / (x + z)) ≤ 2   :=  by sorry
+theorem lean_workbook_plus_45750 (x y z a b c : ℝ) (hx : x ≠ 0) (hy : y ≠ 0) (hz : z ≠ 0) (hab : a = (x - y - z) / x) (hbc : b = (y - z - x) / y) (hca : c = (z - x - y) / z) : a * b * c + 4 = a * b + b * c + c * a   :=  by sorry
+theorem lean_workbook_plus_45770 (x y : ℝ) (h₁ : 0 < y ∧ y ≤ x ∧ x ≤ 2) (h₂ : x * y ^ 2 ≤ 2) : x + 2 * y ≤ 4   :=  by sorry
+theorem lean_workbook_plus_45775 (x : ℝ) : (exp x * Real.sin x - x ^ 2) / x ^ 3 ≠ 0 ∨ (exp x * Real.sin x - x ^ 2) / x ^ 3 = 0   :=  by sorry
+theorem lean_workbook_plus_45780 (f : ℝ → ℝ) (hf : ∀ x, f x = f (1 - x)) (h : f 0 = 1) : f 1 = 1   :=  by sorry
+theorem lean_workbook_plus_45783 :
+  (1 / 5) * ((20 + 2 * 5 + 10 + 0) / 20) = 2 / 5   :=  by sorry
+theorem lean_workbook_plus_45790 : ∀ ε : ℝ, ε > 0 → ∃ δ : ℝ, δ > 0 ∧ ∀ x : ℝ, x ∈ Set.Ioo 1 δ → |(Real.log x) / (x - 1) - 1| < ε   :=  by sorry
+theorem lean_workbook_plus_45791 (X : Type*) [AddCommGroup X] [Module ℝ X]
+    (Y : Submodule ℝ X) : Module.rank ℝ Y + Module.rank ℝ (X ⧸ Y) = Module.rank ℝ X   :=  by sorry
+theorem lean_workbook_plus_45807 : ∀ x y u v : ℝ, x^2 + y^2 = 1 ∧ u^2 + v^2 = 1 → x * u + y * v ≤ 1   :=  by sorry
+theorem lean_workbook_plus_45812 (a : ℕ → ℕ) (h1 : ∀ k, a k = (11 * k)) : ∃ A, A = {k | (1 ≤ k ∧ k ≤ 2015) ∧ (11 ∣ a k)}   :=  by sorry
+theorem lean_workbook_plus_45825 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) : (a / (4 * a + 5 * b))^(1 / 2) + (b / (4 * b + 5 * c))^(1 / 2) + (c / (4 * c + 5 * a))^(1 / 2) ≥ 5 / 6   :=  by sorry
+theorem lean_workbook_plus_45833 (a b c : ℝ) (h : a * b + b * c + c * a = 3) : a ^ 2 + b ^ 2 + c ^ 2 + 3 ≥ 2 * (a + b + c)   :=  by sorry
+theorem lean_workbook_plus_45835 (a b : ℂ) : ‖a * b‖ = ‖a‖ * ‖b‖   :=  by sorry
+theorem lean_workbook_plus_45841 (θ : ℝ) (k : ℤ) : θ = π/6 + π*k/2 ↔ θ = π/6 + π*k/2   :=  by sorry
+theorem lean_workbook_plus_45845 (x : ℝ) (hx : x = 7) : (x - 1) / x * (x - 2) / (x - 1) * (x - 3) / (x - 2) = 4 / 7   :=  by sorry
+theorem lean_workbook_plus_45849  (k : ℕ)
+  (h₀ : 0 < k)
+  (h₁ : (3 * k / 2) < 15) :
+  k < 10   :=  by sorry
+theorem lean_workbook_plus_45884 {a b c : ℤ} (ha : Odd a) (hb : Odd b) : Odd c → a^2 + b^2 + c^2 ≡ 2 [ZMOD 4] ∨ a^2 + b^2 + c^2 ≡ 3 [ZMOD 4]   :=  by sorry
+theorem lean_workbook_plus_45907 (x : ℝ) : 2 * Real.cos 2 * x = Real.sin x * Real.cos 2 * x + Real.sqrt 3 * Real.cos 2 * x * Real.cos x ↔ 2 * Real.cos 2 * x = Real.sin x * Real.cos 2 * x + Real.sqrt 3 * Real.cos 2 * x * Real.cos x   :=  by sorry
+theorem lean_workbook_plus_45916 (x : ℝ) (f : ℝ → ℝ) (hf: f x = (sin x ^ 2 * (1 - sin x)) / (1 + sin x ^ 2)) : f x = (sin x ^ 2 * (1 - sin x)) / (1 + sin x ^ 2)   :=  by sorry
+theorem lean_workbook_plus_45923 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) : a / (b^2 + c^2) + b / (a^2 + c^2) + c / (a^2 + b^2) ≥ 3 / 2 * Real.sqrt 3   :=  by sorry
+theorem lean_workbook_plus_45947 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : a / (a + 3 * b) + b / (b + 3 * c) + c / (c + 3 * d) + d / (d + 3 * a) < 3   :=  by sorry
+theorem lean_workbook_plus_45985 : 13 ∣ 2^70 + 3^70   :=  by sorry
+theorem lean_workbook_plus_45992 (n : ℕ) (A : Matrix (Fin n) (Fin n) ℝ) : ∃ P : ℝ → ℝ, P = fun x ↦ Matrix.det (A - x • (1 : Matrix (Fin n) (Fin n) ℝ))   :=  by sorry
+theorem lean_workbook_plus_45995 (x : ℝ) (hx : x = 0) : x - x^2 / 2 + x^3 / 3 - x^4 / 4 = Real.log (abs (1 + x)) + C ↔ C = 0   :=  by sorry
+theorem lean_workbook_plus_45996 (a b c d : ℂ) : (a^2+b^2)*(c^2+d^2) = (a*c-b*d)^2+(a*d+b*c)^2   :=  by sorry
+theorem lean_workbook_plus_46013 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) (hab : a * b * c = 1) (h : a^2 + b^2 + c^2 = 3 / 2) : 1 / a + 1 / b - 1 / c ≤ 3 / (4 * a * b * c)   :=  by sorry
+theorem lean_workbook_plus_46031 (b : ℕ) (p : ℕ) (k : ℕ) (h₁ : b = 4095) (h₂ : p^k = 13) : (p^k)^3 = 2197   :=  by sorry
+theorem lean_workbook_plus_46033  (n : ℕ)
+  (h₀ : 5 ≤ n) :
+  (2^n) > n^2   :=  by sorry
+theorem lean_workbook_plus_46036 : ∃ x y : ℤ, x^2 - 18 * y^2 = 31   :=  by sorry
+theorem lean_workbook_plus_46042 : 7^4 ≡ 1 [ZMOD 400]   :=  by sorry
+theorem lean_workbook_plus_46043 (a b : ℝ) : ∀ θ : ℝ, a * Real.sin θ + b * Real.cos θ ≤ Real.sqrt (a ^ 2 + b ^ 2)   :=  by sorry
+theorem lean_workbook_plus_46047  (h : ℝ)
+  (hh : 0 < h)
+  (hh2 : (h / Real.sqrt 3 + 4 + h * Real.sqrt 3) = 16) :
+  h = 3 * Real.sqrt 3   :=  by sorry
+theorem lean_workbook_plus_46049 : ∀ x : ℝ, 0.6 < x ∧ x < 1 → x - x^3 < 0.6   :=  by sorry
+theorem lean_workbook_plus_46051  (x d : ℝ)
+  (h₀ : 0 < x ∧ 0 < d)
+  (h₁ : Real.tan 15 = d / x) :
+  d = x * Real.tan 15   :=  by sorry
+theorem lean_workbook_plus_46055 (x y : ℝ) : x = π/2 + y → x - y = π/2   :=  by sorry
+theorem lean_workbook_plus_46069 (n : ℕ) (x : Fin n → ℝ) :
+    ∃ ε : Fin n → ℝ, ∀ i, ε i = 1 ∨ ε i = -1 ∧
+    (∑ i, ε i * x i) ^ 2 ≤ ∑ i, (x i) ^ 2   :=  by sorry
+theorem lean_workbook_plus_46073 (n : ℕ) (w z : Fin n → ℂ) (h : ∀ i, ‖w i‖ = ‖z i‖) : ∑ i, ‖z i‖^2 ≤ ∑ i, ‖w i‖^2   :=  by sorry
+theorem lean_workbook_plus_46074 (x y : ℝ) (h₁ : (x - 3) ^ 2 + (y + 1) ^ 2 = 9) : x ^ 2 + y ^ 2 - 6 * x + 2 * y + 1 = 0   :=  by sorry
+theorem lean_workbook_plus_46083 : ∀ a b c : ℝ, a > 0 ∧ b > 0 ∧ c > 0 → (a - b) / (b + c) + (b - c) / (c + a) + (c - a) / (a + b) ≥ 0   :=  by sorry
 theorem lean_workbook_plus_46085 : 2 * Real.cos (0 * θ) + 1 = 3   :=  by sorry
-theorem lean_workbook_plus_64435 (a b c d : ℤ) : (a+b)^2 - 4*a*b = (c+d)^2 - 4*c*d ↔ (a-b)^2 = (c-d)^2   :=  by sorry
-theorem lean_workbook_plus_63403 (a b c : ℝ) : a * b * (b - a) + b * c * (c - b) + c * a * (a - c) = (a - b) * (b - c) * (c - a)   :=  by sorry
-theorem lean_workbook_plus_7841 (a b : ℝ) : -(a^2 + a * b + b^2)^2 ≤ 0   :=  by sorry
-theorem lean_workbook_plus_72962 {x a : ℝ} (h₁ : x ≠ 0) (h₂ : a = 7) : (x + a + 1) / x = a - x ↔ x^2 - (a - 1) * x + a + 1 = 0   :=  by sorry
-theorem lean_workbook_plus_9124 (x y : ℕ) : (x = 0 ∨ 0 < x) ∧ (y = 0 ∨ 0 < y)   :=  by sorry
-theorem lean_workbook_plus_58975 (X : Matrix (Fin 2) (Fin 2) ℝ) : ∃ a b c d : ℝ, X =!![a, b; c, d]   :=  by sorry
-theorem lean_workbook_plus_44806 (n : ℕ) (hn : 1 ≤ n) : ∃ m, (2^n ∣ m) ∧ (Nat.digits 10 m).all (· ∈ ({8, 9} : Finset ℕ))   :=  by sorry
-theorem lean_workbook_plus_26308 (x y : ℝ) (h₁ : y^2 ≤ x ∧ x ≤ 1) (h₂ : 0 ≤ y ∧ y ≤ 1) : 0 ≤ x ∧ x ≤ 1 ∧ 0 ≤ y ∧ y ≤ 1   :=  by sorry
-theorem lean_workbook_plus_43795 (x : ℕ) : x ≡ 4 [ZMOD 5] ↔ x ≡ 4 [ZMOD 5]   :=  by sorry
-theorem lean_workbook_plus_8892 (f : ℝ → ℝ) (β : ℝ) (h : ∀ x, f x ≥ β) : ∀ x, f x ≥ β   :=  by sorry
-theorem lean_workbook_plus_13465 (x y z : ℝ) (k : ℝ) (h₁ : k ≥ 1) (h₂ : x^2 + y^2 + z^2 = k * (x * y + x * z + y * z)) : 3 * (k + 1)^3 ≥ 8 * (k + 2)   :=  by sorry
-theorem lean_workbook_plus_44792 (h : ℕ) : (2^(2 * h) * Real.sqrt ((2^(2 * h))) : ℝ) = 2^(3 * h)   :=  by sorry
-theorem lean_workbook_plus_21026 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^2 / (a + b)^2 + b^2 / (b + c)^2 + c / (c + a)) ≥ 1   :=  by sorry
-theorem lean_workbook_plus_24028 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (h : x * (x + y + z) = 3 * y * z) : (x + y) ^ 3 + (x + z) ^ 3 + 3 * (x + y) * (y + z) * (z + x) ≤ 5 * (y + z) ^ 3   :=  by sorry
-theorem lean_workbook_plus_7600 {x y : ℝ} (k : ℕ) (h : 0 < k) (h1 : (↑k * x) % 1 = (↑k * y) % 1) (h2 : ((↑k + 1) * x) % 1 = ((↑k + 1) * y) % 1) (n : ℕ) (hn : 0 < n) : (↑n * x) % 1 = (↑n * y) % 1   :=  by sorry
-theorem lean_workbook_plus_34004 (a : ℝ) (h : a ≥ 1) : a ^ 3 + 3 * a ^ 2 - 4 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_53900 : ∑ k in Finset.Icc 11 20, ((k:ℕ)^2 + 1) = 2495   :=  by sorry
-theorem lean_workbook_plus_72779 (x y : ℝ) (h₁ : x = 0) (h₂ : y = 0) : x^4 + y^4 = 0   :=  by sorry
-theorem lean_workbook_plus_60767 (x y : ℝ) : 3 * x ^ 2 + y ^ 2 - x * y ≥ (y - 1 / 2 * x) ^ 2 ∧ (y - 1 / 2 * x) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_51549 (m n : ℝ) (h₁ : m ≥ 0 ∧ n ≥ 0) (h₂ : m ≠ 0) : 2 * Real.sqrt m * (Real.sqrt m + Real.sqrt n) * (Real.sqrt m + Real.sqrt n) / (2 * Real.sqrt m) = (Real.sqrt m + Real.sqrt n) ^ 2   :=  by sorry
-theorem lean_workbook_plus_32867 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : a / b + b / a ≥ (a + 1) / (b + 1) + (b + 1) / (a + 1)   :=  by sorry
-theorem lean_workbook_plus_11649 (m : ℕ) (hm : 0 < m) (S : Finset ℕ) (hS : S = Finset.Icc 1 (51 * m)) (A : Finset ℕ) (hA : A ⊆ S) (hA' : A.card = 50 * m) : ∃ X Y : Finset ℕ, (X ∩ Y = ∅ ∧ Y ∩ A = ∅ ∧ A ∩ X = ∅ ∧ (∑ x in X, x = ∑ y in Y, y ∧ ∑ x in X, x ^ 2 = ∑ y in Y, y ^ 2))   :=  by sorry
-theorem lean_workbook_plus_23867 (a b c d : ℝ) : 6 * (a ^ 4 + b ^ 4 + c ^ 4 + d ^ 4) + 12 * (a ^ 2 * b ^ 2 + a ^ 2 * c ^ 2 + a ^ 2 * d ^ 2 + b ^ 2 * c ^ 2 + b ^ 2 * d ^ 2 + c ^ 2 * d ^ 2) ≥ 8 * (a ^ 3 * b + b ^ 3 * a + a ^ 3 * c + c ^ 3 * a + a ^ 3 * d + d ^ 3 * a + b ^ 3 * c + c ^ 3 * b + b ^ 3 * d + d ^ 3 * b + c ^ 3 * d + d ^ 3 * c)   :=  by sorry
-theorem lean_workbook_plus_22147 (x : ℝ) : Real.logb 25 10 = Real.log 10 / Real.log 25   :=  by sorry
-theorem lean_workbook_plus_45519 (n : ℤ) : n^7 ≡ n [ZMOD 7]   :=  by sorry
-theorem lean_workbook_plus_58886 (a b : ℝ) (h₁ : a > b) (h₂ : b > 0) : Real.sqrt a > Real.sqrt b   :=  by sorry
-theorem lean_workbook_plus_19388 : ∀ x : ℝ, sin (-x) = -sin x   :=  by sorry
-theorem lean_workbook_plus_3380 : ∀ a b c : ℝ, a^2 + b^2 + c^2 ≥ 3 * (a^2 * b^2 * c^2)^(1/3) ↔ a^2 + b^2 + c^2 ≥ 3 * (a^2 * b^2 * c^2)^(1/3)   :=  by sorry
-theorem lean_workbook_plus_66346 (n : ℕ) (h : n > 0) : Even (2 ^ n)   :=  by sorry
-theorem lean_workbook_plus_69769 (a : ℤ) (h : 23 ∣ a^2 + 1) : 23 ∣ a^22 + 1   :=  by sorry
-theorem lean_workbook_plus_23539 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 3) : a^(1/3) + b^(1/3) + c^(1/3) ≥ a * b + b * c + c * a   :=  by sorry
-theorem lean_workbook_plus_61182 (a b c : ℝ) (hab : a + b + c = 3) (h : a > 0 ∧ b > 0 ∧ c > 0)(habc : a * b * c = 1) : a ^ 2 + b ^ 2 + c ^ 2 ≥ a + b + c   :=  by sorry
-theorem lean_workbook_plus_79360 : ∀ n : ℕ, ∑ i in Finset.range n, 2 ^ i = 2 ^ n - 1   :=  by sorry
-theorem lean_workbook_plus_39433 (x y z : ℝ) : (x + y + 2 * z) ^ 2 ≥ 4 * (y + z) * (x + z)   :=  by sorry
-theorem lean_workbook_plus_77870 : a * b * c = 1 → (a + b + c) ^ 2 - 3 * (a + b + c) + 6 ≥ 2 * (a * b + b * c + a * c)   :=  by sorry
-theorem lean_workbook_plus_27159 : ∀ n : ℝ, n^4-6*n^3+14*n^2-16*n+8 ≥ 0 ↔ (n^2-2*n+2)*(n-2)^2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_32212 (f : ℤ → ℤ) (h : ∃ c, ∀ x, f x = c) : ∃ c, ∀ x, f x = c   :=  by sorry
-theorem lean_workbook_plus_30753 (n : ℕ) : ∃ k : ℝ, ∀ ε : ℝ, ε > 0 → ∃ N : ℕ, ∀ x : ℕ, x > N → |(n * ((1 + 1 / n)^(n + 1) - exp 1)) - k| < ε   :=  by sorry
-theorem lean_workbook_plus_8319 (n : ℕ) (x y : ℕ → ℕ) : (A - 2 * n * y 1) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_50138 (x y z a b c : ℝ) (hab : 0 < a ∧ 0 < b ∧ 0 < c) (h : x = (b - c) / (b + c) ∧ y = (c - a) / (c + a) ∧ z = (a - b) / (a + b)) : -1 ≤ x ∧ x ≤ 1 ∧ -1 ≤ y ∧ y ≤ 1 ∧ -1 ≤ z ∧ z ≤ 1 ∧ x + y + z + x * y * z = 0   :=  by sorry
-theorem lean_workbook_plus_19218 : 10 ≡ -1 [ZMOD 11]   :=  by sorry
-theorem lean_workbook_plus_49452 : fib 14 = 377   :=  by sorry
-theorem lean_workbook_plus_25978 (m n p : ℝ) (hm : 0 < m) (hn : 0 < n) (hp : 0 < p) : m / (1 + m + m * n) + n / (1 + n + n * p) + p / (1 + p + p * m) ≤ 1   :=  by sorry
-theorem lean_workbook_plus_41989 {a b c : ℝ} (ha : a > 0) (hb : b > 0) (hc : c > 0) : a^3 * b + a^2 * b * c + c^2 * a * b ≥ 3 * a^2 * b * c   :=  by sorry
-theorem lean_workbook_plus_72012 {a b : ℝ} (h1 : a > b) (h2 : b > 0) (h3 : a^5 + b^5 = a - b) : a^4 + 2 * b^4 < 1   :=  by sorry
-theorem lean_workbook_plus_77228 (m : ℕ) :
-  ∑ i in Finset.range (m+1), i^2 = m * (2 * m + 1) * (m + 1) / 6   :=  by sorry
-theorem lean_workbook_plus_76132 (a b c : ℝ) (hab : a ≠ b) (hbc : b ≠ c) (hca : c ≠ a) : a^3 / (b - c)^2 + b^3 / (c - a)^2 + c^3 / (a - b)^2 = a + b + c + (a / (b - c) + b / (c - a) + c / (a - b)) * (a^2 / (b - c) + b^2 / (c - a) + c^2 / (a - b))   :=  by sorry
-theorem lean_workbook_plus_44090 : ∑ i in Finset.range 101, i = 5050   :=  by sorry
-theorem lean_workbook_plus_13877 : ∀ d e : ℤ, (d * e ≡ -1 [ZMOD 24]) → (d^2 * e ≡ e [ZMOD 24]) ∧ (d^2 * e ≡ -d [ZMOD 24]) → d + e ≡ 0 [ZMOD 24]   :=  by sorry
-theorem lean_workbook_plus_66707 (x y z : ℝ) (h : 3 = x * y + y * z + z * x) : 3 * (x + y) * (x + z) * (y + z) * (x + y + z) ≥ 8 * (x ^ 2 + y ^ 2 + z ^ 2 + 6)   :=  by sorry
-theorem lean_workbook_plus_50024  (x y z : ℝ)
-  (h₀ : 0 < abs (x - y))
-  (h₁ : 0 < abs (y - z))
-  (h₂ : 0 < abs (z - x))
-  (h₃ : abs (x - y) ≥ abs (y - z))
-  (h₄ : abs (y - z) ≥ abs (z - x))
-  (h₅ : abs (z - x) ≥ 1) :
-  3 ≤ x^2 + y^2 + z^2 - x * y - y * z - z * x   :=  by sorry
-theorem lean_workbook_plus_46985 : 77 = 7 * 11   :=  by sorry
-theorem lean_workbook_plus_59895 (a b : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) : (a^2 + b + 3/4) * (b^2 + a + 3/4) ≥ (2*a + 1/2) * (2*b + 1/2)   :=  by sorry
-theorem lean_workbook_plus_24926 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) : (a^2 + b^2) / (a + b) + (b^2 + c^2) / (b + c) ≥ (a + 2 * b + c) / 2   :=  by sorry
-theorem lean_workbook_plus_16505 (n : ℕ) (y : Fin n → NNReal) (h : 3 / 2 ≥ 1) :
-  (∑ i : Fin n, y i) ^ (3 / 2) ≥ ∑ i : Fin n, y i ^ (3 / 2)   :=  by sorry
-theorem lean_workbook_plus_12796 (x : ℝ) (hx : 0 ≤ x ∧ x ≤ 1) : x + 2 ≥ 2^x   :=  by sorry
-theorem lean_workbook_plus_18751 (p q θ α β : ℝ) (hp : p = Real.cos (θ - α)) (hq : q = Real.sin (θ + β)) : p^2 + q^2 - 2 * p * q * Real.sin (α + β) = Real.cos (α + β)^2   :=  by sorry
-theorem lean_workbook_plus_34870 (a b : ℝ) (h : a + b = 1) : a^2 + b^2 > a * b   :=  by sorry
-theorem lean_workbook_plus_71315 (x : ℝ) (hx : sin x ≠ 0 ∧ cos x ≠ 0) : sin x / cos x + cos x / sin x = 1 / (sin x * cos x)   :=  by sorry
-theorem lean_workbook_plus_1662 {a b c d : ℝ} : (a + c) * (c + d) * (d + b) * (b + a) ≥ (a + b + c + d) * (a * b * c + b * c * d + c * d * a + d * a * b) ∧ (a + c) * (c + b) * (b + d) * (d + a) ≥ (a + b + c + d) * (a * b * c + b * c * d + c * d * a + d * a * b)   :=  by sorry
-theorem lean_workbook_plus_77826 (a b c: ℝ) (hab : a > 0 ∧ b > 0 ∧ c > 0 ∧ a * b + b * c + a * c = 3): a + b + c >= 3   :=  by sorry
-theorem lean_workbook_plus_71970 (a b : ℝ) (u v : ℝ) : a * sin u + b * sin (u + v) = (a + b * cos v) * sin u + (b * sin v) * cos u   :=  by sorry
-theorem lean_workbook_plus_43331 (n : ℕ) (hn: n > 0) (S : Finset (Finset ℕ)) (hS: S.card = 2^(n-1)) (hS2: ∀ A B : Finset ℕ, A ∈ S ∧ B ∈ S → A ∩ B ≠ ∅) : S.card = 2^(n-1)   :=  by sorry
-theorem lean_workbook_plus_79990 (a : ℝ) : (a^6 + a^4 - a^3 - a + 1) ≥ 1/4   :=  by sorry
-theorem lean_workbook_plus_27810 :
-  ∀ a b c d : ℝ,
-    4 * (a - c)^2 * (c + a)^2 + 4 * (b - d)^2 * (b + d)^2 =
-    (b^2 - d^2 - a^2 + c^2)^2 + (c^2 - a^2 - b^2 + d^2)^2 +
-    (a^2 - b^2 - c^2 + d^2)^2 + (a^2 - c^2 - d^2 + b^2)^2   :=  by sorry
-theorem lean_workbook_plus_25516 (x : ℝ) (hx : x > 0) (h'x : x ≠ 1) : 4 * x^6 - 3 * x^5 + x^4 + 5 * x^3 + 2 * x^2 - x + 1 > 0   :=  by sorry
-theorem lean_workbook_plus_10007 : ∀ n : ℕ, ∑ k in Finset.range (n+1), (Nat.choose n k) = 2^n   :=  by sorry
-theorem lean_workbook_plus_19567 (n : ℕ) (hn : 2 < n) : 3^n > 3*n   :=  by sorry
-theorem lean_workbook_plus_46486 (x : ℝ) : -1 / 2 < x ∧ x < 45 / 8 ↔ -1 / 2 < x ∧ x < 45 / 8   :=  by sorry
-theorem lean_workbook_plus_75459 (k : ℕ) : 2 * (k * (k + 1) / 2) = k * (k + 1)   :=  by sorry
-theorem lean_workbook_plus_57119 {a b c : ℝ} (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / (b + c) + b / (c + a) + c / (a + b)) ≥ 3 / 2   :=  by sorry
-theorem lean_workbook_plus_32661 : ∀ k : ℕ, (13121^k ≡ (95 * 137 + 106)^k [ZMOD 137])   :=  by sorry
-theorem lean_workbook_plus_44543 (x:ℝ) : x^4 ≥ 4*x-3   :=  by sorry
-theorem lean_workbook_plus_41163 : ∀ t : ℝ, t ≤ 1 → 1 / (1 + t ^ 2) ≤ 27 * (2 - t) / 50   :=  by sorry
-theorem lean_workbook_plus_81405  (x : ℕ → ℝ)
-  (n : ℕ)
+theorem lean_workbook_plus_46094 (a b : Fin 7 → ℝ) (h : ∀ i j, i ≠ j → 1 < |a i - a j| + |b i - b j|) : 1 < |a 0 - a 1| + |b 0 - b 1| ∧ 1 < |a 1 - a 2| + |b 1 - b 2| ∧ 1 < |a 2 - a 3| + |b 2 - b 3| ∧ 1 < |a 3 - a 4| + |b 3 - b 4| ∧ 1 < |a 4 - a 5| + |b 4 - b 5| ∧ 1 < |a 5 - a 6| + |b 5 - b 6| ∧ 1 < |a 6 - a 7| + |b 6 - b 7|   :=  by sorry
+theorem lean_workbook_plus_46102 (x y : ℝ) : x^2 - 4 * x * y - y^2 ≤ 6 * x^2 + 3 * y^2   :=  by sorry
+theorem lean_workbook_plus_46105 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hab : a + b + c = 6) : 2 * (b * (a + c))^(1 / 3) + 2 * (a * (b + c))^(1 / 3) + 2 * (c * (a + b))^(1 / 3) + 3 * (2 / 3 * (a ^ 2 + b ^ 2 + c ^ 2))^(1 / 3) ≤ 18   :=  by sorry
+theorem lean_workbook_plus_46118 (a b c : ℝ) (ha : 0 < a) (hb : b^2 < 4 * a * c) : 3 * b < 2 * a + 6 * c   :=  by sorry
+theorem lean_workbook_plus_46119 (α : ℝ) : (sin α - 1) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_46120 (f : ℝ → ℝ) (hf1 : ∀ x, f x ^ 2 = f (x ^ 2)) (hf2 : ∀ x, f (- x) = - f x) : ∀ x ≥ 0, f x ≥ 0   :=  by sorry
+theorem lean_workbook_plus_46145 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 3) : a^4 + b^4 + c^4 ≥ a^3 + b^3 + c^3   :=  by sorry
+theorem lean_workbook_plus_46157 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 1) (h : (a + b) * (b + c) * (c + a) = 1) : a * b + b * c + c * a ≤ 3 / 4   :=  by sorry
+theorem lean_workbook_plus_46159  (a r : ℂ) :
+  (a / (1 - r)) * (a / (1 + r)) = a^2 / (1 - r^2)   :=  by sorry
+theorem lean_workbook_plus_46161 :
+  123456789 = (10^10 - 91) / 81   :=  by sorry
+theorem lean_workbook_plus_46162 (x : ℝ) (hx : x = 10^302) : x^2 / x^2 = 1   :=  by sorry
+theorem lean_workbook_plus_46163 : √1 = 1   :=  by sorry
+theorem lean_workbook_plus_46167 (h : 5 > 3) : (Nat.choose 5 2 - Nat.choose 3 2) / Nat.choose 5 2 = 7 / 10   :=  by sorry
+theorem lean_workbook_plus_46170 (x : ℝ) (hx : (30 - x) ^ 2 + 15 ^ 2 = (15 + x) ^ 2) : x = 10   :=  by sorry
+theorem lean_workbook_plus_46178 (A B C : ℝ) (hx: A > 0 ∧ B > 0 ∧ C > 0) (hab : A + B + C = π) : (sin A / 2)^2 + (sin B / 2)^2 + (sin C / 2)^2 ≥ 4 * ((sin A / 2)^2 * (sin B / 2)^2 + (sin B / 2)^2 * (sin C / 2)^2 + (sin C / 2)^2 * (sin A / 2)^2)   :=  by sorry
+theorem lean_workbook_plus_46182 : ∀ t : ℝ, 2 * (t ^ 2 - t + 1) / (t ^ 2 + 1) ≥ 1   :=  by sorry
+theorem lean_workbook_plus_46192 (k : ℕ) (h₁ : m = 2^(4 * k + 2) + 1) : m = 2^(4 * k + 2) + 1   :=  by sorry
+theorem lean_workbook_plus_46203 :
+  ∑' k : ℕ, (1 / 4)^k * (Real.sqrt 5 / 4) = (Real.sqrt 5 / 3)   :=  by sorry
+theorem lean_workbook_plus_46215  (x y : ℝ)
+  (h₀ : x * y * (x + y) = 30)
+  (h₁ : x * y + (30 / (x * y)) = 11) :
+  x + y = (30 / (x * y))   :=  by sorry
+theorem lean_workbook_plus_46242 : 1 = 4^2 + 7^2 - 8^2 ∧ 2 = 5^2 + 11^2 - 12^2   :=  by sorry
+theorem lean_workbook_plus_46244 (n : ℕ) (hn : 1 < n) (c d : ℝ) (hcd : c + d = 1) :
+  1 - 1 / n < c + d ∧ c + d < 1 + 1 / n   :=  by sorry
+theorem lean_workbook_plus_46268 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : a * (b * b + c * c) + b * (c * c + a * a) + c * (a * a + b * b) ≤ a * a * a + b * b * b + c * c * c + 3 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_46273 (x y z t : ℝ) : (x^2 + x * y + y^2) * (z^2 + z * t + t^2) ≥ ((x + y / 2)^2 + 3 * y^2 / 4) * ((t + z / 2)^2 + 3 * z^2 / 4) ∧ ((x + y / 2)^2 + 3 * y^2 / 4) * ((t + z / 2)^2 + 3 * z^2 / 4) ≥ ((x + y / 2) * (t + z / 2) + 3 * y * z / 4)^2   :=  by sorry
+theorem lean_workbook_plus_46291 : ∀ n : ℕ, (16 * n ^ 3 + 40 * n ^ 2 + 25 * n) ≤ (16 * n ^ 3 + 40 * n ^ 2 + 33 * n + 9)   :=  by sorry
+theorem lean_workbook_plus_46307 (x : ℝ) (hx : 1 ≤ x) : Real.log x ≤ x - 1   :=  by sorry
+theorem lean_workbook_plus_46311 :
+  30 / (36 + 30 + 25) * 100 = 30 / 91 * 100 ∧
+  25 / (36 + 30 + 25) * 100 = 25 / 91 * 100   :=  by sorry
+theorem lean_workbook_plus_46312 (n : ℕ) (hn : n = 1009) : n + 1 = 1010   :=  by sorry
+theorem lean_workbook_plus_46320 (n : ℕ) (h : n % 2 = 1) : (4:ℤ)^n + n^4 = (2^n + n^2)^2 - n^2 * 2^(n+1)   :=  by sorry
+theorem lean_workbook_plus_46321 (x y : ℝ) : (3*x-10*y=570 ∧ -2*x+13*y=57) ↔ x=420 ∧ y=69   :=  by sorry
+theorem lean_workbook_plus_46323 (n a : ℤ) (hn : n > 0) : gcd a (a + n) ∣ n   :=  by sorry
+theorem lean_workbook_plus_46324  (n s : ℕ)
   (h₀ : 0 < n)
-  (h₁ : ∀ i, 0 ≤ x i)
-  (h₂ : ∀ i, x i^2 ≤ x n^2) :
-  ∀ i, -|x n| ≤ x i ∧ x i ≤ |x n|   :=  by sorry
-theorem lean_workbook_plus_48595 (x y : ℝ) (h₁ : 3*x + 4*y = 4) (h₂ : 2*x + 6*y = 9) : 10*x + 20*y = 26   :=  by sorry
-theorem lean_workbook_plus_39984 (f g : ℝ → ℝ) (hf : ∀ x, f x = 3 * x + a) (hg : ∀ x, g x = x / 3 + b) (h : a + 3 * b = 12) : ∃ a b : ℝ, a + 3 * b = 12 ∧ ∀ x, f x = 3 * x + a ∧ g x = x / 3 + b   :=  by sorry
-theorem lean_workbook_plus_80978 (r a s : ℝ) : r = 1 / 3 * a ∧ a = 1 / 2 * s * Real.sqrt 3 → r = s * Real.sqrt 3 / 6   :=  by sorry
-theorem lean_workbook_plus_61745 (m n : ℝ) (hm : 1 ≤ m) (hn : 1 ≤ n) (hmn : 1 ≤ m * n) : 1 / m + 1 / n ≥ 16 / (1 + 8 * m * n)   :=  by sorry
-theorem lean_workbook_plus_21670 : ∀ a b c : ℝ, 4 * a ^ 4 + 4 * b ^ 4 + 4 * c ^ 4 ≥ 4 * a ^ 2 * b ^ 2 + 4 * b ^ 2 * c ^ 2 + 4 * c ^ 2 * a ^ 2   :=  by sorry
-theorem lean_workbook_plus_75361 (a b c : ℝ) (ha : a > 0) (hb : b > 0) (hc : c > 0) : (a / (a + b))^(1 / 3) + (b / (b + c))^(1 / 3) + (c / (c + a))^(1 / 3) ≤ (3:ℝ) / 2^(1 / 3)   :=  by sorry
-theorem lean_workbook_plus_67978 : 2 ^ 2005 + 2004 ^ 2005 ≡ 0 [ZMOD 2006]   :=  by sorry
-theorem lean_workbook_plus_36019 (a b k : ℝ) (ha : 0 < a) (hb : 0 < b) (hk : 0 ≤ k ∧ k ≤ 32) : 1 / a + 1 / b + k / (a + b) ≥ 3 * (1 + k / 4) * (1 / (2 * a + b) + 1 / (2 * b + a))   :=  by sorry
-theorem lean_workbook_plus_64142 (d S : ℤ) (hd : d > 0) : ∃ n : ℕ, ∃ ε : Fin n → ℤ, ∑ i, ε i * (1 + i * d) ^ 2 = S   :=  by sorry
+  (h₁ : s = 15)
+  (h₂ : s + 3 * n = 45) :
+  n = 10   :=  by sorry
+theorem lean_workbook_plus_46334 (k : ℕ) : k = k   :=  by sorry
+theorem lean_workbook_plus_46338 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : 2 * (a ^ 4 + b ^ 4) + 17 > 16 * a * b   :=  by sorry
+theorem lean_workbook_plus_46374 : ∀ a : ℤ, a ^ 2 ≡ 0 [ZMOD 4] ∨ a ^ 2 ≡ 1 [ZMOD 4]   :=  by sorry
+theorem lean_workbook_plus_46376 : ∀ w : ℝ, (w - 3 / 2)^2 + 3 / 4 > 0   :=  by sorry
+theorem lean_workbook_plus_46438 (x y z : ℝ) (h : x ≠ y ∧ y ≠ z ∧ z ≠ x) : ∃ f : ℝ → ℝ, f x * f y * f z = f x / (x - y) / (x - z) + f y / (y - x) / (y - z) + f z / (z - x) / (z - y)   :=  by sorry
+theorem lean_workbook_plus_46442 (x : ℝ) (hx : x ≥ -1/3) : x / (x ^ 2 + 1) ≤ 1 / 2   :=  by sorry
+theorem lean_workbook_plus_46444 (s t : ℝ) (n m : ℕ) : ∃ (f : ℝ → ℝ), ∀ x ∈ Set.Icc 0 t, f x = exp x * (x - t) ^ n * (x - s) ^ m   :=  by sorry
+theorem lean_workbook_plus_46457 (t a : ℕ → ℕ) (n : ℕ) (ht : t n = 2^(2^n)) (ha : a n = 2^(2^n+1)-1) : a n = 2 * t n - 1   :=  by sorry
+theorem lean_workbook_plus_46460 : ∀ a b c : ℝ, a > 0 ∧ b > 0 ∧ c > 0 → a^2 + (-2*c + 3*b)*a + b^2 + c^2 - b*c ≥ 0   :=  by sorry
+theorem lean_workbook_plus_46461 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : 2 * (a^2 - a + 1) * (b^3 + 1) ≥ (a^2 + b) * (b^2 + 1)   :=  by sorry
+theorem lean_workbook_plus_46472 : ∀ θ : ℝ, |cos θ| ≤ 1   :=  by sorry
 theorem lean_workbook_plus_46480  (m t : ℝ)
   (h₀ : m + t = 12.48)
   (h₁ : m + 2 * t = 17.54) :
   m = 7.42   :=  by sorry
-theorem lean_workbook_plus_62734 (x y z : ℝ) :
-  |x| + |y| + |z| + |x + y + z| ≥ |x + y| + |y + z| + |z + x|   :=  by sorry
-theorem lean_workbook_plus_55079 {k m y : ℤ} (h₁ : k = 3*m) (h₂ : m*(12*m - 1) = y^2) : ∃ k m y : ℤ, k = 3*m ∧ m*(12*m - 1) = y^2   :=  by sorry
-theorem lean_workbook_plus_3836 (x y : ℤ) : x^4 + 4*y^4 = (x^2 + 2*y^2 + 2*x*y) * (x^2 + 2*y^2 - 2*x*y)   :=  by sorry
-theorem lean_workbook_plus_56292 : 15 ^ 18 ≡ 1 [ZMOD 19]   :=  by sorry
-theorem lean_workbook_plus_72914 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 3) : 2 * (a^(3/4) + b^(3/4) + c^(3/4)) ≥ 3 + a * b + b * c + c * a   :=  by sorry
-theorem lean_workbook_plus_74894  (x : ℕ)
-  (h₀ : 0 < x)
-  (h₁ : 40 * x + 20727 ≥ 2 * (8 * x^2 + 4 * x + 3) + 1) :
-  1 ≤ x ∧ x ≤ 37   :=  by sorry
-theorem lean_workbook_plus_76682 (a b c : ℝ) (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : (a + b) * (b + c) * (c + a) / 8 ≥ (2 * a + b) * (2 * b + c) * (2 * c + a) / 27   :=  by sorry
-theorem lean_workbook_plus_55146 : ∀ x y z : ℝ, x > 0 ∧ y > 0 ∧ z > 0 →
-  x^2*y^2*z + y*z^2*x^2 + y^2*z^2*x + y^5 - z^2*x^3 + x^5 - y^3*z^2 - x^3*y^2 - x^2*y^3 - z^3*x^2 - z^3*y^2 + z^5 =
-  (x - y)^2 * (x - z)^2 * x + 3 * (x - y)^2 * (x + y - z)^2 * (y / 3 + z / 3) + 3 * (x - z)^2 * (x - y + z)^2 * (y / 3 + z / 3) + (y - z)^2 * y * z * (y + z)   :=  by sorry
-theorem lean_workbook_plus_2994 (x y : ℝ) : (x - y) ^ 2 + (x - 1) ^ 2 + (y - 1) ^ 2 ≥ 0   :=  by sorry
-theorem lean_workbook_plus_9607 (x : ℝ) : sin x = 0 ↔ ∃ n : ℤ, x = n * π   :=  by sorry
-theorem lean_workbook_plus_40320 (a b : ℝ) (hab : 1 ≤ a ∧ 1 ≤ b) (h : a + 1 / a ^ 2 ≥ b - 2 / b ^ 2) : a ≥ b / 2 - 1 / b ^ 2   :=  by sorry
-theorem lean_workbook_plus_20330 (y:ℝ) (hy: y ≥ 0) : y^2 ≤ y + y^3   :=  by sorry
+theorem lean_workbook_plus_46486 (x : ℝ) : -1 / 2 < x ∧ x < 45 / 8 ↔ -1 / 2 < x ∧ x < 45 / 8   :=  by sorry
+theorem lean_workbook_plus_46512 (a b c : ℝ) (habc : a + b + c = 1) : a^2 + b^2 + c^2 + a * b + b * c ≥ 1 / 2   :=  by sorry
+theorem lean_workbook_plus_46525 (n : ℕ) : ∑ p in Finset.Icc 1 n, choose n p = 2^n - 1   :=  by sorry
+theorem lean_workbook_plus_46526  (a b n : ℝ)
+  (h₀ : 64 - 8 * a + b = 0)
+  (h₁ : a = n + 8)
+  (h₂ : b = 8 * n) :
+  64 - 8 * a + b = 0   :=  by sorry
+theorem lean_workbook_plus_46527 (p : ℕ → ℕ) (hp : p = fun (n : ℕ) => 10 * n) : p 1 = 10   :=  by sorry
+theorem lean_workbook_plus_46535 (x : ℝ) (hx : 0 < x ∧ x < π) : (9 * (x ^ 2 * (sin x) ^ 2) + 4) / (x * sin x) ≥ 12   :=  by sorry
+theorem lean_workbook_plus_46536 (a b : ℝ) : (a + b) ^ 2 ≥ 2 * a * b   :=  by sorry
+theorem lean_workbook_plus_46540 (n : ℤ) : ∃ k : ℤ, n * (n + 1) / 2 = k   :=  by sorry
+theorem lean_workbook_plus_46559 (a b c d : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) (hd : d ≥ 0) (hab : a + b + c + d = 100) : (a / (b + 7))^(1 / 3) + (b / (c + 7))^(1 / 3) + (c / (d + 7))^(1 / 3) + (d / (a + 7))^(1 / 3) ≤ 8 / (7:ℝ)^(1 / 3)   :=  by sorry
+theorem lean_workbook_plus_46579  (a b c : ℝ)
+  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
+  (h₁ : a * b + b * c + c * a = 3) :
+  3 ≤ a + b + c   :=  by sorry
+theorem lean_workbook_plus_46588 (x y z : ℝ) (hx : x > 0 ∧ y > 0 ∧ z > 0) (h : x^3 + y^3 + z^3 = 3) : x*y*z + 8 ≥ 3 * (x*y + y*z + z*x)   :=  by sorry
+theorem lean_workbook_plus_46589 (A : ℕ) (hA : A ≡ -1 [ZMOD 8]) (hA' : A ≡ -1 [ZMOD 3]) : ∃ B : ℕ, B ≡ A [ZMOD 8] ∧ B ≡ A [ZMOD 3]   :=  by sorry
+theorem lean_workbook_plus_46596 (a b c : ℝ) : (b - c) ^ 2 * (b + c - 2 * a) ^ 2 + (c - a) ^ 2 * (c + a - 2 * b) ^ 2 + (a - b) ^ 2 * (a + b - 2 * c) ^ 2 = 1 / 2 * ((b - c) ^ 2 + (c - a) ^ 2 + (a - b) ^ 2) ^ 2   :=  by sorry
+theorem lean_workbook_plus_46600 (x y n : ℝ) : (cos (x - y) - cos (x + y) = n ↔ 2 * cos ((x - y) / 2) ^ 2 - 2 * cos ((x + y) / 2) ^ 2 = n)   :=  by sorry
+theorem lean_workbook_plus_46602 (a b c d : ℝ) (ha : a ∈ Set.Icc 0 1) (hb : b ∈ Set.Icc 0 1) (hc : c ∈ Set.Icc 0 1) (hd : d ∈ Set.Icc 0 1) : 3 * (a + b + c + d) ≤ 8 + a ^ 3 + b ^ 3 + c ^ 3 + d ^ 3   :=  by sorry
+theorem lean_workbook_plus_46612 {p : ℕ} (hp : Nat.Prime p) : (Nat.factorial (2 * p) / (Nat.factorial p) ^ 2) = (Nat.choose (2 * p) p)   :=  by sorry
+theorem lean_workbook_plus_46622 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x + y) * (y + z) * (z + x) ≥ 8 / 9 * (x + y + z) * (x * y + y * z + z * x)   :=  by sorry
+theorem lean_workbook_plus_46630 : ∀ a b c : ℝ, a^2 + b^2 + c^2 ≥ (1 / 3) * (a + b + c)^2 ↔ a^2 + b^2 + c^2 ≥ b * c + c * a + a * b   :=  by sorry
+theorem lean_workbook_plus_46655 :
+  (2^27653 - 1) % 625 = 491   :=  by sorry
+theorem lean_workbook_plus_46660 (a b : ℝ) (h₁ : a + b = 1) (h₂ : a^2 + b^2 = 2) : a * b = -1 / 2   :=  by sorry
+theorem lean_workbook_plus_46663 : (2 : ℝ) > 1   :=  by sorry
+theorem lean_workbook_plus_46667 : ∀ a b : ℂ, a^2 - b^2 = (a + b) * (a - b)   :=  by sorry
+theorem lean_workbook_plus_46668 : 3 ∣ (n - 2) → n ^ 2 + n + 2 ≡ 2 [ZMOD 3]   :=  by sorry
+theorem lean_workbook_plus_46671 (p q x y : ℝ) (h₁ : x - y = p) (h₂ : x + y = q) (h₃ : p * q = 240) (h₄ : p ≤ q) : x = (q + p) / 2 ∧ y = (q - p) / 2   :=  by sorry
+theorem lean_workbook_plus_46726 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : a / (a + 3) + b / (a * b + 2) + 1 / (b * (b + 2)) > 3 / 5   :=  by sorry
+theorem lean_workbook_plus_46737 (a b c : ℝ) :
+  (a^2 + b^2 + c^2)^2 ≥ (a * (b^2 - b * c + c^2) + b * (c^2 - c * a + a^2) + c * (a^2 - a * b + b^2)) * (a + b + c)   :=  by sorry
+theorem lean_workbook_plus_46738 (x y z : ℝ) (hx : x > 0) (hy : y > 0) (hz : z > 0) (h : x * y * z = 1) : (x + y + z) ^ 2 ≥ 3 * (x * y + y * z + z * x)   :=  by sorry
+theorem lean_workbook_plus_46743 (c : ℝ) : (1 + c^2) / 2 ≥ c   :=  by sorry
+theorem lean_workbook_plus_46756 (a b c : ℝ) :
+  8 * (a^2 * b^2 + b^2 * c^2 + c^2 * a^2) * (a^2 + b^2 + c^2) ≤
+  9 * (a^2 + b^2) * (a^2 + c^2) * (b^2 + c^2)   :=  by sorry
+theorem lean_workbook_plus_46764 (x y : ℝ) (h₁ : y = x / 2) (h₂ : y > 0) : x ≥ y   :=  by sorry
+theorem lean_workbook_plus_46767 : (a^2 + a * b + b^2)^2 = a^4 + 2 * b * a^3 + 3 * a^2 * b^2 + 2 * a * b^3 + b^4   :=  by sorry
+theorem lean_workbook_plus_46768 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : Real.sqrt x * Real.sqrt y = Real.sqrt (x * y)   :=  by sorry
+theorem lean_workbook_plus_46789 (n : ℕ) (h : n = p^4 * q) (hp : p.Prime) (hq : q.Prime) (hpq : p ≠ q) (h1 : p ∣ n) : p^3 ∣ p^4 ∨ p^3 ∣ q   :=  by sorry
+theorem lean_workbook_plus_46791 (x y : ℝ) : (x - y) ^ 2 * (7 * x ^ 2 + 7 * y ^ 2 + 10 * x * y) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_46804 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 8 * a ^ 3 + 3 * b ^ 3 + 3 * c ^ 3 + b ^ 2 * c + b * c ^ 2 ≥ 4 * (a ^ 2 * b + a * b ^ 2 + a ^ 2 * c + a * c ^ 2)   :=  by sorry
+theorem lean_workbook_plus_46818 (x y : ℝ) (h₁ : x = Real.sqrt 5) (h₂ : y = Real.sqrt 7) : y = Real.sqrt (x^2 + 2)   :=  by sorry
+theorem lean_workbook_plus_46821 :
+  (Nat.choose 7 3) + (Nat.choose 7 4) + (Nat.choose 7 5) = 91   :=  by sorry
 theorem lean_workbook_plus_46829 (a x : ℕ) (h : 4 * a * (a + 1) = 8 * x) : ∃ k : ℕ, k * (k + 1) / 2 = x   :=  by sorry
-theorem lean_workbook_plus_82846  (a b c : ℝ)
-  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c) :
-  a / (b + c) + b / (a + c) + c / (a + b) ≥ 1.5   :=  by sorry
-theorem lean_workbook_plus_3127  (x y : ℝ)
-  (h₀ : 0 ≤ 1 + x^2 + y^2 + x^2 * y^2)
-  (h₁ : 0 ≤ 2 + x^2 + y^2)
-  (h₂ : 1 + x^2 + y^2 + x^2 * y^2 ≠ 0)
-  (h₃ : 2 + x^2 + y^2 ≠ 0)
-  (h₄ : 0 ≤ x * y) :
-  (2 * x * y - 1) * (x * y - 1) ≤ 0 ↔ x * y ∈ Set.Icc (1 / 2) 1   :=  by sorry
-theorem lean_workbook_plus_1369 {m n z x : ℝ}
- (hm : 0 < m)
- (hn : 0 < n)
- (hz : 0 < z)
- (hx : 0 < x) :
- (m * z + n * x) / (m + n) ≥ (m + n) / (m / z + n / x)   :=  by sorry
-theorem lean_workbook_plus_31261 :
-  Nat.gcd 123456789 987654321 = 9   :=  by sorry
-theorem lean_workbook_plus_25266 : ∀ n : ℕ, (∏ k in Finset.Icc 1 n, (1 + 1 / k ^ 3)) < 3   :=  by sorry
-theorem lean_workbook_plus_17210 (p : ℕ) (hp : p.Prime) : ∃ k : ℕ, (∏ k in Finset.Ico 1 (p-1), k ^ (2 * k - p - 1) : ℚ) = k   :=  by sorry
-theorem lean_workbook_plus_22143 (x y z : ℝ) (hxy : 0 < x ∧ x ≤ y) (hyz : y ≤ z ∧ z ≤ 3) (h : y * z ≤ 6) (h' : x * y * z ≤ 6) : x + y + z ≤ 6   :=  by sorry
-theorem lean_workbook_plus_1978 (a b c : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) : a ^ 4 + a ^ 4 + b ^ 4 + c ^ 4 ≥ 4 * a ^ 2 * b * c   :=  by sorry
-theorem lean_workbook_plus_70093 (f : ℝ → ℝ) (hf: f = fun x => x^4 + ax^3 + bx^2 + cx + d) : f 2013 = -2 ∧ f 2014 = 4 ∧ f 2015 = 8 ∧ f 2016 = 16 → f 2017 = 58   :=  by sorry
-theorem lean_workbook_plus_12156  (a b c : ℝ) :
-  2 * (a^2 + b^2 + c^2) ≥ 2 * (a * b + b * c + c * a)   :=  by sorry
-theorem lean_workbook_plus_51722 (a b w u : ℝ) (ha : 0 < a) (hb : 0 < b) (hw : 0 < w) (hu : 0 < u) : (a * b) / (a + b) ≤ (w^2 * a + u^2 * b) / (w + u)^2   :=  by sorry
-theorem lean_workbook_plus_35149 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) : (a + b) * (a ^ 4 + b ^ 4) ≥ (a ^ 2 + b ^ 2) * (a ^ 3 + b ^ 3)   :=  by sorry
+theorem lean_workbook_plus_46832 : 2 ^ 1000 ≡ 2 [MOD 7]   :=  by sorry
+theorem lean_workbook_plus_46860 (a b c : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) (habc : a * b * c ≠ 0) (h : (a * b / (1 + a + b)) + (b * c / (1 + b + c)) + (c * a / (1 + c + a)) = 1) : 1 + a + b + c ≥ 4 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_46862 (x y z : ℝ) : x ^ 2 + y ^ 2 + z ^ 2 ≥ x * y + y * z + x * z   :=  by sorry
+theorem lean_workbook_plus_46866 : (11 ^ 2) ^ 4 * (3 ^ 2 * 11) ^ 3 ≤ (4 * 5 ^ 2) ^ 3 * (2 ^ 7) ^ 4   :=  by sorry
+theorem lean_workbook_plus_46867 (f : ℤ → ℤ) (hf: f = fun x ↦ x + 1) : ∀ x, f x = x + 1   :=  by sorry
+theorem lean_workbook_plus_46871 : ∀ a b c : ℝ, a + b + c = 0 → (a^7 + b^7 + c^7) / 7 = (a^5 + b^5 + c^5) / 5 * (a^2 + b^2 + c^2) / 2   :=  by sorry
+theorem lean_workbook_plus_46905 {n m : ℕ} (A : Matrix (Fin n) (Fin m) ℝ) (b : Fin n → ℝ) (x0 : Fin m → ℝ) (h : A.mulVec x0 = b) : ∀ x : Fin m → ℝ, A.mulVec x = b ↔ ∃ h : Fin m → ℝ, x = x0 + h ∧ A.mulVec h = 0   :=  by sorry
+theorem lean_workbook_plus_46907 {a b c : ℝ} (ha : a ≥ 0 ∧ b ≥ 0 ∧ c ≥ 0) (hab : a ≥ b) (hbc : b ≥ c) (hca : c ≥ a) : a ^ 3 + b ^ 3 + c ^ 3 ≥ b * (a - c) ^ 2 + c * (b - a) ^ 2 + a * (c - b) ^ 2 + 3 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_46912  (x : ℝ)
+  (h₀ : 0 < x)
+  (h₁ : x = Real.sqrt (2 + x)) :
+  x = 2   :=  by sorry
+theorem lean_workbook_plus_46933 (a : ℝ) (ha : 0 < a) (hab : a ≠ 1) : (Real.sqrt (1 - a^2) - 1) / a * (Real.sqrt (1 - a^2) + 1) / a = (Real.sqrt (1 - a^2) - 1) * (Real.sqrt (1 - a^2) + 1) / a^2   :=  by sorry
+theorem lean_workbook_plus_46936 : 1 ∈ ({1, 2, 3} : Finset ℕ)   :=  by sorry
+theorem lean_workbook_plus_46940 :
+  Nat.gcd 180 594 = 18   :=  by sorry
+theorem lean_workbook_plus_46969 : (4:ℝ)^(1/3) - 1 = (2^(1/3) - 1) * (2^(1/3) + 1)   :=  by sorry
+theorem lean_workbook_plus_46972 (a b c : ℝ) : a^2 + b^2 + c^2 ≥ (a + b + c) * (a + b + c)/3   :=  by sorry
+theorem lean_workbook_plus_46976 (a b c: ℝ) (h1 : a >= 1 ∧ b >= 1 ∧ c >= 1): a + b + c >= 3   :=  by sorry
+theorem lean_workbook_plus_46977 (x : ℝ) (t : ℝ) (ht : t = sin x + cos x) : sin x * cos x = (t^2 - 1) / 2 ∧ |t| ≤ Real.sqrt 2   :=  by sorry
+theorem lean_workbook_plus_46978 (a b c : ℝ) : a^2 * (b + c) + b^2 * (c + a) + c^2 * (a + b) = a^3 + b^3 + c^3 + 2 * a * b * c + 1 ↔ a * b * c - 1 = a^3 + b^3 + c^3 + 3 * a * b * c - a * b * (a + b) - b * c * (b + c) - c * a * (c + a)   :=  by sorry
+theorem lean_workbook_plus_46981  (a b c p : ℝ)
+  (h₀ : 0 < p ∧ p ≠ 1)
+  (h₁ : a ≠ 0)
+  (h₂ : (p - 1) * (p + 1) = 1)
+  (h₃ : b = -a * (2 * p^2 - 1) / (p * (p - 1)))
+  (h₄ : c = a * (p + 1) / (p - 1)) :
+  b^2 - 4 * a * c = a^2 / (p^2 * (p - 1)^2)   :=  by sorry
+theorem lean_workbook_plus_46985 : 77 = 7 * 11   :=  by sorry
+theorem lean_workbook_plus_46988 : ∀ n : ℤ, n ≡ 2 [ZMOD 3] → n ^ 2 + 2 ≡ 0 [ZMOD 3]   :=  by sorry
+theorem lean_workbook_plus_46998 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : 5 * (a ^ 3 + b ^ 3 + c ^ 3) + 3 * (a ^ 2 * b + b ^ 2 * c + c ^ 2 * a) ≥ 6 * (a * b ^ 2 + b * c ^ 2 + c * a ^ 2) + 6 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_47000 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^3 * b^4 + b^3 * c^4 + c^3 * a^4 >= 2 * a * b * c * (a * b + b * c + c * a)^2 - 5 * (a * b * c)^2 * (a + b + c)   :=  by sorry
+theorem lean_workbook_plus_47004 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a * b + b * c + c * a ≠ 0) : (a^2 + b * c)^(1/3) + (b^2 + c * a)^(1/3) + (c^2 + a * b)^(1/3) ≥ (4 * (a^2 + b^2 + c^2) / (a * b + b * c + c * a))^(1/3) + 1 / (2^(1/3))   :=  by sorry
+theorem lean_workbook_plus_47006 (f : ℤ → ℤ) (hf: f = fun x => x + 2) : ∀ x, f x = x + 2   :=  by sorry
+theorem lean_workbook_plus_47031 (n : ℕ) : 0 ≤ 1 / (n ^ 2 + n + 2) ∧ 1 / (n ^ 2 + n + 2) ≤ 1 / 4   :=  by sorry
+theorem lean_workbook_plus_47039 (a b c : ℝ) : (a * b + a * c + b * c) / (a ^ 2 + b ^ 2 + c ^ 2) ≤ 1   :=  by sorry
+theorem lean_workbook_plus_47048 : ∃ a, ∏' n : ℕ, (1 + (1:ℝ) / 2 ^ n) = a   :=  by sorry
+theorem lean_workbook_plus_47050 (a : ℝ) (ha : 0 < a) : 0 < a⁻¹   :=  by sorry
+theorem lean_workbook_plus_47052 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a / b + b / c + c / a) ≥ ((a ^ 2 + b ^ 2 + c ^ 2) / (a * b + b * c + c * a))^(5 / 7)   :=  by sorry
+theorem lean_workbook_plus_47064 {a b c : ℝ} (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (1 / 2) * (1 / a + 1 / b + 1 / c) ≥ 1 / (a + b) + 1 / (b + c) + 1 / (c + a)   :=  by sorry
+theorem lean_workbook_plus_47065 (p : ℕ) (hp : 1 < p) (n : ℕ) : ∑ k in Finset.range n, p^k < p^n   :=  by sorry
+theorem lean_workbook_plus_47079 (x a k : ℕ) : 10 * x + a = 2 * (a * 10 ^ k + x) → 8 * x = a * (2 * 10 ^ k - 1)   :=  by sorry
+theorem lean_workbook_plus_47082 (x y : ℝ) (hx : x = (5:ℝ)^(1/3)) (hy : y = (4:ℝ)^(1/3)) : 1/9 * (9 * x - 9 * y) = x - y   :=  by sorry
+theorem lean_workbook_plus_47093 (a : ℝ) (c : ℕ → ℝ) (hc : ∀ n, 0 < c n) :
+    ∃ y : ℕ → ℕ, Summable fun n : ℕ => c n * |Real.sin (n * y n * a)|   :=  by sorry
+theorem lean_workbook_plus_47094 (a : ℝ) : a + 0 = a   :=  by sorry
+theorem lean_workbook_plus_47096 : ∃ f : ℤ → ℤ, ∀ x, f x = - x^2   :=  by sorry
+theorem lean_workbook_plus_47099 (n : ℕ) (f : ℕ → ℝ) (hf: f 0 = Real.sqrt 2 ∧ ∀ n, f (n + 1) = Real.sqrt (2 + f n)) : f n < f (n + 1)   :=  by sorry
+theorem lean_workbook_plus_47115 (x y : ℚ) (k : ℝ) (h₁ : x + k * y = 0) (h₂ : ¬ k ∈ Set.range ((↑) : ℚ → ℝ)) : x = 0 ∧ y = 0   :=  by sorry
+theorem lean_workbook_plus_47123 (a:ℝ) (ha : a ≥ 0) : a^6 + 2 ≥ a^3 + a^2 + a   :=  by sorry
+theorem lean_workbook_plus_47129  (a b c : ℂ)
+  (h₀ : (a + b + c) * (a^2 + b^2 + c^2 - a * b - b * c - c * a) = 1) :
+  a^2 + b^2 + c^2 = 1 / (a + b + c) + a * b + b * c + c * a   :=  by sorry
+theorem lean_workbook_plus_47133 (p : ℕ) (b c x y z : ℤ) (hp : 0 < p) (h : 0 ≤ x ∧ 0 ≤ y ∧ 0 ≤ z) (h2 : x < p ∧ y < p ∧ z < p) (h3 : y ≡ b * x [ZMOD p]) (h4 : z ≡ c * y [ZMOD p]) : z ≡ b * c * x [ZMOD p]   :=  by sorry
+theorem lean_workbook_plus_47140 (n : ℕ) (hn : Odd n) : 11 ∣ (10 ^ n + (- 1) ^ (n + 1))   :=  by sorry
+theorem lean_workbook_plus_47146 : ∀ a c : ℝ, (1 / (a * c)^(1 / 4) - (a * c)^(1 / 4))^2 + (Real.sqrt a - Real.sqrt c)^2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_47158 (f : ℚ → ℚ) (hf: f = fun x => x) : ∀ x, f x = x   :=  by sorry
+theorem lean_workbook_plus_47159 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^2 + b^2) * (b^2 + c^2) * (c^2 + a^2) ≥ (a^2 + b * c) * (b^2 + c * a) * (c^2 + a * b)   :=  by sorry
+theorem lean_workbook_plus_47184 {a b c : ℝ} (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : a^2 / b + b^2 / c + c^2 / a ≥ a + b + c   :=  by sorry
+theorem lean_workbook_plus_47189 : ∀ x y z : ℝ, x ≥ 0 ∧ y ≥ 0 ∧ z ≥ 0 → 3 * (x ^ 2 + x * y + y ^ 2) * (y ^ 2 + y * z + z ^ 2) * (z ^ 2 + z * x + x ^ 2) ≥ (x + y + z) ^ 2 * (x * y + x * z + y * z) ^ 2   :=  by sorry
+theorem lean_workbook_plus_47195 (b c : ℝ) : 2 * (b ^ 2 + c ^ 2) + 5 * b * c ≤ (9 / 4) * (b + c) ^ 2   :=  by sorry
+theorem lean_workbook_plus_47215 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (9 / (a + b + c) : ℝ) ≤ 2 * (1 / (a + b) + 1 / (b + c) + 1 / (c + a)) ∧ (2 * (1 / (a + b) + 1 / (b + c) + 1 / (c + a)) : ℝ) ≤ (1 / a + 1 / b + 1 / c)   :=  by sorry
+theorem lean_workbook_plus_47216 (x y z a b : ℝ) : (x - a) * (y - b) * (z - b) ≥ 0 ↔ x * y * z + x * b ^ 2 + a * b * (y + z) ≥ a * b ^ 2 + a * y * z + b * (x * y + x * z)   :=  by sorry
+theorem lean_workbook_plus_47221 :
+  ∀ a b c : ℝ, a > 0 ∧ b > 0 ∧ c > 0 → (a + b) / c + (b + c) / a + (c + a) / b - 6 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_47234 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (2 * a ^ 3 / (a ^ 2 + b ^ 2)) ^ (1 / 3) + (2 * b ^ 3 / (b ^ 2 + c ^ 2)) ^ (1 / 3) + (2 * c ^ 3 / (c ^ 2 + a ^ 2)) ^ (1 / 3) ≤ 3   :=  by sorry
+theorem lean_workbook_plus_47238 (x y : ℝ) (hx : 0 ≤ x) (hy : 0 ≤ y) : (1 / (2 * x + 1) + 1 / (2 * y + 1)) ≥ 2 / (x * y + 2)   :=  by sorry
+theorem lean_workbook_plus_47248 : ∀ n : ℕ, (8^n - 1) / (2^(n + 3) - 1) = (2^(3 * n) - 1) / (2^(n + 3) - 1)   :=  by sorry
+theorem lean_workbook_plus_47270 (n : ℕ) (hn : 3 < n) (a : ℕ → ℕ) (ha : Function.Bijective a) : ∃ k l : ℕ, k > l ∧ n ∣ k * a k - l * a l   :=  by sorry
+theorem lean_workbook_plus_47285 {a b c : ℝ} (hx: a > 0 ∧ b > 0 ∧ c > 0) (hab : a + b > c) (hbc : b + c > a) (hca : a + c > b) : a^3 + b^3 + c^3 - 3 * a * b * c - 2 * (c - b)^3 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_47291 : ∀ n : ℕ, (∏ i in Finset.range n, (2 * i - 1) / (2 * i)) ≤ (∏ i in Finset.range n, (2 * i) / (2 * i + 1))   :=  by sorry
+theorem lean_workbook_plus_47296 (F : ℕ → ℕ) (h₁ : F 1 = 1) (h₂ : F 2 = 1) (h₃ : ∀ n, F (n + 2) = F (n + 1) + F n) : F 5 = 5   :=  by sorry
+theorem lean_workbook_plus_47298 {A B : Set α} (h₁ : A ⊆ B) (h₂ : ¬ B ⊆ A) : A ⊂ B   :=  by sorry
+theorem lean_workbook_plus_47299 : (2:ℝ) ^ 845 > 3 ^ 362   :=  by sorry
+theorem lean_workbook_plus_47302 (a b : ℝ) : |a| - |b| ≤ |a + b| ∧ |a + b| ≤ |a| + |b|   :=  by sorry
+theorem lean_workbook_plus_47303  (a₁ a₂ b : ℤ)
+  (h₀ : a₁ ≡ a₂ [ZMOD 6])
+  (h₁ : b ≡ b [ZMOD 6]) :
+  6 * a₁ * b ≡ 6 * a₂ * b [ZMOD 6]   :=  by sorry
+theorem lean_workbook_plus_47316 (n : ℕ) : 9 * n * (n + 1) * (n + 3) ^ 2 ≤ (3 * n + 5) ^ 2 * (n + 2) ^ 2   :=  by sorry
+theorem lean_workbook_plus_47335 (x : ℝ) : 4 * x - x ^ 4 ≤ 3   :=  by sorry
+theorem lean_workbook_plus_47342 (a b c d e : ℕ) : (a + b + c + d + e) + 150 = (a + 30 + b + 30 + c + 30 + d + 30 + e + 30)   :=  by sorry
+theorem lean_workbook_plus_47346 (a : ℤ) (h : a % 2 = 0 ∨ a % 2 = 1) : 3 ∣ a ∨ 3 ∣ (a + 2) ∨ 3 ∣ (a + 4)   :=  by sorry
+theorem lean_workbook_plus_47364 (x : ℝ) (k : ℤ) : ∃ f : ℝ → ℝ, ∀ x, f x = k * π   :=  by sorry
+theorem lean_workbook_plus_47390 (a b : ℝ) : (a+b)^2 + (3 * Real.sqrt (a * b))^2 >= 6 * (a + b) * Real.sqrt (a * b)   :=  by sorry
+theorem lean_workbook_plus_47393 :
+  6 * 3 + 10 * 1 + 15 * 1 + 7 * 1 = 50   :=  by sorry
+theorem lean_workbook_plus_47397 :  ∀ x : ℝ, (sin x * (1 - cos x) / (1 - cos x ^ 2) - sin x * (1 + cos x) / (1 - cos x ^ 2) = -2 * cos x * sin x / sin x ^ 2)   :=  by sorry
+theorem lean_workbook_plus_47398  (a b c : ℝ)
+  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
+  (h₁ : c / a + a / b + b / c = -3 / 2) :
+  b^2 / a^2 + c^2 / b^2 + a^2 / c^2 ≥ 9 / 4   :=  by sorry
+theorem lean_workbook_plus_47413  (a b : ℝ) :
+  (1 + a^4) * (1 + b^4) ≥ (1 + a^2 * b^2) * (a^2 + b^2)   :=  by sorry
+theorem lean_workbook_plus_47428 (x : ℝ) (hx : 0 < x) : 3*x^4 + 1 ≥ 4*x^3   :=  by sorry
+theorem lean_workbook_plus_47445 (A B : Matrix (Fin 2) (Fin 2) ℚ) (hA : A =![![1, 1],![0, 0]]) (hB : B =![![0, 0],![1, 1]]) : A ^ 2 = A * B ∧ B ^ 2 = B * A   :=  by sorry
+theorem lean_workbook_plus_47452 :
+  (60 + 100 + 90 + 40 + 50 + 200 + 90) / 7 = 90   :=  by sorry
+theorem lean_workbook_plus_47460 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) : (2*x+3*y)/(4*x+5*y) + (3*x+2*y)/(5*x+4*y) > 11/10   :=  by sorry
+theorem lean_workbook_plus_47480 : ∀ x y : ℝ, 0 < x - xy ∧ 0 < xy → 0 < x   :=  by sorry
+theorem lean_workbook_plus_47497 (x y z : ℝ) (h₁ : x + y + z = 6) (h₂ : x*y + y*z + z*x = 11) (h₃ : x*y*z = 6) : x^5 + y^5 + z^5 = 276   :=  by sorry
+theorem lean_workbook_plus_47499 (a b : ℤ) : a^7 + b^7 = (a + b)*(a^6 - a^5*b + a^4*b^2 - a^3*b^3 + a^2*b^4 - a*b^5 + b^6)   :=  by sorry
+theorem lean_workbook_plus_47500 (n : ℕ) (hn : 0 < n) : n^21 + n^16 - 2*n^6 + 1 > 0   :=  by sorry
+theorem lean_workbook_plus_47547 (a b c : ℝ) : 2 * (a ^ 4 + b ^ 4 + c ^ 4 + a ^ 2 * b * c + b ^ 2 * a * c + c ^ 2 * a * b) ≥ 2 * (a ^ 3 * b + a ^ 3 * c + b ^ 3 * a + b ^ 3 * c + c ^ 3 * a + c ^ 3 * b)   :=  by sorry
+theorem lean_workbook_plus_47553 : ∀ n : ℕ, ∀ x : ℝ, (Real.sin x)^2 * Real.sin (n * x) = 1/4 * (2 * Real.sin (n * x) - Real.sin ((n + 2) * x) - Real.sin ((n - 2) * x))   :=  by sorry
+theorem lean_workbook_plus_47559  (x y : ℝ)
+  (h₀ : y = x - 3)
+  (h₁ : -2 * y = 2 * (x^2 + 1)) :
+  x = -2 ∨ x = 1   :=  by sorry
+theorem lean_workbook_plus_47563 (x : ℝ) (hx : (x-2)*(x-3)*(x+1) = 0) : x = 3 ∨ x = 2 ∨ x = -1   :=  by sorry
+theorem lean_workbook_plus_47564 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a + b + c = 1) : a^2 * (b + c) + b^2 * (c + a) + c^2 * (a + b) ≥ 6 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_47581 (x y : ℤ) : 9 * (x ^ 3 + y ^ 3) + 18 * x * y * (x + y) = (x + 2 * y) ^ 3 + (y + 2 * x) ^ 3   :=  by sorry
+theorem lean_workbook_plus_47583 : ∀ ε : ℝ, ε > 0 → ∃ N : ℕ, ∀ n : ℕ, n ≥ N → |sin (π * (8 * n ^ 3 - 2 * n ^ 2 + 7) ^ (1 / 3))| < ε   :=  by sorry
+theorem lean_workbook_plus_47585 (x : ℝ) : 5 + Real.sqrt 9 + 1084 + 197495 + 17237 + 1753 = 217577   :=  by sorry
+theorem lean_workbook_plus_47587  (a : ℕ → ℕ)
+  (h₀ : a 0 = 1)
+  (h₁ : a 1 = 1)
+  (h₂ : a 2 = 2)
+  (h₃ : ∀ n, a (n + 3) = a (n + 2) + a (n + 1) + a n) :
+  a 6 = 24   :=  by sorry
+theorem lean_workbook_plus_47595 :
+  (2 * (6 / 21 * 1 / 21 + 5 / 21 * 2 / 21 + 3 / 21 * 4 / 21)) = 8 / 63   :=  by sorry
+theorem lean_workbook_plus_47604 : ∀ ε : ℝ, ε > 0 → ∃ δ : ℝ, δ > 0 ∧ ∀ x : ℝ, x ∈ Set.Ioo 1 δ → |(x^3 - 1) / (x - 1) - 3| < ε   :=  by sorry
+theorem lean_workbook_plus_47605 : (∑ k in Finset.Icc 1 10, (2 * k)) - (∑ k in Finset.Icc 1 10, (2 * k - 1)) = 10   :=  by sorry
+theorem lean_workbook_plus_47610 :
+  18 + 32 + 14 + 36 + 10 + 16 + 6 + 16 + 2 = 150   :=  by sorry
+theorem lean_workbook_plus_47613 (k : ℕ) (h₁ : 3 ≤ k) : 2 * k + 2 ≤ 2^k   :=  by sorry
+theorem lean_workbook_plus_47630 {a b c : ℝ} : a^2 * (b - c) + b^2 * (c - a) + c^2 * (a - b) = (a - b) * (a - c) * (b - c)   :=  by sorry
+theorem lean_workbook_plus_47636 (x : ℝ) : ↑⌊x⌋ ≤ x ∧ x < ↑⌊x⌋ + 1   :=  by sorry
+theorem lean_workbook_plus_47645 (x : ℝ) (hx : x > 0) : x^3 + x + 1/x - x^2 > 3/2   :=  by sorry
+theorem lean_workbook_plus_47647 (x y z u v w : ℝ) :
+  (x - u) ^ 2 + (y - v) ^ 2 + (z - w) ^ 2 ≥
+    1 / 2 * ((x - z) * (x - u - v + z) + (y - x) * (y - v - w + x) + (z - y) * (z - w - u + y))   :=  by sorry
+theorem lean_workbook_plus_47667 :
+  (1 / 8 + 1 / 12 + 1 / 24) = 1 / 4   :=  by sorry
+theorem lean_workbook_plus_47673 (a b : ℕ) (hab : Nat.Coprime a b) (n : ℕ) : Nat.Coprime a (b^n)   :=  by sorry
+theorem lean_workbook_plus_47675 (a : ℕ) : a = 7 ^ 10 → a ≡ 1 [ZMOD 11]   :=  by sorry
+theorem lean_workbook_plus_47677 (a b c : ℝ) : (a + b) * (b + c) * (c + a) - 8 * a * b * c = 2 * c * (a - b) ^ 2 + (a + b) * (a - c) * (b - c)   :=  by sorry
+theorem lean_workbook_plus_47678 (f : ℕ → ℝ) (k : ℝ) (n : ℕ) : ∑ i in Finset.range n, k * f i = k * ∑ i in Finset.range n, f i   :=  by sorry
+theorem lean_workbook_plus_47682 (x : ℝ) : x^2 + x - 12 = 0 ↔ x = -4 ∨ x = 3   :=  by sorry
+theorem lean_workbook_plus_47687 (a : ℕ) (h : a = 3 * k + 1) : a ≡ 1 [ZMOD 3]   :=  by sorry
+theorem lean_workbook_plus_47693 (a : ℝ) (ha : a^2 ≤ 1) : (3 * a^2 - 1) / ((3 - 2 * a^2) * (a^2 + 2)) ≥ (27 * a^2 - 9) / 49   :=  by sorry
+theorem lean_workbook_plus_47702 : 3 ^ 10 ≡ 1 [ZMOD 11]   :=  by sorry
+theorem lean_workbook_plus_47713 (x : ℤ) (k : ℕ) : (x^((9:ℕ)*k) + x^((8:ℕ)*k) + x^((7:ℕ)*k) + x^((6:ℕ)*k) + x^((5:ℕ)*k) + x^((4:ℕ)*k) + x^((3:ℕ)*k) + x^((2:ℕ)*k) + x^((1:ℕ)*k) + 1) = (x^((1:ℕ)*k) + 1) * (x^((4:ℕ)*k) - x^((3:ℕ)*k) + x^((2:ℕ)*k) - x^((1:ℕ)*k) + 1) * (x^((4:ℕ)*k) + x^((3:ℕ)*k) + x^((2:ℕ)*k) + x^((1:ℕ)*k) + 1)   :=  by sorry
+theorem lean_workbook_plus_47728 : ∀ a b : ℝ, Real.sqrt (2 * (a ^ 2 + b ^ 2)) ≥ a + b   :=  by sorry
+theorem lean_workbook_plus_47740 {a b c : ℝ} (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : (a^2 + b^2)^2 ≥ (a + b + c) * (a + b - c) * (b + c - a) * (c + a - b)   :=  by sorry
+theorem lean_workbook_plus_47745 (a b c : ℝ) : 5 * (a ^ 4 + b ^ 4 + c ^ 4) + a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2 ≥ 2 * (a ^ 3 * (b + c) + b ^ 3 * (c + a) + c ^ 3 * (a + b) + a * b * c * (a + b + c))   :=  by sorry
+theorem lean_workbook_plus_47746 : ∀ a b c : ℝ, (b + 2 * a) ^ 2 + (c + 2 * a) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_47747 (a b c: ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) : a^2 * (b + c) + b^2 * (a + c) + c^2 * (a + b) ≥ 6 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_47751 (p q : ℝ) (h : p ^ 3 + q ^ 3 = 2) : p + q ≤ 2   :=  by sorry
+theorem lean_workbook_plus_47762 (a b c : ℝ) :
+  (12 * a / (3 * a + 4 * b + 5 * c))^(25 / 27) + (12 * b / (5 * a + 3 * b + 4 * c))^(25 / 27) + (12 * c / (4 * a + 5 * b + 3 * c))^(25 / 27) ≥ 3   :=  by sorry
+theorem lean_workbook_plus_47773 (x y z : ℝ) : (x + y + z) * (x + y - z) * (y + z - x) * (z + x - y) = 2 * x ^ 2 * y ^ 2 + 2 * y ^ 2 * z ^ 2 + 2 * z ^ 2 * x ^ 2 - x ^ 4 - y ^ 4 - z ^ 4   :=  by sorry
+theorem lean_workbook_plus_47791 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) : a^3 / (b + c) + b^3 / (a + c) + c^3 / (a + b) ≥ (a^2 + b^2 + c^2) / 2   :=  by sorry
+theorem lean_workbook_plus_47794 (a : ℚ) (h : a = 15 / 24) : a / 60 = 1 / 96   :=  by sorry
+theorem lean_workbook_plus_47800 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : 1 / (1 + a) + 2 / (1 + b) ≤ 1) : a * b^2 ≥ 8   :=  by sorry
+theorem lean_workbook_plus_47834 (a b : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hab : a^2 + b^2 = a^5 + b^5) : a + b ≤ 2   :=  by sorry
+theorem lean_workbook_plus_47848 : (1 + Real.sin θ) * (1 - Real.sin θ) = (Real.cos θ) ^ 2   :=  by sorry
+theorem lean_workbook_plus_47854 (x : ℝ) :
+  2 * (sin x ^ 2 + cos x ^ 2) ≥ (sin x + cos x) ^ 2   :=  by sorry
+theorem lean_workbook_plus_47859 (θ : ℝ) (h1 : 0 < θ) (h2 : θ < Real.pi / 2) : 2 > Real.tan θ * (1 - Real.sin θ)   :=  by sorry
+theorem lean_workbook_plus_47860 (m n p : ℤ) : m^3 + n^3 + p^3 = 3 * m * n * p + (m + n + p) * (m^2 + n^2 + p^2 - m * n - n * p - p * m)   :=  by sorry
+theorem lean_workbook_plus_47861 (P : ℝ → ℝ) (h : P = λ x => 1007 * x ^ 2 - 2014 * x + 2014) : P 1 = 1007   :=  by sorry
+theorem lean_workbook_plus_47862 : ∀ n : ℤ, n^7 ≡ n [ZMOD 2]   :=  by sorry
+theorem lean_workbook_plus_47865 : ∀ (x : ZMod 11), x ^ 2 = 0 ∨ x ^ 2 = 1 ∨ x ^ 2 = 4 ∨ x ^ 2 = 9 ∨ x ^ 2 = 5 ∨ x ^ 2 = 3   :=  by sorry
+theorem lean_workbook_plus_47893 (a b c d : ℝ) (ha : 0 ≤ a ∧ a ≤ 1) (hb : 0 ≤ b ∧ b ≤ 1) (hc : 0 ≤ c ∧ c ≤ 1) (hd : 0 ≤ d ∧ d ≤ 1) : a * (1 - b) + b * (1 - c) + c * (1 - d) + d * (1 - a) ≤ 2   :=  by sorry
+theorem lean_workbook_plus_47896 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (hab : a + 2 / a - 5 * b / 4 + 4 / b = 5) : a + b ≥ 2   :=  by sorry
+theorem lean_workbook_plus_47929 (a b : ℝ) : (a - b) ^ 2 * (a + b) ≥ 0 → a ^ 3 + b ^ 3 ≥ a ^ 2 * b + a * b ^ 2   :=  by sorry
+theorem lean_workbook_plus_47941 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : x * (x + y) * (x - y) ^ 2 + y * (y + z) * (y - z) ^ 2 + z * (z + x) * (z - x) ^ 2 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_47956 (a b c d : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (hd : 0 ≤ d) : (a + c) * (b + d) * (a + b + c + d) / 4 ≥ a * c * d + a * b * d + a * b * c + b * c * d   :=  by sorry
+theorem lean_workbook_plus_47962  (x y z a b c : ℝ)
+  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
+  (h₁ : x = b * c / a^2)
+  (h₂ : y = c * a / b^2)
+  (h₃ : z = a * b / c^2) :
+  (a + b + c)^4 ≥ a^2 * (a^2 + 26 * b * c) + b^2 * (b^2 + 26 * c * a) + c^2 * (c^2 + 26 * a * b)   :=  by sorry
+theorem lean_workbook_plus_47963 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a + b + c = 3) : 3 ≤ a * (1 + b ^ 3) ^ (1 / 2) + b * (1 + c ^ 3) ^ (1 / 2) + c * (1 + a ^ 3) ^ (1 / 2) ∧ a * (1 + b ^ 3) ^ (1 / 2) + b * (1 + c ^ 3) ^ (1 / 2) + c * (1 + a ^ 3) ^ (1 / 2) ≤ 5   :=  by sorry
+theorem lean_workbook_plus_47967 (x y : ℝ) (h : x^4 + y^4 = 1) : -1 ≤ x ∧ x ≤ 1   :=  by sorry
+theorem lean_workbook_plus_47969 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) (habc : a + b + c + d = 1) : (1 - a)^(1/3) + (1 - b)^(1/3) + (1 - c)^(1/3) + (1 - d)^(1/3) ≥ a^(1/3) + b^(1/3) + c^(1/3) + d^(1/3)   :=  by sorry
+theorem lean_workbook_plus_47972 (A B C : ℝ) (hx: A > 0 ∧ B > 0 ∧ C > 0) (hab : A + B + C = π) : 4 * Real.cos (A / 2) * Real.cos (B / 2) * Real.cos (C / 2) ≥ Real.sin (A + B + C)   :=  by sorry
+theorem lean_workbook_plus_47973  (s f : ℕ)
+  (h₀ : s = 9 * f)
+  (h₁ : f = 18515) :
+  s = 166635   :=  by sorry
+theorem lean_workbook_plus_47976 (a : ℝ) : 5 / Real.sqrt 2 + Real.sqrt a + 5 / Real.sqrt 2 - Real.sqrt a = 10 / Real.sqrt 2   :=  by sorry
+theorem lean_workbook_plus_47980 (z w : ℂ) : ‖z - w‖ ≥ ‖‖z‖ - ‖w‖‖   :=  by sorry
+theorem lean_workbook_plus_47985 (a b c : ℝ) (h : a + b + c = 0) :
+  (a * b + b * c + c * a) ^ 2 = (1 / 4) * (a ^ 2 + b ^ 2 + c ^ 2) ^ 2   :=  by sorry
+theorem lean_workbook_plus_47990 : cos (4 * x) = 2 * cos (2 * x) ^ 2 - 1   :=  by sorry
+theorem lean_workbook_plus_47996 : ∀ {a a' m : ℕ}, a ≡ a' [ZMOD m] → ∀ n : ℕ, a ^ n ≡ a' ^ n [ZMOD m]   :=  by sorry
+theorem lean_workbook_plus_47997 (a b c : ℝ) : 7*a + 2.5*b + 0*c = 7*a + 2.5*b   :=  by sorry
+theorem lean_workbook_plus_48003 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) (h : x*y*z = 1) : (2 / (1 + x))^(1 / 3) + (2 / (1 + y))^(1 / 3) + (2 / (1 + z))^(1 / 3) ≤ 3   :=  by sorry
+theorem lean_workbook_plus_48010 : ∃ k : ℕ, (7 ^ (3 ^ 2019) - 1) / (3 ^ 2019) = k   :=  by sorry
+theorem lean_workbook_plus_48018 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : 2 * (x + y + z) ^ 3 + 9 * x * y * z ≥ 7 * (x + y + z) * (x * y + y * z + z * x)   :=  by sorry
+theorem lean_workbook_plus_48029 (a b : ℝ) (hab : 0 < a ∧ 0 < b) : 1 / a ^ 2 + 1 / b ^ 2 + 1 / (a ^ 2 - a * b + b ^ 2) ≥ 3 / (a * b)   :=  by sorry
+theorem lean_workbook_plus_48040 :
+  (5:ℝ)^25 > 2^58   :=  by sorry
+theorem lean_workbook_plus_48042  (x y : ℕ)
+  (h₀ : 0 ≤ x ∧ x ≤ 9)
+  (h₁ : 0 ≤ y ∧ y ≤ 9)
+  (h₂ : 3 ∣ (10 * x + y))
+  (h₃ : 3 ∣ (10 * y + (9 - x))) :
+  x ∈ ({0, 3, 6, 9} : Finset ℕ) ∧ y ∈ ({0, 3, 6, 9} : Finset ℕ)   :=  by sorry
+theorem lean_workbook_plus_48046 (a b : ℝ) (h : a^3 * b + a * b^3 = 2 / 9) : a^2 + b^2 + a * b ≥ 1   :=  by sorry
+theorem lean_workbook_plus_48056 (a b c : ℝ) : 0 ≤ (1 - a) * (1 - b) * (1 - a - b + a * b) / ((1 + a ^ 2) * (1 + b ^ 2)) ∧ (1 - a) * (1 - b) * (1 - a - b + a * b) / ((1 + a ^ 2) * (1 + b ^ 2)) ≤ 4   :=  by sorry
+theorem lean_workbook_plus_48060 (a : ℝ) : (1 + 3 * a ^ 2) ^ 2 ≥ 16 * a ^ 3   :=  by sorry
+theorem lean_workbook_plus_48076 (a b : ℝ) (ha : 3 ≤ a) (hb : 3 ≤ b) (h : a^2 ≥ 3 * b) : 48 * a^2 + 12 * b^2 + 255 ≥ 104 * a + 101 * a + 20 * a * b   :=  by sorry
+theorem lean_workbook_plus_48087 (a b c: ℝ) : a / (b + c) + b / (a + c) + c / (a + b) = (a / (b + c) + 1 + b / (a + c) + 1 + c / (a + b) + 1) - 3   :=  by sorry
+theorem lean_workbook_plus_48092 {a b c : ℝ} : (a - b) ^ 4 + (b - c) ^ 4 + (c - a) ^ 4 + (a ^ 4 + b ^ 4 + c ^ 4 - a ^ 2 * b * c + b ^ 2 * c * a + c ^ 2 * a * b) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_48094 (a b c : ℝ) : 3 * (a ^ 4 + b ^ 4 + c ^ 4) + 9 * (a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2) ≥ 5 * (a ^ 3 * (b + c) + b ^ 3 * (c + a) + c ^ 3 * (a + b)) + 2 * a * b * c * (a + b + c)   :=  by sorry
+theorem lean_workbook_plus_48100 : √(8 + 4 * Real.sqrt 3) = √2 + √6   :=  by sorry
+theorem lean_workbook_plus_48104 (m : ℕ) (hm : 2 ≤ m) (f : ℕ → ℤ) (hf: f (3*m) ≥ 2 ∧ f (3*m+1) ≤ -1 ∧ f (3*m+2) ≤ -1) : f (3*m) ≥ 2 ∧ f (3*m+1) ≤ -1 ∧ f (3*m+2) ≤ -1   :=  by sorry
+theorem lean_workbook_plus_48108 (x : ℝ) : x^4 - x^3 + x^2 - x + 1 / 3 > 0   :=  by sorry
+theorem lean_workbook_plus_48142 (x y z : ℝ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) : (x^3 + y^3 + z^3) / (x * y * z) ≥ 3 * ((x^6 + y^6 + z^6) / (x^3 * y^3 + y^3 * z^3 + z^3 * x^3))^(25/81)   :=  by sorry
+theorem lean_workbook_plus_48143 (x y : ℝ) : Real.sin (x + y) * Real.sin (x - y) = Real.sin x ^ 2 - Real.sin y ^ 2   :=  by sorry
+theorem lean_workbook_plus_48156 : ∀ θ : ℝ, (sin θ + cos θ) ^ 2 + (sin θ - cos θ) ^ 2 = 2   :=  by sorry
+theorem lean_workbook_plus_48158 (n : ℕ) : ∃ f : ℕ → ℝ, ∀ n, f n = 1 / (n + 1)^2   :=  by sorry
+theorem lean_workbook_plus_48169 (x : ℚ) (hx : 0 < x) : x = x   :=  by sorry
+theorem lean_workbook_plus_48175 : ∃ f : ℤ → ℤ, ∀ x, f x = x + 2017   :=  by sorry
+theorem lean_workbook_plus_48183 (x:ℝ) : 6 * (x ^ 10 + x ^ 8) - 8 * x ^ 9 - 3 * x ^ 8 - 7 * x ^ 3 + 7 ≥ 4 * x ^ 9 - 3 * x ^ 8 - 7 * x ^ 3 + 7   :=  by sorry
+theorem lean_workbook_plus_48211 (f : ℤ → ℤ) (hf: f = fun x ↦ x) : ∀ x y, f ((x - y) * f x) = f (y * f (x - y)) + (x - y) ^ 2   :=  by sorry
+theorem lean_workbook_plus_48236 : ∀ n : ℕ, ∀ z : Fin n → ℂ, ∑ i, ‖z i‖ ≥ ‖∑ i, z i‖   :=  by sorry
+theorem lean_workbook_plus_48244 (a b c d : ℝ) : 4 * (a * b + b * c + c * d + d * a) ≤ (a + b + c + d) ^ 2   :=  by sorry
+theorem lean_workbook_plus_48247 (n : ℕ) (hn : 0 < n) (x_n : ℝ) (hx_n : x_n = (3 + Real.sqrt 5)^n + (3 - Real.sqrt 5)^n) : 2^n ∣ x_n   :=  by sorry
+theorem lean_workbook_plus_48269 (x : ℝ) : (9 / 10)^7 * (4 / 3)^9 * (3 / 5)^6 * (5 / 6)^11 = 1 / 125   :=  by sorry
+theorem lean_workbook_plus_48271  (f : ℝ → ℝ)
+  (h₀ : ∀ x, f x = 28 * x^5 + 3 * x^4 - 29 * x^3 + 4 * x^2 - 7 * x + 1)
+  : f 1 = 0   :=  by sorry
+theorem lean_workbook_plus_48277 (a b c : ℝ) (h : a^2 + b^2 + c^2 = a * b + b * c + c * a) : a = b ∧ b = c ∧ c = a   :=  by sorry
+theorem lean_workbook_plus_48298 (a b c : ℝ) : (a - 1)^(1 / 2) + (a + 1)^(1 / 2) - 2 * (a)^(1 / 2) = 2 * (b + 1)^(1 / 2) - (b - 1)^(1 / 2) - (b)^(1 / 2) + 2 * (c - 1)^(1 / 2) - (c)^(1 / 2) - (c + 1)^(1 / 2)   :=  by sorry
+theorem lean_workbook_plus_48301 (p n : ℕ) : ∑ k in Finset.range (n+1), choose (p + k) k = choose (p + n + 1) n   :=  by sorry
+theorem lean_workbook_plus_48302 (a b c : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (habc : a + b + c = 1) : (1 / (a^3 + 7)^(1 / 3) + 1 / (b^3 + 7)^(1 / 3) + 1 / (c^3 + 7)^(1 / 3)) ≥ 1 / 2 + 2 / (7 : ℝ)^(1 / 3)   :=  by sorry
+theorem lean_workbook_plus_48309 (n k : ℕ) : 2 * k + 2 ≤ n → 2 * k ≤ n   :=  by sorry
+theorem lean_workbook_plus_48310 (x y : ℤ) (n : ℕ) : (x - y) * (∏ k in Finset.range n, (x ^ (2 ^ k) + y ^ (2 ^ k))) = x ^ (2 ^ n) - y ^ (2 ^ n)   :=  by sorry
+theorem lean_workbook_plus_48319 (x y : ℝ) : 2*x+3*y-10=0 ↔ y = -2/3*x + 10/3   :=  by sorry
+theorem lean_workbook_plus_48345 (a b c d : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) : (a / (b + c + 12 * d))^(1 / 2) + (b / (c + d + 12 * a))^(1 / 2) + (c / (d + a + 12 * b))^(1 / 2) + (d / (a + b + 12 * c))^(1 / 2) ≥ 2 / 7 * (14:ℝ)^(1 / 2)   :=  by sorry
+theorem lean_workbook_plus_48359 (x y z : ℝ) : x^2 + y^4 + z^8 ≥ 2*x + 4*y + 8*z - 11   :=  by sorry
+theorem lean_workbook_plus_48371 (x : ℝ) : Continuous (fun x => (x + 1) ^ (1/3))   :=  by sorry
+theorem lean_workbook_plus_48375 (a b c : ℝ) (ha : a ≥ 0) (hb : b ≥ 0) (hc : c ≥ 0) : (a + b) * (b + c) * (a + c) ≥ 8 * a * b * c   :=  by sorry
+theorem lean_workbook_plus_48385 (a b : ℝ) (hab : a + b > 0) : a ^ 2 + b + 1 / (a + b) ≥ 7 / 4   :=  by sorry
+theorem lean_workbook_plus_48394 (x y z a b c : ℝ) (h₁ : a = x + y) (h₂ : b = y + z) (h₃ : c = z + x) : a + b + c = x + y + (y + z) + (z + x)   :=  by sorry
+theorem lean_workbook_plus_48410 (r : ℝ) (k : ℕ) : ∑ n in Finset.range (k+1), (Nat.choose k n * r ^ n) = (r + 1) ^ k   :=  by sorry
+theorem lean_workbook_plus_48411 : (∑ i in Finset.range 11, choose 10 i) / 2 = 2^10 / 2   :=  by sorry
+theorem lean_workbook_plus_48427 : ∀ c : ℝ, (c - 1) ^ 2 * (71 * c ^ 2 + 2 * c + 631) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_48431 (a b c d : ℝ) (h1 : a < b ∧ b < c ∧ c < d) : (a + b + c + d) ^ 2 ≥ 8 * (a * c + b * d)   :=  by sorry
+theorem lean_workbook_plus_48452  (b c d : ℂ)
+  (h₀ : b ≠ 0)
+  (h₁ : 3 * b * c - 2 * b^3 = d) :
+  c = (d + 2 * b^3) / (3 * b)   :=  by sorry
+theorem lean_workbook_plus_48453 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) (h : a^2 + b^2 + c^2 = 1) :
+  a^3 / (1 - b * c) + b^3 / (1 - c * a) + c^3 / (1 - a * b) ≤
+    (a^4 + b^4 + c^4) / (2 * a * b * c * (a * b + b * c + c * a))   :=  by sorry
+theorem lean_workbook_plus_48454 (x y z : ℝ) : (x - y) ^ 2 * (x ^ 2 + 2 * x * y + 7 * y ^ 2) + (y - z) ^ 2 * (y ^ 2 + 2 * y * z + 7 * z ^ 2) + (z - x) ^ 2 * (z ^ 2 + 2 * z * x + 7 * x ^ 2) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_48461 (a b c : ℝ) : abs a + abs b + abs c + abs (a + b + c) ≥ abs (a + b) + abs (b + c) + abs (c + a)   :=  by sorry
+theorem lean_workbook_plus_48466 (a b : ℝ) (h₁ : a^2 + b^2 = 100) (h₂ : a + b = 12) : a * b = 22   :=  by sorry
+theorem lean_workbook_plus_48467  (a b c p q : ℝ)
+  (h₀ : a ≠ 0)
+  (h₁ : a * p^2 + b * p + c = 0)
+  (h₂ : a * q^2 + b * q + c = 0)
+  (h₃ : p > q)
+  (h₄ : p - q = 1) :
+  p + q = -b / a ∧ p * q = c / a   :=  by sorry
+theorem lean_workbook_plus_48471 (a b c : ℝ) (h : ∀ x ∈ Set.Icc (-1) 1, abs (a * x ^ 2 + b * x + c) ≤ 1) :
+  abs a + abs b + abs c ≤ 4   :=  by sorry
+theorem lean_workbook_plus_48481 (a b c d : ℝ) (p : ℝ → ℝ) (hp : p = fun x : ℝ => x^4 + a*x^3 + b*x^2 + c*x + d) : p 1 = 1993 ∧ p 2 = 3986 ∧ p 3 = 5979 → 1/4 * (p 11 + p (-7)) = 5233   :=  by sorry
+theorem lean_workbook_plus_48490 (x : ℝ) : 5 * (x^16 + x^8 + 1)^(1/5) = x^8 + x^2 + 5 ↔ x = 0   :=  by sorry
+theorem lean_workbook_plus_48506 (a b c : ℝ) : (a + b - 2 * c) ^ 4 + (a + c - 2 * b) ^ 4 + (b + c - 2 * a) ^ 4 ≥ 9 * ((a - b) ^ 4 + (a - c) ^ 4 + (b - c) ^ 4)   :=  by sorry
+theorem lean_workbook_plus_48513 : ∀ a b c : ℝ, (a * b * c)^(1/3) ≤ 1/3 → 1/3 * (a^2 * b^2 * c^2)^(1/3) ≥ a * b * c   :=  by sorry
+theorem lean_workbook_plus_48524 (a b c d m n p : ℤ) (hm : m = a*b + c*d) (hn : n = a*c + b*d) (hp : p = a*d + b*c) : m*n*p = (a*b + c*d)*(a*c + b*d)*(a*d + b*c)   :=  by sorry
+theorem lean_workbook_plus_48528 (a b c : ℝ) : a^2 * b^2 * c^2 * (a^2 + b^2 + c^2) ≥ a^3 * b^3 * c^2 + a^3 * b^2 * c^3 + a^2 * b^3 * c^3   :=  by sorry
+theorem lean_workbook_plus_48533 : ∀ n : ℕ, ∑ i in Finset.range n, Real.sqrt i ≤ n * Real.sqrt n   :=  by sorry
+theorem lean_workbook_plus_48545 (a b c : ℤ) (hab : a * b + b * c + c * a = 1) : ∃ k : ℤ, k ^ 2 = (1 + a ^ 2) * (1 + b ^ 2) * (1 + c ^ 2)   :=  by sorry
+theorem lean_workbook_plus_48552 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (habc : a * b * c = 1) : 1 / a ^ 2 + 1 / b ≥ 4 / (a ^ 2 + b)   :=  by sorry
+theorem lean_workbook_plus_48558 : ∀ y : ℝ, y^2 + y + 1 + 2 * Real.sqrt (y^2 + y) ≥ y^2 - y ↔ 2 * y + 1 + 2 * Real.sqrt (y^2 + y) ≥ 0   :=  by sorry
+theorem lean_workbook_plus_48583 (c : ℝ) (f : ℝ → ℝ) (L : ℝ) (h : c ≠ 0) : (∀ ε > 0, ∃ δ > 0, ∀ x, |x| < δ → |f x - L| < ε) → ∀ ε > 0, ∃ δ > 0, ∀ x, |x| < δ → |f (c * x) - L| < ε   :=  by sorry
+theorem lean_workbook_plus_48585 tan_eq_v (f : ℝ → ℝ) : f tan_eq_v * (1 + tan_eq_v^2) = 1 → f tan_eq_v = 1 / (1 + tan_eq_v^2)   :=  by sorry
+theorem lean_workbook_plus_48591  (s : ℝ)
+  (h₀ : s = ∑ k in (Finset.range 101), (3^k)) :
+  s = (3^101 - 1) / 2   :=  by sorry
+theorem lean_workbook_plus_48592 (x : ℝ) : x^2 - 15*x + 56 = 0 ↔ x = 7 ∨ x = 8   :=  by sorry
+theorem lean_workbook_plus_48595 (x y : ℝ) (h₁ : 3*x + 4*y = 4) (h₂ : 2*x + 6*y = 9) : 10*x + 20*y = 26   :=  by sorry
+theorem lean_workbook_plus_48596 (a b c : ℝ) (h₁ : a > b) (h₂ : b > c) : 1 / (a - b) + 1 / (b - c) > 2 / (a - c)   :=  by sorry
+theorem lean_workbook_plus_48637 (a b c : ℝ) : (1 / (a * b * (a + b) + a * b * c)) + (1 / (b * c * (b + c) + a * b * c)) + (1 / (a * c * (a + c) + a * b * c)) = (1 / (a * b * (a + b + c))) + (1 / (b * c * (a + b + c))) + (1 / (a * c * (a + b + c)))   :=  by sorry
+theorem lean_workbook_plus_48644  (a b c : ℝ)
+  (p : ℝ → ℝ)
+  (h₀ : ∀ x, p x = (x + 1) * (x - 4) * (x - 2) + a * x^2 + b * x + c)
+  (h₁ : p (-1) = 2)
+  (h₂ : p 4 = -13)
+  (h₃ : p 2 = 5) :
+  a - b + c = 2 ∧ 16 * a + 4 * b + c = -13 ∧ 4 * a + 2 * b + c = 5   :=  by sorry
+theorem lean_workbook_plus_48646  (v d t : ℝ)
+  (h₀ : 0 < v ∧ 0 < d ∧ 0 < t)
+  (h₁ : v * t = d)
+  (h₂ : 3 / 2 * v + 4 / 5 * v * (t + 1) = d) :
+  d / v = 23 / 2   :=  by sorry
+theorem lean_workbook_plus_48648 (n a k : ℝ) (h₁ : n = a + k) (h₂ : a = ⌊n⌋) (h₃ : 0 < k) (h₄ : k < 1) : ⌊n⌋ + 1 = ⌈n⌉   :=  by sorry
+theorem lean_workbook_plus_48649 : 32 % 9 = 5   :=  by sorry
+theorem lean_workbook_plus_48656 :
+  ((9).choose 2 / (99).choose 2 : ℚ) = 4 / 539   :=  by sorry
+theorem lean_workbook_plus_48665 (x z : ℝ) : Real.logb 2 x = z → Real.logb x 2 = 1 / z   :=  by sorry
+theorem lean_workbook_plus_48710 : ∀ a b c : ℝ, a ^ 4 + b ^ 4 + c ^ 4 + a ^ 2 * b ^ 2 + b ^ 2 * c ^ 2 + c ^ 2 * a ^ 2 ≥ a ^ 3 * b + a * b ^ 3 + b ^ 3 * c + b * c ^ 3 + c ^ 3 * a + c * a ^ 3   :=  by sorry
+theorem lean_workbook_plus_48715 (x y z : ℝ) (h : x + y + z = 0) : (x^2 + y^2 + z^2) / 2 * (x^3 + y^3 + z^3) / 3 = (x^5 + y^5 + z^5) / 5   :=  by sorry
+theorem lean_workbook_plus_48716 (x y : ℝ) (h : x < y) : ∃ z : ℝ, x < z ∧ z < y   :=  by sorry
+theorem lean_workbook_plus_48724 :
+  ∀ n ∈ Finset.range 64, 3^16 ≡ 1 [ZMOD 64]   :=  by sorry
+theorem lean_workbook_plus_48725 (x : ℝ) : |x^2 - 4*x - 39601| ≥ |x^2 + 4*x - 39601| → x ≤ 199  :=  by sorry
+theorem lean_workbook_plus_48740 : 2005 = 41^2 + 18^2 → 2005^2005 = (41 * 2005^1002)^2 + (18 * 2005^1002)^2   :=  by sorry
+theorem lean_workbook_plus_48743 (x y z : ℝ) : 3 * (x ^ 4 * y ^ 2 + y ^ 4 * z ^ 2 + z ^ 4 * x ^ 2) * (x ^ 2 * y ^ 4 + y ^ 2 * z ^ 4 + z ^ 2 * x ^ 4) ≥ 3 * (x ^ 4 * y * z + y ^ 4 * z * x + z ^ 4 * x * y) ^ 2   :=  by sorry
+theorem lean_workbook_plus_48752 (f : ℝ → ℝ) (hf: f x = x ∨ f x = -x) : f x = x ∨ f x = -x   :=  by sorry
+theorem lean_workbook_plus_48758 (x : ℤ) (h : x = 13) : x^2 + x + 5 = 187   :=  by sorry
+theorem lean_workbook_plus_48761 :
+  6 - 2 + (5 - (-6)) = 15   :=  by sorry
+theorem lean_workbook_plus_48763 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) :  3 * (a ^ 2 + b ^ 2 + c ^ 2) / (2 * (a * b + b * c + c * a)) ≥ a / (b + c) + b / (a + c) + c / (b + a)   :=  by sorry
+theorem lean_workbook_plus_48772 : ∃ f : ℤ → ℤ, ∀ x : ℤ, 3 * f x - 2 * f (f x) = x   :=  by sorry
+theorem lean_workbook_plus_48782 : ∀ a b c : ℝ, a^3 + b^3 + c^3 - 3*a*b*c = 1/2 * (a + b + c) * ((a - b)^2 + (b - c)^2 + (c - a)^2)   :=  by sorry
+theorem lean_workbook_plus_48800 (a b : ℕ) (h₁ : a = 6893) (h₂ : b = 11639) : Nat.gcd a b = 113   :=  by sorry
+theorem lean_workbook_plus_48801  (n : ℝ)
+  (h : ℝ)
+  (h₀ : 0 < n)
+  (h₁ : 0 < h)
+  (h₂ : (0.9^h) * n = 0.5 * n) :
+  h = Real.log 0.5 / Real.log 0.9   :=  by sorry
+theorem lean_workbook_plus_48808 : √(4 + 2 * Real.sqrt 3) = 1 + Real.sqrt 3   :=  by sorry
+theorem lean_workbook_plus_48818 (a b : ℝ) : Real.sqrt (a ^ 2 - a * b + b ^ 2) ≥ (1 / 2) * (a + b)   :=  by sorry
+theorem lean_workbook_plus_48823 :  12 * d^2 * k^2 + 8 * d^2 * k * m + 16 * d^2 * k * n + 16 * d^2 * m * n + 16 * d^2 * n^2 + 4 * d * k^3 + 20 * d * k^2 * m + 16 * d * k^2 * n + 14 * d * k * m^2 + 40 * d * k * m * n + 24 * d * k * n^2 + 2 * d * m^3 + 28 * d * m^2 * n + 40 * d * m * n^2 + 16 * d * n^3 + k^4 + 4 * k^3 * m + 4 * k^3 * n + 7 * k^2 * m^2 + 16 * k^2 * m * n + 8 * k^2 * n^2 + 6 * k * m^3 + 22 * k * m^2 * n + 24 * k * m * n^2 + 8 * k * n^3 + 12 * m^3 * n + 22 * m^2 * n^2 + 16 * m * n^3 + 4 * n^4 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_48825 (k : ℝ) : k^2 - 20 * k + 100 ≥ 0   :=  by sorry
+theorem lean_workbook_plus_48837 : (Finset.filter (λ x => x % 4 = 0) (Finset.range 22)).card = 6 ∧ (Finset.filter (λ x => x % 4 = 1) (Finset.range 22)).card = 6 ∧ (Finset.filter (λ x => x % 4 = 2) (Finset.range 22)).card = 5 ∧ (Finset.filter (λ x => x % 4 = 3) (Finset.range 22)).card = 5   :=  by sorry
+theorem lean_workbook_plus_48848 (a b : ℝ) (hab : 0 ≤ a ∧ 0 ≤ b ∧ a + b ≤ 1) (k : ℝ) (hk : k ≥ 1) : a / (b + 1) + k * b / (a + 1) ≤ k   :=  by sorry
+theorem lean_workbook_plus_48861 (f : ℝ → ℝ) (hf: f x = (2*x-1)/x) : f x = (2*x-1)/x   :=  by sorry
+theorem lean_workbook_plus_48863 : ¬ ∃ l, ∀ n, |(-1 : ℝ)^n - l| < 1   :=  by sorry
