@@ -167,7 +167,7 @@ theorem lean_workbook_46721 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c)
 theorem lean_workbook_46722 (a b c d : ℝ) (h1 : a^2 + b^2 = 1) (h2 : c^2 + d^2 = 1) : √(1 + a) + √(1 + c) + √(1 + ac - bd) ≥ √2  :=  by sorry
 theorem lean_workbook_46723 (f : ℝ → ℝ): (∀ x y, f (x ^ 2 + f y) = f (x ^ 2 - f y) + f (2 * x * y)) ↔ ∃ k:ℝ, ∀ x, f x = k * x  :=  by sorry
 theorem lean_workbook_46724 (x : ℝ) (hx: 0 ≤ x) : Real.cos (Real.sin x) ≥ 1 - 1 / 2 * x ^ 2  :=  by sorry
-theorem lean_workbook_46725 (R : ℝ) (k : ℕ) (θ : ℝ) : 
+theorem lean_workbook_46725 (R : ℝ) (k : ℕ) (θ : ℝ) :
   ‖ exp (i * R^k * exp (i * k * θ)) * (i * R * exp (i * θ))‖ ≤ R * exp (-2 * k * R^k * θ / π)  :=  by sorry
 theorem lean_workbook_46726 (x : ℝ) (hx : abs x < 1) : ∑' n : ℕ, x ^ n = 1 / (1 - x)  :=  by sorry
 theorem lean_workbook_46727 (a b c : ℝ) (hab : 0 < a) (hbc : 0 < b) (hca : 0 < c) (habc : a * b + b * c + c * a = 1) : (a + b) * (b + c) * (c + a) * (Real.sqrt (a ^ 2 + 1) + a) * (Real.sqrt (b ^ 2 + 1) + b) * (Real.sqrt (c ^ 2 + 1) + c) ≥ 8  :=  by sorry
@@ -260,3 +260,14 @@ theorem lean_workbook_46796 {x y z : ℝ} (hx : 0 ≤ x) (hy : 0 ≤ y) (hz : 0 
 theorem lean_workbook_46797 (a b c : ℝ) : a / b + b / c + c / a ≥ 3 * ( (a ^ 2 + b ^ 2 + c ^ 2) / (a * b + b * c + c * a)) ^ (2 / 3)  :=  by sorry
 theorem lean_workbook_46798 (n : ℕ) : n ^ 3 = ((n * (n + 1)) / 2) ^ 2 - ((n * (n - 1)) / 2) ^ 2  :=  by sorry
 theorem lean_workbook_46799 (a b c : ℝ) (h1 : a > 0 ∧ b > 0 ∧ c > 0 ∧ a * b * c = 1)  (h2 : a^3 > 36) : a^2 / 3 + b^2 + c^2 ≥ a * b + a * c + b * c  :=  by sorry
+
+theorem lean_workbook_plus_29 :
+  ∀ x : ℝ,
+    -(2 * Real.cos (2 * x) - 2 * Real.cos (4 * x) + 2 * Real.cos (6 * x) - 1) *
+      (1 / Real.sin ((π / 4) - x))^2 * (1 / Real.sin (x + (π / 4)))^2 = 0   :=  by sorry
+refine' not_forall.2 ⟨0, by norm_num⟩
+no goals
+⊢ ¬∀ (x : ℝ),
+      -(2 * cos (2 * x) - 2 * cos (4 * x) + 2 * cos (6 * x) - 1) * (1 / sin (π / 4 - x)) ^ 2 *
+          (1 / sin (x + π / 4)) ^ 2 =
+        0

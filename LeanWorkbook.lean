@@ -1,2 +1,11 @@
-import LeanWorkbook.leanworkbook_plus
+import LeanWorkbook.leanworkbook_plus_0
+import LeanWorkbook.leanworkbook_plus_1
+import LeanWorkbook.leanworkbook_plus_2
+import LeanWorkbook.leanworkbook_plus_3
+import LeanWorkbook.leanworkbook_plus_4
+import LeanWorkbook.leanworkbook_plus_5
+import LeanWorkbook.leanworkbook_plus_6
+import LeanWorkbook.leanworkbook_plus_7
+import LeanWorkbook.leanworkbook_plus_8
+import LeanWorkbook.leanworkbook_plus_9
 import LeanWorkbook.leanworkbook_import
